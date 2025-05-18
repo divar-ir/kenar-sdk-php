@@ -1,6 +1,6 @@
 # Divar\KenarApiClient\FinderApi
 
-All URIs are relative to http://localhost, except if the operation defines another base path.
+All URIs are relative to https://open-api.divar.ir, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
@@ -19,7 +19,7 @@ finderGetPost($token): \Divar\KenarApiClient\Model\FinderGetPostResponse
 
 Get a Divar post
 
-This API allows you to get details about Divar post by its token. You can use the token to get the post data and its state in order to implement your service.
+This API allows you to get details about Divar post by its token. You can use the token to get the post data and its state
 
 ### Example
 

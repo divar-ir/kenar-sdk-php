@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**payment_method** | [**\Divar\KenarApiClient\Model\AddonSemanticPaymentMethod**](AddonSemanticPaymentMethod.md) |  | [optional]
+**payment_method** | [**\Divar\KenarApiClient\Model\AddonsAddonSemanticPaymentMethod**](AddonsAddonSemanticPaymentMethod.md) |  | [optional]
 **identity_verification_result** | [**\Divar\KenarApiClient\Model\AddonSemanticIdentityVerificationResult**](AddonSemanticIdentityVerificationResult.md) |  | [optional]
 **post_verification_result** | [**\Divar\KenarApiClient\Model\AddonSemanticPostVerificationResult**](AddonSemanticPostVerificationResult.md) |  | [optional]
 **status** | [**\Divar\KenarApiClient\Model\AddonsAddonSemanticStatus**](AddonsAddonSemanticStatus.md) |  | [optional]

@@ -1,6 +1,6 @@
 # Divar\KenarApiClient\ChatAPIApi
 
-All URIs are relative to http://localhost, except if the operation defines another base path.
+All URIs are relative to https://open-api.divar.ir, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
@@ -35,7 +35,7 @@ $apiInstance = new Divar\KenarApiClient\Api\ChatAPIApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$conversation_id = 'conversation_id_example'; // string
+$conversation_id = 'conversation_id_example'; // string | Unique identifier for the conversation
 $chat_api_chat_bot_send_message_body = new \Divar\KenarApiClient\Model\ChatAPIChatBotSendMessageBody(); // \Divar\KenarApiClient\Model\ChatAPIChatBotSendMessageBody
 
 try {
@@ -50,7 +50,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **conversation_id** | **string**|  | |
+| **conversation_id** | **string**| Unique identifier for the conversation | |
 | **chat_api_chat_bot_send_message_body** | [**\Divar\KenarApiClient\Model\ChatAPIChatBotSendMessageBody**](../Model/ChatAPIChatBotSendMessageBody.md)|  | |
 
 ### Return type
@@ -93,7 +93,7 @@ $apiInstance = new Divar\KenarApiClient\Api\ChatAPIApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$user_id = 'user_id_example'; // string
+$user_id = 'user_id_example'; // string | Unique identifier for the user to start or continue a conversation with
 $chat_api_chat_bot_send_message_body = new \Divar\KenarApiClient\Model\ChatAPIChatBotSendMessageBody(); // \Divar\KenarApiClient\Model\ChatAPIChatBotSendMessageBody
 
 try {
@@ -108,7 +108,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **user_id** | **string**|  | |
+| **user_id** | **string**| Unique identifier for the user to start or continue a conversation with | |
 | **chat_api_chat_bot_send_message_body** | [**\Divar\KenarApiClient\Model\ChatAPIChatBotSendMessageBody**](../Model/ChatAPIChatBotSendMessageBody.md)|  | |
 
 ### Return type
@@ -151,7 +151,7 @@ $apiInstance = new Divar\KenarApiClient\Api\ChatAPIApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$conversation_id = 'conversation_id_example'; // string
+$conversation_id = 'conversation_id_example'; // string | Unique identifier for the conversation
 $chat_api_chat_bot_send_message_body = new \Divar\KenarApiClient\Model\ChatAPIChatBotSendMessageBody(); // \Divar\KenarApiClient\Model\ChatAPIChatBotSendMessageBody
 
 try {
@@ -166,7 +166,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **conversation_id** | **string**|  | |
+| **conversation_id** | **string**| Unique identifier for the conversation | |
 | **chat_api_chat_bot_send_message_body** | [**\Divar\KenarApiClient\Model\ChatAPIChatBotSendMessageBody**](../Model/ChatAPIChatBotSendMessageBody.md)|  | |
 
 ### Return type
@@ -209,7 +209,7 @@ $apiInstance = new Divar\KenarApiClient\Api\ChatAPIApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$conversation_id = 'conversation_id_example'; // string
+$conversation_id = 'conversation_id_example'; // string | Unique identifier for the conversation
 $chat_api_conversation_send_message_body = new \Divar\KenarApiClient\Model\ChatAPIConversationSendMessageBody(); // \Divar\KenarApiClient\Model\ChatAPIConversationSendMessageBody
 
 try {
@@ -224,7 +224,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **conversation_id** | **string**|  | |
+| **conversation_id** | **string**| Unique identifier for the conversation | |
 | **chat_api_conversation_send_message_body** | [**\Divar\KenarApiClient\Model\ChatAPIConversationSendMessageBody**](../Model/ChatAPIConversationSendMessageBody.md)|  | |
 
 ### Return type
@@ -323,7 +323,7 @@ $apiInstance = new Divar\KenarApiClient\Api\ChatAPIApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$conversation_id = 'conversation_id_example'; // string
+$conversation_id = 'conversation_id_example'; // string | Unique identifier for the conversation
 
 try {
     $result = $apiInstance->chatAPIGetConversation($conversation_id);
@@ -337,7 +337,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **conversation_id** | **string**|  | |
+| **conversation_id** | **string**| Unique identifier for the conversation | |
 
 ### Return type
 

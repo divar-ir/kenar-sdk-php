@@ -1,6 +1,6 @@
 <?php
 /**
- * AddonsAddonLinkage
+ * AddonsAddonSemanticPaymentMethod
  *
  * PHP version 8.1
  *
@@ -30,21 +30,19 @@ namespace Divar\KenarApiClient\Model;
 use \Divar\KenarApiClient\ObjectSerializer;
 
 /**
- * AddonsAddonLinkage Class Doc Comment
+ * AddonsAddonSemanticPaymentMethod Class Doc Comment
  *
  * @category Class
  * @package  Divar\KenarApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class AddonsAddonLinkage
+class AddonsAddonSemanticPaymentMethod
 {
     /**
      * Possible values of this enum
      */
-    public const POST_DETAILS = 'POST_DETAILS';
-
-    public const POST_MANAGEMENT = 'POST_MANAGEMENT';
+    public const SECURE = 'SECURE';
 
     /**
      * Gets allowable values of the enum
@@ -53,8 +51,7 @@ class AddonsAddonLinkage
     public static function getAllowableEnumValues()
     {
         return [
-            self::POST_DETAILS,
-            self::POST_MANAGEMENT
+            self::SECURE
         ];
     }
 }

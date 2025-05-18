@@ -1,6 +1,6 @@
 <?php
 /**
- * AssetsGetPermissionsResponseTest
+ * AddonsAddonSemanticPaymentMethodTest
  *
  * PHP version 8.1
  *
@@ -31,15 +31,15 @@ namespace Divar\KenarApiClient\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * AssetsGetPermissionsResponseTest Class Doc Comment
+ * AddonsAddonSemanticPaymentMethodTest Class Doc Comment
  *
  * @category    Class
- * @description AssetsGetPermissionsResponse
+ * @description AddonsAddonSemanticPaymentMethod
  * @package     Divar\KenarApiClient
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class AssetsGetPermissionsResponseTest extends TestCase
+class AddonsAddonSemanticPaymentMethodTest extends TestCase
 {
 
     /**
@@ -71,18 +71,9 @@ class AssetsGetPermissionsResponseTest extends TestCase
     }
 
     /**
-     * Test "AssetsGetPermissionsResponse"
+     * Test "AddonsAddonSemanticPaymentMethod"
      */
-    public function testAssetsGetPermissionsResponse()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "permissions"
-     */
-    public function testPropertyPermissions()
+    public function testAddonsAddonSemanticPaymentMethod()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

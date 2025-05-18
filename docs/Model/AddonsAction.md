@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**open_direct_link** | **string** |  | [optional]
+**open_direct_link** | **string** | An action to send user to your URL directly with just a resource id (if applicable) | [optional]
 **open_server_link** | [**\Divar\KenarApiClient\Model\AddonsOpenServerLink**](AddonsOpenServerLink.md) |  | [optional]
 **get_dynamic_action** | [**\Divar\KenarApiClient\Model\AddonsGetDynamicAction**](AddonsGetDynamicAction.md) |  | [optional]
 

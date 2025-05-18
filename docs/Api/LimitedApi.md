@@ -1,6 +1,6 @@
 # Divar\KenarApiClient\LimitedApi
 
-All URIs are relative to http://localhost, except if the operation defines another base path.
+All URIs are relative to https://open-api.divar.ir, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
