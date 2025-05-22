@@ -58,8 +58,8 @@ class MessageVideoData implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'link' => 'string',
-        'thumbnail_link' => 'string',
-        'size_bytes' => 'string'
+        'size_bytes' => 'string',
+        'thumbnail_link' => 'string'
     ];
 
     /**
@@ -71,8 +71,8 @@ class MessageVideoData implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'link' => null,
-        'thumbnail_link' => null,
-        'size_bytes' => 'uint64'
+        'size_bytes' => 'uint64',
+        'thumbnail_link' => null
     ];
 
     /**
@@ -82,8 +82,8 @@ class MessageVideoData implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'link' => false,
-        'thumbnail_link' => false,
-        'size_bytes' => false
+        'size_bytes' => false,
+        'thumbnail_link' => false
     ];
 
     /**
@@ -173,8 +173,8 @@ class MessageVideoData implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'link' => 'link',
-        'thumbnail_link' => 'thumbnail_link',
-        'size_bytes' => 'size_bytes'
+        'size_bytes' => 'size_bytes',
+        'thumbnail_link' => 'thumbnail_link'
     ];
 
     /**
@@ -184,8 +184,8 @@ class MessageVideoData implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'link' => 'setLink',
-        'thumbnail_link' => 'setThumbnailLink',
-        'size_bytes' => 'setSizeBytes'
+        'size_bytes' => 'setSizeBytes',
+        'thumbnail_link' => 'setThumbnailLink'
     ];
 
     /**
@@ -195,8 +195,8 @@ class MessageVideoData implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'link' => 'getLink',
-        'thumbnail_link' => 'getThumbnailLink',
-        'size_bytes' => 'getSizeBytes'
+        'size_bytes' => 'getSizeBytes',
+        'thumbnail_link' => 'getThumbnailLink'
     ];
 
     /**
@@ -257,8 +257,8 @@ class MessageVideoData implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(?array $data = null)
     {
         $this->setIfExists('link', $data ?? [], null);
-        $this->setIfExists('thumbnail_link', $data ?? [], null);
         $this->setIfExists('size_bytes', $data ?? [], null);
+        $this->setIfExists('thumbnail_link', $data ?? [], null);
     }
 
     /**
@@ -331,33 +331,6 @@ class MessageVideoData implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets thumbnail_link
-     *
-     * @return string|null
-     */
-    public function getThumbnailLink()
-    {
-        return $this->container['thumbnail_link'];
-    }
-
-    /**
-     * Sets thumbnail_link
-     *
-     * @param string|null $thumbnail_link thumbnail_link
-     *
-     * @return self
-     */
-    public function setThumbnailLink($thumbnail_link)
-    {
-        if (is_null($thumbnail_link)) {
-            throw new \InvalidArgumentException('non-nullable thumbnail_link cannot be null');
-        }
-        $this->container['thumbnail_link'] = $thumbnail_link;
-
-        return $this;
-    }
-
-    /**
      * Gets size_bytes
      *
      * @return string|null
@@ -380,6 +353,33 @@ class MessageVideoData implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable size_bytes cannot be null');
         }
         $this->container['size_bytes'] = $size_bytes;
+
+        return $this;
+    }
+
+    /**
+     * Gets thumbnail_link
+     *
+     * @return string|null
+     */
+    public function getThumbnailLink()
+    {
+        return $this->container['thumbnail_link'];
+    }
+
+    /**
+     * Sets thumbnail_link
+     *
+     * @param string|null $thumbnail_link thumbnail_link
+     *
+     * @return self
+     */
+    public function setThumbnailLink($thumbnail_link)
+    {
+        if (is_null($thumbnail_link)) {
+            throw new \InvalidArgumentException('non-nullable thumbnail_link cannot be null');
+        }
+        $this->container['thumbnail_link'] = $thumbnail_link;
 
         return $this;
     }

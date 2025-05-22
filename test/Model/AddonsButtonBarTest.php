@@ -80,18 +80,18 @@ class AddonsButtonBarTest extends TestCase
     }
 
     /**
-     * Test attribute "title"
+     * Test attribute "action"
      */
-    public function testPropertyTitle()
+    public function testPropertyAction()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "action"
+     * Test attribute "title"
      */
-    public function testPropertyAction()
+    public function testPropertyTitle()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

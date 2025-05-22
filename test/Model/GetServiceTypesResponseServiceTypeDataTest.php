@@ -80,18 +80,18 @@ class GetServiceTypesResponseServiceTypeDataTest extends TestCase
     }
 
     /**
-     * Test attribute "slug"
+     * Test attribute "display"
      */
-    public function testPropertySlug()
+    public function testPropertyDisplay()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "display"
+     * Test attribute "slug"
      */
-    public function testPropertyDisplay()
+    public function testPropertySlug()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

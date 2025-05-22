@@ -57,8 +57,8 @@ class AddonsBusinessAddon implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'meta_data' => '\Divar\KenarApiClient\Model\AddonsAddonMetaData',
         'business_ref' => 'string',
+        'meta_data' => '\Divar\KenarApiClient\Model\AddonsAddonMetaData',
         'widgets' => 'object'
     ];
 
@@ -70,8 +70,8 @@ class AddonsBusinessAddon implements ModelInterface, ArrayAccess, \JsonSerializa
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'meta_data' => null,
         'business_ref' => null,
+        'meta_data' => null,
         'widgets' => null
     ];
 
@@ -81,8 +81,8 @@ class AddonsBusinessAddon implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'meta_data' => false,
         'business_ref' => false,
+        'meta_data' => false,
         'widgets' => false
     ];
 
@@ -172,8 +172,8 @@ class AddonsBusinessAddon implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $attributeMap = [
-        'meta_data' => 'meta_data',
         'business_ref' => 'business_ref',
+        'meta_data' => 'meta_data',
         'widgets' => 'widgets'
     ];
 
@@ -183,8 +183,8 @@ class AddonsBusinessAddon implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'meta_data' => 'setMetaData',
         'business_ref' => 'setBusinessRef',
+        'meta_data' => 'setMetaData',
         'widgets' => 'setWidgets'
     ];
 
@@ -194,8 +194,8 @@ class AddonsBusinessAddon implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'meta_data' => 'getMetaData',
         'business_ref' => 'getBusinessRef',
+        'meta_data' => 'getMetaData',
         'widgets' => 'getWidgets'
     ];
 
@@ -256,8 +256,8 @@ class AddonsBusinessAddon implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('meta_data', $data ?? [], null);
         $this->setIfExists('business_ref', $data ?? [], null);
+        $this->setIfExists('meta_data', $data ?? [], null);
         $this->setIfExists('widgets', $data ?? [], null);
     }
 
@@ -304,33 +304,6 @@ class AddonsBusinessAddon implements ModelInterface, ArrayAccess, \JsonSerializa
 
 
     /**
-     * Gets meta_data
-     *
-     * @return \Divar\KenarApiClient\Model\AddonsAddonMetaData|null
-     */
-    public function getMetaData()
-    {
-        return $this->container['meta_data'];
-    }
-
-    /**
-     * Sets meta_data
-     *
-     * @param \Divar\KenarApiClient\Model\AddonsAddonMetaData|null $meta_data meta_data
-     *
-     * @return self
-     */
-    public function setMetaData($meta_data)
-    {
-        if (is_null($meta_data)) {
-            throw new \InvalidArgumentException('non-nullable meta_data cannot be null');
-        }
-        $this->container['meta_data'] = $meta_data;
-
-        return $this;
-    }
-
-    /**
      * Gets business_ref
      *
      * @return string|null
@@ -353,6 +326,33 @@ class AddonsBusinessAddon implements ModelInterface, ArrayAccess, \JsonSerializa
             throw new \InvalidArgumentException('non-nullable business_ref cannot be null');
         }
         $this->container['business_ref'] = $business_ref;
+
+        return $this;
+    }
+
+    /**
+     * Gets meta_data
+     *
+     * @return \Divar\KenarApiClient\Model\AddonsAddonMetaData|null
+     */
+    public function getMetaData()
+    {
+        return $this->container['meta_data'];
+    }
+
+    /**
+     * Sets meta_data
+     *
+     * @param \Divar\KenarApiClient\Model\AddonsAddonMetaData|null $meta_data meta_data
+     *
+     * @return self
+     */
+    public function setMetaData($meta_data)
+    {
+        if (is_null($meta_data)) {
+            throw new \InvalidArgumentException('non-nullable meta_data cannot be null');
+        }
+        $this->container['meta_data'] = $meta_data;
 
         return $this;
     }

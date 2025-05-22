@@ -57,8 +57,8 @@ class AddonsTitleRow implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'text' => 'string',
-        'has_divider' => 'bool'
+        'has_divider' => 'bool',
+        'text' => 'string'
     ];
 
     /**
@@ -69,8 +69,8 @@ class AddonsTitleRow implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'text' => null,
-        'has_divider' => null
+        'has_divider' => null,
+        'text' => null
     ];
 
     /**
@@ -79,8 +79,8 @@ class AddonsTitleRow implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'text' => false,
-        'has_divider' => false
+        'has_divider' => false,
+        'text' => false
     ];
 
     /**
@@ -169,8 +169,8 @@ class AddonsTitleRow implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'text' => 'text',
-        'has_divider' => 'has_divider'
+        'has_divider' => 'has_divider',
+        'text' => 'text'
     ];
 
     /**
@@ -179,8 +179,8 @@ class AddonsTitleRow implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'text' => 'setText',
-        'has_divider' => 'setHasDivider'
+        'has_divider' => 'setHasDivider',
+        'text' => 'setText'
     ];
 
     /**
@@ -189,8 +189,8 @@ class AddonsTitleRow implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'text' => 'getText',
-        'has_divider' => 'getHasDivider'
+        'has_divider' => 'getHasDivider',
+        'text' => 'getText'
     ];
 
     /**
@@ -250,8 +250,8 @@ class AddonsTitleRow implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('text', $data ?? [], null);
         $this->setIfExists('has_divider', $data ?? [], null);
+        $this->setIfExists('text', $data ?? [], null);
     }
 
     /**
@@ -297,33 +297,6 @@ class AddonsTitleRow implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets text
-     *
-     * @return string|null
-     */
-    public function getText()
-    {
-        return $this->container['text'];
-    }
-
-    /**
-     * Sets text
-     *
-     * @param string|null $text text
-     *
-     * @return self
-     */
-    public function setText($text)
-    {
-        if (is_null($text)) {
-            throw new \InvalidArgumentException('non-nullable text cannot be null');
-        }
-        $this->container['text'] = $text;
-
-        return $this;
-    }
-
-    /**
      * Gets has_divider
      *
      * @return bool|null
@@ -346,6 +319,33 @@ class AddonsTitleRow implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable has_divider cannot be null');
         }
         $this->container['has_divider'] = $has_divider;
+
+        return $this;
+    }
+
+    /**
+     * Gets text
+     *
+     * @return string|null
+     */
+    public function getText()
+    {
+        return $this->container['text'];
+    }
+
+    /**
+     * Sets text
+     *
+     * @param string|null $text text
+     *
+     * @return self
+     */
+    public function setText($text)
+    {
+        if (is_null($text)) {
+            throw new \InvalidArgumentException('non-nullable text cannot be null');
+        }
+        $this->container['text'] = $text;
 
         return $this;
     }

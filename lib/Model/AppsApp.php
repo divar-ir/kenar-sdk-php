@@ -57,13 +57,13 @@ class AppsApp implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'slug' => 'string',
-        'display' => 'string',
         'avatar' => 'string',
+        'display' => 'string',
         'divar_identification_key' => 'string',
-        'status' => '\Divar\KenarApiClient\Model\AppsAppStatus',
+        'service_tags' => '\Divar\KenarApiClient\Model\AppsServiceTag[]',
         'service_type' => '\Divar\KenarApiClient\Model\AppsServiceType',
-        'service_tags' => '\Divar\KenarApiClient\Model\AppsServiceTag[]'
+        'slug' => 'string',
+        'status' => '\Divar\KenarApiClient\Model\AppsAppStatus'
     ];
 
     /**
@@ -74,13 +74,13 @@ class AppsApp implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'slug' => null,
-        'display' => null,
         'avatar' => null,
+        'display' => null,
         'divar_identification_key' => null,
-        'status' => null,
+        'service_tags' => null,
         'service_type' => null,
-        'service_tags' => null
+        'slug' => null,
+        'status' => null
     ];
 
     /**
@@ -89,13 +89,13 @@ class AppsApp implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'slug' => false,
-        'display' => false,
         'avatar' => false,
+        'display' => false,
         'divar_identification_key' => false,
-        'status' => false,
+        'service_tags' => false,
         'service_type' => false,
-        'service_tags' => false
+        'slug' => false,
+        'status' => false
     ];
 
     /**
@@ -184,13 +184,13 @@ class AppsApp implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'slug' => 'slug',
-        'display' => 'display',
         'avatar' => 'avatar',
+        'display' => 'display',
         'divar_identification_key' => 'divar_identification_key',
-        'status' => 'status',
+        'service_tags' => 'service_tags',
         'service_type' => 'service_type',
-        'service_tags' => 'service_tags'
+        'slug' => 'slug',
+        'status' => 'status'
     ];
 
     /**
@@ -199,13 +199,13 @@ class AppsApp implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'slug' => 'setSlug',
-        'display' => 'setDisplay',
         'avatar' => 'setAvatar',
+        'display' => 'setDisplay',
         'divar_identification_key' => 'setDivarIdentificationKey',
-        'status' => 'setStatus',
+        'service_tags' => 'setServiceTags',
         'service_type' => 'setServiceType',
-        'service_tags' => 'setServiceTags'
+        'slug' => 'setSlug',
+        'status' => 'setStatus'
     ];
 
     /**
@@ -214,13 +214,13 @@ class AppsApp implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'slug' => 'getSlug',
-        'display' => 'getDisplay',
         'avatar' => 'getAvatar',
+        'display' => 'getDisplay',
         'divar_identification_key' => 'getDivarIdentificationKey',
-        'status' => 'getStatus',
+        'service_tags' => 'getServiceTags',
         'service_type' => 'getServiceType',
-        'service_tags' => 'getServiceTags'
+        'slug' => 'getSlug',
+        'status' => 'getStatus'
     ];
 
     /**
@@ -280,13 +280,13 @@ class AppsApp implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('slug', $data ?? [], null);
-        $this->setIfExists('display', $data ?? [], null);
         $this->setIfExists('avatar', $data ?? [], null);
+        $this->setIfExists('display', $data ?? [], null);
         $this->setIfExists('divar_identification_key', $data ?? [], null);
-        $this->setIfExists('status', $data ?? [], null);
-        $this->setIfExists('service_type', $data ?? [], null);
         $this->setIfExists('service_tags', $data ?? [], null);
+        $this->setIfExists('service_type', $data ?? [], null);
+        $this->setIfExists('slug', $data ?? [], null);
+        $this->setIfExists('status', $data ?? [], null);
     }
 
     /**
@@ -332,28 +332,28 @@ class AppsApp implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets slug
+     * Gets avatar
      *
      * @return string|null
      */
-    public function getSlug()
+    public function getAvatar()
     {
-        return $this->container['slug'];
+        return $this->container['avatar'];
     }
 
     /**
-     * Sets slug
+     * Sets avatar
      *
-     * @param string|null $slug slug
+     * @param string|null $avatar avatar
      *
      * @return self
      */
-    public function setSlug($slug)
+    public function setAvatar($avatar)
     {
-        if (is_null($slug)) {
-            throw new \InvalidArgumentException('non-nullable slug cannot be null');
+        if (is_null($avatar)) {
+            throw new \InvalidArgumentException('non-nullable avatar cannot be null');
         }
-        $this->container['slug'] = $slug;
+        $this->container['avatar'] = $avatar;
 
         return $this;
     }
@@ -386,33 +386,6 @@ class AppsApp implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets avatar
-     *
-     * @return string|null
-     */
-    public function getAvatar()
-    {
-        return $this->container['avatar'];
-    }
-
-    /**
-     * Sets avatar
-     *
-     * @param string|null $avatar avatar
-     *
-     * @return self
-     */
-    public function setAvatar($avatar)
-    {
-        if (is_null($avatar)) {
-            throw new \InvalidArgumentException('non-nullable avatar cannot be null');
-        }
-        $this->container['avatar'] = $avatar;
-
-        return $this;
-    }
-
-    /**
      * Gets divar_identification_key
      *
      * @return string|null
@@ -440,28 +413,28 @@ class AppsApp implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets status
+     * Gets service_tags
      *
-     * @return \Divar\KenarApiClient\Model\AppsAppStatus|null
+     * @return \Divar\KenarApiClient\Model\AppsServiceTag[]|null
      */
-    public function getStatus()
+    public function getServiceTags()
     {
-        return $this->container['status'];
+        return $this->container['service_tags'];
     }
 
     /**
-     * Sets status
+     * Sets service_tags
      *
-     * @param \Divar\KenarApiClient\Model\AppsAppStatus|null $status status
+     * @param \Divar\KenarApiClient\Model\AppsServiceTag[]|null $service_tags service_tags
      *
      * @return self
      */
-    public function setStatus($status)
+    public function setServiceTags($service_tags)
     {
-        if (is_null($status)) {
-            throw new \InvalidArgumentException('non-nullable status cannot be null');
+        if (is_null($service_tags)) {
+            throw new \InvalidArgumentException('non-nullable service_tags cannot be null');
         }
-        $this->container['status'] = $status;
+        $this->container['service_tags'] = $service_tags;
 
         return $this;
     }
@@ -494,28 +467,55 @@ class AppsApp implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets service_tags
+     * Gets slug
      *
-     * @return \Divar\KenarApiClient\Model\AppsServiceTag[]|null
+     * @return string|null
      */
-    public function getServiceTags()
+    public function getSlug()
     {
-        return $this->container['service_tags'];
+        return $this->container['slug'];
     }
 
     /**
-     * Sets service_tags
+     * Sets slug
      *
-     * @param \Divar\KenarApiClient\Model\AppsServiceTag[]|null $service_tags service_tags
+     * @param string|null $slug slug
      *
      * @return self
      */
-    public function setServiceTags($service_tags)
+    public function setSlug($slug)
     {
-        if (is_null($service_tags)) {
-            throw new \InvalidArgumentException('non-nullable service_tags cannot be null');
+        if (is_null($slug)) {
+            throw new \InvalidArgumentException('non-nullable slug cannot be null');
         }
-        $this->container['service_tags'] = $service_tags;
+        $this->container['slug'] = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Gets status
+     *
+     * @return \Divar\KenarApiClient\Model\AppsAppStatus|null
+     */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+     * Sets status
+     *
+     * @param \Divar\KenarApiClient\Model\AppsAppStatus|null $status status
+     *
+     * @return self
+     */
+    public function setStatus($status)
+    {
+        if (is_null($status)) {
+            throw new \InvalidArgumentException('non-nullable status cannot be null');
+        }
+        $this->container['status'] = $status;
 
         return $this;
     }

@@ -80,9 +80,9 @@ class AddonsEvaluationRowTest extends TestCase
     }
 
     /**
-     * Test attribute "indicator_text"
+     * Test attribute "icon_name"
      */
-    public function testPropertyIndicatorText()
+    public function testPropertyIconName()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -98,9 +98,9 @@ class AddonsEvaluationRowTest extends TestCase
     }
 
     /**
-     * Test attribute "icon_name"
+     * Test attribute "indicator_text"
      */
-    public function testPropertyIconName()
+    public function testPropertyIndicatorText()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

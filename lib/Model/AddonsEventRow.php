@@ -57,12 +57,12 @@ class AddonsEventRow implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'title' => 'string',
-        'subtitle' => 'string',
-        'label' => 'string',
-        'image_id' => 'string',
         'has_divider' => 'bool',
-        'icon_name' => '\Divar\KenarApiClient\Model\DivarIconsIconName'
+        'icon_name' => '\Divar\KenarApiClient\Model\DivarIconsIconName',
+        'image_id' => 'string',
+        'label' => 'string',
+        'subtitle' => 'string',
+        'title' => 'string'
     ];
 
     /**
@@ -73,12 +73,12 @@ class AddonsEventRow implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'title' => null,
-        'subtitle' => null,
-        'label' => null,
-        'image_id' => null,
         'has_divider' => null,
-        'icon_name' => null
+        'icon_name' => null,
+        'image_id' => null,
+        'label' => null,
+        'subtitle' => null,
+        'title' => null
     ];
 
     /**
@@ -87,12 +87,12 @@ class AddonsEventRow implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'title' => false,
-        'subtitle' => false,
-        'label' => false,
-        'image_id' => false,
         'has_divider' => false,
-        'icon_name' => false
+        'icon_name' => false,
+        'image_id' => false,
+        'label' => false,
+        'subtitle' => false,
+        'title' => false
     ];
 
     /**
@@ -181,12 +181,12 @@ class AddonsEventRow implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'title' => 'title',
-        'subtitle' => 'subtitle',
-        'label' => 'label',
-        'image_id' => 'image_id',
         'has_divider' => 'has_divider',
-        'icon_name' => 'icon_name'
+        'icon_name' => 'icon_name',
+        'image_id' => 'image_id',
+        'label' => 'label',
+        'subtitle' => 'subtitle',
+        'title' => 'title'
     ];
 
     /**
@@ -195,12 +195,12 @@ class AddonsEventRow implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'title' => 'setTitle',
-        'subtitle' => 'setSubtitle',
-        'label' => 'setLabel',
-        'image_id' => 'setImageId',
         'has_divider' => 'setHasDivider',
-        'icon_name' => 'setIconName'
+        'icon_name' => 'setIconName',
+        'image_id' => 'setImageId',
+        'label' => 'setLabel',
+        'subtitle' => 'setSubtitle',
+        'title' => 'setTitle'
     ];
 
     /**
@@ -209,12 +209,12 @@ class AddonsEventRow implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'title' => 'getTitle',
-        'subtitle' => 'getSubtitle',
-        'label' => 'getLabel',
-        'image_id' => 'getImageId',
         'has_divider' => 'getHasDivider',
-        'icon_name' => 'getIconName'
+        'icon_name' => 'getIconName',
+        'image_id' => 'getImageId',
+        'label' => 'getLabel',
+        'subtitle' => 'getSubtitle',
+        'title' => 'getTitle'
     ];
 
     /**
@@ -274,12 +274,12 @@ class AddonsEventRow implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('title', $data ?? [], null);
-        $this->setIfExists('subtitle', $data ?? [], null);
-        $this->setIfExists('label', $data ?? [], null);
-        $this->setIfExists('image_id', $data ?? [], null);
         $this->setIfExists('has_divider', $data ?? [], null);
         $this->setIfExists('icon_name', $data ?? [], null);
+        $this->setIfExists('image_id', $data ?? [], null);
+        $this->setIfExists('label', $data ?? [], null);
+        $this->setIfExists('subtitle', $data ?? [], null);
+        $this->setIfExists('title', $data ?? [], null);
     }
 
     /**
@@ -323,114 +323,6 @@ class AddonsEventRow implements ModelInterface, ArrayAccess, \JsonSerializable
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets title
-     *
-     * @return string|null
-     */
-    public function getTitle()
-    {
-        return $this->container['title'];
-    }
-
-    /**
-     * Sets title
-     *
-     * @param string|null $title title
-     *
-     * @return self
-     */
-    public function setTitle($title)
-    {
-        if (is_null($title)) {
-            throw new \InvalidArgumentException('non-nullable title cannot be null');
-        }
-        $this->container['title'] = $title;
-
-        return $this;
-    }
-
-    /**
-     * Gets subtitle
-     *
-     * @return string|null
-     */
-    public function getSubtitle()
-    {
-        return $this->container['subtitle'];
-    }
-
-    /**
-     * Sets subtitle
-     *
-     * @param string|null $subtitle subtitle
-     *
-     * @return self
-     */
-    public function setSubtitle($subtitle)
-    {
-        if (is_null($subtitle)) {
-            throw new \InvalidArgumentException('non-nullable subtitle cannot be null');
-        }
-        $this->container['subtitle'] = $subtitle;
-
-        return $this;
-    }
-
-    /**
-     * Gets label
-     *
-     * @return string|null
-     */
-    public function getLabel()
-    {
-        return $this->container['label'];
-    }
-
-    /**
-     * Sets label
-     *
-     * @param string|null $label label
-     *
-     * @return self
-     */
-    public function setLabel($label)
-    {
-        if (is_null($label)) {
-            throw new \InvalidArgumentException('non-nullable label cannot be null');
-        }
-        $this->container['label'] = $label;
-
-        return $this;
-    }
-
-    /**
-     * Gets image_id
-     *
-     * @return string|null
-     */
-    public function getImageId()
-    {
-        return $this->container['image_id'];
-    }
-
-    /**
-     * Sets image_id
-     *
-     * @param string|null $image_id image_id
-     *
-     * @return self
-     */
-    public function setImageId($image_id)
-    {
-        if (is_null($image_id)) {
-            throw new \InvalidArgumentException('non-nullable image_id cannot be null');
-        }
-        $this->container['image_id'] = $image_id;
-
-        return $this;
-    }
 
     /**
      * Gets has_divider
@@ -482,6 +374,114 @@ class AddonsEventRow implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable icon_name cannot be null');
         }
         $this->container['icon_name'] = $icon_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets image_id
+     *
+     * @return string|null
+     */
+    public function getImageId()
+    {
+        return $this->container['image_id'];
+    }
+
+    /**
+     * Sets image_id
+     *
+     * @param string|null $image_id image_id
+     *
+     * @return self
+     */
+    public function setImageId($image_id)
+    {
+        if (is_null($image_id)) {
+            throw new \InvalidArgumentException('non-nullable image_id cannot be null');
+        }
+        $this->container['image_id'] = $image_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets label
+     *
+     * @return string|null
+     */
+    public function getLabel()
+    {
+        return $this->container['label'];
+    }
+
+    /**
+     * Sets label
+     *
+     * @param string|null $label label
+     *
+     * @return self
+     */
+    public function setLabel($label)
+    {
+        if (is_null($label)) {
+            throw new \InvalidArgumentException('non-nullable label cannot be null');
+        }
+        $this->container['label'] = $label;
+
+        return $this;
+    }
+
+    /**
+     * Gets subtitle
+     *
+     * @return string|null
+     */
+    public function getSubtitle()
+    {
+        return $this->container['subtitle'];
+    }
+
+    /**
+     * Sets subtitle
+     *
+     * @param string|null $subtitle subtitle
+     *
+     * @return self
+     */
+    public function setSubtitle($subtitle)
+    {
+        if (is_null($subtitle)) {
+            throw new \InvalidArgumentException('non-nullable subtitle cannot be null');
+        }
+        $this->container['subtitle'] = $subtitle;
+
+        return $this;
+    }
+
+    /**
+     * Gets title
+     *
+     * @return string|null
+     */
+    public function getTitle()
+    {
+        return $this->container['title'];
+    }
+
+    /**
+     * Sets title
+     *
+     * @param string|null $title title
+     *
+     * @return self
+     */
+    public function setTitle($title)
+    {
+        if (is_null($title)) {
+            throw new \InvalidArgumentException('non-nullable title cannot be null');
+        }
+        $this->container['title'] = $title;
 
         return $this;
     }

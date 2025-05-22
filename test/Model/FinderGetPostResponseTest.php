@@ -80,27 +80,9 @@ class FinderGetPostResponseTest extends TestCase
     }
 
     /**
-     * Test attribute "state"
+     * Test attribute "business_data"
      */
-    public function testPropertyState()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "first_published_at"
-     */
-    public function testPropertyFirstPublishedAt()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "token"
-     */
-    public function testPropertyToken()
+    public function testPropertyBusinessData()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -116,18 +98,18 @@ class FinderGetPostResponseTest extends TestCase
     }
 
     /**
-     * Test attribute "city"
+     * Test attribute "chat_enabled"
      */
-    public function testPropertyCity()
+    public function testPropertyChatEnabled()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "district"
+     * Test attribute "city"
      */
-    public function testPropertyDistrict()
+    public function testPropertyCity()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -143,18 +125,36 @@ class FinderGetPostResponseTest extends TestCase
     }
 
     /**
-     * Test attribute "chat_enabled"
+     * Test attribute "district"
      */
-    public function testPropertyChatEnabled()
+    public function testPropertyDistrict()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "business_data"
+     * Test attribute "first_published_at"
      */
-    public function testPropertyBusinessData()
+    public function testPropertyFirstPublishedAt()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "state"
+     */
+    public function testPropertyState()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "token"
+     */
+    public function testPropertyToken()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

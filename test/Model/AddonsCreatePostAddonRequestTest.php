@@ -80,33 +80,6 @@ class AddonsCreatePostAddonRequestTest extends TestCase
     }
 
     /**
-     * Test attribute "token"
-     */
-    public function testPropertyToken()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "widgets"
-     */
-    public function testPropertyWidgets()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "selector"
-     */
-    public function testPropertySelector()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "link_in_spec"
      */
     public function testPropertyLinkInSpec()
@@ -125,6 +98,15 @@ class AddonsCreatePostAddonRequestTest extends TestCase
     }
 
     /**
+     * Test attribute "selector"
+     */
+    public function testPropertySelector()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "semantic"
      */
     public function testPropertySemantic()
@@ -137,6 +119,24 @@ class AddonsCreatePostAddonRequestTest extends TestCase
      * Test attribute "semantic_sensitives"
      */
     public function testPropertySemanticSensitives()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "token"
+     */
+    public function testPropertyToken()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "widgets"
+     */
+    public function testPropertyWidgets()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

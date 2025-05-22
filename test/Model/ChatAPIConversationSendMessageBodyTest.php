@@ -80,15 +80,6 @@ class ChatAPIConversationSendMessageBodyTest extends TestCase
     }
 
     /**
-     * Test attribute "message"
-     */
-    public function testPropertyMessage()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "media_token"
      */
     public function testPropertyMediaToken()
@@ -98,9 +89,9 @@ class ChatAPIConversationSendMessageBodyTest extends TestCase
     }
 
     /**
-     * Test attribute "sender_buttons"
+     * Test attribute "message"
      */
-    public function testPropertySenderButtons()
+    public function testPropertyMessage()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -110,6 +101,15 @@ class ChatAPIConversationSendMessageBodyTest extends TestCase
      * Test attribute "receiver_buttons"
      */
     public function testPropertyReceiverButtons()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "sender_buttons"
+     */
+    public function testPropertySenderButtons()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

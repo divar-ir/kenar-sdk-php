@@ -57,8 +57,8 @@ class GetServiceTypesResponseServiceTypeData implements ModelInterface, ArrayAcc
       * @var string[]
       */
     protected static $openAPITypes = [
-        'slug' => '\Divar\KenarApiClient\Model\AppsServiceType',
-        'display' => 'string'
+        'display' => 'string',
+        'slug' => '\Divar\KenarApiClient\Model\AppsServiceType'
     ];
 
     /**
@@ -69,8 +69,8 @@ class GetServiceTypesResponseServiceTypeData implements ModelInterface, ArrayAcc
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'slug' => null,
-        'display' => null
+        'display' => null,
+        'slug' => null
     ];
 
     /**
@@ -79,8 +79,8 @@ class GetServiceTypesResponseServiceTypeData implements ModelInterface, ArrayAcc
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'slug' => false,
-        'display' => false
+        'display' => false,
+        'slug' => false
     ];
 
     /**
@@ -169,8 +169,8 @@ class GetServiceTypesResponseServiceTypeData implements ModelInterface, ArrayAcc
      * @var string[]
      */
     protected static $attributeMap = [
-        'slug' => 'slug',
-        'display' => 'display'
+        'display' => 'display',
+        'slug' => 'slug'
     ];
 
     /**
@@ -179,8 +179,8 @@ class GetServiceTypesResponseServiceTypeData implements ModelInterface, ArrayAcc
      * @var string[]
      */
     protected static $setters = [
-        'slug' => 'setSlug',
-        'display' => 'setDisplay'
+        'display' => 'setDisplay',
+        'slug' => 'setSlug'
     ];
 
     /**
@@ -189,8 +189,8 @@ class GetServiceTypesResponseServiceTypeData implements ModelInterface, ArrayAcc
      * @var string[]
      */
     protected static $getters = [
-        'slug' => 'getSlug',
-        'display' => 'getDisplay'
+        'display' => 'getDisplay',
+        'slug' => 'getSlug'
     ];
 
     /**
@@ -250,8 +250,8 @@ class GetServiceTypesResponseServiceTypeData implements ModelInterface, ArrayAcc
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('slug', $data ?? [], null);
         $this->setIfExists('display', $data ?? [], null);
+        $this->setIfExists('slug', $data ?? [], null);
     }
 
     /**
@@ -297,33 +297,6 @@ class GetServiceTypesResponseServiceTypeData implements ModelInterface, ArrayAcc
 
 
     /**
-     * Gets slug
-     *
-     * @return \Divar\KenarApiClient\Model\AppsServiceType|null
-     */
-    public function getSlug()
-    {
-        return $this->container['slug'];
-    }
-
-    /**
-     * Sets slug
-     *
-     * @param \Divar\KenarApiClient\Model\AppsServiceType|null $slug slug
-     *
-     * @return self
-     */
-    public function setSlug($slug)
-    {
-        if (is_null($slug)) {
-            throw new \InvalidArgumentException('non-nullable slug cannot be null');
-        }
-        $this->container['slug'] = $slug;
-
-        return $this;
-    }
-
-    /**
      * Gets display
      *
      * @return string|null
@@ -346,6 +319,33 @@ class GetServiceTypesResponseServiceTypeData implements ModelInterface, ArrayAcc
             throw new \InvalidArgumentException('non-nullable display cannot be null');
         }
         $this->container['display'] = $display;
+
+        return $this;
+    }
+
+    /**
+     * Gets slug
+     *
+     * @return \Divar\KenarApiClient\Model\AppsServiceType|null
+     */
+    public function getSlug()
+    {
+        return $this->container['slug'];
+    }
+
+    /**
+     * Sets slug
+     *
+     * @param \Divar\KenarApiClient\Model\AppsServiceType|null $slug slug
+     *
+     * @return self
+     */
+    public function setSlug($slug)
+    {
+        if (is_null($slug)) {
+            throw new \InvalidArgumentException('non-nullable slug cannot be null');
+        }
+        $this->container['slug'] = $slug;
 
         return $this;
     }

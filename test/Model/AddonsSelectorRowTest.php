@@ -80,18 +80,9 @@ class AddonsSelectorRowTest extends TestCase
     }
 
     /**
-     * Test attribute "title"
+     * Test attribute "action"
      */
-    public function testPropertyTitle()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "image_id"
-     */
-    public function testPropertyImageId()
+    public function testPropertyAction()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -116,9 +107,18 @@ class AddonsSelectorRowTest extends TestCase
     }
 
     /**
-     * Test attribute "action"
+     * Test attribute "image_id"
      */
-    public function testPropertyAction()
+    public function testPropertyImageId()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "title"
+     */
+    public function testPropertyTitle()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

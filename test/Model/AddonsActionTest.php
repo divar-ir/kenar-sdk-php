@@ -80,6 +80,15 @@ class AddonsActionTest extends TestCase
     }
 
     /**
+     * Test attribute "get_dynamic_action"
+     */
+    public function testPropertyGetDynamicAction()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "open_direct_link"
      */
     public function testPropertyOpenDirectLink()
@@ -92,15 +101,6 @@ class AddonsActionTest extends TestCase
      * Test attribute "open_server_link"
      */
     public function testPropertyOpenServerLink()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "get_dynamic_action"
-     */
-    public function testPropertyGetDynamicAction()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

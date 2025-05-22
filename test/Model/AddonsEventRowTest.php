@@ -80,27 +80,18 @@ class AddonsEventRowTest extends TestCase
     }
 
     /**
-     * Test attribute "title"
+     * Test attribute "has_divider"
      */
-    public function testPropertyTitle()
+    public function testPropertyHasDivider()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "subtitle"
+     * Test attribute "icon_name"
      */
-    public function testPropertySubtitle()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "label"
-     */
-    public function testPropertyLabel()
+    public function testPropertyIconName()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -116,18 +107,27 @@ class AddonsEventRowTest extends TestCase
     }
 
     /**
-     * Test attribute "has_divider"
+     * Test attribute "label"
      */
-    public function testPropertyHasDivider()
+    public function testPropertyLabel()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "icon_name"
+     * Test attribute "subtitle"
      */
-    public function testPropertyIconName()
+    public function testPropertySubtitle()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "title"
+     */
+    public function testPropertyTitle()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

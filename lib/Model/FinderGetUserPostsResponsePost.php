@@ -57,10 +57,10 @@ class FinderGetUserPostsResponsePost implements ModelInterface, ArrayAccess, \Js
       * @var string[]
       */
     protected static $openAPITypes = [
-        'token' => 'string',
-        'title' => 'string',
+        'category' => 'string',
         'images' => 'string[]',
-        'category' => 'string'
+        'title' => 'string',
+        'token' => 'string'
     ];
 
     /**
@@ -71,10 +71,10 @@ class FinderGetUserPostsResponsePost implements ModelInterface, ArrayAccess, \Js
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'token' => null,
-        'title' => null,
+        'category' => null,
         'images' => null,
-        'category' => null
+        'title' => null,
+        'token' => null
     ];
 
     /**
@@ -83,10 +83,10 @@ class FinderGetUserPostsResponsePost implements ModelInterface, ArrayAccess, \Js
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'token' => false,
-        'title' => false,
+        'category' => false,
         'images' => false,
-        'category' => false
+        'title' => false,
+        'token' => false
     ];
 
     /**
@@ -175,10 +175,10 @@ class FinderGetUserPostsResponsePost implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $attributeMap = [
-        'token' => 'token',
-        'title' => 'title',
+        'category' => 'category',
         'images' => 'images',
-        'category' => 'category'
+        'title' => 'title',
+        'token' => 'token'
     ];
 
     /**
@@ -187,10 +187,10 @@ class FinderGetUserPostsResponsePost implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $setters = [
-        'token' => 'setToken',
-        'title' => 'setTitle',
+        'category' => 'setCategory',
         'images' => 'setImages',
-        'category' => 'setCategory'
+        'title' => 'setTitle',
+        'token' => 'setToken'
     ];
 
     /**
@@ -199,10 +199,10 @@ class FinderGetUserPostsResponsePost implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $getters = [
-        'token' => 'getToken',
-        'title' => 'getTitle',
+        'category' => 'getCategory',
         'images' => 'getImages',
-        'category' => 'getCategory'
+        'title' => 'getTitle',
+        'token' => 'getToken'
     ];
 
     /**
@@ -262,10 +262,10 @@ class FinderGetUserPostsResponsePost implements ModelInterface, ArrayAccess, \Js
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('token', $data ?? [], null);
-        $this->setIfExists('title', $data ?? [], null);
-        $this->setIfExists('images', $data ?? [], null);
         $this->setIfExists('category', $data ?? [], null);
+        $this->setIfExists('images', $data ?? [], null);
+        $this->setIfExists('title', $data ?? [], null);
+        $this->setIfExists('token', $data ?? [], null);
     }
 
     /**
@@ -311,55 +311,28 @@ class FinderGetUserPostsResponsePost implements ModelInterface, ArrayAccess, \Js
 
 
     /**
-     * Gets token
+     * Gets category
      *
      * @return string|null
      */
-    public function getToken()
+    public function getCategory()
     {
-        return $this->container['token'];
+        return $this->container['category'];
     }
 
     /**
-     * Sets token
+     * Sets category
      *
-     * @param string|null $token token
+     * @param string|null $category category
      *
      * @return self
      */
-    public function setToken($token)
+    public function setCategory($category)
     {
-        if (is_null($token)) {
-            throw new \InvalidArgumentException('non-nullable token cannot be null');
+        if (is_null($category)) {
+            throw new \InvalidArgumentException('non-nullable category cannot be null');
         }
-        $this->container['token'] = $token;
-
-        return $this;
-    }
-
-    /**
-     * Gets title
-     *
-     * @return string|null
-     */
-    public function getTitle()
-    {
-        return $this->container['title'];
-    }
-
-    /**
-     * Sets title
-     *
-     * @param string|null $title title
-     *
-     * @return self
-     */
-    public function setTitle($title)
-    {
-        if (is_null($title)) {
-            throw new \InvalidArgumentException('non-nullable title cannot be null');
-        }
-        $this->container['title'] = $title;
+        $this->container['category'] = $category;
 
         return $this;
     }
@@ -392,28 +365,55 @@ class FinderGetUserPostsResponsePost implements ModelInterface, ArrayAccess, \Js
     }
 
     /**
-     * Gets category
+     * Gets title
      *
      * @return string|null
      */
-    public function getCategory()
+    public function getTitle()
     {
-        return $this->container['category'];
+        return $this->container['title'];
     }
 
     /**
-     * Sets category
+     * Sets title
      *
-     * @param string|null $category category
+     * @param string|null $title title
      *
      * @return self
      */
-    public function setCategory($category)
+    public function setTitle($title)
     {
-        if (is_null($category)) {
-            throw new \InvalidArgumentException('non-nullable category cannot be null');
+        if (is_null($title)) {
+            throw new \InvalidArgumentException('non-nullable title cannot be null');
         }
-        $this->container['category'] = $category;
+        $this->container['title'] = $title;
+
+        return $this;
+    }
+
+    /**
+     * Gets token
+     *
+     * @return string|null
+     */
+    public function getToken()
+    {
+        return $this->container['token'];
+    }
+
+    /**
+     * Sets token
+     *
+     * @param string|null $token token
+     *
+     * @return self
+     */
+    public function setToken($token)
+    {
+        if (is_null($token)) {
+            throw new \InvalidArgumentException('non-nullable token cannot be null');
+        }
+        $this->container['token'] = $token;
 
         return $this;
     }

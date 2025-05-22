@@ -80,27 +80,9 @@ class FinderSearchPostItemTest extends TestCase
     }
 
     /**
-     * Test attribute "token"
-     */
-    public function testPropertyToken()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "category"
      */
     public function testPropertyCategory()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "last_modified_at"
-     */
-    public function testPropertyLastModifiedAt()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -116,36 +98,9 @@ class FinderSearchPostItemTest extends TestCase
     }
 
     /**
-     * Test attribute "title"
+     * Test attribute "community_fields"
      */
-    public function testPropertyTitle()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "price"
-     */
-    public function testPropertyPrice()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "real_estate_fields"
-     */
-    public function testPropertyRealEstateFields()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "vehicles_fields"
-     */
-    public function testPropertyVehiclesFields()
+    public function testPropertyCommunityFields()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -170,18 +125,18 @@ class FinderSearchPostItemTest extends TestCase
     }
 
     /**
-     * Test attribute "services_fields"
+     * Test attribute "jobs_fields"
      */
-    public function testPropertyServicesFields()
+    public function testPropertyJobsFields()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "personal_goods_fields"
+     * Test attribute "last_modified_at"
      */
-    public function testPropertyPersonalGoodsFields()
+    public function testPropertyLastModifiedAt()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -197,9 +152,54 @@ class FinderSearchPostItemTest extends TestCase
     }
 
     /**
-     * Test attribute "community_fields"
+     * Test attribute "personal_goods_fields"
      */
-    public function testPropertyCommunityFields()
+    public function testPropertyPersonalGoodsFields()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "price"
+     */
+    public function testPropertyPrice()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "real_estate_fields"
+     */
+    public function testPropertyRealEstateFields()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "services_fields"
+     */
+    public function testPropertyServicesFields()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "title"
+     */
+    public function testPropertyTitle()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "token"
+     */
+    public function testPropertyToken()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -215,9 +215,9 @@ class FinderSearchPostItemTest extends TestCase
     }
 
     /**
-     * Test attribute "jobs_fields"
+     * Test attribute "vehicles_fields"
      */
-    public function testPropertyJobsFields()
+    public function testPropertyVehiclesFields()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

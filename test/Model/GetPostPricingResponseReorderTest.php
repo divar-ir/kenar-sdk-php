@@ -80,18 +80,18 @@ class GetPostPricingResponseReorderTest extends TestCase
     }
 
     /**
-     * Test attribute "cost_rials"
+     * Test attribute "available"
      */
-    public function testPropertyCostRials()
+    public function testPropertyAvailable()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "available"
+     * Test attribute "cost_rials"
      */
-    public function testPropertyAvailable()
+    public function testPropertyCostRials()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

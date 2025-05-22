@@ -57,10 +57,10 @@ class ChatAPIConversationSendMessageBody implements ModelInterface, ArrayAccess,
       * @var string[]
       */
     protected static $openAPITypes = [
-        'message' => 'string',
         'media_token' => 'string',
-        'sender_buttons' => '\Divar\KenarApiClient\Model\ChatapiChatButtonGrid',
-        'receiver_buttons' => '\Divar\KenarApiClient\Model\ChatapiChatButtonGrid'
+        'message' => 'string',
+        'receiver_buttons' => '\Divar\KenarApiClient\Model\ChatapiChatButtonGrid',
+        'sender_buttons' => '\Divar\KenarApiClient\Model\ChatapiChatButtonGrid'
     ];
 
     /**
@@ -71,10 +71,10 @@ class ChatAPIConversationSendMessageBody implements ModelInterface, ArrayAccess,
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'message' => null,
         'media_token' => null,
-        'sender_buttons' => null,
-        'receiver_buttons' => null
+        'message' => null,
+        'receiver_buttons' => null,
+        'sender_buttons' => null
     ];
 
     /**
@@ -83,10 +83,10 @@ class ChatAPIConversationSendMessageBody implements ModelInterface, ArrayAccess,
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'message' => false,
         'media_token' => false,
-        'sender_buttons' => false,
-        'receiver_buttons' => false
+        'message' => false,
+        'receiver_buttons' => false,
+        'sender_buttons' => false
     ];
 
     /**
@@ -175,10 +175,10 @@ class ChatAPIConversationSendMessageBody implements ModelInterface, ArrayAccess,
      * @var string[]
      */
     protected static $attributeMap = [
-        'message' => 'message',
         'media_token' => 'media_token',
-        'sender_buttons' => 'sender_buttons',
-        'receiver_buttons' => 'receiver_buttons'
+        'message' => 'message',
+        'receiver_buttons' => 'receiver_buttons',
+        'sender_buttons' => 'sender_buttons'
     ];
 
     /**
@@ -187,10 +187,10 @@ class ChatAPIConversationSendMessageBody implements ModelInterface, ArrayAccess,
      * @var string[]
      */
     protected static $setters = [
-        'message' => 'setMessage',
         'media_token' => 'setMediaToken',
-        'sender_buttons' => 'setSenderButtons',
-        'receiver_buttons' => 'setReceiverButtons'
+        'message' => 'setMessage',
+        'receiver_buttons' => 'setReceiverButtons',
+        'sender_buttons' => 'setSenderButtons'
     ];
 
     /**
@@ -199,10 +199,10 @@ class ChatAPIConversationSendMessageBody implements ModelInterface, ArrayAccess,
      * @var string[]
      */
     protected static $getters = [
-        'message' => 'getMessage',
         'media_token' => 'getMediaToken',
-        'sender_buttons' => 'getSenderButtons',
-        'receiver_buttons' => 'getReceiverButtons'
+        'message' => 'getMessage',
+        'receiver_buttons' => 'getReceiverButtons',
+        'sender_buttons' => 'getSenderButtons'
     ];
 
     /**
@@ -262,10 +262,10 @@ class ChatAPIConversationSendMessageBody implements ModelInterface, ArrayAccess,
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('message', $data ?? [], null);
         $this->setIfExists('media_token', $data ?? [], null);
-        $this->setIfExists('sender_buttons', $data ?? [], null);
+        $this->setIfExists('message', $data ?? [], null);
         $this->setIfExists('receiver_buttons', $data ?? [], null);
+        $this->setIfExists('sender_buttons', $data ?? [], null);
     }
 
     /**
@@ -314,33 +314,6 @@ class ChatAPIConversationSendMessageBody implements ModelInterface, ArrayAccess,
 
 
     /**
-     * Gets message
-     *
-     * @return string
-     */
-    public function getMessage()
-    {
-        return $this->container['message'];
-    }
-
-    /**
-     * Sets message
-     *
-     * @param string $message Text message content to be sent
-     *
-     * @return self
-     */
-    public function setMessage($message)
-    {
-        if (is_null($message)) {
-            throw new \InvalidArgumentException('non-nullable message cannot be null');
-        }
-        $this->container['message'] = $message;
-
-        return $this;
-    }
-
-    /**
      * Gets media_token
      *
      * @return string|null
@@ -368,28 +341,28 @@ class ChatAPIConversationSendMessageBody implements ModelInterface, ArrayAccess,
     }
 
     /**
-     * Gets sender_buttons
+     * Gets message
      *
-     * @return \Divar\KenarApiClient\Model\ChatapiChatButtonGrid|null
+     * @return string
      */
-    public function getSenderButtons()
+    public function getMessage()
     {
-        return $this->container['sender_buttons'];
+        return $this->container['message'];
     }
 
     /**
-     * Sets sender_buttons
+     * Sets message
      *
-     * @param \Divar\KenarApiClient\Model\ChatapiChatButtonGrid|null $sender_buttons sender_buttons
+     * @param string $message Text message content to be sent
      *
      * @return self
      */
-    public function setSenderButtons($sender_buttons)
+    public function setMessage($message)
     {
-        if (is_null($sender_buttons)) {
-            throw new \InvalidArgumentException('non-nullable sender_buttons cannot be null');
+        if (is_null($message)) {
+            throw new \InvalidArgumentException('non-nullable message cannot be null');
         }
-        $this->container['sender_buttons'] = $sender_buttons;
+        $this->container['message'] = $message;
 
         return $this;
     }
@@ -417,6 +390,33 @@ class ChatAPIConversationSendMessageBody implements ModelInterface, ArrayAccess,
             throw new \InvalidArgumentException('non-nullable receiver_buttons cannot be null');
         }
         $this->container['receiver_buttons'] = $receiver_buttons;
+
+        return $this;
+    }
+
+    /**
+     * Gets sender_buttons
+     *
+     * @return \Divar\KenarApiClient\Model\ChatapiChatButtonGrid|null
+     */
+    public function getSenderButtons()
+    {
+        return $this->container['sender_buttons'];
+    }
+
+    /**
+     * Sets sender_buttons
+     *
+     * @param \Divar\KenarApiClient\Model\ChatapiChatButtonGrid|null $sender_buttons sender_buttons
+     *
+     * @return self
+     */
+    public function setSenderButtons($sender_buttons)
+    {
+        if (is_null($sender_buttons)) {
+            throw new \InvalidArgumentException('non-nullable sender_buttons cannot be null');
+        }
+        $this->container['sender_buttons'] = $sender_buttons;
 
         return $this;
     }

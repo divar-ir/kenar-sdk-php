@@ -80,54 +80,9 @@ class AddonsAddonSemanticTest extends TestCase
     }
 
     /**
-     * Test attribute "payment_method"
+     * Test attribute "car_verification_failure_reason"
      */
-    public function testPropertyPaymentMethod()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "identity_verification_result"
-     */
-    public function testPropertyIdentityVerificationResult()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "post_verification_result"
-     */
-    public function testPropertyPostVerificationResult()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "status"
-     */
-    public function testPropertyStatus()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "identity_verification_last_successful_stage"
-     */
-    public function testPropertyIdentityVerificationLastSuccessfulStage()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "identity_verification_failure_reason"
-     */
-    public function testPropertyIdentityVerificationFailureReason()
+    public function testPropertyCarVerificationFailureReason()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -143,18 +98,27 @@ class AddonsAddonSemanticTest extends TestCase
     }
 
     /**
-     * Test attribute "car_verification_failure_reason"
+     * Test attribute "identity_verification_failure_reason"
      */
-    public function testPropertyCarVerificationFailureReason()
+    public function testPropertyIdentityVerificationFailureReason()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "ownership_result"
+     * Test attribute "identity_verification_last_successful_stage"
      */
-    public function testPropertyOwnershipResult()
+    public function testPropertyIdentityVerificationLastSuccessfulStage()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "identity_verification_result"
+     */
+    public function testPropertyIdentityVerificationResult()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -173,6 +137,42 @@ class AddonsAddonSemanticTest extends TestCase
      * Test attribute "new_face_verification_result"
      */
     public function testPropertyNewFaceVerificationResult()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "ownership_result"
+     */
+    public function testPropertyOwnershipResult()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "payment_method"
+     */
+    public function testPropertyPaymentMethod()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "post_verification_result"
+     */
+    public function testPropertyPostVerificationResult()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "status"
+     */
+    public function testPropertyStatus()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

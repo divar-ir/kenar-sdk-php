@@ -57,19 +57,19 @@ class AddonsPostAddon implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'meta_data' => '\Divar\KenarApiClient\Model\AddonsAddonMetaData',
-        'token' => 'string',
         'app' => '\Divar\KenarApiClient\Model\AppsApp',
-        'widgets' => 'object',
-        'score' => 'string',
-        'selector' => '\Divar\KenarApiClient\Model\AddonsAddonSelector',
         'linkage' => '\Divar\KenarApiClient\Model\AddonsAddonLinkage',
+        'meta_data' => '\Divar\KenarApiClient\Model\AddonsAddonMetaData',
+        'score' => 'string',
         'secondary_links' => '\Divar\KenarApiClient\Model\AddonsAddonSecondaryLinks',
+        'selector' => '\Divar\KenarApiClient\Model\AddonsAddonSelector',
         'semantic' => 'array<string,string>',
         'semantic_data' => '\Divar\KenarApiClient\Model\AddonsAddonSemantic',
+        'semantic_sensitives' => 'string[]',
         'sensitive_semantic' => 'array<string,string>',
-        'widgets_semantic' => 'object',
-        'semantic_sensitives' => 'string[]'
+        'token' => 'string',
+        'widgets' => 'object',
+        'widgets_semantic' => 'object'
     ];
 
     /**
@@ -80,19 +80,19 @@ class AddonsPostAddon implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'meta_data' => null,
-        'token' => null,
         'app' => null,
-        'widgets' => null,
-        'score' => 'int64',
-        'selector' => null,
         'linkage' => null,
+        'meta_data' => null,
+        'score' => 'int64',
         'secondary_links' => null,
+        'selector' => null,
         'semantic' => null,
         'semantic_data' => null,
+        'semantic_sensitives' => null,
         'sensitive_semantic' => null,
-        'widgets_semantic' => null,
-        'semantic_sensitives' => null
+        'token' => null,
+        'widgets' => null,
+        'widgets_semantic' => null
     ];
 
     /**
@@ -101,19 +101,19 @@ class AddonsPostAddon implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'meta_data' => false,
-        'token' => false,
         'app' => false,
-        'widgets' => false,
-        'score' => false,
-        'selector' => false,
         'linkage' => false,
+        'meta_data' => false,
+        'score' => false,
         'secondary_links' => false,
+        'selector' => false,
         'semantic' => false,
         'semantic_data' => false,
+        'semantic_sensitives' => false,
         'sensitive_semantic' => false,
-        'widgets_semantic' => false,
-        'semantic_sensitives' => false
+        'token' => false,
+        'widgets' => false,
+        'widgets_semantic' => false
     ];
 
     /**
@@ -202,19 +202,19 @@ class AddonsPostAddon implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'meta_data' => 'meta_data',
-        'token' => 'token',
         'app' => 'app',
-        'widgets' => 'widgets',
-        'score' => 'score',
-        'selector' => 'selector',
         'linkage' => 'linkage',
+        'meta_data' => 'meta_data',
+        'score' => 'score',
         'secondary_links' => 'secondary_links',
+        'selector' => 'selector',
         'semantic' => 'semantic',
         'semantic_data' => 'semantic_data',
+        'semantic_sensitives' => 'semantic_sensitives',
         'sensitive_semantic' => 'sensitive_semantic',
-        'widgets_semantic' => 'widgets_semantic',
-        'semantic_sensitives' => 'semantic_sensitives'
+        'token' => 'token',
+        'widgets' => 'widgets',
+        'widgets_semantic' => 'widgets_semantic'
     ];
 
     /**
@@ -223,19 +223,19 @@ class AddonsPostAddon implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'meta_data' => 'setMetaData',
-        'token' => 'setToken',
         'app' => 'setApp',
-        'widgets' => 'setWidgets',
-        'score' => 'setScore',
-        'selector' => 'setSelector',
         'linkage' => 'setLinkage',
+        'meta_data' => 'setMetaData',
+        'score' => 'setScore',
         'secondary_links' => 'setSecondaryLinks',
+        'selector' => 'setSelector',
         'semantic' => 'setSemantic',
         'semantic_data' => 'setSemanticData',
+        'semantic_sensitives' => 'setSemanticSensitives',
         'sensitive_semantic' => 'setSensitiveSemantic',
-        'widgets_semantic' => 'setWidgetsSemantic',
-        'semantic_sensitives' => 'setSemanticSensitives'
+        'token' => 'setToken',
+        'widgets' => 'setWidgets',
+        'widgets_semantic' => 'setWidgetsSemantic'
     ];
 
     /**
@@ -244,19 +244,19 @@ class AddonsPostAddon implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'meta_data' => 'getMetaData',
-        'token' => 'getToken',
         'app' => 'getApp',
-        'widgets' => 'getWidgets',
-        'score' => 'getScore',
-        'selector' => 'getSelector',
         'linkage' => 'getLinkage',
+        'meta_data' => 'getMetaData',
+        'score' => 'getScore',
         'secondary_links' => 'getSecondaryLinks',
+        'selector' => 'getSelector',
         'semantic' => 'getSemantic',
         'semantic_data' => 'getSemanticData',
+        'semantic_sensitives' => 'getSemanticSensitives',
         'sensitive_semantic' => 'getSensitiveSemantic',
-        'widgets_semantic' => 'getWidgetsSemantic',
-        'semantic_sensitives' => 'getSemanticSensitives'
+        'token' => 'getToken',
+        'widgets' => 'getWidgets',
+        'widgets_semantic' => 'getWidgetsSemantic'
     ];
 
     /**
@@ -316,19 +316,19 @@ class AddonsPostAddon implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('meta_data', $data ?? [], null);
-        $this->setIfExists('token', $data ?? [], null);
         $this->setIfExists('app', $data ?? [], null);
-        $this->setIfExists('widgets', $data ?? [], null);
-        $this->setIfExists('score', $data ?? [], null);
-        $this->setIfExists('selector', $data ?? [], null);
         $this->setIfExists('linkage', $data ?? [], null);
+        $this->setIfExists('meta_data', $data ?? [], null);
+        $this->setIfExists('score', $data ?? [], null);
         $this->setIfExists('secondary_links', $data ?? [], null);
+        $this->setIfExists('selector', $data ?? [], null);
         $this->setIfExists('semantic', $data ?? [], null);
         $this->setIfExists('semantic_data', $data ?? [], null);
-        $this->setIfExists('sensitive_semantic', $data ?? [], null);
-        $this->setIfExists('widgets_semantic', $data ?? [], null);
         $this->setIfExists('semantic_sensitives', $data ?? [], null);
+        $this->setIfExists('sensitive_semantic', $data ?? [], null);
+        $this->setIfExists('token', $data ?? [], null);
+        $this->setIfExists('widgets', $data ?? [], null);
+        $this->setIfExists('widgets_semantic', $data ?? [], null);
     }
 
     /**
@@ -374,60 +374,6 @@ class AddonsPostAddon implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets meta_data
-     *
-     * @return \Divar\KenarApiClient\Model\AddonsAddonMetaData|null
-     */
-    public function getMetaData()
-    {
-        return $this->container['meta_data'];
-    }
-
-    /**
-     * Sets meta_data
-     *
-     * @param \Divar\KenarApiClient\Model\AddonsAddonMetaData|null $meta_data meta_data
-     *
-     * @return self
-     */
-    public function setMetaData($meta_data)
-    {
-        if (is_null($meta_data)) {
-            throw new \InvalidArgumentException('non-nullable meta_data cannot be null');
-        }
-        $this->container['meta_data'] = $meta_data;
-
-        return $this;
-    }
-
-    /**
-     * Gets token
-     *
-     * @return string|null
-     */
-    public function getToken()
-    {
-        return $this->container['token'];
-    }
-
-    /**
-     * Sets token
-     *
-     * @param string|null $token token
-     *
-     * @return self
-     */
-    public function setToken($token)
-    {
-        if (is_null($token)) {
-            throw new \InvalidArgumentException('non-nullable token cannot be null');
-        }
-        $this->container['token'] = $token;
-
-        return $this;
-    }
-
-    /**
      * Gets app
      *
      * @return \Divar\KenarApiClient\Model\AppsApp|null
@@ -450,87 +396,6 @@ class AddonsPostAddon implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable app cannot be null');
         }
         $this->container['app'] = $app;
-
-        return $this;
-    }
-
-    /**
-     * Gets widgets
-     *
-     * @return object|null
-     */
-    public function getWidgets()
-    {
-        return $this->container['widgets'];
-    }
-
-    /**
-     * Sets widgets
-     *
-     * @param object|null $widgets widgets
-     *
-     * @return self
-     */
-    public function setWidgets($widgets)
-    {
-        if (is_null($widgets)) {
-            throw new \InvalidArgumentException('non-nullable widgets cannot be null');
-        }
-        $this->container['widgets'] = $widgets;
-
-        return $this;
-    }
-
-    /**
-     * Gets score
-     *
-     * @return string|null
-     */
-    public function getScore()
-    {
-        return $this->container['score'];
-    }
-
-    /**
-     * Sets score
-     *
-     * @param string|null $score score
-     *
-     * @return self
-     */
-    public function setScore($score)
-    {
-        if (is_null($score)) {
-            throw new \InvalidArgumentException('non-nullable score cannot be null');
-        }
-        $this->container['score'] = $score;
-
-        return $this;
-    }
-
-    /**
-     * Gets selector
-     *
-     * @return \Divar\KenarApiClient\Model\AddonsAddonSelector|null
-     */
-    public function getSelector()
-    {
-        return $this->container['selector'];
-    }
-
-    /**
-     * Sets selector
-     *
-     * @param \Divar\KenarApiClient\Model\AddonsAddonSelector|null $selector selector
-     *
-     * @return self
-     */
-    public function setSelector($selector)
-    {
-        if (is_null($selector)) {
-            throw new \InvalidArgumentException('non-nullable selector cannot be null');
-        }
-        $this->container['selector'] = $selector;
 
         return $this;
     }
@@ -563,6 +428,60 @@ class AddonsPostAddon implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
+     * Gets meta_data
+     *
+     * @return \Divar\KenarApiClient\Model\AddonsAddonMetaData|null
+     */
+    public function getMetaData()
+    {
+        return $this->container['meta_data'];
+    }
+
+    /**
+     * Sets meta_data
+     *
+     * @param \Divar\KenarApiClient\Model\AddonsAddonMetaData|null $meta_data meta_data
+     *
+     * @return self
+     */
+    public function setMetaData($meta_data)
+    {
+        if (is_null($meta_data)) {
+            throw new \InvalidArgumentException('non-nullable meta_data cannot be null');
+        }
+        $this->container['meta_data'] = $meta_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets score
+     *
+     * @return string|null
+     */
+    public function getScore()
+    {
+        return $this->container['score'];
+    }
+
+    /**
+     * Sets score
+     *
+     * @param string|null $score score
+     *
+     * @return self
+     */
+    public function setScore($score)
+    {
+        if (is_null($score)) {
+            throw new \InvalidArgumentException('non-nullable score cannot be null');
+        }
+        $this->container['score'] = $score;
+
+        return $this;
+    }
+
+    /**
      * Gets secondary_links
      *
      * @return \Divar\KenarApiClient\Model\AddonsAddonSecondaryLinks|null
@@ -585,6 +504,33 @@ class AddonsPostAddon implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable secondary_links cannot be null');
         }
         $this->container['secondary_links'] = $secondary_links;
+
+        return $this;
+    }
+
+    /**
+     * Gets selector
+     *
+     * @return \Divar\KenarApiClient\Model\AddonsAddonSelector|null
+     */
+    public function getSelector()
+    {
+        return $this->container['selector'];
+    }
+
+    /**
+     * Sets selector
+     *
+     * @param \Divar\KenarApiClient\Model\AddonsAddonSelector|null $selector selector
+     *
+     * @return self
+     */
+    public function setSelector($selector)
+    {
+        if (is_null($selector)) {
+            throw new \InvalidArgumentException('non-nullable selector cannot be null');
+        }
+        $this->container['selector'] = $selector;
 
         return $this;
     }
@@ -644,6 +590,33 @@ class AddonsPostAddon implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
+     * Gets semantic_sensitives
+     *
+     * @return string[]|null
+     */
+    public function getSemanticSensitives()
+    {
+        return $this->container['semantic_sensitives'];
+    }
+
+    /**
+     * Sets semantic_sensitives
+     *
+     * @param string[]|null $semantic_sensitives semantic_sensitives
+     *
+     * @return self
+     */
+    public function setSemanticSensitives($semantic_sensitives)
+    {
+        if (is_null($semantic_sensitives)) {
+            throw new \InvalidArgumentException('non-nullable semantic_sensitives cannot be null');
+        }
+        $this->container['semantic_sensitives'] = $semantic_sensitives;
+
+        return $this;
+    }
+
+    /**
      * Gets sensitive_semantic
      *
      * @return array<string,string>|null
@@ -671,6 +644,60 @@ class AddonsPostAddon implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
+     * Gets token
+     *
+     * @return string|null
+     */
+    public function getToken()
+    {
+        return $this->container['token'];
+    }
+
+    /**
+     * Sets token
+     *
+     * @param string|null $token token
+     *
+     * @return self
+     */
+    public function setToken($token)
+    {
+        if (is_null($token)) {
+            throw new \InvalidArgumentException('non-nullable token cannot be null');
+        }
+        $this->container['token'] = $token;
+
+        return $this;
+    }
+
+    /**
+     * Gets widgets
+     *
+     * @return object|null
+     */
+    public function getWidgets()
+    {
+        return $this->container['widgets'];
+    }
+
+    /**
+     * Sets widgets
+     *
+     * @param object|null $widgets widgets
+     *
+     * @return self
+     */
+    public function setWidgets($widgets)
+    {
+        if (is_null($widgets)) {
+            throw new \InvalidArgumentException('non-nullable widgets cannot be null');
+        }
+        $this->container['widgets'] = $widgets;
+
+        return $this;
+    }
+
+    /**
      * Gets widgets_semantic
      *
      * @return object|null
@@ -693,33 +720,6 @@ class AddonsPostAddon implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable widgets_semantic cannot be null');
         }
         $this->container['widgets_semantic'] = $widgets_semantic;
-
-        return $this;
-    }
-
-    /**
-     * Gets semantic_sensitives
-     *
-     * @return string[]|null
-     */
-    public function getSemanticSensitives()
-    {
-        return $this->container['semantic_sensitives'];
-    }
-
-    /**
-     * Sets semantic_sensitives
-     *
-     * @param string[]|null $semantic_sensitives semantic_sensitives
-     *
-     * @return self
-     */
-    public function setSemanticSensitives($semantic_sensitives)
-    {
-        if (is_null($semantic_sensitives)) {
-            throw new \InvalidArgumentException('non-nullable semantic_sensitives cannot be null');
-        }
-        $this->container['semantic_sensitives'] = $semantic_sensitives;
 
         return $this;
     }

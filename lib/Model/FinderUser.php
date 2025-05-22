@@ -57,8 +57,8 @@ class FinderUser implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'phone_numbers' => 'string[]',
         'phone_number' => 'string',
+        'phone_numbers' => 'string[]',
         'user_id' => 'string'
     ];
 
@@ -70,8 +70,8 @@ class FinderUser implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'phone_numbers' => null,
         'phone_number' => null,
+        'phone_numbers' => null,
         'user_id' => null
     ];
 
@@ -81,8 +81,8 @@ class FinderUser implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'phone_numbers' => false,
         'phone_number' => false,
+        'phone_numbers' => false,
         'user_id' => false
     ];
 
@@ -172,8 +172,8 @@ class FinderUser implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'phone_numbers' => 'phone_numbers',
         'phone_number' => 'phone_number',
+        'phone_numbers' => 'phone_numbers',
         'user_id' => 'user_id'
     ];
 
@@ -183,8 +183,8 @@ class FinderUser implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'phone_numbers' => 'setPhoneNumbers',
         'phone_number' => 'setPhoneNumber',
+        'phone_numbers' => 'setPhoneNumbers',
         'user_id' => 'setUserId'
     ];
 
@@ -194,8 +194,8 @@ class FinderUser implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'phone_numbers' => 'getPhoneNumbers',
         'phone_number' => 'getPhoneNumber',
+        'phone_numbers' => 'getPhoneNumbers',
         'user_id' => 'getUserId'
     ];
 
@@ -256,8 +256,8 @@ class FinderUser implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('phone_numbers', $data ?? [], null);
         $this->setIfExists('phone_number', $data ?? [], null);
+        $this->setIfExists('phone_numbers', $data ?? [], null);
         $this->setIfExists('user_id', $data ?? [], null);
     }
 
@@ -304,33 +304,6 @@ class FinderUser implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets phone_numbers
-     *
-     * @return string[]|null
-     */
-    public function getPhoneNumbers()
-    {
-        return $this->container['phone_numbers'];
-    }
-
-    /**
-     * Sets phone_numbers
-     *
-     * @param string[]|null $phone_numbers deprecated
-     *
-     * @return self
-     */
-    public function setPhoneNumbers($phone_numbers)
-    {
-        if (is_null($phone_numbers)) {
-            throw new \InvalidArgumentException('non-nullable phone_numbers cannot be null');
-        }
-        $this->container['phone_numbers'] = $phone_numbers;
-
-        return $this;
-    }
-
-    /**
      * Gets phone_number
      *
      * @return string|null
@@ -353,6 +326,33 @@ class FinderUser implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable phone_number cannot be null');
         }
         $this->container['phone_number'] = $phone_number;
+
+        return $this;
+    }
+
+    /**
+     * Gets phone_numbers
+     *
+     * @return string[]|null
+     */
+    public function getPhoneNumbers()
+    {
+        return $this->container['phone_numbers'];
+    }
+
+    /**
+     * Sets phone_numbers
+     *
+     * @param string[]|null $phone_numbers deprecated
+     *
+     * @return self
+     */
+    public function setPhoneNumbers($phone_numbers)
+    {
+        if (is_null($phone_numbers)) {
+            throw new \InvalidArgumentException('non-nullable phone_numbers cannot be null');
+        }
+        $this->container['phone_numbers'] = $phone_numbers;
 
         return $this;
     }

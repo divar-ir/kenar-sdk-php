@@ -57,9 +57,9 @@ class PaymentTransaction implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'string',
         'cost_rials' => 'string',
         'extra_details' => 'string',
+        'id' => 'string',
         'state' => '\Divar\KenarApiClient\Model\PaymentTransactionState',
         'type' => '\Divar\KenarApiClient\Model\PaymentTransactionType'
     ];
@@ -72,9 +72,9 @@ class PaymentTransaction implements ModelInterface, ArrayAccess, \JsonSerializab
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'id' => null,
         'cost_rials' => 'int64',
         'extra_details' => null,
+        'id' => null,
         'state' => null,
         'type' => null
     ];
@@ -85,9 +85,9 @@ class PaymentTransaction implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'id' => false,
         'cost_rials' => false,
         'extra_details' => false,
+        'id' => false,
         'state' => false,
         'type' => false
     ];
@@ -178,9 +178,9 @@ class PaymentTransaction implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
         'cost_rials' => 'cost_rials',
         'extra_details' => 'extra_details',
+        'id' => 'id',
         'state' => 'state',
         'type' => 'type'
     ];
@@ -191,9 +191,9 @@ class PaymentTransaction implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
         'cost_rials' => 'setCostRials',
         'extra_details' => 'setExtraDetails',
+        'id' => 'setId',
         'state' => 'setState',
         'type' => 'setType'
     ];
@@ -204,9 +204,9 @@ class PaymentTransaction implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
         'cost_rials' => 'getCostRials',
         'extra_details' => 'getExtraDetails',
+        'id' => 'getId',
         'state' => 'getState',
         'type' => 'getType'
     ];
@@ -268,9 +268,9 @@ class PaymentTransaction implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('cost_rials', $data ?? [], null);
         $this->setIfExists('extra_details', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('state', $data ?? [], null);
         $this->setIfExists('type', $data ?? [], null);
     }
@@ -316,33 +316,6 @@ class PaymentTransaction implements ModelInterface, ArrayAccess, \JsonSerializab
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets id
-     *
-     * @return string|null
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param string|null $id Same uuid when creating transaction
-     *
-     * @return self
-     */
-    public function setId($id)
-    {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
-        }
-        $this->container['id'] = $id;
-
-        return $this;
-    }
 
     /**
      * Gets cost_rials
@@ -394,6 +367,33 @@ class PaymentTransaction implements ModelInterface, ArrayAccess, \JsonSerializab
             throw new \InvalidArgumentException('non-nullable extra_details cannot be null');
         }
         $this->container['extra_details'] = $extra_details;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id Same uuid when creating transaction
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
 
         return $this;
     }

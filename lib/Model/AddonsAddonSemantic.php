@@ -58,17 +58,17 @@ class AddonsAddonSemantic implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'payment_method' => '\Divar\KenarApiClient\Model\AddonsAddonSemanticPaymentMethod',
-        'identity_verification_result' => '\Divar\KenarApiClient\Model\AddonSemanticIdentityVerificationResult',
-        'post_verification_result' => '\Divar\KenarApiClient\Model\AddonSemanticPostVerificationResult',
-        'status' => '\Divar\KenarApiClient\Model\AddonsAddonSemanticStatus',
-        'identity_verification_last_successful_stage' => '\Divar\KenarApiClient\Model\AddonSemanticIdentityVerificationStage',
-        'identity_verification_failure_reason' => '\Divar\KenarApiClient\Model\AddonSemanticIdentityVerificationStage',
-        'car_verification_last_successful_stage' => '\Divar\KenarApiClient\Model\AddonSemanticCarVerificationStage',
         'car_verification_failure_reason' => '\Divar\KenarApiClient\Model\AddonSemanticCarVerificationStage',
-        'ownership_result' => '\Divar\KenarApiClient\Model\AddonSemanticOwnershipResult',
+        'car_verification_last_successful_stage' => '\Divar\KenarApiClient\Model\AddonSemanticCarVerificationStage',
+        'identity_verification_failure_reason' => '\Divar\KenarApiClient\Model\AddonSemanticIdentityVerificationStage',
+        'identity_verification_last_successful_stage' => '\Divar\KenarApiClient\Model\AddonSemanticIdentityVerificationStage',
+        'identity_verification_result' => '\Divar\KenarApiClient\Model\AddonSemanticIdentityVerificationResult',
         'inspection_result' => '\Divar\KenarApiClient\Model\AddonSemanticInspectionResult',
-        'new_face_verification_result' => '\Divar\KenarApiClient\Model\AddonSemanticNewFaceVerificationResult'
+        'new_face_verification_result' => '\Divar\KenarApiClient\Model\AddonSemanticNewFaceVerificationResult',
+        'ownership_result' => '\Divar\KenarApiClient\Model\AddonSemanticOwnershipResult',
+        'payment_method' => '\Divar\KenarApiClient\Model\AddonsAddonSemanticPaymentMethod',
+        'post_verification_result' => '\Divar\KenarApiClient\Model\AddonSemanticPostVerificationResult',
+        'status' => '\Divar\KenarApiClient\Model\AddonsAddonSemanticStatus'
     ];
 
     /**
@@ -79,17 +79,17 @@ class AddonsAddonSemantic implements ModelInterface, ArrayAccess, \JsonSerializa
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'payment_method' => null,
-        'identity_verification_result' => null,
-        'post_verification_result' => null,
-        'status' => null,
-        'identity_verification_last_successful_stage' => null,
-        'identity_verification_failure_reason' => null,
-        'car_verification_last_successful_stage' => null,
         'car_verification_failure_reason' => null,
-        'ownership_result' => null,
+        'car_verification_last_successful_stage' => null,
+        'identity_verification_failure_reason' => null,
+        'identity_verification_last_successful_stage' => null,
+        'identity_verification_result' => null,
         'inspection_result' => null,
-        'new_face_verification_result' => null
+        'new_face_verification_result' => null,
+        'ownership_result' => null,
+        'payment_method' => null,
+        'post_verification_result' => null,
+        'status' => null
     ];
 
     /**
@@ -98,17 +98,17 @@ class AddonsAddonSemantic implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'payment_method' => false,
-        'identity_verification_result' => false,
-        'post_verification_result' => false,
-        'status' => false,
-        'identity_verification_last_successful_stage' => false,
-        'identity_verification_failure_reason' => false,
-        'car_verification_last_successful_stage' => false,
         'car_verification_failure_reason' => false,
-        'ownership_result' => false,
+        'car_verification_last_successful_stage' => false,
+        'identity_verification_failure_reason' => false,
+        'identity_verification_last_successful_stage' => false,
+        'identity_verification_result' => false,
         'inspection_result' => false,
-        'new_face_verification_result' => false
+        'new_face_verification_result' => false,
+        'ownership_result' => false,
+        'payment_method' => false,
+        'post_verification_result' => false,
+        'status' => false
     ];
 
     /**
@@ -197,17 +197,17 @@ class AddonsAddonSemantic implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $attributeMap = [
-        'payment_method' => 'payment_method',
-        'identity_verification_result' => 'identity_verification_result',
-        'post_verification_result' => 'post_verification_result',
-        'status' => 'status',
-        'identity_verification_last_successful_stage' => 'identity_verification_last_successful_stage',
-        'identity_verification_failure_reason' => 'identity_verification_failure_reason',
-        'car_verification_last_successful_stage' => 'car_verification_last_successful_stage',
         'car_verification_failure_reason' => 'car_verification_failure_reason',
-        'ownership_result' => 'ownership_result',
+        'car_verification_last_successful_stage' => 'car_verification_last_successful_stage',
+        'identity_verification_failure_reason' => 'identity_verification_failure_reason',
+        'identity_verification_last_successful_stage' => 'identity_verification_last_successful_stage',
+        'identity_verification_result' => 'identity_verification_result',
         'inspection_result' => 'inspection_result',
-        'new_face_verification_result' => 'new_face_verification_result'
+        'new_face_verification_result' => 'new_face_verification_result',
+        'ownership_result' => 'ownership_result',
+        'payment_method' => 'payment_method',
+        'post_verification_result' => 'post_verification_result',
+        'status' => 'status'
     ];
 
     /**
@@ -216,17 +216,17 @@ class AddonsAddonSemantic implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'payment_method' => 'setPaymentMethod',
-        'identity_verification_result' => 'setIdentityVerificationResult',
-        'post_verification_result' => 'setPostVerificationResult',
-        'status' => 'setStatus',
-        'identity_verification_last_successful_stage' => 'setIdentityVerificationLastSuccessfulStage',
-        'identity_verification_failure_reason' => 'setIdentityVerificationFailureReason',
-        'car_verification_last_successful_stage' => 'setCarVerificationLastSuccessfulStage',
         'car_verification_failure_reason' => 'setCarVerificationFailureReason',
-        'ownership_result' => 'setOwnershipResult',
+        'car_verification_last_successful_stage' => 'setCarVerificationLastSuccessfulStage',
+        'identity_verification_failure_reason' => 'setIdentityVerificationFailureReason',
+        'identity_verification_last_successful_stage' => 'setIdentityVerificationLastSuccessfulStage',
+        'identity_verification_result' => 'setIdentityVerificationResult',
         'inspection_result' => 'setInspectionResult',
-        'new_face_verification_result' => 'setNewFaceVerificationResult'
+        'new_face_verification_result' => 'setNewFaceVerificationResult',
+        'ownership_result' => 'setOwnershipResult',
+        'payment_method' => 'setPaymentMethod',
+        'post_verification_result' => 'setPostVerificationResult',
+        'status' => 'setStatus'
     ];
 
     /**
@@ -235,17 +235,17 @@ class AddonsAddonSemantic implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'payment_method' => 'getPaymentMethod',
-        'identity_verification_result' => 'getIdentityVerificationResult',
-        'post_verification_result' => 'getPostVerificationResult',
-        'status' => 'getStatus',
-        'identity_verification_last_successful_stage' => 'getIdentityVerificationLastSuccessfulStage',
-        'identity_verification_failure_reason' => 'getIdentityVerificationFailureReason',
-        'car_verification_last_successful_stage' => 'getCarVerificationLastSuccessfulStage',
         'car_verification_failure_reason' => 'getCarVerificationFailureReason',
-        'ownership_result' => 'getOwnershipResult',
+        'car_verification_last_successful_stage' => 'getCarVerificationLastSuccessfulStage',
+        'identity_verification_failure_reason' => 'getIdentityVerificationFailureReason',
+        'identity_verification_last_successful_stage' => 'getIdentityVerificationLastSuccessfulStage',
+        'identity_verification_result' => 'getIdentityVerificationResult',
         'inspection_result' => 'getInspectionResult',
-        'new_face_verification_result' => 'getNewFaceVerificationResult'
+        'new_face_verification_result' => 'getNewFaceVerificationResult',
+        'ownership_result' => 'getOwnershipResult',
+        'payment_method' => 'getPaymentMethod',
+        'post_verification_result' => 'getPostVerificationResult',
+        'status' => 'getStatus'
     ];
 
     /**
@@ -305,17 +305,17 @@ class AddonsAddonSemantic implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('payment_method', $data ?? [], null);
-        $this->setIfExists('identity_verification_result', $data ?? [], null);
-        $this->setIfExists('post_verification_result', $data ?? [], null);
-        $this->setIfExists('status', $data ?? [], null);
-        $this->setIfExists('identity_verification_last_successful_stage', $data ?? [], null);
-        $this->setIfExists('identity_verification_failure_reason', $data ?? [], null);
-        $this->setIfExists('car_verification_last_successful_stage', $data ?? [], null);
         $this->setIfExists('car_verification_failure_reason', $data ?? [], null);
-        $this->setIfExists('ownership_result', $data ?? [], null);
+        $this->setIfExists('car_verification_last_successful_stage', $data ?? [], null);
+        $this->setIfExists('identity_verification_failure_reason', $data ?? [], null);
+        $this->setIfExists('identity_verification_last_successful_stage', $data ?? [], null);
+        $this->setIfExists('identity_verification_result', $data ?? [], null);
         $this->setIfExists('inspection_result', $data ?? [], null);
         $this->setIfExists('new_face_verification_result', $data ?? [], null);
+        $this->setIfExists('ownership_result', $data ?? [], null);
+        $this->setIfExists('payment_method', $data ?? [], null);
+        $this->setIfExists('post_verification_result', $data ?? [], null);
+        $this->setIfExists('status', $data ?? [], null);
     }
 
     /**
@@ -361,163 +361,28 @@ class AddonsAddonSemantic implements ModelInterface, ArrayAccess, \JsonSerializa
 
 
     /**
-     * Gets payment_method
+     * Gets car_verification_failure_reason
      *
-     * @return \Divar\KenarApiClient\Model\AddonsAddonSemanticPaymentMethod|null
+     * @return \Divar\KenarApiClient\Model\AddonSemanticCarVerificationStage|null
      */
-    public function getPaymentMethod()
+    public function getCarVerificationFailureReason()
     {
-        return $this->container['payment_method'];
+        return $this->container['car_verification_failure_reason'];
     }
 
     /**
-     * Sets payment_method
+     * Sets car_verification_failure_reason
      *
-     * @param \Divar\KenarApiClient\Model\AddonsAddonSemanticPaymentMethod|null $payment_method payment_method
+     * @param \Divar\KenarApiClient\Model\AddonSemanticCarVerificationStage|null $car_verification_failure_reason car_verification_failure_reason
      *
      * @return self
      */
-    public function setPaymentMethod($payment_method)
+    public function setCarVerificationFailureReason($car_verification_failure_reason)
     {
-        if (is_null($payment_method)) {
-            throw new \InvalidArgumentException('non-nullable payment_method cannot be null');
+        if (is_null($car_verification_failure_reason)) {
+            throw new \InvalidArgumentException('non-nullable car_verification_failure_reason cannot be null');
         }
-        $this->container['payment_method'] = $payment_method;
-
-        return $this;
-    }
-
-    /**
-     * Gets identity_verification_result
-     *
-     * @return \Divar\KenarApiClient\Model\AddonSemanticIdentityVerificationResult|null
-     */
-    public function getIdentityVerificationResult()
-    {
-        return $this->container['identity_verification_result'];
-    }
-
-    /**
-     * Sets identity_verification_result
-     *
-     * @param \Divar\KenarApiClient\Model\AddonSemanticIdentityVerificationResult|null $identity_verification_result identity_verification_result
-     *
-     * @return self
-     */
-    public function setIdentityVerificationResult($identity_verification_result)
-    {
-        if (is_null($identity_verification_result)) {
-            throw new \InvalidArgumentException('non-nullable identity_verification_result cannot be null');
-        }
-        $this->container['identity_verification_result'] = $identity_verification_result;
-
-        return $this;
-    }
-
-    /**
-     * Gets post_verification_result
-     *
-     * @return \Divar\KenarApiClient\Model\AddonSemanticPostVerificationResult|null
-     */
-    public function getPostVerificationResult()
-    {
-        return $this->container['post_verification_result'];
-    }
-
-    /**
-     * Sets post_verification_result
-     *
-     * @param \Divar\KenarApiClient\Model\AddonSemanticPostVerificationResult|null $post_verification_result post_verification_result
-     *
-     * @return self
-     */
-    public function setPostVerificationResult($post_verification_result)
-    {
-        if (is_null($post_verification_result)) {
-            throw new \InvalidArgumentException('non-nullable post_verification_result cannot be null');
-        }
-        $this->container['post_verification_result'] = $post_verification_result;
-
-        return $this;
-    }
-
-    /**
-     * Gets status
-     *
-     * @return \Divar\KenarApiClient\Model\AddonsAddonSemanticStatus|null
-     */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-     * Sets status
-     *
-     * @param \Divar\KenarApiClient\Model\AddonsAddonSemanticStatus|null $status status
-     *
-     * @return self
-     */
-    public function setStatus($status)
-    {
-        if (is_null($status)) {
-            throw new \InvalidArgumentException('non-nullable status cannot be null');
-        }
-        $this->container['status'] = $status;
-
-        return $this;
-    }
-
-    /**
-     * Gets identity_verification_last_successful_stage
-     *
-     * @return \Divar\KenarApiClient\Model\AddonSemanticIdentityVerificationStage|null
-     */
-    public function getIdentityVerificationLastSuccessfulStage()
-    {
-        return $this->container['identity_verification_last_successful_stage'];
-    }
-
-    /**
-     * Sets identity_verification_last_successful_stage
-     *
-     * @param \Divar\KenarApiClient\Model\AddonSemanticIdentityVerificationStage|null $identity_verification_last_successful_stage identity_verification_last_successful_stage
-     *
-     * @return self
-     */
-    public function setIdentityVerificationLastSuccessfulStage($identity_verification_last_successful_stage)
-    {
-        if (is_null($identity_verification_last_successful_stage)) {
-            throw new \InvalidArgumentException('non-nullable identity_verification_last_successful_stage cannot be null');
-        }
-        $this->container['identity_verification_last_successful_stage'] = $identity_verification_last_successful_stage;
-
-        return $this;
-    }
-
-    /**
-     * Gets identity_verification_failure_reason
-     *
-     * @return \Divar\KenarApiClient\Model\AddonSemanticIdentityVerificationStage|null
-     */
-    public function getIdentityVerificationFailureReason()
-    {
-        return $this->container['identity_verification_failure_reason'];
-    }
-
-    /**
-     * Sets identity_verification_failure_reason
-     *
-     * @param \Divar\KenarApiClient\Model\AddonSemanticIdentityVerificationStage|null $identity_verification_failure_reason identity_verification_failure_reason
-     *
-     * @return self
-     */
-    public function setIdentityVerificationFailureReason($identity_verification_failure_reason)
-    {
-        if (is_null($identity_verification_failure_reason)) {
-            throw new \InvalidArgumentException('non-nullable identity_verification_failure_reason cannot be null');
-        }
-        $this->container['identity_verification_failure_reason'] = $identity_verification_failure_reason;
+        $this->container['car_verification_failure_reason'] = $car_verification_failure_reason;
 
         return $this;
     }
@@ -550,55 +415,82 @@ class AddonsAddonSemantic implements ModelInterface, ArrayAccess, \JsonSerializa
     }
 
     /**
-     * Gets car_verification_failure_reason
+     * Gets identity_verification_failure_reason
      *
-     * @return \Divar\KenarApiClient\Model\AddonSemanticCarVerificationStage|null
+     * @return \Divar\KenarApiClient\Model\AddonSemanticIdentityVerificationStage|null
      */
-    public function getCarVerificationFailureReason()
+    public function getIdentityVerificationFailureReason()
     {
-        return $this->container['car_verification_failure_reason'];
+        return $this->container['identity_verification_failure_reason'];
     }
 
     /**
-     * Sets car_verification_failure_reason
+     * Sets identity_verification_failure_reason
      *
-     * @param \Divar\KenarApiClient\Model\AddonSemanticCarVerificationStage|null $car_verification_failure_reason car_verification_failure_reason
+     * @param \Divar\KenarApiClient\Model\AddonSemanticIdentityVerificationStage|null $identity_verification_failure_reason identity_verification_failure_reason
      *
      * @return self
      */
-    public function setCarVerificationFailureReason($car_verification_failure_reason)
+    public function setIdentityVerificationFailureReason($identity_verification_failure_reason)
     {
-        if (is_null($car_verification_failure_reason)) {
-            throw new \InvalidArgumentException('non-nullable car_verification_failure_reason cannot be null');
+        if (is_null($identity_verification_failure_reason)) {
+            throw new \InvalidArgumentException('non-nullable identity_verification_failure_reason cannot be null');
         }
-        $this->container['car_verification_failure_reason'] = $car_verification_failure_reason;
+        $this->container['identity_verification_failure_reason'] = $identity_verification_failure_reason;
 
         return $this;
     }
 
     /**
-     * Gets ownership_result
+     * Gets identity_verification_last_successful_stage
      *
-     * @return \Divar\KenarApiClient\Model\AddonSemanticOwnershipResult|null
+     * @return \Divar\KenarApiClient\Model\AddonSemanticIdentityVerificationStage|null
      */
-    public function getOwnershipResult()
+    public function getIdentityVerificationLastSuccessfulStage()
     {
-        return $this->container['ownership_result'];
+        return $this->container['identity_verification_last_successful_stage'];
     }
 
     /**
-     * Sets ownership_result
+     * Sets identity_verification_last_successful_stage
      *
-     * @param \Divar\KenarApiClient\Model\AddonSemanticOwnershipResult|null $ownership_result ownership_result
+     * @param \Divar\KenarApiClient\Model\AddonSemanticIdentityVerificationStage|null $identity_verification_last_successful_stage identity_verification_last_successful_stage
      *
      * @return self
      */
-    public function setOwnershipResult($ownership_result)
+    public function setIdentityVerificationLastSuccessfulStage($identity_verification_last_successful_stage)
     {
-        if (is_null($ownership_result)) {
-            throw new \InvalidArgumentException('non-nullable ownership_result cannot be null');
+        if (is_null($identity_verification_last_successful_stage)) {
+            throw new \InvalidArgumentException('non-nullable identity_verification_last_successful_stage cannot be null');
         }
-        $this->container['ownership_result'] = $ownership_result;
+        $this->container['identity_verification_last_successful_stage'] = $identity_verification_last_successful_stage;
+
+        return $this;
+    }
+
+    /**
+     * Gets identity_verification_result
+     *
+     * @return \Divar\KenarApiClient\Model\AddonSemanticIdentityVerificationResult|null
+     */
+    public function getIdentityVerificationResult()
+    {
+        return $this->container['identity_verification_result'];
+    }
+
+    /**
+     * Sets identity_verification_result
+     *
+     * @param \Divar\KenarApiClient\Model\AddonSemanticIdentityVerificationResult|null $identity_verification_result identity_verification_result
+     *
+     * @return self
+     */
+    public function setIdentityVerificationResult($identity_verification_result)
+    {
+        if (is_null($identity_verification_result)) {
+            throw new \InvalidArgumentException('non-nullable identity_verification_result cannot be null');
+        }
+        $this->container['identity_verification_result'] = $identity_verification_result;
 
         return $this;
     }
@@ -653,6 +545,114 @@ class AddonsAddonSemantic implements ModelInterface, ArrayAccess, \JsonSerializa
             throw new \InvalidArgumentException('non-nullable new_face_verification_result cannot be null');
         }
         $this->container['new_face_verification_result'] = $new_face_verification_result;
+
+        return $this;
+    }
+
+    /**
+     * Gets ownership_result
+     *
+     * @return \Divar\KenarApiClient\Model\AddonSemanticOwnershipResult|null
+     */
+    public function getOwnershipResult()
+    {
+        return $this->container['ownership_result'];
+    }
+
+    /**
+     * Sets ownership_result
+     *
+     * @param \Divar\KenarApiClient\Model\AddonSemanticOwnershipResult|null $ownership_result ownership_result
+     *
+     * @return self
+     */
+    public function setOwnershipResult($ownership_result)
+    {
+        if (is_null($ownership_result)) {
+            throw new \InvalidArgumentException('non-nullable ownership_result cannot be null');
+        }
+        $this->container['ownership_result'] = $ownership_result;
+
+        return $this;
+    }
+
+    /**
+     * Gets payment_method
+     *
+     * @return \Divar\KenarApiClient\Model\AddonsAddonSemanticPaymentMethod|null
+     */
+    public function getPaymentMethod()
+    {
+        return $this->container['payment_method'];
+    }
+
+    /**
+     * Sets payment_method
+     *
+     * @param \Divar\KenarApiClient\Model\AddonsAddonSemanticPaymentMethod|null $payment_method payment_method
+     *
+     * @return self
+     */
+    public function setPaymentMethod($payment_method)
+    {
+        if (is_null($payment_method)) {
+            throw new \InvalidArgumentException('non-nullable payment_method cannot be null');
+        }
+        $this->container['payment_method'] = $payment_method;
+
+        return $this;
+    }
+
+    /**
+     * Gets post_verification_result
+     *
+     * @return \Divar\KenarApiClient\Model\AddonSemanticPostVerificationResult|null
+     */
+    public function getPostVerificationResult()
+    {
+        return $this->container['post_verification_result'];
+    }
+
+    /**
+     * Sets post_verification_result
+     *
+     * @param \Divar\KenarApiClient\Model\AddonSemanticPostVerificationResult|null $post_verification_result post_verification_result
+     *
+     * @return self
+     */
+    public function setPostVerificationResult($post_verification_result)
+    {
+        if (is_null($post_verification_result)) {
+            throw new \InvalidArgumentException('non-nullable post_verification_result cannot be null');
+        }
+        $this->container['post_verification_result'] = $post_verification_result;
+
+        return $this;
+    }
+
+    /**
+     * Gets status
+     *
+     * @return \Divar\KenarApiClient\Model\AddonsAddonSemanticStatus|null
+     */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+     * Sets status
+     *
+     * @param \Divar\KenarApiClient\Model\AddonsAddonSemanticStatus|null $status status
+     *
+     * @return self
+     */
+    public function setStatus($status)
+    {
+        if (is_null($status)) {
+            throw new \InvalidArgumentException('non-nullable status cannot be null');
+        }
+        $this->container['status'] = $status;
 
         return $this;
     }

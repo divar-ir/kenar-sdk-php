@@ -80,18 +80,18 @@ class FinderSearchQueryNumberRangeTest extends TestCase
     }
 
     /**
-     * Test attribute "min"
+     * Test attribute "max"
      */
-    public function testPropertyMin()
+    public function testPropertyMax()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "max"
+     * Test attribute "min"
      */
-    public function testPropertyMax()
+    public function testPropertyMin()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

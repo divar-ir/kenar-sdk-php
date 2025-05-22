@@ -57,9 +57,9 @@ class AddonsDescriptionRow implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'text' => 'string',
+        'expandable' => 'bool',
         'has_divider' => 'bool',
-        'expandable' => 'bool'
+        'text' => 'string'
     ];
 
     /**
@@ -70,9 +70,9 @@ class AddonsDescriptionRow implements ModelInterface, ArrayAccess, \JsonSerializ
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'text' => null,
+        'expandable' => null,
         'has_divider' => null,
-        'expandable' => null
+        'text' => null
     ];
 
     /**
@@ -81,9 +81,9 @@ class AddonsDescriptionRow implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'text' => false,
+        'expandable' => false,
         'has_divider' => false,
-        'expandable' => false
+        'text' => false
     ];
 
     /**
@@ -172,9 +172,9 @@ class AddonsDescriptionRow implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $attributeMap = [
-        'text' => 'text',
+        'expandable' => 'expandable',
         'has_divider' => 'has_divider',
-        'expandable' => 'expandable'
+        'text' => 'text'
     ];
 
     /**
@@ -183,9 +183,9 @@ class AddonsDescriptionRow implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $setters = [
-        'text' => 'setText',
+        'expandable' => 'setExpandable',
         'has_divider' => 'setHasDivider',
-        'expandable' => 'setExpandable'
+        'text' => 'setText'
     ];
 
     /**
@@ -194,9 +194,9 @@ class AddonsDescriptionRow implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $getters = [
-        'text' => 'getText',
+        'expandable' => 'getExpandable',
         'has_divider' => 'getHasDivider',
-        'expandable' => 'getExpandable'
+        'text' => 'getText'
     ];
 
     /**
@@ -256,9 +256,9 @@ class AddonsDescriptionRow implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('text', $data ?? [], null);
-        $this->setIfExists('has_divider', $data ?? [], null);
         $this->setIfExists('expandable', $data ?? [], null);
+        $this->setIfExists('has_divider', $data ?? [], null);
+        $this->setIfExists('text', $data ?? [], null);
     }
 
     /**
@@ -304,28 +304,28 @@ class AddonsDescriptionRow implements ModelInterface, ArrayAccess, \JsonSerializ
 
 
     /**
-     * Gets text
+     * Gets expandable
      *
-     * @return string|null
+     * @return bool|null
      */
-    public function getText()
+    public function getExpandable()
     {
-        return $this->container['text'];
+        return $this->container['expandable'];
     }
 
     /**
-     * Sets text
+     * Sets expandable
      *
-     * @param string|null $text text
+     * @param bool|null $expandable expandable
      *
      * @return self
      */
-    public function setText($text)
+    public function setExpandable($expandable)
     {
-        if (is_null($text)) {
-            throw new \InvalidArgumentException('non-nullable text cannot be null');
+        if (is_null($expandable)) {
+            throw new \InvalidArgumentException('non-nullable expandable cannot be null');
         }
-        $this->container['text'] = $text;
+        $this->container['expandable'] = $expandable;
 
         return $this;
     }
@@ -358,28 +358,28 @@ class AddonsDescriptionRow implements ModelInterface, ArrayAccess, \JsonSerializ
     }
 
     /**
-     * Gets expandable
+     * Gets text
      *
-     * @return bool|null
+     * @return string|null
      */
-    public function getExpandable()
+    public function getText()
     {
-        return $this->container['expandable'];
+        return $this->container['text'];
     }
 
     /**
-     * Sets expandable
+     * Sets text
      *
-     * @param bool|null $expandable expandable
+     * @param string|null $text text
      *
      * @return self
      */
-    public function setExpandable($expandable)
+    public function setText($text)
     {
-        if (is_null($expandable)) {
-            throw new \InvalidArgumentException('non-nullable expandable cannot be null');
+        if (is_null($text)) {
+            throw new \InvalidArgumentException('non-nullable text cannot be null');
         }
-        $this->container['expandable'] = $expandable;
+        $this->container['text'] = $text;
 
         return $this;
     }

@@ -80,9 +80,9 @@ class AddonsAddonSelectorTest extends TestCase
     }
 
     /**
-     * Test attribute "tokens"
+     * Test attribute "brand_models"
      */
-    public function testPropertyTokens()
+    public function testPropertyBrandModels()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -116,9 +116,9 @@ class AddonsAddonSelectorTest extends TestCase
     }
 
     /**
-     * Test attribute "brand_models"
+     * Test attribute "tokens"
      */
-    public function testPropertyBrandModels()
+    public function testPropertyTokens()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

@@ -57,8 +57,8 @@ class PaymentReorderPostBody implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'string',
-        'extra_details' => 'string'
+        'extra_details' => 'string',
+        'id' => 'string'
     ];
 
     /**
@@ -69,8 +69,8 @@ class PaymentReorderPostBody implements ModelInterface, ArrayAccess, \JsonSerial
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'id' => null,
-        'extra_details' => null
+        'extra_details' => null,
+        'id' => null
     ];
 
     /**
@@ -79,8 +79,8 @@ class PaymentReorderPostBody implements ModelInterface, ArrayAccess, \JsonSerial
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'id' => false,
-        'extra_details' => false
+        'extra_details' => false,
+        'id' => false
     ];
 
     /**
@@ -169,8 +169,8 @@ class PaymentReorderPostBody implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'extra_details' => 'extra_details'
+        'extra_details' => 'extra_details',
+        'id' => 'id'
     ];
 
     /**
@@ -179,8 +179,8 @@ class PaymentReorderPostBody implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'extra_details' => 'setExtraDetails'
+        'extra_details' => 'setExtraDetails',
+        'id' => 'setId'
     ];
 
     /**
@@ -189,8 +189,8 @@ class PaymentReorderPostBody implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'extra_details' => 'getExtraDetails'
+        'extra_details' => 'getExtraDetails',
+        'id' => 'getId'
     ];
 
     /**
@@ -250,8 +250,8 @@ class PaymentReorderPostBody implements ModelInterface, ArrayAccess, \JsonSerial
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('extra_details', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
     }
 
     /**
@@ -297,33 +297,6 @@ class PaymentReorderPostBody implements ModelInterface, ArrayAccess, \JsonSerial
 
 
     /**
-     * Gets id
-     *
-     * @return string|null
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param string|null $id A Version 4 uuid that must be unique for each payment. This uuid must be generated on your side and sent in the request. If an id is sent that has a successful or semi-successful transaction on the Kenar side, you will receive an error.
-     *
-     * @return self
-     */
-    public function setId($id)
-    {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
-        }
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
      * Gets extra_details
      *
      * @return string|null
@@ -346,6 +319,33 @@ class PaymentReorderPostBody implements ModelInterface, ArrayAccess, \JsonSerial
             throw new \InvalidArgumentException('non-nullable extra_details cannot be null');
         }
         $this->container['extra_details'] = $extra_details;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id A Version 4 uuid that must be unique for each payment. This uuid must be generated on your side and sent in the request. If an id is sent that has a successful or semi-successful transaction on the Kenar side, you will receive an error.
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
 
         return $this;
     }

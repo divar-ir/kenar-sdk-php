@@ -27,11 +27,17 @@ Using this API you can retrieve current balance of your app.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure API key authorization: APIKey
+$config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 
 $apiInstance = new Divar\KenarApiClient\Api\LimitedApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 
 try {
@@ -52,7 +58,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[APIKey](../../README.md#APIKey)
 
 ### HTTP request headers
 
@@ -80,11 +86,17 @@ Using this API and with user permission, you can get the price of various servic
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure API key authorization: APIKey
+$config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 
 $apiInstance = new Divar\KenarApiClient\Api\LimitedApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $post_token = 'post_token_example'; // string | An 8-9 character unique identifier for the post
 
@@ -108,7 +120,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[APIKey](../../README.md#APIKey)
 
 ### HTTP request headers
 
@@ -136,11 +148,17 @@ Using this API you can retrieve transaction details.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure API key authorization: APIKey
+$config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 
 $apiInstance = new Divar\KenarApiClient\Api\LimitedApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $id = 'id_example'; // string | The unique identifier for the transaction, same as the id in the request
 
@@ -164,7 +182,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[APIKey](../../README.md#APIKey)
 
 ### HTTP request headers
 
@@ -192,11 +210,17 @@ Use GetPostPricing API to get the cost of the service before calling this API.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure API key authorization: APIKey
+$config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 
 $apiInstance = new Divar\KenarApiClient\Api\LimitedApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $post_token = 'post_token_example'; // string
 $payment_reorder_post_body = new \Divar\KenarApiClient\Model\PaymentReorderPostBody(); // \Divar\KenarApiClient\Model\PaymentReorderPostBody
@@ -222,7 +246,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[APIKey](../../README.md#APIKey)
 
 ### HTTP request headers
 

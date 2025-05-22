@@ -80,18 +80,18 @@ class ImageCarouselRowImageItemTest extends TestCase
     }
 
     /**
-     * Test attribute "image_id"
+     * Test attribute "description"
      */
-    public function testPropertyImageId()
+    public function testPropertyDescription()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "description"
+     * Test attribute "image_id"
      */
-    public function testPropertyDescription()
+    public function testPropertyImageId()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

@@ -80,15 +80,6 @@ class ChatapiMessageTest extends TestCase
     }
 
     /**
-     * Test attribute "id"
-     */
-    public function testPropertyId()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "conversation"
      */
     public function testPropertyConversation()
@@ -98,18 +89,45 @@ class ChatapiMessageTest extends TestCase
     }
 
     /**
-     * Test attribute "sender"
+     * Test attribute "file_data"
      */
-    public function testPropertySender()
+    public function testPropertyFileData()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "type"
+     * Test attribute "id"
      */
-    public function testPropertyType()
+    public function testPropertyId()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "image_data"
+     */
+    public function testPropertyImageData()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "location_data"
+     */
+    public function testPropertyLocationData()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "sender"
+     */
+    public function testPropertySender()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -134,36 +152,9 @@ class ChatapiMessageTest extends TestCase
     }
 
     /**
-     * Test attribute "image_data"
+     * Test attribute "type"
      */
-    public function testPropertyImageData()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "file_data"
-     */
-    public function testPropertyFileData()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "voice_data"
-     */
-    public function testPropertyVoiceData()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "location_data"
-     */
-    public function testPropertyLocationData()
+    public function testPropertyType()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -173,6 +164,15 @@ class ChatapiMessageTest extends TestCase
      * Test attribute "video_data"
      */
     public function testPropertyVideoData()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "voice_data"
+     */
+    public function testPropertyVoiceData()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

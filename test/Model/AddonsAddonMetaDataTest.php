@@ -80,15 +80,6 @@ class AddonsAddonMetaDataTest extends TestCase
     }
 
     /**
-     * Test attribute "id"
-     */
-    public function testPropertyId()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "app"
      */
     public function testPropertyApp()
@@ -107,6 +98,15 @@ class AddonsAddonMetaDataTest extends TestCase
     }
 
     /**
+     * Test attribute "id"
+     */
+    public function testPropertyId()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "last_modified"
      */
     public function testPropertyLastModified()
@@ -116,18 +116,18 @@ class AddonsAddonMetaDataTest extends TestCase
     }
 
     /**
-     * Test attribute "status"
+     * Test attribute "service_tags"
      */
-    public function testPropertyStatus()
+    public function testPropertyServiceTags()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "service_tags"
+     * Test attribute "status"
      */
-    public function testPropertyServiceTags()
+    public function testPropertyStatus()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

@@ -57,10 +57,10 @@ class AssetsGetPermissionsResponsePermission implements ModelInterface, ArrayAcc
       * @var string[]
       */
     protected static $openAPITypes = [
-        'slug' => 'string',
-        'display' => 'string',
         'description' => 'string',
-        'lifecycle_state' => '\Divar\KenarApiClient\Model\AssetsGetPermissionsResponseLifeCycleState'
+        'display' => 'string',
+        'lifecycle_state' => '\Divar\KenarApiClient\Model\AssetsGetPermissionsResponseLifeCycleState',
+        'slug' => 'string'
     ];
 
     /**
@@ -71,10 +71,10 @@ class AssetsGetPermissionsResponsePermission implements ModelInterface, ArrayAcc
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'slug' => null,
-        'display' => null,
         'description' => null,
-        'lifecycle_state' => null
+        'display' => null,
+        'lifecycle_state' => null,
+        'slug' => null
     ];
 
     /**
@@ -83,10 +83,10 @@ class AssetsGetPermissionsResponsePermission implements ModelInterface, ArrayAcc
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'slug' => false,
-        'display' => false,
         'description' => false,
-        'lifecycle_state' => false
+        'display' => false,
+        'lifecycle_state' => false,
+        'slug' => false
     ];
 
     /**
@@ -175,10 +175,10 @@ class AssetsGetPermissionsResponsePermission implements ModelInterface, ArrayAcc
      * @var string[]
      */
     protected static $attributeMap = [
-        'slug' => 'slug',
-        'display' => 'display',
         'description' => 'description',
-        'lifecycle_state' => 'lifecycle_state'
+        'display' => 'display',
+        'lifecycle_state' => 'lifecycle_state',
+        'slug' => 'slug'
     ];
 
     /**
@@ -187,10 +187,10 @@ class AssetsGetPermissionsResponsePermission implements ModelInterface, ArrayAcc
      * @var string[]
      */
     protected static $setters = [
-        'slug' => 'setSlug',
-        'display' => 'setDisplay',
         'description' => 'setDescription',
-        'lifecycle_state' => 'setLifecycleState'
+        'display' => 'setDisplay',
+        'lifecycle_state' => 'setLifecycleState',
+        'slug' => 'setSlug'
     ];
 
     /**
@@ -199,10 +199,10 @@ class AssetsGetPermissionsResponsePermission implements ModelInterface, ArrayAcc
      * @var string[]
      */
     protected static $getters = [
-        'slug' => 'getSlug',
-        'display' => 'getDisplay',
         'description' => 'getDescription',
-        'lifecycle_state' => 'getLifecycleState'
+        'display' => 'getDisplay',
+        'lifecycle_state' => 'getLifecycleState',
+        'slug' => 'getSlug'
     ];
 
     /**
@@ -262,10 +262,10 @@ class AssetsGetPermissionsResponsePermission implements ModelInterface, ArrayAcc
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('slug', $data ?? [], null);
-        $this->setIfExists('display', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
+        $this->setIfExists('display', $data ?? [], null);
         $this->setIfExists('lifecycle_state', $data ?? [], null);
+        $this->setIfExists('slug', $data ?? [], null);
     }
 
     /**
@@ -311,28 +311,28 @@ class AssetsGetPermissionsResponsePermission implements ModelInterface, ArrayAcc
 
 
     /**
-     * Gets slug
+     * Gets description
      *
      * @return string|null
      */
-    public function getSlug()
+    public function getDescription()
     {
-        return $this->container['slug'];
+        return $this->container['description'];
     }
 
     /**
-     * Sets slug
+     * Sets description
      *
-     * @param string|null $slug slug
+     * @param string|null $description description
      *
      * @return self
      */
-    public function setSlug($slug)
+    public function setDescription($description)
     {
-        if (is_null($slug)) {
-            throw new \InvalidArgumentException('non-nullable slug cannot be null');
+        if (is_null($description)) {
+            throw new \InvalidArgumentException('non-nullable description cannot be null');
         }
-        $this->container['slug'] = $slug;
+        $this->container['description'] = $description;
 
         return $this;
     }
@@ -365,33 +365,6 @@ class AssetsGetPermissionsResponsePermission implements ModelInterface, ArrayAcc
     }
 
     /**
-     * Gets description
-     *
-     * @return string|null
-     */
-    public function getDescription()
-    {
-        return $this->container['description'];
-    }
-
-    /**
-     * Sets description
-     *
-     * @param string|null $description description
-     *
-     * @return self
-     */
-    public function setDescription($description)
-    {
-        if (is_null($description)) {
-            throw new \InvalidArgumentException('non-nullable description cannot be null');
-        }
-        $this->container['description'] = $description;
-
-        return $this;
-    }
-
-    /**
      * Gets lifecycle_state
      *
      * @return \Divar\KenarApiClient\Model\AssetsGetPermissionsResponseLifeCycleState|null
@@ -414,6 +387,33 @@ class AssetsGetPermissionsResponsePermission implements ModelInterface, ArrayAcc
             throw new \InvalidArgumentException('non-nullable lifecycle_state cannot be null');
         }
         $this->container['lifecycle_state'] = $lifecycle_state;
+
+        return $this;
+    }
+
+    /**
+     * Gets slug
+     *
+     * @return string|null
+     */
+    public function getSlug()
+    {
+        return $this->container['slug'];
+    }
+
+    /**
+     * Sets slug
+     *
+     * @param string|null $slug slug
+     *
+     * @return self
+     */
+    public function setSlug($slug)
+    {
+        if (is_null($slug)) {
+            throw new \InvalidArgumentException('non-nullable slug cannot be null');
+        }
+        $this->container['slug'] = $slug;
 
         return $this;
     }

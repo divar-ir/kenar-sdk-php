@@ -58,9 +58,9 @@ class AddonsAction implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
+        'get_dynamic_action' => '\Divar\KenarApiClient\Model\AddonsGetDynamicAction',
         'open_direct_link' => 'string',
-        'open_server_link' => '\Divar\KenarApiClient\Model\AddonsOpenServerLink',
-        'get_dynamic_action' => '\Divar\KenarApiClient\Model\AddonsGetDynamicAction'
+        'open_server_link' => '\Divar\KenarApiClient\Model\AddonsOpenServerLink'
     ];
 
     /**
@@ -71,9 +71,9 @@ class AddonsAction implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'get_dynamic_action' => null,
         'open_direct_link' => null,
-        'open_server_link' => null,
-        'get_dynamic_action' => null
+        'open_server_link' => null
     ];
 
     /**
@@ -82,9 +82,9 @@ class AddonsAction implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
+        'get_dynamic_action' => false,
         'open_direct_link' => false,
-        'open_server_link' => false,
-        'get_dynamic_action' => false
+        'open_server_link' => false
     ];
 
     /**
@@ -173,9 +173,9 @@ class AddonsAction implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
+        'get_dynamic_action' => 'get_dynamic_action',
         'open_direct_link' => 'open_direct_link',
-        'open_server_link' => 'open_server_link',
-        'get_dynamic_action' => 'get_dynamic_action'
+        'open_server_link' => 'open_server_link'
     ];
 
     /**
@@ -184,9 +184,9 @@ class AddonsAction implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
+        'get_dynamic_action' => 'setGetDynamicAction',
         'open_direct_link' => 'setOpenDirectLink',
-        'open_server_link' => 'setOpenServerLink',
-        'get_dynamic_action' => 'setGetDynamicAction'
+        'open_server_link' => 'setOpenServerLink'
     ];
 
     /**
@@ -195,9 +195,9 @@ class AddonsAction implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
+        'get_dynamic_action' => 'getGetDynamicAction',
         'open_direct_link' => 'getOpenDirectLink',
-        'open_server_link' => 'getOpenServerLink',
-        'get_dynamic_action' => 'getGetDynamicAction'
+        'open_server_link' => 'getOpenServerLink'
     ];
 
     /**
@@ -257,9 +257,9 @@ class AddonsAction implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
+        $this->setIfExists('get_dynamic_action', $data ?? [], null);
         $this->setIfExists('open_direct_link', $data ?? [], null);
         $this->setIfExists('open_server_link', $data ?? [], null);
-        $this->setIfExists('get_dynamic_action', $data ?? [], null);
     }
 
     /**
@@ -303,6 +303,33 @@ class AddonsAction implements ModelInterface, ArrayAccess, \JsonSerializable
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets get_dynamic_action
+     *
+     * @return \Divar\KenarApiClient\Model\AddonsGetDynamicAction|null
+     */
+    public function getGetDynamicAction()
+    {
+        return $this->container['get_dynamic_action'];
+    }
+
+    /**
+     * Sets get_dynamic_action
+     *
+     * @param \Divar\KenarApiClient\Model\AddonsGetDynamicAction|null $get_dynamic_action get_dynamic_action
+     *
+     * @return self
+     */
+    public function setGetDynamicAction($get_dynamic_action)
+    {
+        if (is_null($get_dynamic_action)) {
+            throw new \InvalidArgumentException('non-nullable get_dynamic_action cannot be null');
+        }
+        $this->container['get_dynamic_action'] = $get_dynamic_action;
+
+        return $this;
+    }
 
     /**
      * Gets open_direct_link
@@ -354,33 +381,6 @@ class AddonsAction implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable open_server_link cannot be null');
         }
         $this->container['open_server_link'] = $open_server_link;
-
-        return $this;
-    }
-
-    /**
-     * Gets get_dynamic_action
-     *
-     * @return \Divar\KenarApiClient\Model\AddonsGetDynamicAction|null
-     */
-    public function getGetDynamicAction()
-    {
-        return $this->container['get_dynamic_action'];
-    }
-
-    /**
-     * Sets get_dynamic_action
-     *
-     * @param \Divar\KenarApiClient\Model\AddonsGetDynamicAction|null $get_dynamic_action get_dynamic_action
-     *
-     * @return self
-     */
-    public function setGetDynamicAction($get_dynamic_action)
-    {
-        if (is_null($get_dynamic_action)) {
-            throw new \InvalidArgumentException('non-nullable get_dynamic_action cannot be null');
-        }
-        $this->container['get_dynamic_action'] = $get_dynamic_action;
 
         return $this;
     }

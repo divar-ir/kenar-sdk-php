@@ -57,12 +57,12 @@ class AddonsAddonMetaData implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'string',
         'app' => '\Divar\KenarApiClient\Model\AppsApp',
         'created_at' => '\DateTime',
+        'id' => 'string',
         'last_modified' => '\DateTime',
-        'status' => '\Divar\KenarApiClient\Model\AddonsStatus',
-        'service_tags' => '\Divar\KenarApiClient\Model\AppsServiceTag[]'
+        'service_tags' => '\Divar\KenarApiClient\Model\AppsServiceTag[]',
+        'status' => '\Divar\KenarApiClient\Model\AddonsStatus'
     ];
 
     /**
@@ -73,12 +73,12 @@ class AddonsAddonMetaData implements ModelInterface, ArrayAccess, \JsonSerializa
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'id' => null,
         'app' => null,
         'created_at' => 'date-time',
+        'id' => null,
         'last_modified' => 'date-time',
-        'status' => null,
-        'service_tags' => null
+        'service_tags' => null,
+        'status' => null
     ];
 
     /**
@@ -87,12 +87,12 @@ class AddonsAddonMetaData implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'id' => false,
         'app' => false,
         'created_at' => false,
+        'id' => false,
         'last_modified' => false,
-        'status' => false,
-        'service_tags' => false
+        'service_tags' => false,
+        'status' => false
     ];
 
     /**
@@ -181,12 +181,12 @@ class AddonsAddonMetaData implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
         'app' => 'app',
         'created_at' => 'created_at',
+        'id' => 'id',
         'last_modified' => 'last_modified',
-        'status' => 'status',
-        'service_tags' => 'service_tags'
+        'service_tags' => 'service_tags',
+        'status' => 'status'
     ];
 
     /**
@@ -195,12 +195,12 @@ class AddonsAddonMetaData implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
         'app' => 'setApp',
         'created_at' => 'setCreatedAt',
+        'id' => 'setId',
         'last_modified' => 'setLastModified',
-        'status' => 'setStatus',
-        'service_tags' => 'setServiceTags'
+        'service_tags' => 'setServiceTags',
+        'status' => 'setStatus'
     ];
 
     /**
@@ -209,12 +209,12 @@ class AddonsAddonMetaData implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
         'app' => 'getApp',
         'created_at' => 'getCreatedAt',
+        'id' => 'getId',
         'last_modified' => 'getLastModified',
-        'status' => 'getStatus',
-        'service_tags' => 'getServiceTags'
+        'service_tags' => 'getServiceTags',
+        'status' => 'getStatus'
     ];
 
     /**
@@ -274,12 +274,12 @@ class AddonsAddonMetaData implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('app', $data ?? [], null);
         $this->setIfExists('created_at', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('last_modified', $data ?? [], null);
-        $this->setIfExists('status', $data ?? [], null);
         $this->setIfExists('service_tags', $data ?? [], null);
+        $this->setIfExists('status', $data ?? [], null);
     }
 
     /**
@@ -323,33 +323,6 @@ class AddonsAddonMetaData implements ModelInterface, ArrayAccess, \JsonSerializa
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets id
-     *
-     * @return string|null
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param string|null $id id
-     *
-     * @return self
-     */
-    public function setId($id)
-    {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
-        }
-        $this->container['id'] = $id;
-
-        return $this;
-    }
 
     /**
      * Gets app
@@ -406,6 +379,33 @@ class AddonsAddonMetaData implements ModelInterface, ArrayAccess, \JsonSerializa
     }
 
     /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id id
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
      * Gets last_modified
      *
      * @return \DateTime|null
@@ -433,33 +433,6 @@ class AddonsAddonMetaData implements ModelInterface, ArrayAccess, \JsonSerializa
     }
 
     /**
-     * Gets status
-     *
-     * @return \Divar\KenarApiClient\Model\AddonsStatus|null
-     */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-     * Sets status
-     *
-     * @param \Divar\KenarApiClient\Model\AddonsStatus|null $status status
-     *
-     * @return self
-     */
-    public function setStatus($status)
-    {
-        if (is_null($status)) {
-            throw new \InvalidArgumentException('non-nullable status cannot be null');
-        }
-        $this->container['status'] = $status;
-
-        return $this;
-    }
-
-    /**
      * Gets service_tags
      *
      * @return \Divar\KenarApiClient\Model\AppsServiceTag[]|null
@@ -482,6 +455,33 @@ class AddonsAddonMetaData implements ModelInterface, ArrayAccess, \JsonSerializa
             throw new \InvalidArgumentException('non-nullable service_tags cannot be null');
         }
         $this->container['service_tags'] = $service_tags;
+
+        return $this;
+    }
+
+    /**
+     * Gets status
+     *
+     * @return \Divar\KenarApiClient\Model\AddonsStatus|null
+     */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+     * Sets status
+     *
+     * @param \Divar\KenarApiClient\Model\AddonsStatus|null $status status
+     *
+     * @return self
+     */
+    public function setStatus($status)
+    {
+        if (is_null($status)) {
+            throw new \InvalidArgumentException('non-nullable status cannot be null');
+        }
+        $this->container['status'] = $status;
 
         return $this;
     }

@@ -80,15 +80,6 @@ class PostEditPostBodyTest extends TestCase
     }
 
     /**
-     * Test attribute "title"
-     */
-    public function testPropertyTitle()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "description"
      */
     public function testPropertyDescription()
@@ -101,6 +92,15 @@ class PostEditPostBodyTest extends TestCase
      * Test attribute "image_paths"
      */
     public function testPropertyImagePaths()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "title"
+     */
+    public function testPropertyTitle()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

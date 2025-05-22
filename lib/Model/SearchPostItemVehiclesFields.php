@@ -57,9 +57,9 @@ class SearchPostItemVehiclesFields implements ModelInterface, ArrayAccess, \Json
       * @var string[]
       */
     protected static $openAPITypes = [
-        'usage' => 'string',
+        'custom_post_subtitle' => 'string',
         'installment_sale' => 'string',
-        'custom_post_subtitle' => 'string'
+        'usage' => 'string'
     ];
 
     /**
@@ -70,9 +70,9 @@ class SearchPostItemVehiclesFields implements ModelInterface, ArrayAccess, \Json
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'usage' => 'uint64',
+        'custom_post_subtitle' => null,
         'installment_sale' => null,
-        'custom_post_subtitle' => null
+        'usage' => 'uint64'
     ];
 
     /**
@@ -81,9 +81,9 @@ class SearchPostItemVehiclesFields implements ModelInterface, ArrayAccess, \Json
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'usage' => false,
+        'custom_post_subtitle' => false,
         'installment_sale' => false,
-        'custom_post_subtitle' => false
+        'usage' => false
     ];
 
     /**
@@ -172,9 +172,9 @@ class SearchPostItemVehiclesFields implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $attributeMap = [
-        'usage' => 'usage',
+        'custom_post_subtitle' => 'custom_post_subtitle',
         'installment_sale' => 'installment_sale',
-        'custom_post_subtitle' => 'custom_post_subtitle'
+        'usage' => 'usage'
     ];
 
     /**
@@ -183,9 +183,9 @@ class SearchPostItemVehiclesFields implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $setters = [
-        'usage' => 'setUsage',
+        'custom_post_subtitle' => 'setCustomPostSubtitle',
         'installment_sale' => 'setInstallmentSale',
-        'custom_post_subtitle' => 'setCustomPostSubtitle'
+        'usage' => 'setUsage'
     ];
 
     /**
@@ -194,9 +194,9 @@ class SearchPostItemVehiclesFields implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $getters = [
-        'usage' => 'getUsage',
+        'custom_post_subtitle' => 'getCustomPostSubtitle',
         'installment_sale' => 'getInstallmentSale',
-        'custom_post_subtitle' => 'getCustomPostSubtitle'
+        'usage' => 'getUsage'
     ];
 
     /**
@@ -256,9 +256,9 @@ class SearchPostItemVehiclesFields implements ModelInterface, ArrayAccess, \Json
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('usage', $data ?? [], null);
-        $this->setIfExists('installment_sale', $data ?? [], null);
         $this->setIfExists('custom_post_subtitle', $data ?? [], null);
+        $this->setIfExists('installment_sale', $data ?? [], null);
+        $this->setIfExists('usage', $data ?? [], null);
     }
 
     /**
@@ -304,28 +304,28 @@ class SearchPostItemVehiclesFields implements ModelInterface, ArrayAccess, \Json
 
 
     /**
-     * Gets usage
+     * Gets custom_post_subtitle
      *
      * @return string|null
      */
-    public function getUsage()
+    public function getCustomPostSubtitle()
     {
-        return $this->container['usage'];
+        return $this->container['custom_post_subtitle'];
     }
 
     /**
-     * Sets usage
+     * Sets custom_post_subtitle
      *
-     * @param string|null $usage usage
+     * @param string|null $custom_post_subtitle custom_post_subtitle
      *
      * @return self
      */
-    public function setUsage($usage)
+    public function setCustomPostSubtitle($custom_post_subtitle)
     {
-        if (is_null($usage)) {
-            throw new \InvalidArgumentException('non-nullable usage cannot be null');
+        if (is_null($custom_post_subtitle)) {
+            throw new \InvalidArgumentException('non-nullable custom_post_subtitle cannot be null');
         }
-        $this->container['usage'] = $usage;
+        $this->container['custom_post_subtitle'] = $custom_post_subtitle;
 
         return $this;
     }
@@ -358,28 +358,28 @@ class SearchPostItemVehiclesFields implements ModelInterface, ArrayAccess, \Json
     }
 
     /**
-     * Gets custom_post_subtitle
+     * Gets usage
      *
      * @return string|null
      */
-    public function getCustomPostSubtitle()
+    public function getUsage()
     {
-        return $this->container['custom_post_subtitle'];
+        return $this->container['usage'];
     }
 
     /**
-     * Sets custom_post_subtitle
+     * Sets usage
      *
-     * @param string|null $custom_post_subtitle custom_post_subtitle
+     * @param string|null $usage usage
      *
      * @return self
      */
-    public function setCustomPostSubtitle($custom_post_subtitle)
+    public function setUsage($usage)
     {
-        if (is_null($custom_post_subtitle)) {
-            throw new \InvalidArgumentException('non-nullable custom_post_subtitle cannot be null');
+        if (is_null($usage)) {
+            throw new \InvalidArgumentException('non-nullable usage cannot be null');
         }
-        $this->container['custom_post_subtitle'] = $custom_post_subtitle;
+        $this->container['usage'] = $usage;
 
         return $this;
     }

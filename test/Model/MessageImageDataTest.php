@@ -80,6 +80,15 @@ class MessageImageDataTest extends TestCase
     }
 
     /**
+     * Test attribute "height_px"
+     */
+    public function testPropertyHeightPx()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "link"
      */
     public function testPropertyLink()
@@ -92,15 +101,6 @@ class MessageImageDataTest extends TestCase
      * Test attribute "size_bytes"
      */
     public function testPropertySizeBytes()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "height_px"
-     */
-    public function testPropertyHeightPx()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

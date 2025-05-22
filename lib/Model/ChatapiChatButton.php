@@ -58,9 +58,9 @@ class ChatapiChatButton implements ModelInterface, ArrayAccess, \JsonSerializabl
       */
     protected static $openAPITypes = [
         'action' => '\Divar\KenarApiClient\Model\AddonsAction',
-        'icon_name' => 'string',
         'caption' => 'string',
-        'icon' => '\Divar\KenarApiClient\Model\DivarIconsIconName'
+        'icon' => '\Divar\KenarApiClient\Model\DivarIconsIconName',
+        'icon_name' => 'string'
     ];
 
     /**
@@ -72,9 +72,9 @@ class ChatapiChatButton implements ModelInterface, ArrayAccess, \JsonSerializabl
       */
     protected static $openAPIFormats = [
         'action' => null,
-        'icon_name' => null,
         'caption' => null,
-        'icon' => null
+        'icon' => null,
+        'icon_name' => null
     ];
 
     /**
@@ -84,9 +84,9 @@ class ChatapiChatButton implements ModelInterface, ArrayAccess, \JsonSerializabl
       */
     protected static array $openAPINullables = [
         'action' => false,
-        'icon_name' => false,
         'caption' => false,
-        'icon' => false
+        'icon' => false,
+        'icon_name' => false
     ];
 
     /**
@@ -176,9 +176,9 @@ class ChatapiChatButton implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     protected static $attributeMap = [
         'action' => 'action',
-        'icon_name' => 'icon_name',
         'caption' => 'caption',
-        'icon' => 'icon'
+        'icon' => 'icon',
+        'icon_name' => 'icon_name'
     ];
 
     /**
@@ -188,9 +188,9 @@ class ChatapiChatButton implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     protected static $setters = [
         'action' => 'setAction',
-        'icon_name' => 'setIconName',
         'caption' => 'setCaption',
-        'icon' => 'setIcon'
+        'icon' => 'setIcon',
+        'icon_name' => 'setIconName'
     ];
 
     /**
@@ -200,9 +200,9 @@ class ChatapiChatButton implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     protected static $getters = [
         'action' => 'getAction',
-        'icon_name' => 'getIconName',
         'caption' => 'getCaption',
-        'icon' => 'getIcon'
+        'icon' => 'getIcon',
+        'icon_name' => 'getIconName'
     ];
 
     /**
@@ -263,9 +263,9 @@ class ChatapiChatButton implements ModelInterface, ArrayAccess, \JsonSerializabl
     public function __construct(?array $data = null)
     {
         $this->setIfExists('action', $data ?? [], null);
-        $this->setIfExists('icon_name', $data ?? [], null);
         $this->setIfExists('caption', $data ?? [], null);
         $this->setIfExists('icon', $data ?? [], null);
+        $this->setIfExists('icon_name', $data ?? [], null);
     }
 
     /**
@@ -338,33 +338,6 @@ class ChatapiChatButton implements ModelInterface, ArrayAccess, \JsonSerializabl
     }
 
     /**
-     * Gets icon_name
-     *
-     * @return string|null
-     */
-    public function getIconName()
-    {
-        return $this->container['icon_name'];
-    }
-
-    /**
-     * Sets icon_name
-     *
-     * @param string|null $icon_name icon_name
-     *
-     * @return self
-     */
-    public function setIconName($icon_name)
-    {
-        if (is_null($icon_name)) {
-            throw new \InvalidArgumentException('non-nullable icon_name cannot be null');
-        }
-        $this->container['icon_name'] = $icon_name;
-
-        return $this;
-    }
-
-    /**
      * Gets caption
      *
      * @return string|null
@@ -414,6 +387,33 @@ class ChatapiChatButton implements ModelInterface, ArrayAccess, \JsonSerializabl
             throw new \InvalidArgumentException('non-nullable icon cannot be null');
         }
         $this->container['icon'] = $icon;
+
+        return $this;
+    }
+
+    /**
+     * Gets icon_name
+     *
+     * @return string|null
+     */
+    public function getIconName()
+    {
+        return $this->container['icon_name'];
+    }
+
+    /**
+     * Sets icon_name
+     *
+     * @param string|null $icon_name icon_name
+     *
+     * @return self
+     */
+    public function setIconName($icon_name)
+    {
+        if (is_null($icon_name)) {
+            throw new \InvalidArgumentException('non-nullable icon_name cannot be null');
+        }
+        $this->container['icon_name'] = $icon_name;
 
         return $this;
     }

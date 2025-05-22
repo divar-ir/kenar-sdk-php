@@ -57,12 +57,12 @@ class AddonsCreateUserAddonV2Body implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
-        'widgets' => '\Divar\KenarApiClient\Model\AddonsWidget[]',
-        'semantic' => 'array<string,string>',
-        'phone' => 'string',
         'categories' => 'string[]',
+        'cost' => 'int',
+        'phone' => 'string',
+        'semantic' => 'array<string,string>',
         'ticket_uuid' => 'string',
-        'cost' => 'int'
+        'widgets' => '\Divar\KenarApiClient\Model\AddonsWidget[]'
     ];
 
     /**
@@ -73,12 +73,12 @@ class AddonsCreateUserAddonV2Body implements ModelInterface, ArrayAccess, \JsonS
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'widgets' => null,
-        'semantic' => null,
-        'phone' => null,
         'categories' => null,
+        'cost' => 'int32',
+        'phone' => null,
+        'semantic' => null,
         'ticket_uuid' => null,
-        'cost' => 'int32'
+        'widgets' => null
     ];
 
     /**
@@ -87,12 +87,12 @@ class AddonsCreateUserAddonV2Body implements ModelInterface, ArrayAccess, \JsonS
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'widgets' => false,
-        'semantic' => false,
-        'phone' => false,
         'categories' => false,
+        'cost' => false,
+        'phone' => false,
+        'semantic' => false,
         'ticket_uuid' => false,
-        'cost' => false
+        'widgets' => false
     ];
 
     /**
@@ -181,12 +181,12 @@ class AddonsCreateUserAddonV2Body implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $attributeMap = [
-        'widgets' => 'widgets',
-        'semantic' => 'semantic',
-        'phone' => 'phone',
         'categories' => 'categories',
+        'cost' => 'cost',
+        'phone' => 'phone',
+        'semantic' => 'semantic',
         'ticket_uuid' => 'ticket_uuid',
-        'cost' => 'cost'
+        'widgets' => 'widgets'
     ];
 
     /**
@@ -195,12 +195,12 @@ class AddonsCreateUserAddonV2Body implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $setters = [
-        'widgets' => 'setWidgets',
-        'semantic' => 'setSemantic',
-        'phone' => 'setPhone',
         'categories' => 'setCategories',
+        'cost' => 'setCost',
+        'phone' => 'setPhone',
+        'semantic' => 'setSemantic',
         'ticket_uuid' => 'setTicketUuid',
-        'cost' => 'setCost'
+        'widgets' => 'setWidgets'
     ];
 
     /**
@@ -209,12 +209,12 @@ class AddonsCreateUserAddonV2Body implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $getters = [
-        'widgets' => 'getWidgets',
-        'semantic' => 'getSemantic',
-        'phone' => 'getPhone',
         'categories' => 'getCategories',
+        'cost' => 'getCost',
+        'phone' => 'getPhone',
+        'semantic' => 'getSemantic',
         'ticket_uuid' => 'getTicketUuid',
-        'cost' => 'getCost'
+        'widgets' => 'getWidgets'
     ];
 
     /**
@@ -274,12 +274,12 @@ class AddonsCreateUserAddonV2Body implements ModelInterface, ArrayAccess, \JsonS
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('widgets', $data ?? [], null);
-        $this->setIfExists('semantic', $data ?? [], null);
-        $this->setIfExists('phone', $data ?? [], null);
         $this->setIfExists('categories', $data ?? [], null);
-        $this->setIfExists('ticket_uuid', $data ?? [], null);
         $this->setIfExists('cost', $data ?? [], null);
+        $this->setIfExists('phone', $data ?? [], null);
+        $this->setIfExists('semantic', $data ?? [], null);
+        $this->setIfExists('ticket_uuid', $data ?? [], null);
+        $this->setIfExists('widgets', $data ?? [], null);
     }
 
     /**
@@ -325,55 +325,55 @@ class AddonsCreateUserAddonV2Body implements ModelInterface, ArrayAccess, \JsonS
 
 
     /**
-     * Gets widgets
+     * Gets categories
      *
-     * @return \Divar\KenarApiClient\Model\AddonsWidget[]|null
+     * @return string[]|null
      */
-    public function getWidgets()
+    public function getCategories()
     {
-        return $this->container['widgets'];
+        return $this->container['categories'];
     }
 
     /**
-     * Sets widgets
+     * Sets categories
      *
-     * @param \Divar\KenarApiClient\Model\AddonsWidget[]|null $widgets widgets
+     * @param string[]|null $categories categories
      *
      * @return self
      */
-    public function setWidgets($widgets)
+    public function setCategories($categories)
     {
-        if (is_null($widgets)) {
-            throw new \InvalidArgumentException('non-nullable widgets cannot be null');
+        if (is_null($categories)) {
+            throw new \InvalidArgumentException('non-nullable categories cannot be null');
         }
-        $this->container['widgets'] = $widgets;
+        $this->container['categories'] = $categories;
 
         return $this;
     }
 
     /**
-     * Gets semantic
+     * Gets cost
      *
-     * @return array<string,string>|null
+     * @return int|null
      */
-    public function getSemantic()
+    public function getCost()
     {
-        return $this->container['semantic'];
+        return $this->container['cost'];
     }
 
     /**
-     * Sets semantic
+     * Sets cost
      *
-     * @param array<string,string>|null $semantic semantic
+     * @param int|null $cost cost
      *
      * @return self
      */
-    public function setSemantic($semantic)
+    public function setCost($cost)
     {
-        if (is_null($semantic)) {
-            throw new \InvalidArgumentException('non-nullable semantic cannot be null');
+        if (is_null($cost)) {
+            throw new \InvalidArgumentException('non-nullable cost cannot be null');
         }
-        $this->container['semantic'] = $semantic;
+        $this->container['cost'] = $cost;
 
         return $this;
     }
@@ -406,28 +406,28 @@ class AddonsCreateUserAddonV2Body implements ModelInterface, ArrayAccess, \JsonS
     }
 
     /**
-     * Gets categories
+     * Gets semantic
      *
-     * @return string[]|null
+     * @return array<string,string>|null
      */
-    public function getCategories()
+    public function getSemantic()
     {
-        return $this->container['categories'];
+        return $this->container['semantic'];
     }
 
     /**
-     * Sets categories
+     * Sets semantic
      *
-     * @param string[]|null $categories categories
+     * @param array<string,string>|null $semantic semantic
      *
      * @return self
      */
-    public function setCategories($categories)
+    public function setSemantic($semantic)
     {
-        if (is_null($categories)) {
-            throw new \InvalidArgumentException('non-nullable categories cannot be null');
+        if (is_null($semantic)) {
+            throw new \InvalidArgumentException('non-nullable semantic cannot be null');
         }
-        $this->container['categories'] = $categories;
+        $this->container['semantic'] = $semantic;
 
         return $this;
     }
@@ -460,28 +460,28 @@ class AddonsCreateUserAddonV2Body implements ModelInterface, ArrayAccess, \JsonS
     }
 
     /**
-     * Gets cost
+     * Gets widgets
      *
-     * @return int|null
+     * @return \Divar\KenarApiClient\Model\AddonsWidget[]|null
      */
-    public function getCost()
+    public function getWidgets()
     {
-        return $this->container['cost'];
+        return $this->container['widgets'];
     }
 
     /**
-     * Sets cost
+     * Sets widgets
      *
-     * @param int|null $cost cost
+     * @param \Divar\KenarApiClient\Model\AddonsWidget[]|null $widgets widgets
      *
      * @return self
      */
-    public function setCost($cost)
+    public function setWidgets($widgets)
     {
-        if (is_null($cost)) {
-            throw new \InvalidArgumentException('non-nullable cost cannot be null');
+        if (is_null($widgets)) {
+            throw new \InvalidArgumentException('non-nullable widgets cannot be null');
         }
-        $this->container['cost'] = $cost;
+        $this->container['widgets'] = $widgets;
 
         return $this;
     }

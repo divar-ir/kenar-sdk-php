@@ -57,13 +57,13 @@ class AddonsScoreRow implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'title' => 'string',
+        'action' => '\Divar\KenarApiClient\Model\AddonsAction',
         'descriptive_score' => 'string',
-        'percentage_score' => 'int',
-        'score_color' => '\Divar\KenarApiClient\Model\AddonsWidgetColor',
         'has_divider' => 'bool',
         'icon_name' => '\Divar\KenarApiClient\Model\DivarIconsIconName',
-        'action' => '\Divar\KenarApiClient\Model\AddonsAction'
+        'percentage_score' => 'int',
+        'score_color' => '\Divar\KenarApiClient\Model\AddonsWidgetColor',
+        'title' => 'string'
     ];
 
     /**
@@ -74,13 +74,13 @@ class AddonsScoreRow implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'title' => null,
+        'action' => null,
         'descriptive_score' => null,
-        'percentage_score' => 'int32',
-        'score_color' => null,
         'has_divider' => null,
         'icon_name' => null,
-        'action' => null
+        'percentage_score' => 'int32',
+        'score_color' => null,
+        'title' => null
     ];
 
     /**
@@ -89,13 +89,13 @@ class AddonsScoreRow implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'title' => false,
+        'action' => false,
         'descriptive_score' => false,
-        'percentage_score' => false,
-        'score_color' => false,
         'has_divider' => false,
         'icon_name' => false,
-        'action' => false
+        'percentage_score' => false,
+        'score_color' => false,
+        'title' => false
     ];
 
     /**
@@ -184,13 +184,13 @@ class AddonsScoreRow implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'title' => 'title',
+        'action' => 'action',
         'descriptive_score' => 'descriptive_score',
-        'percentage_score' => 'percentage_score',
-        'score_color' => 'score_color',
         'has_divider' => 'has_divider',
         'icon_name' => 'icon_name',
-        'action' => 'action'
+        'percentage_score' => 'percentage_score',
+        'score_color' => 'score_color',
+        'title' => 'title'
     ];
 
     /**
@@ -199,13 +199,13 @@ class AddonsScoreRow implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'title' => 'setTitle',
+        'action' => 'setAction',
         'descriptive_score' => 'setDescriptiveScore',
-        'percentage_score' => 'setPercentageScore',
-        'score_color' => 'setScoreColor',
         'has_divider' => 'setHasDivider',
         'icon_name' => 'setIconName',
-        'action' => 'setAction'
+        'percentage_score' => 'setPercentageScore',
+        'score_color' => 'setScoreColor',
+        'title' => 'setTitle'
     ];
 
     /**
@@ -214,13 +214,13 @@ class AddonsScoreRow implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'title' => 'getTitle',
+        'action' => 'getAction',
         'descriptive_score' => 'getDescriptiveScore',
-        'percentage_score' => 'getPercentageScore',
-        'score_color' => 'getScoreColor',
         'has_divider' => 'getHasDivider',
         'icon_name' => 'getIconName',
-        'action' => 'getAction'
+        'percentage_score' => 'getPercentageScore',
+        'score_color' => 'getScoreColor',
+        'title' => 'getTitle'
     ];
 
     /**
@@ -280,13 +280,13 @@ class AddonsScoreRow implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('title', $data ?? [], null);
+        $this->setIfExists('action', $data ?? [], null);
         $this->setIfExists('descriptive_score', $data ?? [], null);
-        $this->setIfExists('percentage_score', $data ?? [], null);
-        $this->setIfExists('score_color', $data ?? [], null);
         $this->setIfExists('has_divider', $data ?? [], null);
         $this->setIfExists('icon_name', $data ?? [], null);
-        $this->setIfExists('action', $data ?? [], null);
+        $this->setIfExists('percentage_score', $data ?? [], null);
+        $this->setIfExists('score_color', $data ?? [], null);
+        $this->setIfExists('title', $data ?? [], null);
     }
 
     /**
@@ -332,28 +332,28 @@ class AddonsScoreRow implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets title
+     * Gets action
      *
-     * @return string|null
+     * @return \Divar\KenarApiClient\Model\AddonsAction|null
      */
-    public function getTitle()
+    public function getAction()
     {
-        return $this->container['title'];
+        return $this->container['action'];
     }
 
     /**
-     * Sets title
+     * Sets action
      *
-     * @param string|null $title title
+     * @param \Divar\KenarApiClient\Model\AddonsAction|null $action action
      *
      * @return self
      */
-    public function setTitle($title)
+    public function setAction($action)
     {
-        if (is_null($title)) {
-            throw new \InvalidArgumentException('non-nullable title cannot be null');
+        if (is_null($action)) {
+            throw new \InvalidArgumentException('non-nullable action cannot be null');
         }
-        $this->container['title'] = $title;
+        $this->container['action'] = $action;
 
         return $this;
     }
@@ -381,60 +381,6 @@ class AddonsScoreRow implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable descriptive_score cannot be null');
         }
         $this->container['descriptive_score'] = $descriptive_score;
-
-        return $this;
-    }
-
-    /**
-     * Gets percentage_score
-     *
-     * @return int|null
-     */
-    public function getPercentageScore()
-    {
-        return $this->container['percentage_score'];
-    }
-
-    /**
-     * Sets percentage_score
-     *
-     * @param int|null $percentage_score percentage_score
-     *
-     * @return self
-     */
-    public function setPercentageScore($percentage_score)
-    {
-        if (is_null($percentage_score)) {
-            throw new \InvalidArgumentException('non-nullable percentage_score cannot be null');
-        }
-        $this->container['percentage_score'] = $percentage_score;
-
-        return $this;
-    }
-
-    /**
-     * Gets score_color
-     *
-     * @return \Divar\KenarApiClient\Model\AddonsWidgetColor|null
-     */
-    public function getScoreColor()
-    {
-        return $this->container['score_color'];
-    }
-
-    /**
-     * Sets score_color
-     *
-     * @param \Divar\KenarApiClient\Model\AddonsWidgetColor|null $score_color score_color
-     *
-     * @return self
-     */
-    public function setScoreColor($score_color)
-    {
-        if (is_null($score_color)) {
-            throw new \InvalidArgumentException('non-nullable score_color cannot be null');
-        }
-        $this->container['score_color'] = $score_color;
 
         return $this;
     }
@@ -494,28 +440,82 @@ class AddonsScoreRow implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets action
+     * Gets percentage_score
      *
-     * @return \Divar\KenarApiClient\Model\AddonsAction|null
+     * @return int|null
      */
-    public function getAction()
+    public function getPercentageScore()
     {
-        return $this->container['action'];
+        return $this->container['percentage_score'];
     }
 
     /**
-     * Sets action
+     * Sets percentage_score
      *
-     * @param \Divar\KenarApiClient\Model\AddonsAction|null $action action
+     * @param int|null $percentage_score percentage_score
      *
      * @return self
      */
-    public function setAction($action)
+    public function setPercentageScore($percentage_score)
     {
-        if (is_null($action)) {
-            throw new \InvalidArgumentException('non-nullable action cannot be null');
+        if (is_null($percentage_score)) {
+            throw new \InvalidArgumentException('non-nullable percentage_score cannot be null');
         }
-        $this->container['action'] = $action;
+        $this->container['percentage_score'] = $percentage_score;
+
+        return $this;
+    }
+
+    /**
+     * Gets score_color
+     *
+     * @return \Divar\KenarApiClient\Model\AddonsWidgetColor|null
+     */
+    public function getScoreColor()
+    {
+        return $this->container['score_color'];
+    }
+
+    /**
+     * Sets score_color
+     *
+     * @param \Divar\KenarApiClient\Model\AddonsWidgetColor|null $score_color score_color
+     *
+     * @return self
+     */
+    public function setScoreColor($score_color)
+    {
+        if (is_null($score_color)) {
+            throw new \InvalidArgumentException('non-nullable score_color cannot be null');
+        }
+        $this->container['score_color'] = $score_color;
+
+        return $this;
+    }
+
+    /**
+     * Gets title
+     *
+     * @return string|null
+     */
+    public function getTitle()
+    {
+        return $this->container['title'];
+    }
+
+    /**
+     * Sets title
+     *
+     * @param string|null $title title
+     *
+     * @return self
+     */
+    public function setTitle($title)
+    {
+        if (is_null($title)) {
+            throw new \InvalidArgumentException('non-nullable title cannot be null');
+        }
+        $this->container['title'] = $title;
 
         return $this;
     }

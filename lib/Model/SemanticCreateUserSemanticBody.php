@@ -57,10 +57,10 @@ class SemanticCreateUserSemanticBody implements ModelInterface, ArrayAccess, \Js
       * @var string[]
       */
     protected static $openAPITypes = [
+        'cost' => 'int',
         'phone' => 'string',
         'semantic' => 'array<string,string>',
-        'ticket_uuid' => 'string',
-        'cost' => 'int'
+        'ticket_uuid' => 'string'
     ];
 
     /**
@@ -71,10 +71,10 @@ class SemanticCreateUserSemanticBody implements ModelInterface, ArrayAccess, \Js
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'cost' => 'int32',
         'phone' => null,
         'semantic' => null,
-        'ticket_uuid' => null,
-        'cost' => 'int32'
+        'ticket_uuid' => null
     ];
 
     /**
@@ -83,10 +83,10 @@ class SemanticCreateUserSemanticBody implements ModelInterface, ArrayAccess, \Js
       * @var boolean[]
       */
     protected static array $openAPINullables = [
+        'cost' => false,
         'phone' => false,
         'semantic' => false,
-        'ticket_uuid' => false,
-        'cost' => false
+        'ticket_uuid' => false
     ];
 
     /**
@@ -175,10 +175,10 @@ class SemanticCreateUserSemanticBody implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $attributeMap = [
+        'cost' => 'cost',
         'phone' => 'phone',
         'semantic' => 'semantic',
-        'ticket_uuid' => 'ticket_uuid',
-        'cost' => 'cost'
+        'ticket_uuid' => 'ticket_uuid'
     ];
 
     /**
@@ -187,10 +187,10 @@ class SemanticCreateUserSemanticBody implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $setters = [
+        'cost' => 'setCost',
         'phone' => 'setPhone',
         'semantic' => 'setSemantic',
-        'ticket_uuid' => 'setTicketUuid',
-        'cost' => 'setCost'
+        'ticket_uuid' => 'setTicketUuid'
     ];
 
     /**
@@ -199,10 +199,10 @@ class SemanticCreateUserSemanticBody implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $getters = [
+        'cost' => 'getCost',
         'phone' => 'getPhone',
         'semantic' => 'getSemantic',
-        'ticket_uuid' => 'getTicketUuid',
-        'cost' => 'getCost'
+        'ticket_uuid' => 'getTicketUuid'
     ];
 
     /**
@@ -262,10 +262,10 @@ class SemanticCreateUserSemanticBody implements ModelInterface, ArrayAccess, \Js
      */
     public function __construct(?array $data = null)
     {
+        $this->setIfExists('cost', $data ?? [], null);
         $this->setIfExists('phone', $data ?? [], null);
         $this->setIfExists('semantic', $data ?? [], null);
         $this->setIfExists('ticket_uuid', $data ?? [], null);
-        $this->setIfExists('cost', $data ?? [], null);
     }
 
     /**
@@ -309,6 +309,33 @@ class SemanticCreateUserSemanticBody implements ModelInterface, ArrayAccess, \Js
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets cost
+     *
+     * @return int|null
+     */
+    public function getCost()
+    {
+        return $this->container['cost'];
+    }
+
+    /**
+     * Sets cost
+     *
+     * @param int|null $cost cost
+     *
+     * @return self
+     */
+    public function setCost($cost)
+    {
+        if (is_null($cost)) {
+            throw new \InvalidArgumentException('non-nullable cost cannot be null');
+        }
+        $this->container['cost'] = $cost;
+
+        return $this;
+    }
 
     /**
      * Gets phone
@@ -387,33 +414,6 @@ class SemanticCreateUserSemanticBody implements ModelInterface, ArrayAccess, \Js
             throw new \InvalidArgumentException('non-nullable ticket_uuid cannot be null');
         }
         $this->container['ticket_uuid'] = $ticket_uuid;
-
-        return $this;
-    }
-
-    /**
-     * Gets cost
-     *
-     * @return int|null
-     */
-    public function getCost()
-    {
-        return $this->container['cost'];
-    }
-
-    /**
-     * Sets cost
-     *
-     * @param int|null $cost cost
-     *
-     * @return self
-     */
-    public function setCost($cost)
-    {
-        if (is_null($cost)) {
-            throw new \InvalidArgumentException('non-nullable cost cannot be null');
-        }
-        $this->container['cost'] = $cost;
 
         return $this;
     }

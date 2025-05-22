@@ -80,18 +80,18 @@ class AddonsCreateUserAddonV2BodyTest extends TestCase
     }
 
     /**
-     * Test attribute "widgets"
+     * Test attribute "categories"
      */
-    public function testPropertyWidgets()
+    public function testPropertyCategories()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "semantic"
+     * Test attribute "cost"
      */
-    public function testPropertySemantic()
+    public function testPropertyCost()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -107,9 +107,9 @@ class AddonsCreateUserAddonV2BodyTest extends TestCase
     }
 
     /**
-     * Test attribute "categories"
+     * Test attribute "semantic"
      */
-    public function testPropertyCategories()
+    public function testPropertySemantic()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -125,9 +125,9 @@ class AddonsCreateUserAddonV2BodyTest extends TestCase
     }
 
     /**
-     * Test attribute "cost"
+     * Test attribute "widgets"
      */
-    public function testPropertyCost()
+    public function testPropertyWidgets()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

@@ -57,22 +57,22 @@ class FinderSearchPostItem implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var string[]
       */
     protected static $openAPITypes = [
-        'token' => 'string',
         'category' => 'string',
-        'last_modified_at' => '\DateTime',
         'city' => 'string',
-        'title' => 'string',
-        'price' => '\Divar\KenarApiClient\Model\SearchPostItemPrice',
-        'real_estate_fields' => '\Divar\KenarApiClient\Model\SearchPostItemRealEstateFields',
-        'vehicles_fields' => '\Divar\KenarApiClient\Model\SearchPostItemVehiclesFields',
+        'community_fields' => 'object',
         'electronic_devices_fields' => 'object',
         'home_kitchen_fields' => 'object',
-        'services_fields' => 'object',
-        'personal_goods_fields' => 'object',
+        'jobs_fields' => 'object',
+        'last_modified_at' => '\DateTime',
         'leisure_hobbies_fields' => 'object',
-        'community_fields' => 'object',
+        'personal_goods_fields' => 'object',
+        'price' => '\Divar\KenarApiClient\Model\SearchPostItemPrice',
+        'real_estate_fields' => '\Divar\KenarApiClient\Model\SearchPostItemRealEstateFields',
+        'services_fields' => 'object',
+        'title' => 'string',
+        'token' => 'string',
         'tools_materials_equipment_fields' => 'object',
-        'jobs_fields' => 'object'
+        'vehicles_fields' => '\Divar\KenarApiClient\Model\SearchPostItemVehiclesFields'
     ];
 
     /**
@@ -83,22 +83,22 @@ class FinderSearchPostItem implements ModelInterface, ArrayAccess, \JsonSerializ
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'token' => null,
         'category' => null,
-        'last_modified_at' => 'date-time',
         'city' => null,
-        'title' => null,
-        'price' => null,
-        'real_estate_fields' => null,
-        'vehicles_fields' => null,
+        'community_fields' => null,
         'electronic_devices_fields' => null,
         'home_kitchen_fields' => null,
-        'services_fields' => null,
-        'personal_goods_fields' => null,
+        'jobs_fields' => null,
+        'last_modified_at' => 'date-time',
         'leisure_hobbies_fields' => null,
-        'community_fields' => null,
+        'personal_goods_fields' => null,
+        'price' => null,
+        'real_estate_fields' => null,
+        'services_fields' => null,
+        'title' => null,
+        'token' => null,
         'tools_materials_equipment_fields' => null,
-        'jobs_fields' => null
+        'vehicles_fields' => null
     ];
 
     /**
@@ -107,22 +107,22 @@ class FinderSearchPostItem implements ModelInterface, ArrayAccess, \JsonSerializ
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'token' => false,
         'category' => false,
-        'last_modified_at' => false,
         'city' => false,
-        'title' => false,
-        'price' => false,
-        'real_estate_fields' => false,
-        'vehicles_fields' => false,
+        'community_fields' => false,
         'electronic_devices_fields' => false,
         'home_kitchen_fields' => false,
-        'services_fields' => false,
-        'personal_goods_fields' => false,
+        'jobs_fields' => false,
+        'last_modified_at' => false,
         'leisure_hobbies_fields' => false,
-        'community_fields' => false,
+        'personal_goods_fields' => false,
+        'price' => false,
+        'real_estate_fields' => false,
+        'services_fields' => false,
+        'title' => false,
+        'token' => false,
         'tools_materials_equipment_fields' => false,
-        'jobs_fields' => false
+        'vehicles_fields' => false
     ];
 
     /**
@@ -211,22 +211,22 @@ class FinderSearchPostItem implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $attributeMap = [
-        'token' => 'token',
         'category' => 'category',
-        'last_modified_at' => 'last_modified_at',
         'city' => 'city',
-        'title' => 'title',
-        'price' => 'price',
-        'real_estate_fields' => 'real_estate_fields',
-        'vehicles_fields' => 'vehicles_fields',
+        'community_fields' => 'community_fields',
         'electronic_devices_fields' => 'electronic_devices_fields',
         'home_kitchen_fields' => 'home_kitchen_fields',
-        'services_fields' => 'services_fields',
-        'personal_goods_fields' => 'personal_goods_fields',
+        'jobs_fields' => 'jobs_fields',
+        'last_modified_at' => 'last_modified_at',
         'leisure_hobbies_fields' => 'leisure_hobbies_fields',
-        'community_fields' => 'community_fields',
+        'personal_goods_fields' => 'personal_goods_fields',
+        'price' => 'price',
+        'real_estate_fields' => 'real_estate_fields',
+        'services_fields' => 'services_fields',
+        'title' => 'title',
+        'token' => 'token',
         'tools_materials_equipment_fields' => 'tools_materials_equipment_fields',
-        'jobs_fields' => 'jobs_fields'
+        'vehicles_fields' => 'vehicles_fields'
     ];
 
     /**
@@ -235,22 +235,22 @@ class FinderSearchPostItem implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $setters = [
-        'token' => 'setToken',
         'category' => 'setCategory',
-        'last_modified_at' => 'setLastModifiedAt',
         'city' => 'setCity',
-        'title' => 'setTitle',
-        'price' => 'setPrice',
-        'real_estate_fields' => 'setRealEstateFields',
-        'vehicles_fields' => 'setVehiclesFields',
+        'community_fields' => 'setCommunityFields',
         'electronic_devices_fields' => 'setElectronicDevicesFields',
         'home_kitchen_fields' => 'setHomeKitchenFields',
-        'services_fields' => 'setServicesFields',
-        'personal_goods_fields' => 'setPersonalGoodsFields',
+        'jobs_fields' => 'setJobsFields',
+        'last_modified_at' => 'setLastModifiedAt',
         'leisure_hobbies_fields' => 'setLeisureHobbiesFields',
-        'community_fields' => 'setCommunityFields',
+        'personal_goods_fields' => 'setPersonalGoodsFields',
+        'price' => 'setPrice',
+        'real_estate_fields' => 'setRealEstateFields',
+        'services_fields' => 'setServicesFields',
+        'title' => 'setTitle',
+        'token' => 'setToken',
         'tools_materials_equipment_fields' => 'setToolsMaterialsEquipmentFields',
-        'jobs_fields' => 'setJobsFields'
+        'vehicles_fields' => 'setVehiclesFields'
     ];
 
     /**
@@ -259,22 +259,22 @@ class FinderSearchPostItem implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $getters = [
-        'token' => 'getToken',
         'category' => 'getCategory',
-        'last_modified_at' => 'getLastModifiedAt',
         'city' => 'getCity',
-        'title' => 'getTitle',
-        'price' => 'getPrice',
-        'real_estate_fields' => 'getRealEstateFields',
-        'vehicles_fields' => 'getVehiclesFields',
+        'community_fields' => 'getCommunityFields',
         'electronic_devices_fields' => 'getElectronicDevicesFields',
         'home_kitchen_fields' => 'getHomeKitchenFields',
-        'services_fields' => 'getServicesFields',
-        'personal_goods_fields' => 'getPersonalGoodsFields',
+        'jobs_fields' => 'getJobsFields',
+        'last_modified_at' => 'getLastModifiedAt',
         'leisure_hobbies_fields' => 'getLeisureHobbiesFields',
-        'community_fields' => 'getCommunityFields',
+        'personal_goods_fields' => 'getPersonalGoodsFields',
+        'price' => 'getPrice',
+        'real_estate_fields' => 'getRealEstateFields',
+        'services_fields' => 'getServicesFields',
+        'title' => 'getTitle',
+        'token' => 'getToken',
         'tools_materials_equipment_fields' => 'getToolsMaterialsEquipmentFields',
-        'jobs_fields' => 'getJobsFields'
+        'vehicles_fields' => 'getVehiclesFields'
     ];
 
     /**
@@ -334,22 +334,22 @@ class FinderSearchPostItem implements ModelInterface, ArrayAccess, \JsonSerializ
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('token', $data ?? [], null);
         $this->setIfExists('category', $data ?? [], null);
-        $this->setIfExists('last_modified_at', $data ?? [], null);
         $this->setIfExists('city', $data ?? [], null);
-        $this->setIfExists('title', $data ?? [], null);
-        $this->setIfExists('price', $data ?? [], null);
-        $this->setIfExists('real_estate_fields', $data ?? [], null);
-        $this->setIfExists('vehicles_fields', $data ?? [], null);
+        $this->setIfExists('community_fields', $data ?? [], null);
         $this->setIfExists('electronic_devices_fields', $data ?? [], null);
         $this->setIfExists('home_kitchen_fields', $data ?? [], null);
-        $this->setIfExists('services_fields', $data ?? [], null);
-        $this->setIfExists('personal_goods_fields', $data ?? [], null);
-        $this->setIfExists('leisure_hobbies_fields', $data ?? [], null);
-        $this->setIfExists('community_fields', $data ?? [], null);
-        $this->setIfExists('tools_materials_equipment_fields', $data ?? [], null);
         $this->setIfExists('jobs_fields', $data ?? [], null);
+        $this->setIfExists('last_modified_at', $data ?? [], null);
+        $this->setIfExists('leisure_hobbies_fields', $data ?? [], null);
+        $this->setIfExists('personal_goods_fields', $data ?? [], null);
+        $this->setIfExists('price', $data ?? [], null);
+        $this->setIfExists('real_estate_fields', $data ?? [], null);
+        $this->setIfExists('services_fields', $data ?? [], null);
+        $this->setIfExists('title', $data ?? [], null);
+        $this->setIfExists('token', $data ?? [], null);
+        $this->setIfExists('tools_materials_equipment_fields', $data ?? [], null);
+        $this->setIfExists('vehicles_fields', $data ?? [], null);
     }
 
     /**
@@ -395,33 +395,6 @@ class FinderSearchPostItem implements ModelInterface, ArrayAccess, \JsonSerializ
 
 
     /**
-     * Gets token
-     *
-     * @return string|null
-     */
-    public function getToken()
-    {
-        return $this->container['token'];
-    }
-
-    /**
-     * Sets token
-     *
-     * @param string|null $token token
-     *
-     * @return self
-     */
-    public function setToken($token)
-    {
-        if (is_null($token)) {
-            throw new \InvalidArgumentException('non-nullable token cannot be null');
-        }
-        $this->container['token'] = $token;
-
-        return $this;
-    }
-
-    /**
      * Gets category
      *
      * @return string|null
@@ -444,33 +417,6 @@ class FinderSearchPostItem implements ModelInterface, ArrayAccess, \JsonSerializ
             throw new \InvalidArgumentException('non-nullable category cannot be null');
         }
         $this->container['category'] = $category;
-
-        return $this;
-    }
-
-    /**
-     * Gets last_modified_at
-     *
-     * @return \DateTime|null
-     */
-    public function getLastModifiedAt()
-    {
-        return $this->container['last_modified_at'];
-    }
-
-    /**
-     * Sets last_modified_at
-     *
-     * @param \DateTime|null $last_modified_at last_modified_at
-     *
-     * @return self
-     */
-    public function setLastModifiedAt($last_modified_at)
-    {
-        if (is_null($last_modified_at)) {
-            throw new \InvalidArgumentException('non-nullable last_modified_at cannot be null');
-        }
-        $this->container['last_modified_at'] = $last_modified_at;
 
         return $this;
     }
@@ -503,109 +449,28 @@ class FinderSearchPostItem implements ModelInterface, ArrayAccess, \JsonSerializ
     }
 
     /**
-     * Gets title
+     * Gets community_fields
      *
-     * @return string|null
+     * @return object|null
      */
-    public function getTitle()
+    public function getCommunityFields()
     {
-        return $this->container['title'];
+        return $this->container['community_fields'];
     }
 
     /**
-     * Sets title
+     * Sets community_fields
      *
-     * @param string|null $title title
+     * @param object|null $community_fields community_fields
      *
      * @return self
      */
-    public function setTitle($title)
+    public function setCommunityFields($community_fields)
     {
-        if (is_null($title)) {
-            throw new \InvalidArgumentException('non-nullable title cannot be null');
+        if (is_null($community_fields)) {
+            throw new \InvalidArgumentException('non-nullable community_fields cannot be null');
         }
-        $this->container['title'] = $title;
-
-        return $this;
-    }
-
-    /**
-     * Gets price
-     *
-     * @return \Divar\KenarApiClient\Model\SearchPostItemPrice|null
-     */
-    public function getPrice()
-    {
-        return $this->container['price'];
-    }
-
-    /**
-     * Sets price
-     *
-     * @param \Divar\KenarApiClient\Model\SearchPostItemPrice|null $price price
-     *
-     * @return self
-     */
-    public function setPrice($price)
-    {
-        if (is_null($price)) {
-            throw new \InvalidArgumentException('non-nullable price cannot be null');
-        }
-        $this->container['price'] = $price;
-
-        return $this;
-    }
-
-    /**
-     * Gets real_estate_fields
-     *
-     * @return \Divar\KenarApiClient\Model\SearchPostItemRealEstateFields|null
-     */
-    public function getRealEstateFields()
-    {
-        return $this->container['real_estate_fields'];
-    }
-
-    /**
-     * Sets real_estate_fields
-     *
-     * @param \Divar\KenarApiClient\Model\SearchPostItemRealEstateFields|null $real_estate_fields real_estate_fields
-     *
-     * @return self
-     */
-    public function setRealEstateFields($real_estate_fields)
-    {
-        if (is_null($real_estate_fields)) {
-            throw new \InvalidArgumentException('non-nullable real_estate_fields cannot be null');
-        }
-        $this->container['real_estate_fields'] = $real_estate_fields;
-
-        return $this;
-    }
-
-    /**
-     * Gets vehicles_fields
-     *
-     * @return \Divar\KenarApiClient\Model\SearchPostItemVehiclesFields|null
-     */
-    public function getVehiclesFields()
-    {
-        return $this->container['vehicles_fields'];
-    }
-
-    /**
-     * Sets vehicles_fields
-     *
-     * @param \Divar\KenarApiClient\Model\SearchPostItemVehiclesFields|null $vehicles_fields vehicles_fields
-     *
-     * @return self
-     */
-    public function setVehiclesFields($vehicles_fields)
-    {
-        if (is_null($vehicles_fields)) {
-            throw new \InvalidArgumentException('non-nullable vehicles_fields cannot be null');
-        }
-        $this->container['vehicles_fields'] = $vehicles_fields;
+        $this->container['community_fields'] = $community_fields;
 
         return $this;
     }
@@ -665,55 +530,55 @@ class FinderSearchPostItem implements ModelInterface, ArrayAccess, \JsonSerializ
     }
 
     /**
-     * Gets services_fields
+     * Gets jobs_fields
      *
      * @return object|null
      */
-    public function getServicesFields()
+    public function getJobsFields()
     {
-        return $this->container['services_fields'];
+        return $this->container['jobs_fields'];
     }
 
     /**
-     * Sets services_fields
+     * Sets jobs_fields
      *
-     * @param object|null $services_fields services_fields
+     * @param object|null $jobs_fields jobs_fields
      *
      * @return self
      */
-    public function setServicesFields($services_fields)
+    public function setJobsFields($jobs_fields)
     {
-        if (is_null($services_fields)) {
-            throw new \InvalidArgumentException('non-nullable services_fields cannot be null');
+        if (is_null($jobs_fields)) {
+            throw new \InvalidArgumentException('non-nullable jobs_fields cannot be null');
         }
-        $this->container['services_fields'] = $services_fields;
+        $this->container['jobs_fields'] = $jobs_fields;
 
         return $this;
     }
 
     /**
-     * Gets personal_goods_fields
+     * Gets last_modified_at
      *
-     * @return object|null
+     * @return \DateTime|null
      */
-    public function getPersonalGoodsFields()
+    public function getLastModifiedAt()
     {
-        return $this->container['personal_goods_fields'];
+        return $this->container['last_modified_at'];
     }
 
     /**
-     * Sets personal_goods_fields
+     * Sets last_modified_at
      *
-     * @param object|null $personal_goods_fields personal_goods_fields
+     * @param \DateTime|null $last_modified_at last_modified_at
      *
      * @return self
      */
-    public function setPersonalGoodsFields($personal_goods_fields)
+    public function setLastModifiedAt($last_modified_at)
     {
-        if (is_null($personal_goods_fields)) {
-            throw new \InvalidArgumentException('non-nullable personal_goods_fields cannot be null');
+        if (is_null($last_modified_at)) {
+            throw new \InvalidArgumentException('non-nullable last_modified_at cannot be null');
         }
-        $this->container['personal_goods_fields'] = $personal_goods_fields;
+        $this->container['last_modified_at'] = $last_modified_at;
 
         return $this;
     }
@@ -746,28 +611,163 @@ class FinderSearchPostItem implements ModelInterface, ArrayAccess, \JsonSerializ
     }
 
     /**
-     * Gets community_fields
+     * Gets personal_goods_fields
      *
      * @return object|null
      */
-    public function getCommunityFields()
+    public function getPersonalGoodsFields()
     {
-        return $this->container['community_fields'];
+        return $this->container['personal_goods_fields'];
     }
 
     /**
-     * Sets community_fields
+     * Sets personal_goods_fields
      *
-     * @param object|null $community_fields community_fields
+     * @param object|null $personal_goods_fields personal_goods_fields
      *
      * @return self
      */
-    public function setCommunityFields($community_fields)
+    public function setPersonalGoodsFields($personal_goods_fields)
     {
-        if (is_null($community_fields)) {
-            throw new \InvalidArgumentException('non-nullable community_fields cannot be null');
+        if (is_null($personal_goods_fields)) {
+            throw new \InvalidArgumentException('non-nullable personal_goods_fields cannot be null');
         }
-        $this->container['community_fields'] = $community_fields;
+        $this->container['personal_goods_fields'] = $personal_goods_fields;
+
+        return $this;
+    }
+
+    /**
+     * Gets price
+     *
+     * @return \Divar\KenarApiClient\Model\SearchPostItemPrice|null
+     */
+    public function getPrice()
+    {
+        return $this->container['price'];
+    }
+
+    /**
+     * Sets price
+     *
+     * @param \Divar\KenarApiClient\Model\SearchPostItemPrice|null $price price
+     *
+     * @return self
+     */
+    public function setPrice($price)
+    {
+        if (is_null($price)) {
+            throw new \InvalidArgumentException('non-nullable price cannot be null');
+        }
+        $this->container['price'] = $price;
+
+        return $this;
+    }
+
+    /**
+     * Gets real_estate_fields
+     *
+     * @return \Divar\KenarApiClient\Model\SearchPostItemRealEstateFields|null
+     */
+    public function getRealEstateFields()
+    {
+        return $this->container['real_estate_fields'];
+    }
+
+    /**
+     * Sets real_estate_fields
+     *
+     * @param \Divar\KenarApiClient\Model\SearchPostItemRealEstateFields|null $real_estate_fields real_estate_fields
+     *
+     * @return self
+     */
+    public function setRealEstateFields($real_estate_fields)
+    {
+        if (is_null($real_estate_fields)) {
+            throw new \InvalidArgumentException('non-nullable real_estate_fields cannot be null');
+        }
+        $this->container['real_estate_fields'] = $real_estate_fields;
+
+        return $this;
+    }
+
+    /**
+     * Gets services_fields
+     *
+     * @return object|null
+     */
+    public function getServicesFields()
+    {
+        return $this->container['services_fields'];
+    }
+
+    /**
+     * Sets services_fields
+     *
+     * @param object|null $services_fields services_fields
+     *
+     * @return self
+     */
+    public function setServicesFields($services_fields)
+    {
+        if (is_null($services_fields)) {
+            throw new \InvalidArgumentException('non-nullable services_fields cannot be null');
+        }
+        $this->container['services_fields'] = $services_fields;
+
+        return $this;
+    }
+
+    /**
+     * Gets title
+     *
+     * @return string|null
+     */
+    public function getTitle()
+    {
+        return $this->container['title'];
+    }
+
+    /**
+     * Sets title
+     *
+     * @param string|null $title title
+     *
+     * @return self
+     */
+    public function setTitle($title)
+    {
+        if (is_null($title)) {
+            throw new \InvalidArgumentException('non-nullable title cannot be null');
+        }
+        $this->container['title'] = $title;
+
+        return $this;
+    }
+
+    /**
+     * Gets token
+     *
+     * @return string|null
+     */
+    public function getToken()
+    {
+        return $this->container['token'];
+    }
+
+    /**
+     * Sets token
+     *
+     * @param string|null $token token
+     *
+     * @return self
+     */
+    public function setToken($token)
+    {
+        if (is_null($token)) {
+            throw new \InvalidArgumentException('non-nullable token cannot be null');
+        }
+        $this->container['token'] = $token;
 
         return $this;
     }
@@ -800,28 +800,28 @@ class FinderSearchPostItem implements ModelInterface, ArrayAccess, \JsonSerializ
     }
 
     /**
-     * Gets jobs_fields
+     * Gets vehicles_fields
      *
-     * @return object|null
+     * @return \Divar\KenarApiClient\Model\SearchPostItemVehiclesFields|null
      */
-    public function getJobsFields()
+    public function getVehiclesFields()
     {
-        return $this->container['jobs_fields'];
+        return $this->container['vehicles_fields'];
     }
 
     /**
-     * Sets jobs_fields
+     * Sets vehicles_fields
      *
-     * @param object|null $jobs_fields jobs_fields
+     * @param \Divar\KenarApiClient\Model\SearchPostItemVehiclesFields|null $vehicles_fields vehicles_fields
      *
      * @return self
      */
-    public function setJobsFields($jobs_fields)
+    public function setVehiclesFields($vehicles_fields)
     {
-        if (is_null($jobs_fields)) {
-            throw new \InvalidArgumentException('non-nullable jobs_fields cannot be null');
+        if (is_null($vehicles_fields)) {
+            throw new \InvalidArgumentException('non-nullable vehicles_fields cannot be null');
         }
-        $this->container['jobs_fields'] = $jobs_fields;
+        $this->container['vehicles_fields'] = $vehicles_fields;
 
         return $this;
     }

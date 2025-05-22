@@ -57,8 +57,8 @@ class FinderSearchQueryNumberRange implements ModelInterface, ArrayAccess, \Json
       * @var string[]
       */
     protected static $openAPITypes = [
-        'min' => 'string',
-        'max' => 'string'
+        'max' => 'string',
+        'min' => 'string'
     ];
 
     /**
@@ -69,8 +69,8 @@ class FinderSearchQueryNumberRange implements ModelInterface, ArrayAccess, \Json
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'min' => 'int64',
-        'max' => 'int64'
+        'max' => 'int64',
+        'min' => 'int64'
     ];
 
     /**
@@ -79,8 +79,8 @@ class FinderSearchQueryNumberRange implements ModelInterface, ArrayAccess, \Json
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'min' => false,
-        'max' => false
+        'max' => false,
+        'min' => false
     ];
 
     /**
@@ -169,8 +169,8 @@ class FinderSearchQueryNumberRange implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $attributeMap = [
-        'min' => 'min',
-        'max' => 'max'
+        'max' => 'max',
+        'min' => 'min'
     ];
 
     /**
@@ -179,8 +179,8 @@ class FinderSearchQueryNumberRange implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $setters = [
-        'min' => 'setMin',
-        'max' => 'setMax'
+        'max' => 'setMax',
+        'min' => 'setMin'
     ];
 
     /**
@@ -189,8 +189,8 @@ class FinderSearchQueryNumberRange implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $getters = [
-        'min' => 'getMin',
-        'max' => 'getMax'
+        'max' => 'getMax',
+        'min' => 'getMin'
     ];
 
     /**
@@ -250,8 +250,8 @@ class FinderSearchQueryNumberRange implements ModelInterface, ArrayAccess, \Json
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('min', $data ?? [], null);
         $this->setIfExists('max', $data ?? [], null);
+        $this->setIfExists('min', $data ?? [], null);
     }
 
     /**
@@ -297,33 +297,6 @@ class FinderSearchQueryNumberRange implements ModelInterface, ArrayAccess, \Json
 
 
     /**
-     * Gets min
-     *
-     * @return string|null
-     */
-    public function getMin()
-    {
-        return $this->container['min'];
-    }
-
-    /**
-     * Sets min
-     *
-     * @param string|null $min min
-     *
-     * @return self
-     */
-    public function setMin($min)
-    {
-        if (is_null($min)) {
-            throw new \InvalidArgumentException('non-nullable min cannot be null');
-        }
-        $this->container['min'] = $min;
-
-        return $this;
-    }
-
-    /**
      * Gets max
      *
      * @return string|null
@@ -346,6 +319,33 @@ class FinderSearchQueryNumberRange implements ModelInterface, ArrayAccess, \Json
             throw new \InvalidArgumentException('non-nullable max cannot be null');
         }
         $this->container['max'] = $max;
+
+        return $this;
+    }
+
+    /**
+     * Gets min
+     *
+     * @return string|null
+     */
+    public function getMin()
+    {
+        return $this->container['min'];
+    }
+
+    /**
+     * Sets min
+     *
+     * @param string|null $min min
+     *
+     * @return self
+     */
+    public function setMin($min)
+    {
+        if (is_null($min)) {
+            throw new \InvalidArgumentException('non-nullable min cannot be null');
+        }
+        $this->container['min'] = $min;
 
         return $this;
     }

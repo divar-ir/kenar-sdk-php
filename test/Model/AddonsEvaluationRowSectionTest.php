@@ -80,18 +80,18 @@ class AddonsEvaluationRowSectionTest extends TestCase
     }
 
     /**
-     * Test attribute "text"
+     * Test attribute "section_color"
      */
-    public function testPropertyText()
+    public function testPropertySectionColor()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "section_color"
+     * Test attribute "text"
      */
-    public function testPropertySectionColor()
+    public function testPropertyText()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

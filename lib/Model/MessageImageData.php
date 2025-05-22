@@ -57,9 +57,9 @@ class MessageImageData implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
+        'height_px' => 'int',
         'link' => 'string',
         'size_bytes' => 'string',
-        'height_px' => 'int',
         'width_px' => 'int'
     ];
 
@@ -71,9 +71,9 @@ class MessageImageData implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'height_px' => 'int64',
         'link' => null,
         'size_bytes' => 'uint64',
-        'height_px' => 'int64',
         'width_px' => 'int64'
     ];
 
@@ -83,9 +83,9 @@ class MessageImageData implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
+        'height_px' => false,
         'link' => false,
         'size_bytes' => false,
-        'height_px' => false,
         'width_px' => false
     ];
 
@@ -175,9 +175,9 @@ class MessageImageData implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
+        'height_px' => 'height_px',
         'link' => 'link',
         'size_bytes' => 'size_bytes',
-        'height_px' => 'height_px',
         'width_px' => 'width_px'
     ];
 
@@ -187,9 +187,9 @@ class MessageImageData implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
+        'height_px' => 'setHeightPx',
         'link' => 'setLink',
         'size_bytes' => 'setSizeBytes',
-        'height_px' => 'setHeightPx',
         'width_px' => 'setWidthPx'
     ];
 
@@ -199,9 +199,9 @@ class MessageImageData implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
+        'height_px' => 'getHeightPx',
         'link' => 'getLink',
         'size_bytes' => 'getSizeBytes',
-        'height_px' => 'getHeightPx',
         'width_px' => 'getWidthPx'
     ];
 
@@ -262,9 +262,9 @@ class MessageImageData implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
+        $this->setIfExists('height_px', $data ?? [], null);
         $this->setIfExists('link', $data ?? [], null);
         $this->setIfExists('size_bytes', $data ?? [], null);
-        $this->setIfExists('height_px', $data ?? [], null);
         $this->setIfExists('width_px', $data ?? [], null);
     }
 
@@ -309,6 +309,33 @@ class MessageImageData implements ModelInterface, ArrayAccess, \JsonSerializable
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets height_px
+     *
+     * @return int|null
+     */
+    public function getHeightPx()
+    {
+        return $this->container['height_px'];
+    }
+
+    /**
+     * Sets height_px
+     *
+     * @param int|null $height_px height_px
+     *
+     * @return self
+     */
+    public function setHeightPx($height_px)
+    {
+        if (is_null($height_px)) {
+            throw new \InvalidArgumentException('non-nullable height_px cannot be null');
+        }
+        $this->container['height_px'] = $height_px;
+
+        return $this;
+    }
 
     /**
      * Gets link
@@ -360,33 +387,6 @@ class MessageImageData implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable size_bytes cannot be null');
         }
         $this->container['size_bytes'] = $size_bytes;
-
-        return $this;
-    }
-
-    /**
-     * Gets height_px
-     *
-     * @return int|null
-     */
-    public function getHeightPx()
-    {
-        return $this->container['height_px'];
-    }
-
-    /**
-     * Sets height_px
-     *
-     * @param int|null $height_px height_px
-     *
-     * @return self
-     */
-    public function setHeightPx($height_px)
-    {
-        if (is_null($height_px)) {
-            throw new \InvalidArgumentException('non-nullable height_px cannot be null');
-        }
-        $this->container['height_px'] = $height_px;
 
         return $this;
     }

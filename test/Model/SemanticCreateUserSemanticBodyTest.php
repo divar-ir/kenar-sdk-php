@@ -80,6 +80,15 @@ class SemanticCreateUserSemanticBodyTest extends TestCase
     }
 
     /**
+     * Test attribute "cost"
+     */
+    public function testPropertyCost()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "phone"
      */
     public function testPropertyPhone()
@@ -101,15 +110,6 @@ class SemanticCreateUserSemanticBodyTest extends TestCase
      * Test attribute "ticket_uuid"
      */
     public function testPropertyTicketUuid()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "cost"
-     */
-    public function testPropertyCost()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

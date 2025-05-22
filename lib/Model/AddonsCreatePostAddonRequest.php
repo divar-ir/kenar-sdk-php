@@ -57,13 +57,13 @@ class AddonsCreatePostAddonRequest implements ModelInterface, ArrayAccess, \Json
       * @var string[]
       */
     protected static $openAPITypes = [
-        'token' => 'string',
-        'widgets' => 'object',
-        'selector' => '\Divar\KenarApiClient\Model\AddonsAddonSelector',
         'link_in_spec' => 'string',
         'notes' => 'string',
+        'selector' => '\Divar\KenarApiClient\Model\AddonsAddonSelector',
         'semantic' => 'array<string,string>',
-        'semantic_sensitives' => 'string[]'
+        'semantic_sensitives' => 'string[]',
+        'token' => 'string',
+        'widgets' => 'object'
     ];
 
     /**
@@ -74,13 +74,13 @@ class AddonsCreatePostAddonRequest implements ModelInterface, ArrayAccess, \Json
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'token' => null,
-        'widgets' => null,
-        'selector' => null,
         'link_in_spec' => null,
         'notes' => null,
+        'selector' => null,
         'semantic' => null,
-        'semantic_sensitives' => null
+        'semantic_sensitives' => null,
+        'token' => null,
+        'widgets' => null
     ];
 
     /**
@@ -89,13 +89,13 @@ class AddonsCreatePostAddonRequest implements ModelInterface, ArrayAccess, \Json
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'token' => false,
-        'widgets' => false,
-        'selector' => false,
         'link_in_spec' => false,
         'notes' => false,
+        'selector' => false,
         'semantic' => false,
-        'semantic_sensitives' => false
+        'semantic_sensitives' => false,
+        'token' => false,
+        'widgets' => false
     ];
 
     /**
@@ -184,13 +184,13 @@ class AddonsCreatePostAddonRequest implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $attributeMap = [
-        'token' => 'token',
-        'widgets' => 'widgets',
-        'selector' => 'selector',
         'link_in_spec' => 'link_in_spec',
         'notes' => 'notes',
+        'selector' => 'selector',
         'semantic' => 'semantic',
-        'semantic_sensitives' => 'semantic_sensitives'
+        'semantic_sensitives' => 'semantic_sensitives',
+        'token' => 'token',
+        'widgets' => 'widgets'
     ];
 
     /**
@@ -199,13 +199,13 @@ class AddonsCreatePostAddonRequest implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $setters = [
-        'token' => 'setToken',
-        'widgets' => 'setWidgets',
-        'selector' => 'setSelector',
         'link_in_spec' => 'setLinkInSpec',
         'notes' => 'setNotes',
+        'selector' => 'setSelector',
         'semantic' => 'setSemantic',
-        'semantic_sensitives' => 'setSemanticSensitives'
+        'semantic_sensitives' => 'setSemanticSensitives',
+        'token' => 'setToken',
+        'widgets' => 'setWidgets'
     ];
 
     /**
@@ -214,13 +214,13 @@ class AddonsCreatePostAddonRequest implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $getters = [
-        'token' => 'getToken',
-        'widgets' => 'getWidgets',
-        'selector' => 'getSelector',
         'link_in_spec' => 'getLinkInSpec',
         'notes' => 'getNotes',
+        'selector' => 'getSelector',
         'semantic' => 'getSemantic',
-        'semantic_sensitives' => 'getSemanticSensitives'
+        'semantic_sensitives' => 'getSemanticSensitives',
+        'token' => 'getToken',
+        'widgets' => 'getWidgets'
     ];
 
     /**
@@ -280,13 +280,13 @@ class AddonsCreatePostAddonRequest implements ModelInterface, ArrayAccess, \Json
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('token', $data ?? [], null);
-        $this->setIfExists('widgets', $data ?? [], null);
-        $this->setIfExists('selector', $data ?? [], null);
         $this->setIfExists('link_in_spec', $data ?? [], null);
         $this->setIfExists('notes', $data ?? [], null);
+        $this->setIfExists('selector', $data ?? [], null);
         $this->setIfExists('semantic', $data ?? [], null);
         $this->setIfExists('semantic_sensitives', $data ?? [], null);
+        $this->setIfExists('token', $data ?? [], null);
+        $this->setIfExists('widgets', $data ?? [], null);
     }
 
     /**
@@ -330,87 +330,6 @@ class AddonsCreatePostAddonRequest implements ModelInterface, ArrayAccess, \Json
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets token
-     *
-     * @return string|null
-     */
-    public function getToken()
-    {
-        return $this->container['token'];
-    }
-
-    /**
-     * Sets token
-     *
-     * @param string|null $token token
-     *
-     * @return self
-     */
-    public function setToken($token)
-    {
-        if (is_null($token)) {
-            throw new \InvalidArgumentException('non-nullable token cannot be null');
-        }
-        $this->container['token'] = $token;
-
-        return $this;
-    }
-
-    /**
-     * Gets widgets
-     *
-     * @return object|null
-     */
-    public function getWidgets()
-    {
-        return $this->container['widgets'];
-    }
-
-    /**
-     * Sets widgets
-     *
-     * @param object|null $widgets widgets
-     *
-     * @return self
-     */
-    public function setWidgets($widgets)
-    {
-        if (is_null($widgets)) {
-            throw new \InvalidArgumentException('non-nullable widgets cannot be null');
-        }
-        $this->container['widgets'] = $widgets;
-
-        return $this;
-    }
-
-    /**
-     * Gets selector
-     *
-     * @return \Divar\KenarApiClient\Model\AddonsAddonSelector|null
-     */
-    public function getSelector()
-    {
-        return $this->container['selector'];
-    }
-
-    /**
-     * Sets selector
-     *
-     * @param \Divar\KenarApiClient\Model\AddonsAddonSelector|null $selector selector
-     *
-     * @return self
-     */
-    public function setSelector($selector)
-    {
-        if (is_null($selector)) {
-            throw new \InvalidArgumentException('non-nullable selector cannot be null');
-        }
-        $this->container['selector'] = $selector;
-
-        return $this;
-    }
 
     /**
      * Gets link_in_spec
@@ -467,6 +386,33 @@ class AddonsCreatePostAddonRequest implements ModelInterface, ArrayAccess, \Json
     }
 
     /**
+     * Gets selector
+     *
+     * @return \Divar\KenarApiClient\Model\AddonsAddonSelector|null
+     */
+    public function getSelector()
+    {
+        return $this->container['selector'];
+    }
+
+    /**
+     * Sets selector
+     *
+     * @param \Divar\KenarApiClient\Model\AddonsAddonSelector|null $selector selector
+     *
+     * @return self
+     */
+    public function setSelector($selector)
+    {
+        if (is_null($selector)) {
+            throw new \InvalidArgumentException('non-nullable selector cannot be null');
+        }
+        $this->container['selector'] = $selector;
+
+        return $this;
+    }
+
+    /**
      * Gets semantic
      *
      * @return array<string,string>|null
@@ -516,6 +462,60 @@ class AddonsCreatePostAddonRequest implements ModelInterface, ArrayAccess, \Json
             throw new \InvalidArgumentException('non-nullable semantic_sensitives cannot be null');
         }
         $this->container['semantic_sensitives'] = $semantic_sensitives;
+
+        return $this;
+    }
+
+    /**
+     * Gets token
+     *
+     * @return string|null
+     */
+    public function getToken()
+    {
+        return $this->container['token'];
+    }
+
+    /**
+     * Sets token
+     *
+     * @param string|null $token token
+     *
+     * @return self
+     */
+    public function setToken($token)
+    {
+        if (is_null($token)) {
+            throw new \InvalidArgumentException('non-nullable token cannot be null');
+        }
+        $this->container['token'] = $token;
+
+        return $this;
+    }
+
+    /**
+     * Gets widgets
+     *
+     * @return object|null
+     */
+    public function getWidgets()
+    {
+        return $this->container['widgets'];
+    }
+
+    /**
+     * Sets widgets
+     *
+     * @param object|null $widgets widgets
+     *
+     * @return self
+     */
+    public function setWidgets($widgets)
+    {
+        if (is_null($widgets)) {
+            throw new \InvalidArgumentException('non-nullable widgets cannot be null');
+        }
+        $this->container['widgets'] = $widgets;
 
         return $this;
     }

@@ -80,9 +80,9 @@ class SearchPostItemVehiclesFieldsTest extends TestCase
     }
 
     /**
-     * Test attribute "usage"
+     * Test attribute "custom_post_subtitle"
      */
-    public function testPropertyUsage()
+    public function testPropertyCustomPostSubtitle()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -98,9 +98,9 @@ class SearchPostItemVehiclesFieldsTest extends TestCase
     }
 
     /**
-     * Test attribute "custom_post_subtitle"
+     * Test attribute "usage"
      */
-    public function testPropertyCustomPostSubtitle()
+    public function testPropertyUsage()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

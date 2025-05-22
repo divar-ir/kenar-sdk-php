@@ -57,8 +57,8 @@ class AddonsButtonBar implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'title' => 'string',
-        'action' => '\Divar\KenarApiClient\Model\AddonsAction'
+        'action' => '\Divar\KenarApiClient\Model\AddonsAction',
+        'title' => 'string'
     ];
 
     /**
@@ -69,8 +69,8 @@ class AddonsButtonBar implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'title' => null,
-        'action' => null
+        'action' => null,
+        'title' => null
     ];
 
     /**
@@ -79,8 +79,8 @@ class AddonsButtonBar implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'title' => false,
-        'action' => false
+        'action' => false,
+        'title' => false
     ];
 
     /**
@@ -169,8 +169,8 @@ class AddonsButtonBar implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'title' => 'title',
-        'action' => 'action'
+        'action' => 'action',
+        'title' => 'title'
     ];
 
     /**
@@ -179,8 +179,8 @@ class AddonsButtonBar implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'title' => 'setTitle',
-        'action' => 'setAction'
+        'action' => 'setAction',
+        'title' => 'setTitle'
     ];
 
     /**
@@ -189,8 +189,8 @@ class AddonsButtonBar implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'title' => 'getTitle',
-        'action' => 'getAction'
+        'action' => 'getAction',
+        'title' => 'getTitle'
     ];
 
     /**
@@ -250,8 +250,8 @@ class AddonsButtonBar implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('title', $data ?? [], null);
         $this->setIfExists('action', $data ?? [], null);
+        $this->setIfExists('title', $data ?? [], null);
     }
 
     /**
@@ -297,33 +297,6 @@ class AddonsButtonBar implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets title
-     *
-     * @return string|null
-     */
-    public function getTitle()
-    {
-        return $this->container['title'];
-    }
-
-    /**
-     * Sets title
-     *
-     * @param string|null $title title
-     *
-     * @return self
-     */
-    public function setTitle($title)
-    {
-        if (is_null($title)) {
-            throw new \InvalidArgumentException('non-nullable title cannot be null');
-        }
-        $this->container['title'] = $title;
-
-        return $this;
-    }
-
-    /**
      * Gets action
      *
      * @return \Divar\KenarApiClient\Model\AddonsAction|null
@@ -346,6 +319,33 @@ class AddonsButtonBar implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable action cannot be null');
         }
         $this->container['action'] = $action;
+
+        return $this;
+    }
+
+    /**
+     * Gets title
+     *
+     * @return string|null
+     */
+    public function getTitle()
+    {
+        return $this->container['title'];
+    }
+
+    /**
+     * Sets title
+     *
+     * @param string|null $title title
+     *
+     * @return self
+     */
+    public function setTitle($title)
+    {
+        if (is_null($title)) {
+            throw new \InvalidArgumentException('non-nullable title cannot be null');
+        }
+        $this->container['title'] = $title;
 
         return $this;
     }

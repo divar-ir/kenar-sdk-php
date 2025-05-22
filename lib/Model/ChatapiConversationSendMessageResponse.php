@@ -57,8 +57,8 @@ class ChatapiConversationSendMessageResponse implements ModelInterface, ArrayAcc
       * @var string[]
       */
     protected static $openAPITypes = [
-        'status' => 'int',
-        'message' => 'string'
+        'message' => 'string',
+        'status' => 'int'
     ];
 
     /**
@@ -69,8 +69,8 @@ class ChatapiConversationSendMessageResponse implements ModelInterface, ArrayAcc
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'status' => 'int32',
-        'message' => null
+        'message' => null,
+        'status' => 'int32'
     ];
 
     /**
@@ -79,8 +79,8 @@ class ChatapiConversationSendMessageResponse implements ModelInterface, ArrayAcc
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'status' => false,
-        'message' => false
+        'message' => false,
+        'status' => false
     ];
 
     /**
@@ -169,8 +169,8 @@ class ChatapiConversationSendMessageResponse implements ModelInterface, ArrayAcc
      * @var string[]
      */
     protected static $attributeMap = [
-        'status' => 'status',
-        'message' => 'message'
+        'message' => 'message',
+        'status' => 'status'
     ];
 
     /**
@@ -179,8 +179,8 @@ class ChatapiConversationSendMessageResponse implements ModelInterface, ArrayAcc
      * @var string[]
      */
     protected static $setters = [
-        'status' => 'setStatus',
-        'message' => 'setMessage'
+        'message' => 'setMessage',
+        'status' => 'setStatus'
     ];
 
     /**
@@ -189,8 +189,8 @@ class ChatapiConversationSendMessageResponse implements ModelInterface, ArrayAcc
      * @var string[]
      */
     protected static $getters = [
-        'status' => 'getStatus',
-        'message' => 'getMessage'
+        'message' => 'getMessage',
+        'status' => 'getStatus'
     ];
 
     /**
@@ -250,8 +250,8 @@ class ChatapiConversationSendMessageResponse implements ModelInterface, ArrayAcc
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('status', $data ?? [], null);
         $this->setIfExists('message', $data ?? [], null);
+        $this->setIfExists('status', $data ?? [], null);
     }
 
     /**
@@ -297,33 +297,6 @@ class ChatapiConversationSendMessageResponse implements ModelInterface, ArrayAcc
 
 
     /**
-     * Gets status
-     *
-     * @return int|null
-     */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-     * Sets status
-     *
-     * @param int|null $status status
-     *
-     * @return self
-     */
-    public function setStatus($status)
-    {
-        if (is_null($status)) {
-            throw new \InvalidArgumentException('non-nullable status cannot be null');
-        }
-        $this->container['status'] = $status;
-
-        return $this;
-    }
-
-    /**
      * Gets message
      *
      * @return string|null
@@ -346,6 +319,33 @@ class ChatapiConversationSendMessageResponse implements ModelInterface, ArrayAcc
             throw new \InvalidArgumentException('non-nullable message cannot be null');
         }
         $this->container['message'] = $message;
+
+        return $this;
+    }
+
+    /**
+     * Gets status
+     *
+     * @return int|null
+     */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+     * Sets status
+     *
+     * @param int|null $status status
+     *
+     * @return self
+     */
+    public function setStatus($status)
+    {
+        if (is_null($status)) {
+            throw new \InvalidArgumentException('non-nullable status cannot be null');
+        }
+        $this->container['status'] = $status;
 
         return $this;
     }

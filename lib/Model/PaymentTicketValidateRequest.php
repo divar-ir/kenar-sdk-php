@@ -57,10 +57,10 @@ class PaymentTicketValidateRequest implements ModelInterface, ArrayAccess, \Json
       * @var string[]
       */
     protected static $openAPITypes = [
-        'ticket_uuid' => 'string',
         'phone_number' => 'string',
-        'user_id' => 'string',
-        'service_cost' => 'int'
+        'service_cost' => 'int',
+        'ticket_uuid' => 'string',
+        'user_id' => 'string'
     ];
 
     /**
@@ -71,10 +71,10 @@ class PaymentTicketValidateRequest implements ModelInterface, ArrayAccess, \Json
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'ticket_uuid' => null,
         'phone_number' => null,
-        'user_id' => null,
-        'service_cost' => 'int32'
+        'service_cost' => 'int32',
+        'ticket_uuid' => null,
+        'user_id' => null
     ];
 
     /**
@@ -83,10 +83,10 @@ class PaymentTicketValidateRequest implements ModelInterface, ArrayAccess, \Json
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'ticket_uuid' => false,
         'phone_number' => false,
-        'user_id' => false,
-        'service_cost' => false
+        'service_cost' => false,
+        'ticket_uuid' => false,
+        'user_id' => false
     ];
 
     /**
@@ -175,10 +175,10 @@ class PaymentTicketValidateRequest implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $attributeMap = [
-        'ticket_uuid' => 'ticket_uuid',
         'phone_number' => 'phone_number',
-        'user_id' => 'user_id',
-        'service_cost' => 'service_cost'
+        'service_cost' => 'service_cost',
+        'ticket_uuid' => 'ticket_uuid',
+        'user_id' => 'user_id'
     ];
 
     /**
@@ -187,10 +187,10 @@ class PaymentTicketValidateRequest implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $setters = [
-        'ticket_uuid' => 'setTicketUuid',
         'phone_number' => 'setPhoneNumber',
-        'user_id' => 'setUserId',
-        'service_cost' => 'setServiceCost'
+        'service_cost' => 'setServiceCost',
+        'ticket_uuid' => 'setTicketUuid',
+        'user_id' => 'setUserId'
     ];
 
     /**
@@ -199,10 +199,10 @@ class PaymentTicketValidateRequest implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $getters = [
-        'ticket_uuid' => 'getTicketUuid',
         'phone_number' => 'getPhoneNumber',
-        'user_id' => 'getUserId',
-        'service_cost' => 'getServiceCost'
+        'service_cost' => 'getServiceCost',
+        'ticket_uuid' => 'getTicketUuid',
+        'user_id' => 'getUserId'
     ];
 
     /**
@@ -262,10 +262,10 @@ class PaymentTicketValidateRequest implements ModelInterface, ArrayAccess, \Json
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('ticket_uuid', $data ?? [], null);
         $this->setIfExists('phone_number', $data ?? [], null);
-        $this->setIfExists('user_id', $data ?? [], null);
         $this->setIfExists('service_cost', $data ?? [], null);
+        $this->setIfExists('ticket_uuid', $data ?? [], null);
+        $this->setIfExists('user_id', $data ?? [], null);
     }
 
     /**
@@ -311,33 +311,6 @@ class PaymentTicketValidateRequest implements ModelInterface, ArrayAccess, \Json
 
 
     /**
-     * Gets ticket_uuid
-     *
-     * @return string|null
-     */
-    public function getTicketUuid()
-    {
-        return $this->container['ticket_uuid'];
-    }
-
-    /**
-     * Sets ticket_uuid
-     *
-     * @param string|null $ticket_uuid ticket_uuid
-     *
-     * @return self
-     */
-    public function setTicketUuid($ticket_uuid)
-    {
-        if (is_null($ticket_uuid)) {
-            throw new \InvalidArgumentException('non-nullable ticket_uuid cannot be null');
-        }
-        $this->container['ticket_uuid'] = $ticket_uuid;
-
-        return $this;
-    }
-
-    /**
      * Gets phone_number
      *
      * @return string|null
@@ -365,33 +338,6 @@ class PaymentTicketValidateRequest implements ModelInterface, ArrayAccess, \Json
     }
 
     /**
-     * Gets user_id
-     *
-     * @return string|null
-     */
-    public function getUserId()
-    {
-        return $this->container['user_id'];
-    }
-
-    /**
-     * Sets user_id
-     *
-     * @param string|null $user_id user_id
-     *
-     * @return self
-     */
-    public function setUserId($user_id)
-    {
-        if (is_null($user_id)) {
-            throw new \InvalidArgumentException('non-nullable user_id cannot be null');
-        }
-        $this->container['user_id'] = $user_id;
-
-        return $this;
-    }
-
-    /**
      * Gets service_cost
      *
      * @return int|null
@@ -414,6 +360,60 @@ class PaymentTicketValidateRequest implements ModelInterface, ArrayAccess, \Json
             throw new \InvalidArgumentException('non-nullable service_cost cannot be null');
         }
         $this->container['service_cost'] = $service_cost;
+
+        return $this;
+    }
+
+    /**
+     * Gets ticket_uuid
+     *
+     * @return string|null
+     */
+    public function getTicketUuid()
+    {
+        return $this->container['ticket_uuid'];
+    }
+
+    /**
+     * Sets ticket_uuid
+     *
+     * @param string|null $ticket_uuid ticket_uuid
+     *
+     * @return self
+     */
+    public function setTicketUuid($ticket_uuid)
+    {
+        if (is_null($ticket_uuid)) {
+            throw new \InvalidArgumentException('non-nullable ticket_uuid cannot be null');
+        }
+        $this->container['ticket_uuid'] = $ticket_uuid;
+
+        return $this;
+    }
+
+    /**
+     * Gets user_id
+     *
+     * @return string|null
+     */
+    public function getUserId()
+    {
+        return $this->container['user_id'];
+    }
+
+    /**
+     * Sets user_id
+     *
+     * @param string|null $user_id user_id
+     *
+     * @return self
+     */
+    public function setUserId($user_id)
+    {
+        if (is_null($user_id)) {
+            throw new \InvalidArgumentException('non-nullable user_id cannot be null');
+        }
+        $this->container['user_id'] = $user_id;
 
         return $this;
     }

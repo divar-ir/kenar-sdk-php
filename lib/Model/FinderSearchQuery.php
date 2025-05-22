@@ -58,13 +58,13 @@ class FinderSearchQuery implements ModelInterface, ArrayAccess, \JsonSerializabl
       */
     protected static $openAPITypes = [
         'brand_model' => 'string[]',
-        'production_year' => '\Divar\KenarApiClient\Model\FinderSearchQueryNumberRange',
-        'usage' => '\Divar\KenarApiClient\Model\FinderSearchQueryNumberRange',
-        'rooms' => 'string[]',
-        'rent' => '\Divar\KenarApiClient\Model\FinderSearchQueryNumberRange',
         'credit' => '\Divar\KenarApiClient\Model\FinderSearchQueryNumberRange',
+        'only_with_parking' => 'bool',
+        'production_year' => '\Divar\KenarApiClient\Model\FinderSearchQueryNumberRange',
+        'rent' => '\Divar\KenarApiClient\Model\FinderSearchQueryNumberRange',
+        'rooms' => 'string[]',
         'size' => '\Divar\KenarApiClient\Model\FinderSearchQueryNumberRange',
-        'only_with_parking' => 'bool'
+        'usage' => '\Divar\KenarApiClient\Model\FinderSearchQueryNumberRange'
     ];
 
     /**
@@ -76,13 +76,13 @@ class FinderSearchQuery implements ModelInterface, ArrayAccess, \JsonSerializabl
       */
     protected static $openAPIFormats = [
         'brand_model' => null,
-        'production_year' => null,
-        'usage' => null,
-        'rooms' => null,
-        'rent' => null,
         'credit' => null,
+        'only_with_parking' => null,
+        'production_year' => null,
+        'rent' => null,
+        'rooms' => null,
         'size' => null,
-        'only_with_parking' => null
+        'usage' => null
     ];
 
     /**
@@ -92,13 +92,13 @@ class FinderSearchQuery implements ModelInterface, ArrayAccess, \JsonSerializabl
       */
     protected static array $openAPINullables = [
         'brand_model' => false,
-        'production_year' => false,
-        'usage' => false,
-        'rooms' => false,
-        'rent' => false,
         'credit' => false,
+        'only_with_parking' => false,
+        'production_year' => false,
+        'rent' => false,
+        'rooms' => false,
         'size' => false,
-        'only_with_parking' => false
+        'usage' => false
     ];
 
     /**
@@ -188,13 +188,13 @@ class FinderSearchQuery implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     protected static $attributeMap = [
         'brand_model' => 'brand_model',
-        'production_year' => 'production_year',
-        'usage' => 'usage',
-        'rooms' => 'rooms',
-        'rent' => 'rent',
         'credit' => 'credit',
+        'only_with_parking' => 'only_with_parking',
+        'production_year' => 'production_year',
+        'rent' => 'rent',
+        'rooms' => 'rooms',
         'size' => 'size',
-        'only_with_parking' => 'only_with_parking'
+        'usage' => 'usage'
     ];
 
     /**
@@ -204,13 +204,13 @@ class FinderSearchQuery implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     protected static $setters = [
         'brand_model' => 'setBrandModel',
-        'production_year' => 'setProductionYear',
-        'usage' => 'setUsage',
-        'rooms' => 'setRooms',
-        'rent' => 'setRent',
         'credit' => 'setCredit',
+        'only_with_parking' => 'setOnlyWithParking',
+        'production_year' => 'setProductionYear',
+        'rent' => 'setRent',
+        'rooms' => 'setRooms',
         'size' => 'setSize',
-        'only_with_parking' => 'setOnlyWithParking'
+        'usage' => 'setUsage'
     ];
 
     /**
@@ -220,13 +220,13 @@ class FinderSearchQuery implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     protected static $getters = [
         'brand_model' => 'getBrandModel',
-        'production_year' => 'getProductionYear',
-        'usage' => 'getUsage',
-        'rooms' => 'getRooms',
-        'rent' => 'getRent',
         'credit' => 'getCredit',
+        'only_with_parking' => 'getOnlyWithParking',
+        'production_year' => 'getProductionYear',
+        'rent' => 'getRent',
+        'rooms' => 'getRooms',
         'size' => 'getSize',
-        'only_with_parking' => 'getOnlyWithParking'
+        'usage' => 'getUsage'
     ];
 
     /**
@@ -287,13 +287,13 @@ class FinderSearchQuery implements ModelInterface, ArrayAccess, \JsonSerializabl
     public function __construct(?array $data = null)
     {
         $this->setIfExists('brand_model', $data ?? [], null);
-        $this->setIfExists('production_year', $data ?? [], null);
-        $this->setIfExists('usage', $data ?? [], null);
-        $this->setIfExists('rooms', $data ?? [], null);
-        $this->setIfExists('rent', $data ?? [], null);
         $this->setIfExists('credit', $data ?? [], null);
-        $this->setIfExists('size', $data ?? [], null);
         $this->setIfExists('only_with_parking', $data ?? [], null);
+        $this->setIfExists('production_year', $data ?? [], null);
+        $this->setIfExists('rent', $data ?? [], null);
+        $this->setIfExists('rooms', $data ?? [], null);
+        $this->setIfExists('size', $data ?? [], null);
+        $this->setIfExists('usage', $data ?? [], null);
     }
 
     /**
@@ -366,6 +366,60 @@ class FinderSearchQuery implements ModelInterface, ArrayAccess, \JsonSerializabl
     }
 
     /**
+     * Gets credit
+     *
+     * @return \Divar\KenarApiClient\Model\FinderSearchQueryNumberRange|null
+     */
+    public function getCredit()
+    {
+        return $this->container['credit'];
+    }
+
+    /**
+     * Sets credit
+     *
+     * @param \Divar\KenarApiClient\Model\FinderSearchQueryNumberRange|null $credit credit
+     *
+     * @return self
+     */
+    public function setCredit($credit)
+    {
+        if (is_null($credit)) {
+            throw new \InvalidArgumentException('non-nullable credit cannot be null');
+        }
+        $this->container['credit'] = $credit;
+
+        return $this;
+    }
+
+    /**
+     * Gets only_with_parking
+     *
+     * @return bool|null
+     */
+    public function getOnlyWithParking()
+    {
+        return $this->container['only_with_parking'];
+    }
+
+    /**
+     * Sets only_with_parking
+     *
+     * @param bool|null $only_with_parking only_with_parking
+     *
+     * @return self
+     */
+    public function setOnlyWithParking($only_with_parking)
+    {
+        if (is_null($only_with_parking)) {
+            throw new \InvalidArgumentException('non-nullable only_with_parking cannot be null');
+        }
+        $this->container['only_with_parking'] = $only_with_parking;
+
+        return $this;
+    }
+
+    /**
      * Gets production_year
      *
      * @return \Divar\KenarApiClient\Model\FinderSearchQueryNumberRange|null
@@ -388,60 +442,6 @@ class FinderSearchQuery implements ModelInterface, ArrayAccess, \JsonSerializabl
             throw new \InvalidArgumentException('non-nullable production_year cannot be null');
         }
         $this->container['production_year'] = $production_year;
-
-        return $this;
-    }
-
-    /**
-     * Gets usage
-     *
-     * @return \Divar\KenarApiClient\Model\FinderSearchQueryNumberRange|null
-     */
-    public function getUsage()
-    {
-        return $this->container['usage'];
-    }
-
-    /**
-     * Sets usage
-     *
-     * @param \Divar\KenarApiClient\Model\FinderSearchQueryNumberRange|null $usage usage
-     *
-     * @return self
-     */
-    public function setUsage($usage)
-    {
-        if (is_null($usage)) {
-            throw new \InvalidArgumentException('non-nullable usage cannot be null');
-        }
-        $this->container['usage'] = $usage;
-
-        return $this;
-    }
-
-    /**
-     * Gets rooms
-     *
-     * @return string[]|null
-     */
-    public function getRooms()
-    {
-        return $this->container['rooms'];
-    }
-
-    /**
-     * Sets rooms
-     *
-     * @param string[]|null $rooms rooms
-     *
-     * @return self
-     */
-    public function setRooms($rooms)
-    {
-        if (is_null($rooms)) {
-            throw new \InvalidArgumentException('non-nullable rooms cannot be null');
-        }
-        $this->container['rooms'] = $rooms;
 
         return $this;
     }
@@ -474,28 +474,28 @@ class FinderSearchQuery implements ModelInterface, ArrayAccess, \JsonSerializabl
     }
 
     /**
-     * Gets credit
+     * Gets rooms
      *
-     * @return \Divar\KenarApiClient\Model\FinderSearchQueryNumberRange|null
+     * @return string[]|null
      */
-    public function getCredit()
+    public function getRooms()
     {
-        return $this->container['credit'];
+        return $this->container['rooms'];
     }
 
     /**
-     * Sets credit
+     * Sets rooms
      *
-     * @param \Divar\KenarApiClient\Model\FinderSearchQueryNumberRange|null $credit credit
+     * @param string[]|null $rooms rooms
      *
      * @return self
      */
-    public function setCredit($credit)
+    public function setRooms($rooms)
     {
-        if (is_null($credit)) {
-            throw new \InvalidArgumentException('non-nullable credit cannot be null');
+        if (is_null($rooms)) {
+            throw new \InvalidArgumentException('non-nullable rooms cannot be null');
         }
-        $this->container['credit'] = $credit;
+        $this->container['rooms'] = $rooms;
 
         return $this;
     }
@@ -528,28 +528,28 @@ class FinderSearchQuery implements ModelInterface, ArrayAccess, \JsonSerializabl
     }
 
     /**
-     * Gets only_with_parking
+     * Gets usage
      *
-     * @return bool|null
+     * @return \Divar\KenarApiClient\Model\FinderSearchQueryNumberRange|null
      */
-    public function getOnlyWithParking()
+    public function getUsage()
     {
-        return $this->container['only_with_parking'];
+        return $this->container['usage'];
     }
 
     /**
-     * Sets only_with_parking
+     * Sets usage
      *
-     * @param bool|null $only_with_parking only_with_parking
+     * @param \Divar\KenarApiClient\Model\FinderSearchQueryNumberRange|null $usage usage
      *
      * @return self
      */
-    public function setOnlyWithParking($only_with_parking)
+    public function setUsage($usage)
     {
-        if (is_null($only_with_parking)) {
-            throw new \InvalidArgumentException('non-nullable only_with_parking cannot be null');
+        if (is_null($usage)) {
+            throw new \InvalidArgumentException('non-nullable usage cannot be null');
         }
-        $this->container['only_with_parking'] = $only_with_parking;
+        $this->container['usage'] = $usage;
 
         return $this;
     }

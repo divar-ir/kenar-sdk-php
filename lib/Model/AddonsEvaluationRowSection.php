@@ -57,8 +57,8 @@ class AddonsEvaluationRowSection implements ModelInterface, ArrayAccess, \JsonSe
       * @var string[]
       */
     protected static $openAPITypes = [
-        'text' => 'string',
-        'section_color' => '\Divar\KenarApiClient\Model\AddonsWidgetColor'
+        'section_color' => '\Divar\KenarApiClient\Model\AddonsWidgetColor',
+        'text' => 'string'
     ];
 
     /**
@@ -69,8 +69,8 @@ class AddonsEvaluationRowSection implements ModelInterface, ArrayAccess, \JsonSe
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'text' => null,
-        'section_color' => null
+        'section_color' => null,
+        'text' => null
     ];
 
     /**
@@ -79,8 +79,8 @@ class AddonsEvaluationRowSection implements ModelInterface, ArrayAccess, \JsonSe
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'text' => false,
-        'section_color' => false
+        'section_color' => false,
+        'text' => false
     ];
 
     /**
@@ -169,8 +169,8 @@ class AddonsEvaluationRowSection implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $attributeMap = [
-        'text' => 'text',
-        'section_color' => 'section_color'
+        'section_color' => 'section_color',
+        'text' => 'text'
     ];
 
     /**
@@ -179,8 +179,8 @@ class AddonsEvaluationRowSection implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $setters = [
-        'text' => 'setText',
-        'section_color' => 'setSectionColor'
+        'section_color' => 'setSectionColor',
+        'text' => 'setText'
     ];
 
     /**
@@ -189,8 +189,8 @@ class AddonsEvaluationRowSection implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $getters = [
-        'text' => 'getText',
-        'section_color' => 'getSectionColor'
+        'section_color' => 'getSectionColor',
+        'text' => 'getText'
     ];
 
     /**
@@ -250,8 +250,8 @@ class AddonsEvaluationRowSection implements ModelInterface, ArrayAccess, \JsonSe
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('text', $data ?? [], null);
         $this->setIfExists('section_color', $data ?? [], null);
+        $this->setIfExists('text', $data ?? [], null);
     }
 
     /**
@@ -297,33 +297,6 @@ class AddonsEvaluationRowSection implements ModelInterface, ArrayAccess, \JsonSe
 
 
     /**
-     * Gets text
-     *
-     * @return string|null
-     */
-    public function getText()
-    {
-        return $this->container['text'];
-    }
-
-    /**
-     * Sets text
-     *
-     * @param string|null $text text
-     *
-     * @return self
-     */
-    public function setText($text)
-    {
-        if (is_null($text)) {
-            throw new \InvalidArgumentException('non-nullable text cannot be null');
-        }
-        $this->container['text'] = $text;
-
-        return $this;
-    }
-
-    /**
      * Gets section_color
      *
      * @return \Divar\KenarApiClient\Model\AddonsWidgetColor|null
@@ -346,6 +319,33 @@ class AddonsEvaluationRowSection implements ModelInterface, ArrayAccess, \JsonSe
             throw new \InvalidArgumentException('non-nullable section_color cannot be null');
         }
         $this->container['section_color'] = $section_color;
+
+        return $this;
+    }
+
+    /**
+     * Gets text
+     *
+     * @return string|null
+     */
+    public function getText()
+    {
+        return $this->container['text'];
+    }
+
+    /**
+     * Sets text
+     *
+     * @param string|null $text text
+     *
+     * @return self
+     */
+    public function setText($text)
+    {
+        if (is_null($text)) {
+            throw new \InvalidArgumentException('non-nullable text cannot be null');
+        }
+        $this->container['text'] = $text;
 
         return $this;
     }

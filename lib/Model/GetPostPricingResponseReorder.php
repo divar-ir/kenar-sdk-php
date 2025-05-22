@@ -57,8 +57,8 @@ class GetPostPricingResponseReorder implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'cost_rials' => 'string',
-        'available' => 'bool'
+        'available' => 'bool',
+        'cost_rials' => 'string'
     ];
 
     /**
@@ -69,8 +69,8 @@ class GetPostPricingResponseReorder implements ModelInterface, ArrayAccess, \Jso
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'cost_rials' => 'int64',
-        'available' => null
+        'available' => null,
+        'cost_rials' => 'int64'
     ];
 
     /**
@@ -79,8 +79,8 @@ class GetPostPricingResponseReorder implements ModelInterface, ArrayAccess, \Jso
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'cost_rials' => false,
-        'available' => false
+        'available' => false,
+        'cost_rials' => false
     ];
 
     /**
@@ -169,8 +169,8 @@ class GetPostPricingResponseReorder implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $attributeMap = [
-        'cost_rials' => 'cost_rials',
-        'available' => 'available'
+        'available' => 'available',
+        'cost_rials' => 'cost_rials'
     ];
 
     /**
@@ -179,8 +179,8 @@ class GetPostPricingResponseReorder implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $setters = [
-        'cost_rials' => 'setCostRials',
-        'available' => 'setAvailable'
+        'available' => 'setAvailable',
+        'cost_rials' => 'setCostRials'
     ];
 
     /**
@@ -189,8 +189,8 @@ class GetPostPricingResponseReorder implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $getters = [
-        'cost_rials' => 'getCostRials',
-        'available' => 'getAvailable'
+        'available' => 'getAvailable',
+        'cost_rials' => 'getCostRials'
     ];
 
     /**
@@ -250,8 +250,8 @@ class GetPostPricingResponseReorder implements ModelInterface, ArrayAccess, \Jso
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('cost_rials', $data ?? [], null);
         $this->setIfExists('available', $data ?? [], null);
+        $this->setIfExists('cost_rials', $data ?? [], null);
     }
 
     /**
@@ -297,33 +297,6 @@ class GetPostPricingResponseReorder implements ModelInterface, ArrayAccess, \Jso
 
 
     /**
-     * Gets cost_rials
-     *
-     * @return string|null
-     */
-    public function getCostRials()
-    {
-        return $this->container['cost_rials'];
-    }
-
-    /**
-     * Sets cost_rials
-     *
-     * @param string|null $cost_rials The cost of reordering in rials
-     *
-     * @return self
-     */
-    public function setCostRials($cost_rials)
-    {
-        if (is_null($cost_rials)) {
-            throw new \InvalidArgumentException('non-nullable cost_rials cannot be null');
-        }
-        $this->container['cost_rials'] = $cost_rials;
-
-        return $this;
-    }
-
-    /**
      * Gets available
      *
      * @return bool|null
@@ -346,6 +319,33 @@ class GetPostPricingResponseReorder implements ModelInterface, ArrayAccess, \Jso
             throw new \InvalidArgumentException('non-nullable available cannot be null');
         }
         $this->container['available'] = $available;
+
+        return $this;
+    }
+
+    /**
+     * Gets cost_rials
+     *
+     * @return string|null
+     */
+    public function getCostRials()
+    {
+        return $this->container['cost_rials'];
+    }
+
+    /**
+     * Sets cost_rials
+     *
+     * @param string|null $cost_rials The cost of reordering in rials
+     *
+     * @return self
+     */
+    public function setCostRials($cost_rials)
+    {
+        if (is_null($cost_rials)) {
+            throw new \InvalidArgumentException('non-nullable cost_rials cannot be null');
+        }
+        $this->container['cost_rials'] = $cost_rials;
 
         return $this;
     }

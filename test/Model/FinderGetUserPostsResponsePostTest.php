@@ -80,18 +80,9 @@ class FinderGetUserPostsResponsePostTest extends TestCase
     }
 
     /**
-     * Test attribute "token"
+     * Test attribute "category"
      */
-    public function testPropertyToken()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "title"
-     */
-    public function testPropertyTitle()
+    public function testPropertyCategory()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -107,9 +98,18 @@ class FinderGetUserPostsResponsePostTest extends TestCase
     }
 
     /**
-     * Test attribute "category"
+     * Test attribute "title"
      */
-    public function testPropertyCategory()
+    public function testPropertyTitle()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "token"
+     */
+    public function testPropertyToken()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

@@ -80,81 +80,9 @@ class AddonsWidgetTest extends TestCase
     }
 
     /**
-     * Test attribute "event_row"
-     */
-    public function testPropertyEventRow()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "button_bar"
      */
     public function testPropertyButtonBar()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "title_row"
-     */
-    public function testPropertyTitleRow()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "subtitle_row"
-     */
-    public function testPropertySubtitleRow()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "selector_row"
-     */
-    public function testPropertySelectorRow()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "score_row"
-     */
-    public function testPropertyScoreRow()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "image_carousel_row"
-     */
-    public function testPropertyImageCarouselRow()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "group_info_row"
-     */
-    public function testPropertyGroupInfoRow()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "evaluation_row"
-     */
-    public function testPropertyEvaluationRow()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -170,9 +98,81 @@ class AddonsWidgetTest extends TestCase
     }
 
     /**
+     * Test attribute "evaluation_row"
+     */
+    public function testPropertyEvaluationRow()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "event_row"
+     */
+    public function testPropertyEventRow()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "group_info_row"
+     */
+    public function testPropertyGroupInfoRow()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "image_carousel_row"
+     */
+    public function testPropertyImageCarouselRow()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "score_row"
+     */
+    public function testPropertyScoreRow()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "selector_row"
+     */
+    public function testPropertySelectorRow()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "semantic_paths"
      */
     public function testPropertySemanticPaths()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "subtitle_row"
+     */
+    public function testPropertySubtitleRow()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "title_row"
+     */
+    public function testPropertyTitleRow()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

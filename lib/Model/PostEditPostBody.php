@@ -57,9 +57,9 @@ class PostEditPostBody implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'title' => 'string',
         'description' => 'string',
-        'image_paths' => 'string[]'
+        'image_paths' => 'string[]',
+        'title' => 'string'
     ];
 
     /**
@@ -70,9 +70,9 @@ class PostEditPostBody implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'title' => null,
         'description' => null,
-        'image_paths' => null
+        'image_paths' => null,
+        'title' => null
     ];
 
     /**
@@ -81,9 +81,9 @@ class PostEditPostBody implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'title' => false,
         'description' => false,
-        'image_paths' => false
+        'image_paths' => false,
+        'title' => false
     ];
 
     /**
@@ -172,9 +172,9 @@ class PostEditPostBody implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'title' => 'title',
         'description' => 'description',
-        'image_paths' => 'image_paths'
+        'image_paths' => 'image_paths',
+        'title' => 'title'
     ];
 
     /**
@@ -183,9 +183,9 @@ class PostEditPostBody implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'title' => 'setTitle',
         'description' => 'setDescription',
-        'image_paths' => 'setImagePaths'
+        'image_paths' => 'setImagePaths',
+        'title' => 'setTitle'
     ];
 
     /**
@@ -194,9 +194,9 @@ class PostEditPostBody implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'title' => 'getTitle',
         'description' => 'getDescription',
-        'image_paths' => 'getImagePaths'
+        'image_paths' => 'getImagePaths',
+        'title' => 'getTitle'
     ];
 
     /**
@@ -256,9 +256,9 @@ class PostEditPostBody implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('title', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
         $this->setIfExists('image_paths', $data ?? [], null);
+        $this->setIfExists('title', $data ?? [], null);
     }
 
     /**
@@ -302,33 +302,6 @@ class PostEditPostBody implements ModelInterface, ArrayAccess, \JsonSerializable
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets title
-     *
-     * @return string|null
-     */
-    public function getTitle()
-    {
-        return $this->container['title'];
-    }
-
-    /**
-     * Sets title
-     *
-     * @param string|null $title title
-     *
-     * @return self
-     */
-    public function setTitle($title)
-    {
-        if (is_null($title)) {
-            throw new \InvalidArgumentException('non-nullable title cannot be null');
-        }
-        $this->container['title'] = $title;
-
-        return $this;
-    }
 
     /**
      * Gets description
@@ -380,6 +353,33 @@ class PostEditPostBody implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable image_paths cannot be null');
         }
         $this->container['image_paths'] = $image_paths;
+
+        return $this;
+    }
+
+    /**
+     * Gets title
+     *
+     * @return string|null
+     */
+    public function getTitle()
+    {
+        return $this->container['title'];
+    }
+
+    /**
+     * Sets title
+     *
+     * @param string|null $title title
+     *
+     * @return self
+     */
+    public function setTitle($title)
+    {
+        if (is_null($title)) {
+            throw new \InvalidArgumentException('non-nullable title cannot be null');
+        }
+        $this->container['title'] = $title;
 
         return $this;
     }

@@ -80,18 +80,9 @@ class ChatAPIChatBotSendMessageBodyTest extends TestCase
     }
 
     /**
-     * Test attribute "user_id"
+     * Test attribute "buttons"
      */
-    public function testPropertyUserId()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "text_message"
-     */
-    public function testPropertyTextMessage()
+    public function testPropertyButtons()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -107,9 +98,18 @@ class ChatAPIChatBotSendMessageBodyTest extends TestCase
     }
 
     /**
-     * Test attribute "buttons"
+     * Test attribute "text_message"
      */
-    public function testPropertyButtons()
+    public function testPropertyTextMessage()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "user_id"
+     */
+    public function testPropertyUserId()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

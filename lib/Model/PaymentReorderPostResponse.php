@@ -57,8 +57,8 @@ class PaymentReorderPostResponse implements ModelInterface, ArrayAccess, \JsonSe
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'string',
-        'cost_rials' => 'string'
+        'cost_rials' => 'string',
+        'id' => 'string'
     ];
 
     /**
@@ -69,8 +69,8 @@ class PaymentReorderPostResponse implements ModelInterface, ArrayAccess, \JsonSe
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'id' => null,
-        'cost_rials' => 'int64'
+        'cost_rials' => 'int64',
+        'id' => null
     ];
 
     /**
@@ -79,8 +79,8 @@ class PaymentReorderPostResponse implements ModelInterface, ArrayAccess, \JsonSe
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'id' => false,
-        'cost_rials' => false
+        'cost_rials' => false,
+        'id' => false
     ];
 
     /**
@@ -169,8 +169,8 @@ class PaymentReorderPostResponse implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'cost_rials' => 'cost_rials'
+        'cost_rials' => 'cost_rials',
+        'id' => 'id'
     ];
 
     /**
@@ -179,8 +179,8 @@ class PaymentReorderPostResponse implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'cost_rials' => 'setCostRials'
+        'cost_rials' => 'setCostRials',
+        'id' => 'setId'
     ];
 
     /**
@@ -189,8 +189,8 @@ class PaymentReorderPostResponse implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'cost_rials' => 'getCostRials'
+        'cost_rials' => 'getCostRials',
+        'id' => 'getId'
     ];
 
     /**
@@ -250,8 +250,8 @@ class PaymentReorderPostResponse implements ModelInterface, ArrayAccess, \JsonSe
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('cost_rials', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
     }
 
     /**
@@ -297,33 +297,6 @@ class PaymentReorderPostResponse implements ModelInterface, ArrayAccess, \JsonSe
 
 
     /**
-     * Gets id
-     *
-     * @return string|null
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param string|null $id Same uuid when creating transaction
-     *
-     * @return self
-     */
-    public function setId($id)
-    {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
-        }
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
      * Gets cost_rials
      *
      * @return string|null
@@ -346,6 +319,33 @@ class PaymentReorderPostResponse implements ModelInterface, ArrayAccess, \JsonSe
             throw new \InvalidArgumentException('non-nullable cost_rials cannot be null');
         }
         $this->container['cost_rials'] = $cost_rials;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id Same uuid when creating transaction
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
 
         return $this;
     }

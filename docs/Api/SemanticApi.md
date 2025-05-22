@@ -28,11 +28,17 @@ In some cases, it is necessary to store information about the post in Divar with
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure API key authorization: APIKey
+$config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 
 $apiInstance = new Divar\KenarApiClient\Api\SemanticApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $token = 'token_example'; // string
 $semantic_create_post_semantic_body = new \Divar\KenarApiClient\Model\SemanticCreatePostSemanticBody(); // \Divar\KenarApiClient\Model\SemanticCreatePostSemanticBody
@@ -58,7 +64,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[APIKey](../../README.md#APIKey)
 
 ### HTTP request headers
 
@@ -86,11 +92,17 @@ In some cases, it is necessary to store information about the user in Divar with
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure API key authorization: APIKey
+$config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 
 $apiInstance = new Divar\KenarApiClient\Api\SemanticApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $phone = 'phone_example'; // string
 $semantic_create_user_semantic_body = new \Divar\KenarApiClient\Model\SemanticCreateUserSemanticBody(); // \Divar\KenarApiClient\Model\SemanticCreateUserSemanticBody
@@ -116,7 +128,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[APIKey](../../README.md#APIKey)
 
 ### HTTP request headers
 
@@ -144,11 +156,17 @@ In some cases, it is necessary to store information about the user in Divar with
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure API key authorization: APIKey
+$config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 
 $apiInstance = new Divar\KenarApiClient\Api\SemanticApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $divar_user_id = 'divar_user_id_example'; // string
 $semantic_create_user_semantic_body = new \Divar\KenarApiClient\Model\SemanticCreateUserSemanticBody(); // \Divar\KenarApiClient\Model\SemanticCreateUserSemanticBody
@@ -174,7 +192,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[APIKey](../../README.md#APIKey)
 
 ### HTTP request headers
 
@@ -202,11 +220,17 @@ You can delete the semantic information of a user by calling this API.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure API key authorization: APIKey
+$config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 
 $apiInstance = new Divar\KenarApiClient\Api\SemanticApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $phone = 'phone_example'; // string
 $divar_user_id = 'divar_user_id_example'; // string
@@ -232,7 +256,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[APIKey](../../README.md#APIKey)
 
 ### HTTP request headers
 
@@ -260,11 +284,17 @@ You can delete the semantic information of a user by calling this API.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure API key authorization: APIKey
+$config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 
 $apiInstance = new Divar\KenarApiClient\Api\SemanticApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $divar_user_id = 'divar_user_id_example'; // string
 $phone = 'phone_example'; // string
@@ -290,7 +320,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[APIKey](../../README.md#APIKey)
 
 ### HTTP request headers
 

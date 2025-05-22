@@ -80,18 +80,18 @@ class PaymentReorderPostBodyTest extends TestCase
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "extra_details"
      */
-    public function testPropertyId()
+    public function testPropertyExtraDetails()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "extra_details"
+     * Test attribute "id"
      */
-    public function testPropertyExtraDetails()
+    public function testPropertyId()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

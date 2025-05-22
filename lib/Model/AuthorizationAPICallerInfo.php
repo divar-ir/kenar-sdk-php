@@ -58,9 +58,9 @@ class AuthorizationAPICallerInfo implements ModelInterface, ArrayAccess, \JsonSe
       */
     protected static $openAPITypes = [
         'api_key_id' => 'int',
+        'api_key_id_v2' => 'string',
         'app' => '\Divar\KenarApiClient\Model\AppsApp',
-        'scopes' => '\Divar\KenarApiClient\Model\AuthorizationOAuthScope[]',
-        'api_key_id_v2' => 'string'
+        'scopes' => '\Divar\KenarApiClient\Model\AuthorizationOAuthScope[]'
     ];
 
     /**
@@ -72,9 +72,9 @@ class AuthorizationAPICallerInfo implements ModelInterface, ArrayAccess, \JsonSe
       */
     protected static $openAPIFormats = [
         'api_key_id' => 'int32',
+        'api_key_id_v2' => null,
         'app' => null,
-        'scopes' => null,
-        'api_key_id_v2' => null
+        'scopes' => null
     ];
 
     /**
@@ -84,9 +84,9 @@ class AuthorizationAPICallerInfo implements ModelInterface, ArrayAccess, \JsonSe
       */
     protected static array $openAPINullables = [
         'api_key_id' => false,
+        'api_key_id_v2' => false,
         'app' => false,
-        'scopes' => false,
-        'api_key_id_v2' => false
+        'scopes' => false
     ];
 
     /**
@@ -176,9 +176,9 @@ class AuthorizationAPICallerInfo implements ModelInterface, ArrayAccess, \JsonSe
      */
     protected static $attributeMap = [
         'api_key_id' => 'api_key_id',
+        'api_key_id_v2' => 'api_key_id_v2',
         'app' => 'app',
-        'scopes' => 'scopes',
-        'api_key_id_v2' => 'api_key_id_v2'
+        'scopes' => 'scopes'
     ];
 
     /**
@@ -188,9 +188,9 @@ class AuthorizationAPICallerInfo implements ModelInterface, ArrayAccess, \JsonSe
      */
     protected static $setters = [
         'api_key_id' => 'setApiKeyId',
+        'api_key_id_v2' => 'setApiKeyIdV2',
         'app' => 'setApp',
-        'scopes' => 'setScopes',
-        'api_key_id_v2' => 'setApiKeyIdV2'
+        'scopes' => 'setScopes'
     ];
 
     /**
@@ -200,9 +200,9 @@ class AuthorizationAPICallerInfo implements ModelInterface, ArrayAccess, \JsonSe
      */
     protected static $getters = [
         'api_key_id' => 'getApiKeyId',
+        'api_key_id_v2' => 'getApiKeyIdV2',
         'app' => 'getApp',
-        'scopes' => 'getScopes',
-        'api_key_id_v2' => 'getApiKeyIdV2'
+        'scopes' => 'getScopes'
     ];
 
     /**
@@ -263,9 +263,9 @@ class AuthorizationAPICallerInfo implements ModelInterface, ArrayAccess, \JsonSe
     public function __construct(?array $data = null)
     {
         $this->setIfExists('api_key_id', $data ?? [], null);
+        $this->setIfExists('api_key_id_v2', $data ?? [], null);
         $this->setIfExists('app', $data ?? [], null);
         $this->setIfExists('scopes', $data ?? [], null);
-        $this->setIfExists('api_key_id_v2', $data ?? [], null);
     }
 
     /**
@@ -338,6 +338,33 @@ class AuthorizationAPICallerInfo implements ModelInterface, ArrayAccess, \JsonSe
     }
 
     /**
+     * Gets api_key_id_v2
+     *
+     * @return string|null
+     */
+    public function getApiKeyIdV2()
+    {
+        return $this->container['api_key_id_v2'];
+    }
+
+    /**
+     * Sets api_key_id_v2
+     *
+     * @param string|null $api_key_id_v2 api_key_id_v2
+     *
+     * @return self
+     */
+    public function setApiKeyIdV2($api_key_id_v2)
+    {
+        if (is_null($api_key_id_v2)) {
+            throw new \InvalidArgumentException('non-nullable api_key_id_v2 cannot be null');
+        }
+        $this->container['api_key_id_v2'] = $api_key_id_v2;
+
+        return $this;
+    }
+
+    /**
      * Gets app
      *
      * @return \Divar\KenarApiClient\Model\AppsApp|null
@@ -387,33 +414,6 @@ class AuthorizationAPICallerInfo implements ModelInterface, ArrayAccess, \JsonSe
             throw new \InvalidArgumentException('non-nullable scopes cannot be null');
         }
         $this->container['scopes'] = $scopes;
-
-        return $this;
-    }
-
-    /**
-     * Gets api_key_id_v2
-     *
-     * @return string|null
-     */
-    public function getApiKeyIdV2()
-    {
-        return $this->container['api_key_id_v2'];
-    }
-
-    /**
-     * Sets api_key_id_v2
-     *
-     * @param string|null $api_key_id_v2 api_key_id_v2
-     *
-     * @return self
-     */
-    public function setApiKeyIdV2($api_key_id_v2)
-    {
-        if (is_null($api_key_id_v2)) {
-            throw new \InvalidArgumentException('non-nullable api_key_id_v2 cannot be null');
-        }
-        $this->container['api_key_id_v2'] = $api_key_id_v2;
 
         return $this;
     }

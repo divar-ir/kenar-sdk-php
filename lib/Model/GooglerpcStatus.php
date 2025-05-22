@@ -58,8 +58,8 @@ class GooglerpcStatus implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'code' => 'int',
-        'message' => 'string',
-        'details' => '\Divar\KenarApiClient\Model\ProtobufAny[]'
+        'details' => '\Divar\KenarApiClient\Model\ProtobufAny[]',
+        'message' => 'string'
     ];
 
     /**
@@ -71,8 +71,8 @@ class GooglerpcStatus implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'code' => 'int32',
-        'message' => null,
-        'details' => null
+        'details' => null,
+        'message' => null
     ];
 
     /**
@@ -82,8 +82,8 @@ class GooglerpcStatus implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'code' => false,
-        'message' => false,
-        'details' => false
+        'details' => false,
+        'message' => false
     ];
 
     /**
@@ -173,8 +173,8 @@ class GooglerpcStatus implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'code' => 'code',
-        'message' => 'message',
-        'details' => 'details'
+        'details' => 'details',
+        'message' => 'message'
     ];
 
     /**
@@ -184,8 +184,8 @@ class GooglerpcStatus implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'code' => 'setCode',
-        'message' => 'setMessage',
-        'details' => 'setDetails'
+        'details' => 'setDetails',
+        'message' => 'setMessage'
     ];
 
     /**
@@ -195,8 +195,8 @@ class GooglerpcStatus implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'code' => 'getCode',
-        'message' => 'getMessage',
-        'details' => 'getDetails'
+        'details' => 'getDetails',
+        'message' => 'getMessage'
     ];
 
     /**
@@ -257,8 +257,8 @@ class GooglerpcStatus implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(?array $data = null)
     {
         $this->setIfExists('code', $data ?? [], null);
-        $this->setIfExists('message', $data ?? [], null);
         $this->setIfExists('details', $data ?? [], null);
+        $this->setIfExists('message', $data ?? [], null);
     }
 
     /**
@@ -331,33 +331,6 @@ class GooglerpcStatus implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets message
-     *
-     * @return string|null
-     */
-    public function getMessage()
-    {
-        return $this->container['message'];
-    }
-
-    /**
-     * Sets message
-     *
-     * @param string|null $message message
-     *
-     * @return self
-     */
-    public function setMessage($message)
-    {
-        if (is_null($message)) {
-            throw new \InvalidArgumentException('non-nullable message cannot be null');
-        }
-        $this->container['message'] = $message;
-
-        return $this;
-    }
-
-    /**
      * Gets details
      *
      * @return \Divar\KenarApiClient\Model\ProtobufAny[]|null
@@ -380,6 +353,33 @@ class GooglerpcStatus implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable details cannot be null');
         }
         $this->container['details'] = $details;
+
+        return $this;
+    }
+
+    /**
+     * Gets message
+     *
+     * @return string|null
+     */
+    public function getMessage()
+    {
+        return $this->container['message'];
+    }
+
+    /**
+     * Sets message
+     *
+     * @param string|null $message message
+     *
+     * @return self
+     */
+    public function setMessage($message)
+    {
+        if (is_null($message)) {
+            throw new \InvalidArgumentException('non-nullable message cannot be null');
+        }
+        $this->container['message'] = $message;
 
         return $this;
     }

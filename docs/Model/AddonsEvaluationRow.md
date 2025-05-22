@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**indicator_text** | **string** |  | [optional]
-**indicator_percentage** | **int** |  | [optional]
 **icon_name** | [**\Divar\KenarApiClient\Model\DivarIconsIconName**](DivarIconsIconName.md) |  | [optional]
+**indicator_percentage** | **int** |  | [optional]
+**indicator_text** | **string** |  | [optional]
 **left** | [**\Divar\KenarApiClient\Model\AddonsEvaluationRowSection**](AddonsEvaluationRowSection.md) |  | [optional]
 **middle** | [**\Divar\KenarApiClient\Model\AddonsEvaluationRowSection**](AddonsEvaluationRowSection.md) |  | [optional]
 **right** | [**\Divar\KenarApiClient\Model\AddonsEvaluationRowSection**](AddonsEvaluationRowSection.md) |  | [optional]

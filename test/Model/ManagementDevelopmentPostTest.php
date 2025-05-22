@@ -80,15 +80,6 @@ class ManagementDevelopmentPostTest extends TestCase
     }
 
     /**
-     * Test attribute "preset"
-     */
-    public function testPropertyPreset()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "created_at"
      */
     public function testPropertyCreatedAt()
@@ -98,18 +89,27 @@ class ManagementDevelopmentPostTest extends TestCase
     }
 
     /**
-     * Test attribute "token"
+     * Test attribute "mng_token"
      */
-    public function testPropertyToken()
+    public function testPropertyMngToken()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "mng_token"
+     * Test attribute "preset"
      */
-    public function testPropertyMngToken()
+    public function testPropertyPreset()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "token"
+     */
+    public function testPropertyToken()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

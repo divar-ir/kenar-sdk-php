@@ -80,9 +80,9 @@ class AppsAppTest extends TestCase
     }
 
     /**
-     * Test attribute "slug"
+     * Test attribute "avatar"
      */
-    public function testPropertySlug()
+    public function testPropertyAvatar()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -98,15 +98,6 @@ class AppsAppTest extends TestCase
     }
 
     /**
-     * Test attribute "avatar"
-     */
-    public function testPropertyAvatar()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "divar_identification_key"
      */
     public function testPropertyDivarIdentificationKey()
@@ -116,9 +107,9 @@ class AppsAppTest extends TestCase
     }
 
     /**
-     * Test attribute "status"
+     * Test attribute "service_tags"
      */
-    public function testPropertyStatus()
+    public function testPropertyServiceTags()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -134,9 +125,18 @@ class AppsAppTest extends TestCase
     }
 
     /**
-     * Test attribute "service_tags"
+     * Test attribute "slug"
      */
-    public function testPropertyServiceTags()
+    public function testPropertySlug()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "status"
+     */
+    public function testPropertyStatus()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

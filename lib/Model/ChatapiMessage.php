@@ -57,17 +57,17 @@ class ChatapiMessage implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'string',
         'conversation' => '\Divar\KenarApiClient\Model\ChatapiConversation',
+        'file_data' => '\Divar\KenarApiClient\Model\MessageFileData',
+        'id' => 'string',
+        'image_data' => '\Divar\KenarApiClient\Model\MessageImageData',
+        'location_data' => '\Divar\KenarApiClient\Model\MessageLocationData',
         'sender' => '\Divar\KenarApiClient\Model\MessageSender',
-        'type' => '\Divar\KenarApiClient\Model\ChatapiMessageType',
         'sent_at' => '\DateTime',
         'text' => 'string',
-        'image_data' => '\Divar\KenarApiClient\Model\MessageImageData',
-        'file_data' => '\Divar\KenarApiClient\Model\MessageFileData',
-        'voice_data' => '\Divar\KenarApiClient\Model\MessageVoiceData',
-        'location_data' => '\Divar\KenarApiClient\Model\MessageLocationData',
-        'video_data' => '\Divar\KenarApiClient\Model\MessageVideoData'
+        'type' => '\Divar\KenarApiClient\Model\ChatapiMessageType',
+        'video_data' => '\Divar\KenarApiClient\Model\MessageVideoData',
+        'voice_data' => '\Divar\KenarApiClient\Model\MessageVoiceData'
     ];
 
     /**
@@ -78,17 +78,17 @@ class ChatapiMessage implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'id' => null,
         'conversation' => null,
+        'file_data' => null,
+        'id' => null,
+        'image_data' => null,
+        'location_data' => null,
         'sender' => null,
-        'type' => null,
         'sent_at' => 'date-time',
         'text' => null,
-        'image_data' => null,
-        'file_data' => null,
-        'voice_data' => null,
-        'location_data' => null,
-        'video_data' => null
+        'type' => null,
+        'video_data' => null,
+        'voice_data' => null
     ];
 
     /**
@@ -97,17 +97,17 @@ class ChatapiMessage implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'id' => false,
         'conversation' => false,
+        'file_data' => false,
+        'id' => false,
+        'image_data' => false,
+        'location_data' => false,
         'sender' => false,
-        'type' => false,
         'sent_at' => false,
         'text' => false,
-        'image_data' => false,
-        'file_data' => false,
-        'voice_data' => false,
-        'location_data' => false,
-        'video_data' => false
+        'type' => false,
+        'video_data' => false,
+        'voice_data' => false
     ];
 
     /**
@@ -196,17 +196,17 @@ class ChatapiMessage implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
         'conversation' => 'conversation',
+        'file_data' => 'file_data',
+        'id' => 'id',
+        'image_data' => 'image_data',
+        'location_data' => 'location_data',
         'sender' => 'sender',
-        'type' => 'type',
         'sent_at' => 'sent_at',
         'text' => 'text',
-        'image_data' => 'image_data',
-        'file_data' => 'file_data',
-        'voice_data' => 'voice_data',
-        'location_data' => 'location_data',
-        'video_data' => 'video_data'
+        'type' => 'type',
+        'video_data' => 'video_data',
+        'voice_data' => 'voice_data'
     ];
 
     /**
@@ -215,17 +215,17 @@ class ChatapiMessage implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
         'conversation' => 'setConversation',
+        'file_data' => 'setFileData',
+        'id' => 'setId',
+        'image_data' => 'setImageData',
+        'location_data' => 'setLocationData',
         'sender' => 'setSender',
-        'type' => 'setType',
         'sent_at' => 'setSentAt',
         'text' => 'setText',
-        'image_data' => 'setImageData',
-        'file_data' => 'setFileData',
-        'voice_data' => 'setVoiceData',
-        'location_data' => 'setLocationData',
-        'video_data' => 'setVideoData'
+        'type' => 'setType',
+        'video_data' => 'setVideoData',
+        'voice_data' => 'setVoiceData'
     ];
 
     /**
@@ -234,17 +234,17 @@ class ChatapiMessage implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
         'conversation' => 'getConversation',
+        'file_data' => 'getFileData',
+        'id' => 'getId',
+        'image_data' => 'getImageData',
+        'location_data' => 'getLocationData',
         'sender' => 'getSender',
-        'type' => 'getType',
         'sent_at' => 'getSentAt',
         'text' => 'getText',
-        'image_data' => 'getImageData',
-        'file_data' => 'getFileData',
-        'voice_data' => 'getVoiceData',
-        'location_data' => 'getLocationData',
-        'video_data' => 'getVideoData'
+        'type' => 'getType',
+        'video_data' => 'getVideoData',
+        'voice_data' => 'getVoiceData'
     ];
 
     /**
@@ -304,17 +304,17 @@ class ChatapiMessage implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('conversation', $data ?? [], null);
+        $this->setIfExists('file_data', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
+        $this->setIfExists('image_data', $data ?? [], null);
+        $this->setIfExists('location_data', $data ?? [], null);
         $this->setIfExists('sender', $data ?? [], null);
-        $this->setIfExists('type', $data ?? [], null);
         $this->setIfExists('sent_at', $data ?? [], null);
         $this->setIfExists('text', $data ?? [], null);
-        $this->setIfExists('image_data', $data ?? [], null);
-        $this->setIfExists('file_data', $data ?? [], null);
-        $this->setIfExists('voice_data', $data ?? [], null);
-        $this->setIfExists('location_data', $data ?? [], null);
+        $this->setIfExists('type', $data ?? [], null);
         $this->setIfExists('video_data', $data ?? [], null);
+        $this->setIfExists('voice_data', $data ?? [], null);
     }
 
     /**
@@ -360,33 +360,6 @@ class ChatapiMessage implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets id
-     *
-     * @return string|null
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param string|null $id id
-     *
-     * @return self
-     */
-    public function setId($id)
-    {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
-        }
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
      * Gets conversation
      *
      * @return \Divar\KenarApiClient\Model\ChatapiConversation|null
@@ -414,6 +387,114 @@ class ChatapiMessage implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
+     * Gets file_data
+     *
+     * @return \Divar\KenarApiClient\Model\MessageFileData|null
+     */
+    public function getFileData()
+    {
+        return $this->container['file_data'];
+    }
+
+    /**
+     * Sets file_data
+     *
+     * @param \Divar\KenarApiClient\Model\MessageFileData|null $file_data file_data
+     *
+     * @return self
+     */
+    public function setFileData($file_data)
+    {
+        if (is_null($file_data)) {
+            throw new \InvalidArgumentException('non-nullable file_data cannot be null');
+        }
+        $this->container['file_data'] = $file_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string|null
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string|null $id id
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        }
+        $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets image_data
+     *
+     * @return \Divar\KenarApiClient\Model\MessageImageData|null
+     */
+    public function getImageData()
+    {
+        return $this->container['image_data'];
+    }
+
+    /**
+     * Sets image_data
+     *
+     * @param \Divar\KenarApiClient\Model\MessageImageData|null $image_data image_data
+     *
+     * @return self
+     */
+    public function setImageData($image_data)
+    {
+        if (is_null($image_data)) {
+            throw new \InvalidArgumentException('non-nullable image_data cannot be null');
+        }
+        $this->container['image_data'] = $image_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets location_data
+     *
+     * @return \Divar\KenarApiClient\Model\MessageLocationData|null
+     */
+    public function getLocationData()
+    {
+        return $this->container['location_data'];
+    }
+
+    /**
+     * Sets location_data
+     *
+     * @param \Divar\KenarApiClient\Model\MessageLocationData|null $location_data location_data
+     *
+     * @return self
+     */
+    public function setLocationData($location_data)
+    {
+        if (is_null($location_data)) {
+            throw new \InvalidArgumentException('non-nullable location_data cannot be null');
+        }
+        $this->container['location_data'] = $location_data;
+
+        return $this;
+    }
+
+    /**
      * Gets sender
      *
      * @return \Divar\KenarApiClient\Model\MessageSender|null
@@ -436,33 +517,6 @@ class ChatapiMessage implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable sender cannot be null');
         }
         $this->container['sender'] = $sender;
-
-        return $this;
-    }
-
-    /**
-     * Gets type
-     *
-     * @return \Divar\KenarApiClient\Model\ChatapiMessageType|null
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param \Divar\KenarApiClient\Model\ChatapiMessageType|null $type type
-     *
-     * @return self
-     */
-    public function setType($type)
-    {
-        if (is_null($type)) {
-            throw new \InvalidArgumentException('non-nullable type cannot be null');
-        }
-        $this->container['type'] = $type;
 
         return $this;
     }
@@ -522,109 +576,28 @@ class ChatapiMessage implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets image_data
+     * Gets type
      *
-     * @return \Divar\KenarApiClient\Model\MessageImageData|null
+     * @return \Divar\KenarApiClient\Model\ChatapiMessageType|null
      */
-    public function getImageData()
+    public function getType()
     {
-        return $this->container['image_data'];
+        return $this->container['type'];
     }
 
     /**
-     * Sets image_data
+     * Sets type
      *
-     * @param \Divar\KenarApiClient\Model\MessageImageData|null $image_data image_data
+     * @param \Divar\KenarApiClient\Model\ChatapiMessageType|null $type type
      *
      * @return self
      */
-    public function setImageData($image_data)
+    public function setType($type)
     {
-        if (is_null($image_data)) {
-            throw new \InvalidArgumentException('non-nullable image_data cannot be null');
+        if (is_null($type)) {
+            throw new \InvalidArgumentException('non-nullable type cannot be null');
         }
-        $this->container['image_data'] = $image_data;
-
-        return $this;
-    }
-
-    /**
-     * Gets file_data
-     *
-     * @return \Divar\KenarApiClient\Model\MessageFileData|null
-     */
-    public function getFileData()
-    {
-        return $this->container['file_data'];
-    }
-
-    /**
-     * Sets file_data
-     *
-     * @param \Divar\KenarApiClient\Model\MessageFileData|null $file_data file_data
-     *
-     * @return self
-     */
-    public function setFileData($file_data)
-    {
-        if (is_null($file_data)) {
-            throw new \InvalidArgumentException('non-nullable file_data cannot be null');
-        }
-        $this->container['file_data'] = $file_data;
-
-        return $this;
-    }
-
-    /**
-     * Gets voice_data
-     *
-     * @return \Divar\KenarApiClient\Model\MessageVoiceData|null
-     */
-    public function getVoiceData()
-    {
-        return $this->container['voice_data'];
-    }
-
-    /**
-     * Sets voice_data
-     *
-     * @param \Divar\KenarApiClient\Model\MessageVoiceData|null $voice_data voice_data
-     *
-     * @return self
-     */
-    public function setVoiceData($voice_data)
-    {
-        if (is_null($voice_data)) {
-            throw new \InvalidArgumentException('non-nullable voice_data cannot be null');
-        }
-        $this->container['voice_data'] = $voice_data;
-
-        return $this;
-    }
-
-    /**
-     * Gets location_data
-     *
-     * @return \Divar\KenarApiClient\Model\MessageLocationData|null
-     */
-    public function getLocationData()
-    {
-        return $this->container['location_data'];
-    }
-
-    /**
-     * Sets location_data
-     *
-     * @param \Divar\KenarApiClient\Model\MessageLocationData|null $location_data location_data
-     *
-     * @return self
-     */
-    public function setLocationData($location_data)
-    {
-        if (is_null($location_data)) {
-            throw new \InvalidArgumentException('non-nullable location_data cannot be null');
-        }
-        $this->container['location_data'] = $location_data;
+        $this->container['type'] = $type;
 
         return $this;
     }
@@ -652,6 +625,33 @@ class ChatapiMessage implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable video_data cannot be null');
         }
         $this->container['video_data'] = $video_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets voice_data
+     *
+     * @return \Divar\KenarApiClient\Model\MessageVoiceData|null
+     */
+    public function getVoiceData()
+    {
+        return $this->container['voice_data'];
+    }
+
+    /**
+     * Sets voice_data
+     *
+     * @param \Divar\KenarApiClient\Model\MessageVoiceData|null $voice_data voice_data
+     *
+     * @return self
+     */
+    public function setVoiceData($voice_data)
+    {
+        if (is_null($voice_data)) {
+            throw new \InvalidArgumentException('non-nullable voice_data cannot be null');
+        }
+        $this->container['voice_data'] = $voice_data;
 
         return $this;
     }

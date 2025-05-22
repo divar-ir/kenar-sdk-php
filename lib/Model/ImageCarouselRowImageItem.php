@@ -57,8 +57,8 @@ class ImageCarouselRowImageItem implements ModelInterface, ArrayAccess, \JsonSer
       * @var string[]
       */
     protected static $openAPITypes = [
-        'image_id' => 'string',
-        'description' => 'string'
+        'description' => 'string',
+        'image_id' => 'string'
     ];
 
     /**
@@ -69,8 +69,8 @@ class ImageCarouselRowImageItem implements ModelInterface, ArrayAccess, \JsonSer
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'image_id' => null,
-        'description' => null
+        'description' => null,
+        'image_id' => null
     ];
 
     /**
@@ -79,8 +79,8 @@ class ImageCarouselRowImageItem implements ModelInterface, ArrayAccess, \JsonSer
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'image_id' => false,
-        'description' => false
+        'description' => false,
+        'image_id' => false
     ];
 
     /**
@@ -169,8 +169,8 @@ class ImageCarouselRowImageItem implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $attributeMap = [
-        'image_id' => 'image_id',
-        'description' => 'description'
+        'description' => 'description',
+        'image_id' => 'image_id'
     ];
 
     /**
@@ -179,8 +179,8 @@ class ImageCarouselRowImageItem implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $setters = [
-        'image_id' => 'setImageId',
-        'description' => 'setDescription'
+        'description' => 'setDescription',
+        'image_id' => 'setImageId'
     ];
 
     /**
@@ -189,8 +189,8 @@ class ImageCarouselRowImageItem implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $getters = [
-        'image_id' => 'getImageId',
-        'description' => 'getDescription'
+        'description' => 'getDescription',
+        'image_id' => 'getImageId'
     ];
 
     /**
@@ -250,8 +250,8 @@ class ImageCarouselRowImageItem implements ModelInterface, ArrayAccess, \JsonSer
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('image_id', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
+        $this->setIfExists('image_id', $data ?? [], null);
     }
 
     /**
@@ -297,33 +297,6 @@ class ImageCarouselRowImageItem implements ModelInterface, ArrayAccess, \JsonSer
 
 
     /**
-     * Gets image_id
-     *
-     * @return string|null
-     */
-    public function getImageId()
-    {
-        return $this->container['image_id'];
-    }
-
-    /**
-     * Sets image_id
-     *
-     * @param string|null $image_id image_id
-     *
-     * @return self
-     */
-    public function setImageId($image_id)
-    {
-        if (is_null($image_id)) {
-            throw new \InvalidArgumentException('non-nullable image_id cannot be null');
-        }
-        $this->container['image_id'] = $image_id;
-
-        return $this;
-    }
-
-    /**
      * Gets description
      *
      * @return string|null
@@ -346,6 +319,33 @@ class ImageCarouselRowImageItem implements ModelInterface, ArrayAccess, \JsonSer
             throw new \InvalidArgumentException('non-nullable description cannot be null');
         }
         $this->container['description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * Gets image_id
+     *
+     * @return string|null
+     */
+    public function getImageId()
+    {
+        return $this->container['image_id'];
+    }
+
+    /**
+     * Sets image_id
+     *
+     * @param string|null $image_id image_id
+     *
+     * @return self
+     */
+    public function setImageId($image_id)
+    {
+        if (is_null($image_id)) {
+            throw new \InvalidArgumentException('non-nullable image_id cannot be null');
+        }
+        $this->container['image_id'] = $image_id;
 
         return $this;
     }

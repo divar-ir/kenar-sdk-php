@@ -57,10 +57,10 @@ class ManagementDevelopmentPost implements ModelInterface, ArrayAccess, \JsonSer
       * @var string[]
       */
     protected static $openAPITypes = [
-        'preset' => '\Divar\KenarApiClient\Model\ManagementPreset',
         'created_at' => '\DateTime',
-        'token' => 'string',
-        'mng_token' => 'string'
+        'mng_token' => 'string',
+        'preset' => '\Divar\KenarApiClient\Model\ManagementPreset',
+        'token' => 'string'
     ];
 
     /**
@@ -71,10 +71,10 @@ class ManagementDevelopmentPost implements ModelInterface, ArrayAccess, \JsonSer
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'preset' => null,
         'created_at' => 'date-time',
-        'token' => null,
-        'mng_token' => null
+        'mng_token' => null,
+        'preset' => null,
+        'token' => null
     ];
 
     /**
@@ -83,10 +83,10 @@ class ManagementDevelopmentPost implements ModelInterface, ArrayAccess, \JsonSer
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'preset' => false,
         'created_at' => false,
-        'token' => false,
-        'mng_token' => false
+        'mng_token' => false,
+        'preset' => false,
+        'token' => false
     ];
 
     /**
@@ -175,10 +175,10 @@ class ManagementDevelopmentPost implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $attributeMap = [
-        'preset' => 'preset',
         'created_at' => 'created_at',
-        'token' => 'token',
-        'mng_token' => 'mng_token'
+        'mng_token' => 'mng_token',
+        'preset' => 'preset',
+        'token' => 'token'
     ];
 
     /**
@@ -187,10 +187,10 @@ class ManagementDevelopmentPost implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $setters = [
-        'preset' => 'setPreset',
         'created_at' => 'setCreatedAt',
-        'token' => 'setToken',
-        'mng_token' => 'setMngToken'
+        'mng_token' => 'setMngToken',
+        'preset' => 'setPreset',
+        'token' => 'setToken'
     ];
 
     /**
@@ -199,10 +199,10 @@ class ManagementDevelopmentPost implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $getters = [
-        'preset' => 'getPreset',
         'created_at' => 'getCreatedAt',
-        'token' => 'getToken',
-        'mng_token' => 'getMngToken'
+        'mng_token' => 'getMngToken',
+        'preset' => 'getPreset',
+        'token' => 'getToken'
     ];
 
     /**
@@ -262,10 +262,10 @@ class ManagementDevelopmentPost implements ModelInterface, ArrayAccess, \JsonSer
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('preset', $data ?? [], null);
         $this->setIfExists('created_at', $data ?? [], null);
-        $this->setIfExists('token', $data ?? [], null);
         $this->setIfExists('mng_token', $data ?? [], null);
+        $this->setIfExists('preset', $data ?? [], null);
+        $this->setIfExists('token', $data ?? [], null);
     }
 
     /**
@@ -311,33 +311,6 @@ class ManagementDevelopmentPost implements ModelInterface, ArrayAccess, \JsonSer
 
 
     /**
-     * Gets preset
-     *
-     * @return \Divar\KenarApiClient\Model\ManagementPreset|null
-     */
-    public function getPreset()
-    {
-        return $this->container['preset'];
-    }
-
-    /**
-     * Sets preset
-     *
-     * @param \Divar\KenarApiClient\Model\ManagementPreset|null $preset preset
-     *
-     * @return self
-     */
-    public function setPreset($preset)
-    {
-        if (is_null($preset)) {
-            throw new \InvalidArgumentException('non-nullable preset cannot be null');
-        }
-        $this->container['preset'] = $preset;
-
-        return $this;
-    }
-
-    /**
      * Gets created_at
      *
      * @return \DateTime|null
@@ -365,33 +338,6 @@ class ManagementDevelopmentPost implements ModelInterface, ArrayAccess, \JsonSer
     }
 
     /**
-     * Gets token
-     *
-     * @return string|null
-     */
-    public function getToken()
-    {
-        return $this->container['token'];
-    }
-
-    /**
-     * Sets token
-     *
-     * @param string|null $token token
-     *
-     * @return self
-     */
-    public function setToken($token)
-    {
-        if (is_null($token)) {
-            throw new \InvalidArgumentException('non-nullable token cannot be null');
-        }
-        $this->container['token'] = $token;
-
-        return $this;
-    }
-
-    /**
      * Gets mng_token
      *
      * @return string|null
@@ -414,6 +360,60 @@ class ManagementDevelopmentPost implements ModelInterface, ArrayAccess, \JsonSer
             throw new \InvalidArgumentException('non-nullable mng_token cannot be null');
         }
         $this->container['mng_token'] = $mng_token;
+
+        return $this;
+    }
+
+    /**
+     * Gets preset
+     *
+     * @return \Divar\KenarApiClient\Model\ManagementPreset|null
+     */
+    public function getPreset()
+    {
+        return $this->container['preset'];
+    }
+
+    /**
+     * Sets preset
+     *
+     * @param \Divar\KenarApiClient\Model\ManagementPreset|null $preset preset
+     *
+     * @return self
+     */
+    public function setPreset($preset)
+    {
+        if (is_null($preset)) {
+            throw new \InvalidArgumentException('non-nullable preset cannot be null');
+        }
+        $this->container['preset'] = $preset;
+
+        return $this;
+    }
+
+    /**
+     * Gets token
+     *
+     * @return string|null
+     */
+    public function getToken()
+    {
+        return $this->container['token'];
+    }
+
+    /**
+     * Sets token
+     *
+     * @param string|null $token token
+     *
+     * @return self
+     */
+    public function setToken($token)
+    {
+        if (is_null($token)) {
+            throw new \InvalidArgumentException('non-nullable token cannot be null');
+        }
+        $this->container['token'] = $token;
 
         return $this;
     }

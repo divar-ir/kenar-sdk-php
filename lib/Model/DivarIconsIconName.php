@@ -1626,6 +1626,8 @@ class DivarIconsIconName
 
     public const WHATS_APP = 'WHATS_APP';
 
+    public const CHAT_SPARKLES = 'CHAT_SPARKLES';
+
     /**
      * Gets allowable values of the enum
      * @return string[]
@@ -2424,7 +2426,8 @@ class DivarIconsIconName
             self::FOOTNOTE,
             self::SPARKLES_F,
             self::HAND_CLICK,
-            self::WHATS_APP
+            self::WHATS_APP,
+            self::CHAT_SPARKLES
         ];
     }
 }

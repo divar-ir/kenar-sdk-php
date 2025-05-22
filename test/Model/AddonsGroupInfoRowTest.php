@@ -80,18 +80,18 @@ class AddonsGroupInfoRowTest extends TestCase
     }
 
     /**
-     * Test attribute "items"
+     * Test attribute "has_divider"
      */
-    public function testPropertyItems()
+    public function testPropertyHasDivider()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "has_divider"
+     * Test attribute "items"
      */
-    public function testPropertyHasDivider()
+    public function testPropertyItems()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

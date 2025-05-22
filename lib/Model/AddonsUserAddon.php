@@ -57,15 +57,15 @@ class AddonsUserAddon implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
+        'divar_user_id' => 'string',
+        'filters' => '\Divar\KenarApiClient\Model\AddonsUserAddonFilters',
         'meta_data' => '\Divar\KenarApiClient\Model\AddonsAddonMetaData',
         'phone' => 'string',
-        'divar_user_id' => 'string',
-        'widgets' => 'object',
         'semantic' => 'array<string,string>',
         'semantic_data' => '\Divar\KenarApiClient\Model\AddonsAddonSemantic',
         'sensitive_semantic' => 'array<string,string>',
-        'widgets_semantic' => 'object',
-        'filters' => '\Divar\KenarApiClient\Model\AddonsUserAddonFilters'
+        'widgets' => 'object',
+        'widgets_semantic' => 'object'
     ];
 
     /**
@@ -76,15 +76,15 @@ class AddonsUserAddon implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
+        'divar_user_id' => null,
+        'filters' => null,
         'meta_data' => null,
         'phone' => null,
-        'divar_user_id' => null,
-        'widgets' => null,
         'semantic' => null,
         'semantic_data' => null,
         'sensitive_semantic' => null,
-        'widgets_semantic' => null,
-        'filters' => null
+        'widgets' => null,
+        'widgets_semantic' => null
     ];
 
     /**
@@ -93,15 +93,15 @@ class AddonsUserAddon implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
+        'divar_user_id' => false,
+        'filters' => false,
         'meta_data' => false,
         'phone' => false,
-        'divar_user_id' => false,
-        'widgets' => false,
         'semantic' => false,
         'semantic_data' => false,
         'sensitive_semantic' => false,
-        'widgets_semantic' => false,
-        'filters' => false
+        'widgets' => false,
+        'widgets_semantic' => false
     ];
 
     /**
@@ -190,15 +190,15 @@ class AddonsUserAddon implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
+        'divar_user_id' => 'divar_user_id',
+        'filters' => 'filters',
         'meta_data' => 'meta_data',
         'phone' => 'phone',
-        'divar_user_id' => 'divar_user_id',
-        'widgets' => 'widgets',
         'semantic' => 'semantic',
         'semantic_data' => 'semantic_data',
         'sensitive_semantic' => 'sensitive_semantic',
-        'widgets_semantic' => 'widgets_semantic',
-        'filters' => 'filters'
+        'widgets' => 'widgets',
+        'widgets_semantic' => 'widgets_semantic'
     ];
 
     /**
@@ -207,15 +207,15 @@ class AddonsUserAddon implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
+        'divar_user_id' => 'setDivarUserId',
+        'filters' => 'setFilters',
         'meta_data' => 'setMetaData',
         'phone' => 'setPhone',
-        'divar_user_id' => 'setDivarUserId',
-        'widgets' => 'setWidgets',
         'semantic' => 'setSemantic',
         'semantic_data' => 'setSemanticData',
         'sensitive_semantic' => 'setSensitiveSemantic',
-        'widgets_semantic' => 'setWidgetsSemantic',
-        'filters' => 'setFilters'
+        'widgets' => 'setWidgets',
+        'widgets_semantic' => 'setWidgetsSemantic'
     ];
 
     /**
@@ -224,15 +224,15 @@ class AddonsUserAddon implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
+        'divar_user_id' => 'getDivarUserId',
+        'filters' => 'getFilters',
         'meta_data' => 'getMetaData',
         'phone' => 'getPhone',
-        'divar_user_id' => 'getDivarUserId',
-        'widgets' => 'getWidgets',
         'semantic' => 'getSemantic',
         'semantic_data' => 'getSemanticData',
         'sensitive_semantic' => 'getSensitiveSemantic',
-        'widgets_semantic' => 'getWidgetsSemantic',
-        'filters' => 'getFilters'
+        'widgets' => 'getWidgets',
+        'widgets_semantic' => 'getWidgetsSemantic'
     ];
 
     /**
@@ -292,15 +292,15 @@ class AddonsUserAddon implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
+        $this->setIfExists('divar_user_id', $data ?? [], null);
+        $this->setIfExists('filters', $data ?? [], null);
         $this->setIfExists('meta_data', $data ?? [], null);
         $this->setIfExists('phone', $data ?? [], null);
-        $this->setIfExists('divar_user_id', $data ?? [], null);
-        $this->setIfExists('widgets', $data ?? [], null);
         $this->setIfExists('semantic', $data ?? [], null);
         $this->setIfExists('semantic_data', $data ?? [], null);
         $this->setIfExists('sensitive_semantic', $data ?? [], null);
+        $this->setIfExists('widgets', $data ?? [], null);
         $this->setIfExists('widgets_semantic', $data ?? [], null);
-        $this->setIfExists('filters', $data ?? [], null);
     }
 
     /**
@@ -344,6 +344,60 @@ class AddonsUserAddon implements ModelInterface, ArrayAccess, \JsonSerializable
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets divar_user_id
+     *
+     * @return string|null
+     */
+    public function getDivarUserId()
+    {
+        return $this->container['divar_user_id'];
+    }
+
+    /**
+     * Sets divar_user_id
+     *
+     * @param string|null $divar_user_id divar_user_id
+     *
+     * @return self
+     */
+    public function setDivarUserId($divar_user_id)
+    {
+        if (is_null($divar_user_id)) {
+            throw new \InvalidArgumentException('non-nullable divar_user_id cannot be null');
+        }
+        $this->container['divar_user_id'] = $divar_user_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets filters
+     *
+     * @return \Divar\KenarApiClient\Model\AddonsUserAddonFilters|null
+     */
+    public function getFilters()
+    {
+        return $this->container['filters'];
+    }
+
+    /**
+     * Sets filters
+     *
+     * @param \Divar\KenarApiClient\Model\AddonsUserAddonFilters|null $filters filters
+     *
+     * @return self
+     */
+    public function setFilters($filters)
+    {
+        if (is_null($filters)) {
+            throw new \InvalidArgumentException('non-nullable filters cannot be null');
+        }
+        $this->container['filters'] = $filters;
+
+        return $this;
+    }
 
     /**
      * Gets meta_data
@@ -395,60 +449,6 @@ class AddonsUserAddon implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable phone cannot be null');
         }
         $this->container['phone'] = $phone;
-
-        return $this;
-    }
-
-    /**
-     * Gets divar_user_id
-     *
-     * @return string|null
-     */
-    public function getDivarUserId()
-    {
-        return $this->container['divar_user_id'];
-    }
-
-    /**
-     * Sets divar_user_id
-     *
-     * @param string|null $divar_user_id divar_user_id
-     *
-     * @return self
-     */
-    public function setDivarUserId($divar_user_id)
-    {
-        if (is_null($divar_user_id)) {
-            throw new \InvalidArgumentException('non-nullable divar_user_id cannot be null');
-        }
-        $this->container['divar_user_id'] = $divar_user_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets widgets
-     *
-     * @return object|null
-     */
-    public function getWidgets()
-    {
-        return $this->container['widgets'];
-    }
-
-    /**
-     * Sets widgets
-     *
-     * @param object|null $widgets widgets
-     *
-     * @return self
-     */
-    public function setWidgets($widgets)
-    {
-        if (is_null($widgets)) {
-            throw new \InvalidArgumentException('non-nullable widgets cannot be null');
-        }
-        $this->container['widgets'] = $widgets;
 
         return $this;
     }
@@ -535,6 +535,33 @@ class AddonsUserAddon implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
+     * Gets widgets
+     *
+     * @return object|null
+     */
+    public function getWidgets()
+    {
+        return $this->container['widgets'];
+    }
+
+    /**
+     * Sets widgets
+     *
+     * @param object|null $widgets widgets
+     *
+     * @return self
+     */
+    public function setWidgets($widgets)
+    {
+        if (is_null($widgets)) {
+            throw new \InvalidArgumentException('non-nullable widgets cannot be null');
+        }
+        $this->container['widgets'] = $widgets;
+
+        return $this;
+    }
+
+    /**
      * Gets widgets_semantic
      *
      * @return object|null
@@ -557,33 +584,6 @@ class AddonsUserAddon implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable widgets_semantic cannot be null');
         }
         $this->container['widgets_semantic'] = $widgets_semantic;
-
-        return $this;
-    }
-
-    /**
-     * Gets filters
-     *
-     * @return \Divar\KenarApiClient\Model\AddonsUserAddonFilters|null
-     */
-    public function getFilters()
-    {
-        return $this->container['filters'];
-    }
-
-    /**
-     * Sets filters
-     *
-     * @param \Divar\KenarApiClient\Model\AddonsUserAddonFilters|null $filters filters
-     *
-     * @return self
-     */
-    public function setFilters($filters)
-    {
-        if (is_null($filters)) {
-            throw new \InvalidArgumentException('non-nullable filters cannot be null');
-        }
-        $this->container['filters'] = $filters;
 
         return $this;
     }

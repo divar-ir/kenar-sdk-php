@@ -80,9 +80,9 @@ class AddonsDescriptionRowTest extends TestCase
     }
 
     /**
-     * Test attribute "text"
+     * Test attribute "expandable"
      */
-    public function testPropertyText()
+    public function testPropertyExpandable()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -98,9 +98,9 @@ class AddonsDescriptionRowTest extends TestCase
     }
 
     /**
-     * Test attribute "expandable"
+     * Test attribute "text"
      */
-    public function testPropertyExpandable()
+    public function testPropertyText()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

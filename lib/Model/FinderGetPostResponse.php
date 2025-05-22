@@ -57,15 +57,15 @@ class FinderGetPostResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var string[]
       */
     protected static $openAPITypes = [
-        'state' => '\Divar\KenarApiClient\Model\FinderPostExtState',
-        'first_published_at' => '\DateTime',
-        'token' => 'string',
+        'business_data' => '\Divar\KenarApiClient\Model\GetPostResponseBusinessData',
         'category' => 'string',
-        'city' => 'string',
-        'district' => 'string',
-        'data' => 'object',
         'chat_enabled' => 'bool',
-        'business_data' => '\Divar\KenarApiClient\Model\GetPostResponseBusinessData'
+        'city' => 'string',
+        'data' => 'object',
+        'district' => 'string',
+        'first_published_at' => '\DateTime',
+        'state' => '\Divar\KenarApiClient\Model\FinderPostExtState',
+        'token' => 'string'
     ];
 
     /**
@@ -76,15 +76,15 @@ class FinderGetPostResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'state' => null,
-        'first_published_at' => 'date-time',
-        'token' => null,
+        'business_data' => null,
         'category' => null,
-        'city' => null,
-        'district' => null,
-        'data' => null,
         'chat_enabled' => null,
-        'business_data' => null
+        'city' => null,
+        'data' => null,
+        'district' => null,
+        'first_published_at' => 'date-time',
+        'state' => null,
+        'token' => null
     ];
 
     /**
@@ -93,15 +93,15 @@ class FinderGetPostResponse implements ModelInterface, ArrayAccess, \JsonSeriali
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'state' => false,
-        'first_published_at' => false,
-        'token' => false,
+        'business_data' => false,
         'category' => false,
-        'city' => false,
-        'district' => false,
-        'data' => false,
         'chat_enabled' => false,
-        'business_data' => false
+        'city' => false,
+        'data' => false,
+        'district' => false,
+        'first_published_at' => false,
+        'state' => false,
+        'token' => false
     ];
 
     /**
@@ -190,15 +190,15 @@ class FinderGetPostResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $attributeMap = [
-        'state' => 'state',
-        'first_published_at' => 'first_published_at',
-        'token' => 'token',
+        'business_data' => 'business_data',
         'category' => 'category',
-        'city' => 'city',
-        'district' => 'district',
-        'data' => 'data',
         'chat_enabled' => 'chat_enabled',
-        'business_data' => 'business_data'
+        'city' => 'city',
+        'data' => 'data',
+        'district' => 'district',
+        'first_published_at' => 'first_published_at',
+        'state' => 'state',
+        'token' => 'token'
     ];
 
     /**
@@ -207,15 +207,15 @@ class FinderGetPostResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $setters = [
-        'state' => 'setState',
-        'first_published_at' => 'setFirstPublishedAt',
-        'token' => 'setToken',
+        'business_data' => 'setBusinessData',
         'category' => 'setCategory',
-        'city' => 'setCity',
-        'district' => 'setDistrict',
-        'data' => 'setData',
         'chat_enabled' => 'setChatEnabled',
-        'business_data' => 'setBusinessData'
+        'city' => 'setCity',
+        'data' => 'setData',
+        'district' => 'setDistrict',
+        'first_published_at' => 'setFirstPublishedAt',
+        'state' => 'setState',
+        'token' => 'setToken'
     ];
 
     /**
@@ -224,15 +224,15 @@ class FinderGetPostResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      * @var string[]
      */
     protected static $getters = [
-        'state' => 'getState',
-        'first_published_at' => 'getFirstPublishedAt',
-        'token' => 'getToken',
+        'business_data' => 'getBusinessData',
         'category' => 'getCategory',
-        'city' => 'getCity',
-        'district' => 'getDistrict',
-        'data' => 'getData',
         'chat_enabled' => 'getChatEnabled',
-        'business_data' => 'getBusinessData'
+        'city' => 'getCity',
+        'data' => 'getData',
+        'district' => 'getDistrict',
+        'first_published_at' => 'getFirstPublishedAt',
+        'state' => 'getState',
+        'token' => 'getToken'
     ];
 
     /**
@@ -292,15 +292,15 @@ class FinderGetPostResponse implements ModelInterface, ArrayAccess, \JsonSeriali
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('state', $data ?? [], null);
-        $this->setIfExists('first_published_at', $data ?? [], null);
-        $this->setIfExists('token', $data ?? [], null);
-        $this->setIfExists('category', $data ?? [], null);
-        $this->setIfExists('city', $data ?? [], null);
-        $this->setIfExists('district', $data ?? [], null);
-        $this->setIfExists('data', $data ?? [], null);
-        $this->setIfExists('chat_enabled', $data ?? [], null);
         $this->setIfExists('business_data', $data ?? [], null);
+        $this->setIfExists('category', $data ?? [], null);
+        $this->setIfExists('chat_enabled', $data ?? [], null);
+        $this->setIfExists('city', $data ?? [], null);
+        $this->setIfExists('data', $data ?? [], null);
+        $this->setIfExists('district', $data ?? [], null);
+        $this->setIfExists('first_published_at', $data ?? [], null);
+        $this->setIfExists('state', $data ?? [], null);
+        $this->setIfExists('token', $data ?? [], null);
     }
 
     /**
@@ -346,82 +346,28 @@ class FinderGetPostResponse implements ModelInterface, ArrayAccess, \JsonSeriali
 
 
     /**
-     * Gets state
+     * Gets business_data
      *
-     * @return \Divar\KenarApiClient\Model\FinderPostExtState|null
+     * @return \Divar\KenarApiClient\Model\GetPostResponseBusinessData|null
      */
-    public function getState()
+    public function getBusinessData()
     {
-        return $this->container['state'];
+        return $this->container['business_data'];
     }
 
     /**
-     * Sets state
+     * Sets business_data
      *
-     * @param \Divar\KenarApiClient\Model\FinderPostExtState|null $state state
+     * @param \Divar\KenarApiClient\Model\GetPostResponseBusinessData|null $business_data business_data
      *
      * @return self
      */
-    public function setState($state)
+    public function setBusinessData($business_data)
     {
-        if (is_null($state)) {
-            throw new \InvalidArgumentException('non-nullable state cannot be null');
+        if (is_null($business_data)) {
+            throw new \InvalidArgumentException('non-nullable business_data cannot be null');
         }
-        $this->container['state'] = $state;
-
-        return $this;
-    }
-
-    /**
-     * Gets first_published_at
-     *
-     * @return \DateTime|null
-     */
-    public function getFirstPublishedAt()
-    {
-        return $this->container['first_published_at'];
-    }
-
-    /**
-     * Sets first_published_at
-     *
-     * @param \DateTime|null $first_published_at first_published_at
-     *
-     * @return self
-     */
-    public function setFirstPublishedAt($first_published_at)
-    {
-        if (is_null($first_published_at)) {
-            throw new \InvalidArgumentException('non-nullable first_published_at cannot be null');
-        }
-        $this->container['first_published_at'] = $first_published_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets token
-     *
-     * @return string|null
-     */
-    public function getToken()
-    {
-        return $this->container['token'];
-    }
-
-    /**
-     * Sets token
-     *
-     * @param string|null $token token
-     *
-     * @return self
-     */
-    public function setToken($token)
-    {
-        if (is_null($token)) {
-            throw new \InvalidArgumentException('non-nullable token cannot be null');
-        }
-        $this->container['token'] = $token;
+        $this->container['business_data'] = $business_data;
 
         return $this;
     }
@@ -454,6 +400,33 @@ class FinderGetPostResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     }
 
     /**
+     * Gets chat_enabled
+     *
+     * @return bool|null
+     */
+    public function getChatEnabled()
+    {
+        return $this->container['chat_enabled'];
+    }
+
+    /**
+     * Sets chat_enabled
+     *
+     * @param bool|null $chat_enabled chat_enabled
+     *
+     * @return self
+     */
+    public function setChatEnabled($chat_enabled)
+    {
+        if (is_null($chat_enabled)) {
+            throw new \InvalidArgumentException('non-nullable chat_enabled cannot be null');
+        }
+        $this->container['chat_enabled'] = $chat_enabled;
+
+        return $this;
+    }
+
+    /**
      * Gets city
      *
      * @return string|null
@@ -476,33 +449,6 @@ class FinderGetPostResponse implements ModelInterface, ArrayAccess, \JsonSeriali
             throw new \InvalidArgumentException('non-nullable city cannot be null');
         }
         $this->container['city'] = $city;
-
-        return $this;
-    }
-
-    /**
-     * Gets district
-     *
-     * @return string|null
-     */
-    public function getDistrict()
-    {
-        return $this->container['district'];
-    }
-
-    /**
-     * Sets district
-     *
-     * @param string|null $district district
-     *
-     * @return self
-     */
-    public function setDistrict($district)
-    {
-        if (is_null($district)) {
-            throw new \InvalidArgumentException('non-nullable district cannot be null');
-        }
-        $this->container['district'] = $district;
 
         return $this;
     }
@@ -535,55 +481,109 @@ class FinderGetPostResponse implements ModelInterface, ArrayAccess, \JsonSeriali
     }
 
     /**
-     * Gets chat_enabled
+     * Gets district
      *
-     * @return bool|null
+     * @return string|null
      */
-    public function getChatEnabled()
+    public function getDistrict()
     {
-        return $this->container['chat_enabled'];
+        return $this->container['district'];
     }
 
     /**
-     * Sets chat_enabled
+     * Sets district
      *
-     * @param bool|null $chat_enabled chat_enabled
+     * @param string|null $district district
      *
      * @return self
      */
-    public function setChatEnabled($chat_enabled)
+    public function setDistrict($district)
     {
-        if (is_null($chat_enabled)) {
-            throw new \InvalidArgumentException('non-nullable chat_enabled cannot be null');
+        if (is_null($district)) {
+            throw new \InvalidArgumentException('non-nullable district cannot be null');
         }
-        $this->container['chat_enabled'] = $chat_enabled;
+        $this->container['district'] = $district;
 
         return $this;
     }
 
     /**
-     * Gets business_data
+     * Gets first_published_at
      *
-     * @return \Divar\KenarApiClient\Model\GetPostResponseBusinessData|null
+     * @return \DateTime|null
      */
-    public function getBusinessData()
+    public function getFirstPublishedAt()
     {
-        return $this->container['business_data'];
+        return $this->container['first_published_at'];
     }
 
     /**
-     * Sets business_data
+     * Sets first_published_at
      *
-     * @param \Divar\KenarApiClient\Model\GetPostResponseBusinessData|null $business_data business_data
+     * @param \DateTime|null $first_published_at first_published_at
      *
      * @return self
      */
-    public function setBusinessData($business_data)
+    public function setFirstPublishedAt($first_published_at)
     {
-        if (is_null($business_data)) {
-            throw new \InvalidArgumentException('non-nullable business_data cannot be null');
+        if (is_null($first_published_at)) {
+            throw new \InvalidArgumentException('non-nullable first_published_at cannot be null');
         }
-        $this->container['business_data'] = $business_data;
+        $this->container['first_published_at'] = $first_published_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets state
+     *
+     * @return \Divar\KenarApiClient\Model\FinderPostExtState|null
+     */
+    public function getState()
+    {
+        return $this->container['state'];
+    }
+
+    /**
+     * Sets state
+     *
+     * @param \Divar\KenarApiClient\Model\FinderPostExtState|null $state state
+     *
+     * @return self
+     */
+    public function setState($state)
+    {
+        if (is_null($state)) {
+            throw new \InvalidArgumentException('non-nullable state cannot be null');
+        }
+        $this->container['state'] = $state;
+
+        return $this;
+    }
+
+    /**
+     * Gets token
+     *
+     * @return string|null
+     */
+    public function getToken()
+    {
+        return $this->container['token'];
+    }
+
+    /**
+     * Sets token
+     *
+     * @param string|null $token token
+     *
+     * @return self
+     */
+    public function setToken($token)
+    {
+        if (is_null($token)) {
+            throw new \InvalidArgumentException('non-nullable token cannot be null');
+        }
+        $this->container['token'] = $token;
 
         return $this;
     }

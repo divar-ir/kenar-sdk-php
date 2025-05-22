@@ -57,9 +57,9 @@ class AddonsCreatePostAddonV2Body implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
-        'widgets' => '\Divar\KenarApiClient\Model\AddonsWidget[]',
+        'notes' => 'string',
         'semantic' => 'array<string,string>',
-        'notes' => 'string'
+        'widgets' => '\Divar\KenarApiClient\Model\AddonsWidget[]'
     ];
 
     /**
@@ -70,9 +70,9 @@ class AddonsCreatePostAddonV2Body implements ModelInterface, ArrayAccess, \JsonS
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'widgets' => null,
+        'notes' => null,
         'semantic' => null,
-        'notes' => null
+        'widgets' => null
     ];
 
     /**
@@ -81,9 +81,9 @@ class AddonsCreatePostAddonV2Body implements ModelInterface, ArrayAccess, \JsonS
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'widgets' => false,
+        'notes' => false,
         'semantic' => false,
-        'notes' => false
+        'widgets' => false
     ];
 
     /**
@@ -172,9 +172,9 @@ class AddonsCreatePostAddonV2Body implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $attributeMap = [
-        'widgets' => 'widgets',
+        'notes' => 'notes',
         'semantic' => 'semantic',
-        'notes' => 'notes'
+        'widgets' => 'widgets'
     ];
 
     /**
@@ -183,9 +183,9 @@ class AddonsCreatePostAddonV2Body implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $setters = [
-        'widgets' => 'setWidgets',
+        'notes' => 'setNotes',
         'semantic' => 'setSemantic',
-        'notes' => 'setNotes'
+        'widgets' => 'setWidgets'
     ];
 
     /**
@@ -194,9 +194,9 @@ class AddonsCreatePostAddonV2Body implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $getters = [
-        'widgets' => 'getWidgets',
+        'notes' => 'getNotes',
         'semantic' => 'getSemantic',
-        'notes' => 'getNotes'
+        'widgets' => 'getWidgets'
     ];
 
     /**
@@ -256,9 +256,9 @@ class AddonsCreatePostAddonV2Body implements ModelInterface, ArrayAccess, \JsonS
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('widgets', $data ?? [], null);
-        $this->setIfExists('semantic', $data ?? [], null);
         $this->setIfExists('notes', $data ?? [], null);
+        $this->setIfExists('semantic', $data ?? [], null);
+        $this->setIfExists('widgets', $data ?? [], null);
     }
 
     /**
@@ -304,28 +304,28 @@ class AddonsCreatePostAddonV2Body implements ModelInterface, ArrayAccess, \JsonS
 
 
     /**
-     * Gets widgets
+     * Gets notes
      *
-     * @return \Divar\KenarApiClient\Model\AddonsWidget[]|null
+     * @return string|null
      */
-    public function getWidgets()
+    public function getNotes()
     {
-        return $this->container['widgets'];
+        return $this->container['notes'];
     }
 
     /**
-     * Sets widgets
+     * Sets notes
      *
-     * @param \Divar\KenarApiClient\Model\AddonsWidget[]|null $widgets widgets
+     * @param string|null $notes notes
      *
      * @return self
      */
-    public function setWidgets($widgets)
+    public function setNotes($notes)
     {
-        if (is_null($widgets)) {
-            throw new \InvalidArgumentException('non-nullable widgets cannot be null');
+        if (is_null($notes)) {
+            throw new \InvalidArgumentException('non-nullable notes cannot be null');
         }
-        $this->container['widgets'] = $widgets;
+        $this->container['notes'] = $notes;
 
         return $this;
     }
@@ -358,28 +358,28 @@ class AddonsCreatePostAddonV2Body implements ModelInterface, ArrayAccess, \JsonS
     }
 
     /**
-     * Gets notes
+     * Gets widgets
      *
-     * @return string|null
+     * @return \Divar\KenarApiClient\Model\AddonsWidget[]|null
      */
-    public function getNotes()
+    public function getWidgets()
     {
-        return $this->container['notes'];
+        return $this->container['widgets'];
     }
 
     /**
-     * Sets notes
+     * Sets widgets
      *
-     * @param string|null $notes notes
+     * @param \Divar\KenarApiClient\Model\AddonsWidget[]|null $widgets widgets
      *
      * @return self
      */
-    public function setNotes($notes)
+    public function setWidgets($widgets)
     {
-        if (is_null($notes)) {
-            throw new \InvalidArgumentException('non-nullable notes cannot be null');
+        if (is_null($widgets)) {
+            throw new \InvalidArgumentException('non-nullable widgets cannot be null');
         }
-        $this->container['notes'] = $notes;
+        $this->container['widgets'] = $widgets;
 
         return $this;
     }

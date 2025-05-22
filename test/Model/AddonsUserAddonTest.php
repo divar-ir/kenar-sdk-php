@@ -80,6 +80,24 @@ class AddonsUserAddonTest extends TestCase
     }
 
     /**
+     * Test attribute "divar_user_id"
+     */
+    public function testPropertyDivarUserId()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "filters"
+     */
+    public function testPropertyFilters()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "meta_data"
      */
     public function testPropertyMetaData()
@@ -92,24 +110,6 @@ class AddonsUserAddonTest extends TestCase
      * Test attribute "phone"
      */
     public function testPropertyPhone()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "divar_user_id"
-     */
-    public function testPropertyDivarUserId()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "widgets"
-     */
-    public function testPropertyWidgets()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -143,18 +143,18 @@ class AddonsUserAddonTest extends TestCase
     }
 
     /**
-     * Test attribute "widgets_semantic"
+     * Test attribute "widgets"
      */
-    public function testPropertyWidgetsSemantic()
+    public function testPropertyWidgets()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "filters"
+     * Test attribute "widgets_semantic"
      */
-    public function testPropertyFilters()
+    public function testPropertyWidgetsSemantic()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

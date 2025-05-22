@@ -89,18 +89,18 @@ class MessageVideoDataTest extends TestCase
     }
 
     /**
-     * Test attribute "thumbnail_link"
+     * Test attribute "size_bytes"
      */
-    public function testPropertyThumbnailLink()
+    public function testPropertySizeBytes()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "size_bytes"
+     * Test attribute "thumbnail_link"
      */
-    public function testPropertySizeBytes()
+    public function testPropertyThumbnailLink()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

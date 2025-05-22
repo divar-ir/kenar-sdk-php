@@ -80,9 +80,9 @@ class AddonsCreatePostAddonV2BodyTest extends TestCase
     }
 
     /**
-     * Test attribute "widgets"
+     * Test attribute "notes"
      */
-    public function testPropertyWidgets()
+    public function testPropertyNotes()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -98,9 +98,9 @@ class AddonsCreatePostAddonV2BodyTest extends TestCase
     }
 
     /**
-     * Test attribute "notes"
+     * Test attribute "widgets"
      */
-    public function testPropertyNotes()
+    public function testPropertyWidgets()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

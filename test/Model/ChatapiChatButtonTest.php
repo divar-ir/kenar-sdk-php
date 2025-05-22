@@ -89,15 +89,6 @@ class ChatapiChatButtonTest extends TestCase
     }
 
     /**
-     * Test attribute "icon_name"
-     */
-    public function testPropertyIconName()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "caption"
      */
     public function testPropertyCaption()
@@ -110,6 +101,15 @@ class ChatapiChatButtonTest extends TestCase
      * Test attribute "icon"
      */
     public function testPropertyIcon()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "icon_name"
+     */
+    public function testPropertyIconName()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

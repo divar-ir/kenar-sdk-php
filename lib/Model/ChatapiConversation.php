@@ -58,8 +58,8 @@ class ChatapiConversation implements ModelInterface, ArrayAccess, \JsonSerializa
       */
     protected static $openAPITypes = [
         'id' => 'string',
-        'type' => '\Divar\KenarApiClient\Model\ChatapiConversationType',
-        'post_token' => 'string'
+        'post_token' => 'string',
+        'type' => '\Divar\KenarApiClient\Model\ChatapiConversationType'
     ];
 
     /**
@@ -71,8 +71,8 @@ class ChatapiConversation implements ModelInterface, ArrayAccess, \JsonSerializa
       */
     protected static $openAPIFormats = [
         'id' => null,
-        'type' => null,
-        'post_token' => null
+        'post_token' => null,
+        'type' => null
     ];
 
     /**
@@ -82,8 +82,8 @@ class ChatapiConversation implements ModelInterface, ArrayAccess, \JsonSerializa
       */
     protected static array $openAPINullables = [
         'id' => false,
-        'type' => false,
-        'post_token' => false
+        'post_token' => false,
+        'type' => false
     ];
 
     /**
@@ -173,8 +173,8 @@ class ChatapiConversation implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'type' => 'type',
-        'post_token' => 'post_token'
+        'post_token' => 'post_token',
+        'type' => 'type'
     ];
 
     /**
@@ -184,8 +184,8 @@ class ChatapiConversation implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     protected static $setters = [
         'id' => 'setId',
-        'type' => 'setType',
-        'post_token' => 'setPostToken'
+        'post_token' => 'setPostToken',
+        'type' => 'setType'
     ];
 
     /**
@@ -195,8 +195,8 @@ class ChatapiConversation implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     protected static $getters = [
         'id' => 'getId',
-        'type' => 'getType',
-        'post_token' => 'getPostToken'
+        'post_token' => 'getPostToken',
+        'type' => 'getType'
     ];
 
     /**
@@ -257,8 +257,8 @@ class ChatapiConversation implements ModelInterface, ArrayAccess, \JsonSerializa
     public function __construct(?array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('type', $data ?? [], null);
         $this->setIfExists('post_token', $data ?? [], null);
+        $this->setIfExists('type', $data ?? [], null);
     }
 
     /**
@@ -331,33 +331,6 @@ class ChatapiConversation implements ModelInterface, ArrayAccess, \JsonSerializa
     }
 
     /**
-     * Gets type
-     *
-     * @return \Divar\KenarApiClient\Model\ChatapiConversationType|null
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param \Divar\KenarApiClient\Model\ChatapiConversationType|null $type type
-     *
-     * @return self
-     */
-    public function setType($type)
-    {
-        if (is_null($type)) {
-            throw new \InvalidArgumentException('non-nullable type cannot be null');
-        }
-        $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
      * Gets post_token
      *
      * @return string|null
@@ -380,6 +353,33 @@ class ChatapiConversation implements ModelInterface, ArrayAccess, \JsonSerializa
             throw new \InvalidArgumentException('non-nullable post_token cannot be null');
         }
         $this->container['post_token'] = $post_token;
+
+        return $this;
+    }
+
+    /**
+     * Gets type
+     *
+     * @return \Divar\KenarApiClient\Model\ChatapiConversationType|null
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     *
+     * @param \Divar\KenarApiClient\Model\ChatapiConversationType|null $type type
+     *
+     * @return self
+     */
+    public function setType($type)
+    {
+        if (is_null($type)) {
+            throw new \InvalidArgumentException('non-nullable type cannot be null');
+        }
+        $this->container['type'] = $type;
 
         return $this;
     }

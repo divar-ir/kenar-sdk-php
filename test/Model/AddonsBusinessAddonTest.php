@@ -80,18 +80,18 @@ class AddonsBusinessAddonTest extends TestCase
     }
 
     /**
-     * Test attribute "meta_data"
+     * Test attribute "business_ref"
      */
-    public function testPropertyMetaData()
+    public function testPropertyBusinessRef()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "business_ref"
+     * Test attribute "meta_data"
      */
-    public function testPropertyBusinessRef()
+    public function testPropertyMetaData()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

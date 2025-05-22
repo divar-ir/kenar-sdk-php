@@ -57,8 +57,8 @@ class AddonsImageCarouselRow implements ModelInterface, ArrayAccess, \JsonSerial
       * @var string[]
       */
     protected static $openAPITypes = [
-        'items' => '\Divar\KenarApiClient\Model\ImageCarouselRowImageItem[]',
-        'has_divider' => 'bool'
+        'has_divider' => 'bool',
+        'items' => '\Divar\KenarApiClient\Model\ImageCarouselRowImageItem[]'
     ];
 
     /**
@@ -69,8 +69,8 @@ class AddonsImageCarouselRow implements ModelInterface, ArrayAccess, \JsonSerial
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'items' => null,
-        'has_divider' => null
+        'has_divider' => null,
+        'items' => null
     ];
 
     /**
@@ -79,8 +79,8 @@ class AddonsImageCarouselRow implements ModelInterface, ArrayAccess, \JsonSerial
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'items' => false,
-        'has_divider' => false
+        'has_divider' => false,
+        'items' => false
     ];
 
     /**
@@ -169,8 +169,8 @@ class AddonsImageCarouselRow implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $attributeMap = [
-        'items' => 'items',
-        'has_divider' => 'has_divider'
+        'has_divider' => 'has_divider',
+        'items' => 'items'
     ];
 
     /**
@@ -179,8 +179,8 @@ class AddonsImageCarouselRow implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
-        'items' => 'setItems',
-        'has_divider' => 'setHasDivider'
+        'has_divider' => 'setHasDivider',
+        'items' => 'setItems'
     ];
 
     /**
@@ -189,8 +189,8 @@ class AddonsImageCarouselRow implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
-        'items' => 'getItems',
-        'has_divider' => 'getHasDivider'
+        'has_divider' => 'getHasDivider',
+        'items' => 'getItems'
     ];
 
     /**
@@ -250,8 +250,8 @@ class AddonsImageCarouselRow implements ModelInterface, ArrayAccess, \JsonSerial
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('items', $data ?? [], null);
         $this->setIfExists('has_divider', $data ?? [], null);
+        $this->setIfExists('items', $data ?? [], null);
     }
 
     /**
@@ -297,33 +297,6 @@ class AddonsImageCarouselRow implements ModelInterface, ArrayAccess, \JsonSerial
 
 
     /**
-     * Gets items
-     *
-     * @return \Divar\KenarApiClient\Model\ImageCarouselRowImageItem[]|null
-     */
-    public function getItems()
-    {
-        return $this->container['items'];
-    }
-
-    /**
-     * Sets items
-     *
-     * @param \Divar\KenarApiClient\Model\ImageCarouselRowImageItem[]|null $items items
-     *
-     * @return self
-     */
-    public function setItems($items)
-    {
-        if (is_null($items)) {
-            throw new \InvalidArgumentException('non-nullable items cannot be null');
-        }
-        $this->container['items'] = $items;
-
-        return $this;
-    }
-
-    /**
      * Gets has_divider
      *
      * @return bool|null
@@ -346,6 +319,33 @@ class AddonsImageCarouselRow implements ModelInterface, ArrayAccess, \JsonSerial
             throw new \InvalidArgumentException('non-nullable has_divider cannot be null');
         }
         $this->container['has_divider'] = $has_divider;
+
+        return $this;
+    }
+
+    /**
+     * Gets items
+     *
+     * @return \Divar\KenarApiClient\Model\ImageCarouselRowImageItem[]|null
+     */
+    public function getItems()
+    {
+        return $this->container['items'];
+    }
+
+    /**
+     * Sets items
+     *
+     * @param \Divar\KenarApiClient\Model\ImageCarouselRowImageItem[]|null $items items
+     *
+     * @return self
+     */
+    public function setItems($items)
+    {
+        if (is_null($items)) {
+            throw new \InvalidArgumentException('non-nullable items cannot be null');
+        }
+        $this->container['items'] = $items;
 
         return $this;
     }

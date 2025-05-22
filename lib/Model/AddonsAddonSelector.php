@@ -57,11 +57,11 @@ class AddonsAddonSelector implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'tokens' => 'string[]',
+        'brand_models' => 'string[]',
         'categories' => 'string[]',
         'cities' => 'string[]',
         'districts' => 'string[]',
-        'brand_models' => 'string[]'
+        'tokens' => 'string[]'
     ];
 
     /**
@@ -72,11 +72,11 @@ class AddonsAddonSelector implements ModelInterface, ArrayAccess, \JsonSerializa
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'tokens' => null,
+        'brand_models' => null,
         'categories' => null,
         'cities' => null,
         'districts' => null,
-        'brand_models' => null
+        'tokens' => null
     ];
 
     /**
@@ -85,11 +85,11 @@ class AddonsAddonSelector implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'tokens' => false,
+        'brand_models' => false,
         'categories' => false,
         'cities' => false,
         'districts' => false,
-        'brand_models' => false
+        'tokens' => false
     ];
 
     /**
@@ -178,11 +178,11 @@ class AddonsAddonSelector implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $attributeMap = [
-        'tokens' => 'tokens',
+        'brand_models' => 'brand_models',
         'categories' => 'categories',
         'cities' => 'cities',
         'districts' => 'districts',
-        'brand_models' => 'brand_models'
+        'tokens' => 'tokens'
     ];
 
     /**
@@ -191,11 +191,11 @@ class AddonsAddonSelector implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'tokens' => 'setTokens',
+        'brand_models' => 'setBrandModels',
         'categories' => 'setCategories',
         'cities' => 'setCities',
         'districts' => 'setDistricts',
-        'brand_models' => 'setBrandModels'
+        'tokens' => 'setTokens'
     ];
 
     /**
@@ -204,11 +204,11 @@ class AddonsAddonSelector implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'tokens' => 'getTokens',
+        'brand_models' => 'getBrandModels',
         'categories' => 'getCategories',
         'cities' => 'getCities',
         'districts' => 'getDistricts',
-        'brand_models' => 'getBrandModels'
+        'tokens' => 'getTokens'
     ];
 
     /**
@@ -268,11 +268,11 @@ class AddonsAddonSelector implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('tokens', $data ?? [], null);
+        $this->setIfExists('brand_models', $data ?? [], null);
         $this->setIfExists('categories', $data ?? [], null);
         $this->setIfExists('cities', $data ?? [], null);
         $this->setIfExists('districts', $data ?? [], null);
-        $this->setIfExists('brand_models', $data ?? [], null);
+        $this->setIfExists('tokens', $data ?? [], null);
     }
 
     /**
@@ -318,28 +318,28 @@ class AddonsAddonSelector implements ModelInterface, ArrayAccess, \JsonSerializa
 
 
     /**
-     * Gets tokens
+     * Gets brand_models
      *
      * @return string[]|null
      */
-    public function getTokens()
+    public function getBrandModels()
     {
-        return $this->container['tokens'];
+        return $this->container['brand_models'];
     }
 
     /**
-     * Sets tokens
+     * Sets brand_models
      *
-     * @param string[]|null $tokens tokens
+     * @param string[]|null $brand_models brand_models
      *
      * @return self
      */
-    public function setTokens($tokens)
+    public function setBrandModels($brand_models)
     {
-        if (is_null($tokens)) {
-            throw new \InvalidArgumentException('non-nullable tokens cannot be null');
+        if (is_null($brand_models)) {
+            throw new \InvalidArgumentException('non-nullable brand_models cannot be null');
         }
-        $this->container['tokens'] = $tokens;
+        $this->container['brand_models'] = $brand_models;
 
         return $this;
     }
@@ -426,28 +426,28 @@ class AddonsAddonSelector implements ModelInterface, ArrayAccess, \JsonSerializa
     }
 
     /**
-     * Gets brand_models
+     * Gets tokens
      *
      * @return string[]|null
      */
-    public function getBrandModels()
+    public function getTokens()
     {
-        return $this->container['brand_models'];
+        return $this->container['tokens'];
     }
 
     /**
-     * Sets brand_models
+     * Sets tokens
      *
-     * @param string[]|null $brand_models brand_models
+     * @param string[]|null $tokens tokens
      *
      * @return self
      */
-    public function setBrandModels($brand_models)
+    public function setTokens($tokens)
     {
-        if (is_null($brand_models)) {
-            throw new \InvalidArgumentException('non-nullable brand_models cannot be null');
+        if (is_null($tokens)) {
+            throw new \InvalidArgumentException('non-nullable tokens cannot be null');
         }
-        $this->container['brand_models'] = $brand_models;
+        $this->container['tokens'] = $tokens;
 
         return $this;
     }

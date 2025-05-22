@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **string** | Same uuid when creating transaction | [optional]
 **cost_rials** | **string** | The cost of the transaction in rials for your application | [optional]
 **extra_details** | **string** | Same Additional details which you sent in the request | [optional]
+**id** | **string** | Same uuid when creating transaction | [optional]
 **state** | [**\Divar\KenarApiClient\Model\PaymentTransactionState**](PaymentTransactionState.md) |  | [optional]
 **type** | [**\Divar\KenarApiClient\Model\PaymentTransactionType**](PaymentTransactionType.md) |  | [optional]
 

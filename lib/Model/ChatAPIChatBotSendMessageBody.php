@@ -57,10 +57,10 @@ class ChatAPIChatBotSendMessageBody implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'user_id' => 'string',
-        'text_message' => 'string',
+        'buttons' => '\Divar\KenarApiClient\Model\ChatapiChatButtonGrid',
         'media_token' => 'string',
-        'buttons' => '\Divar\KenarApiClient\Model\ChatapiChatButtonGrid'
+        'text_message' => 'string',
+        'user_id' => 'string'
     ];
 
     /**
@@ -71,10 +71,10 @@ class ChatAPIChatBotSendMessageBody implements ModelInterface, ArrayAccess, \Jso
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'user_id' => null,
-        'text_message' => null,
+        'buttons' => null,
         'media_token' => null,
-        'buttons' => null
+        'text_message' => null,
+        'user_id' => null
     ];
 
     /**
@@ -83,10 +83,10 @@ class ChatAPIChatBotSendMessageBody implements ModelInterface, ArrayAccess, \Jso
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'user_id' => false,
-        'text_message' => false,
+        'buttons' => false,
         'media_token' => false,
-        'buttons' => false
+        'text_message' => false,
+        'user_id' => false
     ];
 
     /**
@@ -175,10 +175,10 @@ class ChatAPIChatBotSendMessageBody implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $attributeMap = [
-        'user_id' => 'user_id',
-        'text_message' => 'text_message',
+        'buttons' => 'buttons',
         'media_token' => 'media_token',
-        'buttons' => 'buttons'
+        'text_message' => 'text_message',
+        'user_id' => 'user_id'
     ];
 
     /**
@@ -187,10 +187,10 @@ class ChatAPIChatBotSendMessageBody implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $setters = [
-        'user_id' => 'setUserId',
-        'text_message' => 'setTextMessage',
+        'buttons' => 'setButtons',
         'media_token' => 'setMediaToken',
-        'buttons' => 'setButtons'
+        'text_message' => 'setTextMessage',
+        'user_id' => 'setUserId'
     ];
 
     /**
@@ -199,10 +199,10 @@ class ChatAPIChatBotSendMessageBody implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $getters = [
-        'user_id' => 'getUserId',
-        'text_message' => 'getTextMessage',
+        'buttons' => 'getButtons',
         'media_token' => 'getMediaToken',
-        'buttons' => 'getButtons'
+        'text_message' => 'getTextMessage',
+        'user_id' => 'getUserId'
     ];
 
     /**
@@ -262,10 +262,10 @@ class ChatAPIChatBotSendMessageBody implements ModelInterface, ArrayAccess, \Jso
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('user_id', $data ?? [], null);
-        $this->setIfExists('text_message', $data ?? [], null);
-        $this->setIfExists('media_token', $data ?? [], null);
         $this->setIfExists('buttons', $data ?? [], null);
+        $this->setIfExists('media_token', $data ?? [], null);
+        $this->setIfExists('text_message', $data ?? [], null);
+        $this->setIfExists('user_id', $data ?? [], null);
     }
 
     /**
@@ -314,55 +314,28 @@ class ChatAPIChatBotSendMessageBody implements ModelInterface, ArrayAccess, \Jso
 
 
     /**
-     * Gets user_id
+     * Gets buttons
      *
-     * @return string|null
+     * @return \Divar\KenarApiClient\Model\ChatapiChatButtonGrid|null
      */
-    public function getUserId()
+    public function getButtons()
     {
-        return $this->container['user_id'];
+        return $this->container['buttons'];
     }
 
     /**
-     * Sets user_id
+     * Sets buttons
      *
-     * @param string|null $user_id Unique identifier for the user to start or continue a conversation with
+     * @param \Divar\KenarApiClient\Model\ChatapiChatButtonGrid|null $buttons buttons
      *
      * @return self
      */
-    public function setUserId($user_id)
+    public function setButtons($buttons)
     {
-        if (is_null($user_id)) {
-            throw new \InvalidArgumentException('non-nullable user_id cannot be null');
+        if (is_null($buttons)) {
+            throw new \InvalidArgumentException('non-nullable buttons cannot be null');
         }
-        $this->container['user_id'] = $user_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets text_message
-     *
-     * @return string
-     */
-    public function getTextMessage()
-    {
-        return $this->container['text_message'];
-    }
-
-    /**
-     * Sets text_message
-     *
-     * @param string $text_message Text message content to be sent by the bot
-     *
-     * @return self
-     */
-    public function setTextMessage($text_message)
-    {
-        if (is_null($text_message)) {
-            throw new \InvalidArgumentException('non-nullable text_message cannot be null');
-        }
-        $this->container['text_message'] = $text_message;
+        $this->container['buttons'] = $buttons;
 
         return $this;
     }
@@ -395,28 +368,55 @@ class ChatAPIChatBotSendMessageBody implements ModelInterface, ArrayAccess, \Jso
     }
 
     /**
-     * Gets buttons
+     * Gets text_message
      *
-     * @return \Divar\KenarApiClient\Model\ChatapiChatButtonGrid|null
+     * @return string
      */
-    public function getButtons()
+    public function getTextMessage()
     {
-        return $this->container['buttons'];
+        return $this->container['text_message'];
     }
 
     /**
-     * Sets buttons
+     * Sets text_message
      *
-     * @param \Divar\KenarApiClient\Model\ChatapiChatButtonGrid|null $buttons buttons
+     * @param string $text_message Text message content to be sent by the bot
      *
      * @return self
      */
-    public function setButtons($buttons)
+    public function setTextMessage($text_message)
     {
-        if (is_null($buttons)) {
-            throw new \InvalidArgumentException('non-nullable buttons cannot be null');
+        if (is_null($text_message)) {
+            throw new \InvalidArgumentException('non-nullable text_message cannot be null');
         }
-        $this->container['buttons'] = $buttons;
+        $this->container['text_message'] = $text_message;
+
+        return $this;
+    }
+
+    /**
+     * Gets user_id
+     *
+     * @return string|null
+     */
+    public function getUserId()
+    {
+        return $this->container['user_id'];
+    }
+
+    /**
+     * Sets user_id
+     *
+     * @param string|null $user_id Unique identifier for the user to start or continue a conversation with
+     *
+     * @return self
+     */
+    public function setUserId($user_id)
+    {
+        if (is_null($user_id)) {
+            throw new \InvalidArgumentException('non-nullable user_id cannot be null');
+        }
+        $this->container['user_id'] = $user_id;
 
         return $this;
     }

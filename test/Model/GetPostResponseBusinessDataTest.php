@@ -80,18 +80,18 @@ class GetPostResponseBusinessDataTest extends TestCase
     }
 
     /**
-     * Test attribute "business_type"
+     * Test attribute "business_name"
      */
-    public function testPropertyBusinessType()
+    public function testPropertyBusinessName()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "business_name"
+     * Test attribute "business_type"
      */
-    public function testPropertyBusinessName()
+    public function testPropertyBusinessType()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

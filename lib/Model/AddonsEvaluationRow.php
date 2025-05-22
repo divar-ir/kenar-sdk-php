@@ -57,9 +57,9 @@ class AddonsEvaluationRow implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var string[]
       */
     protected static $openAPITypes = [
-        'indicator_text' => 'string',
-        'indicator_percentage' => 'int',
         'icon_name' => '\Divar\KenarApiClient\Model\DivarIconsIconName',
+        'indicator_percentage' => 'int',
+        'indicator_text' => 'string',
         'left' => '\Divar\KenarApiClient\Model\AddonsEvaluationRowSection',
         'middle' => '\Divar\KenarApiClient\Model\AddonsEvaluationRowSection',
         'right' => '\Divar\KenarApiClient\Model\AddonsEvaluationRowSection'
@@ -73,9 +73,9 @@ class AddonsEvaluationRow implements ModelInterface, ArrayAccess, \JsonSerializa
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'indicator_text' => null,
-        'indicator_percentage' => 'int32',
         'icon_name' => null,
+        'indicator_percentage' => 'int32',
+        'indicator_text' => null,
         'left' => null,
         'middle' => null,
         'right' => null
@@ -87,9 +87,9 @@ class AddonsEvaluationRow implements ModelInterface, ArrayAccess, \JsonSerializa
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'indicator_text' => false,
-        'indicator_percentage' => false,
         'icon_name' => false,
+        'indicator_percentage' => false,
+        'indicator_text' => false,
         'left' => false,
         'middle' => false,
         'right' => false
@@ -181,9 +181,9 @@ class AddonsEvaluationRow implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $attributeMap = [
-        'indicator_text' => 'indicator_text',
-        'indicator_percentage' => 'indicator_percentage',
         'icon_name' => 'icon_name',
+        'indicator_percentage' => 'indicator_percentage',
+        'indicator_text' => 'indicator_text',
         'left' => 'left',
         'middle' => 'middle',
         'right' => 'right'
@@ -195,9 +195,9 @@ class AddonsEvaluationRow implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'indicator_text' => 'setIndicatorText',
-        'indicator_percentage' => 'setIndicatorPercentage',
         'icon_name' => 'setIconName',
+        'indicator_percentage' => 'setIndicatorPercentage',
+        'indicator_text' => 'setIndicatorText',
         'left' => 'setLeft',
         'middle' => 'setMiddle',
         'right' => 'setRight'
@@ -209,9 +209,9 @@ class AddonsEvaluationRow implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'indicator_text' => 'getIndicatorText',
-        'indicator_percentage' => 'getIndicatorPercentage',
         'icon_name' => 'getIconName',
+        'indicator_percentage' => 'getIndicatorPercentage',
+        'indicator_text' => 'getIndicatorText',
         'left' => 'getLeft',
         'middle' => 'getMiddle',
         'right' => 'getRight'
@@ -274,9 +274,9 @@ class AddonsEvaluationRow implements ModelInterface, ArrayAccess, \JsonSerializa
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('indicator_text', $data ?? [], null);
-        $this->setIfExists('indicator_percentage', $data ?? [], null);
         $this->setIfExists('icon_name', $data ?? [], null);
+        $this->setIfExists('indicator_percentage', $data ?? [], null);
+        $this->setIfExists('indicator_text', $data ?? [], null);
         $this->setIfExists('left', $data ?? [], null);
         $this->setIfExists('middle', $data ?? [], null);
         $this->setIfExists('right', $data ?? [], null);
@@ -325,28 +325,28 @@ class AddonsEvaluationRow implements ModelInterface, ArrayAccess, \JsonSerializa
 
 
     /**
-     * Gets indicator_text
+     * Gets icon_name
      *
-     * @return string|null
+     * @return \Divar\KenarApiClient\Model\DivarIconsIconName|null
      */
-    public function getIndicatorText()
+    public function getIconName()
     {
-        return $this->container['indicator_text'];
+        return $this->container['icon_name'];
     }
 
     /**
-     * Sets indicator_text
+     * Sets icon_name
      *
-     * @param string|null $indicator_text indicator_text
+     * @param \Divar\KenarApiClient\Model\DivarIconsIconName|null $icon_name icon_name
      *
      * @return self
      */
-    public function setIndicatorText($indicator_text)
+    public function setIconName($icon_name)
     {
-        if (is_null($indicator_text)) {
-            throw new \InvalidArgumentException('non-nullable indicator_text cannot be null');
+        if (is_null($icon_name)) {
+            throw new \InvalidArgumentException('non-nullable icon_name cannot be null');
         }
-        $this->container['indicator_text'] = $indicator_text;
+        $this->container['icon_name'] = $icon_name;
 
         return $this;
     }
@@ -379,28 +379,28 @@ class AddonsEvaluationRow implements ModelInterface, ArrayAccess, \JsonSerializa
     }
 
     /**
-     * Gets icon_name
+     * Gets indicator_text
      *
-     * @return \Divar\KenarApiClient\Model\DivarIconsIconName|null
+     * @return string|null
      */
-    public function getIconName()
+    public function getIndicatorText()
     {
-        return $this->container['icon_name'];
+        return $this->container['indicator_text'];
     }
 
     /**
-     * Sets icon_name
+     * Sets indicator_text
      *
-     * @param \Divar\KenarApiClient\Model\DivarIconsIconName|null $icon_name icon_name
+     * @param string|null $indicator_text indicator_text
      *
      * @return self
      */
-    public function setIconName($icon_name)
+    public function setIndicatorText($indicator_text)
     {
-        if (is_null($icon_name)) {
-            throw new \InvalidArgumentException('non-nullable icon_name cannot be null');
+        if (is_null($indicator_text)) {
+            throw new \InvalidArgumentException('non-nullable indicator_text cannot be null');
         }
-        $this->container['icon_name'] = $icon_name;
+        $this->container['indicator_text'] = $indicator_text;
 
         return $this;
     }

@@ -80,18 +80,18 @@ class FinderUserTest extends TestCase
     }
 
     /**
-     * Test attribute "phone_numbers"
+     * Test attribute "phone_number"
      */
-    public function testPropertyPhoneNumbers()
+    public function testPropertyPhoneNumber()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "phone_number"
+     * Test attribute "phone_numbers"
      */
-    public function testPropertyPhoneNumber()
+    public function testPropertyPhoneNumbers()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

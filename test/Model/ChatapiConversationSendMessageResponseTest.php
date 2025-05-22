@@ -80,18 +80,18 @@ class ChatapiConversationSendMessageResponseTest extends TestCase
     }
 
     /**
-     * Test attribute "status"
+     * Test attribute "message"
      */
-    public function testPropertyStatus()
+    public function testPropertyMessage()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "message"
+     * Test attribute "status"
      */
-    public function testPropertyMessage()
+    public function testPropertyStatus()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

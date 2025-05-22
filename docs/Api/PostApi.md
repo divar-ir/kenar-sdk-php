@@ -25,11 +25,17 @@ This API allows you to edit a post. This needs `POST_EDIT.{post_token}` OAuth sc
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure API key authorization: APIKey
+$config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 
 $apiInstance = new Divar\KenarApiClient\Api\PostApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $post_token = 'post_token_example'; // string
 $post_edit_post_body = new \Divar\KenarApiClient\Model\PostEditPostBody(); // \Divar\KenarApiClient\Model\PostEditPostBody
@@ -55,7 +61,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[APIKey](../../README.md#APIKey)
 
 ### HTTP request headers
 
@@ -83,11 +89,17 @@ This API allows you to get an upload URL for uploading images of a post. You can
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure API key authorization: APIKey
+$config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 
 $apiInstance = new Divar\KenarApiClient\Api\PostApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 
 try {
@@ -108,7 +120,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[APIKey](../../README.md#APIKey)
 
 ### HTTP request headers
 

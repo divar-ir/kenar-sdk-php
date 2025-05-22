@@ -58,14 +58,14 @@ class SearchPostItemRealEstateFields implements ModelInterface, ArrayAccess, \Js
       */
     protected static $openAPITypes = [
         'credit' => '\Divar\KenarApiClient\Model\SearchPostItemPrice',
-        'rent' => '\Divar\KenarApiClient\Model\SearchPostItemPrice',
         'daily_rent' => 'string',
-        'size' => 'int',
-        'year' => 'int',
-        'has_parking' => 'bool',
+        'floor' => 'int',
         'has_elevator' => 'bool',
+        'has_parking' => 'bool',
+        'rent' => '\Divar\KenarApiClient\Model\SearchPostItemPrice',
         'rooms' => 'string',
-        'floor' => 'int'
+        'size' => 'int',
+        'year' => 'int'
     ];
 
     /**
@@ -77,14 +77,14 @@ class SearchPostItemRealEstateFields implements ModelInterface, ArrayAccess, \Js
       */
     protected static $openAPIFormats = [
         'credit' => null,
-        'rent' => null,
         'daily_rent' => 'uint64',
-        'size' => 'int32',
-        'year' => 'int64',
-        'has_parking' => null,
+        'floor' => 'int32',
         'has_elevator' => null,
+        'has_parking' => null,
+        'rent' => null,
         'rooms' => null,
-        'floor' => 'int32'
+        'size' => 'int32',
+        'year' => 'int64'
     ];
 
     /**
@@ -94,14 +94,14 @@ class SearchPostItemRealEstateFields implements ModelInterface, ArrayAccess, \Js
       */
     protected static array $openAPINullables = [
         'credit' => false,
-        'rent' => false,
         'daily_rent' => false,
-        'size' => false,
-        'year' => false,
-        'has_parking' => false,
+        'floor' => false,
         'has_elevator' => false,
+        'has_parking' => false,
+        'rent' => false,
         'rooms' => false,
-        'floor' => false
+        'size' => false,
+        'year' => false
     ];
 
     /**
@@ -191,14 +191,14 @@ class SearchPostItemRealEstateFields implements ModelInterface, ArrayAccess, \Js
      */
     protected static $attributeMap = [
         'credit' => 'credit',
-        'rent' => 'rent',
         'daily_rent' => 'daily_rent',
-        'size' => 'size',
-        'year' => 'year',
-        'has_parking' => 'has_parking',
+        'floor' => 'floor',
         'has_elevator' => 'has_elevator',
+        'has_parking' => 'has_parking',
+        'rent' => 'rent',
         'rooms' => 'rooms',
-        'floor' => 'floor'
+        'size' => 'size',
+        'year' => 'year'
     ];
 
     /**
@@ -208,14 +208,14 @@ class SearchPostItemRealEstateFields implements ModelInterface, ArrayAccess, \Js
      */
     protected static $setters = [
         'credit' => 'setCredit',
-        'rent' => 'setRent',
         'daily_rent' => 'setDailyRent',
-        'size' => 'setSize',
-        'year' => 'setYear',
-        'has_parking' => 'setHasParking',
+        'floor' => 'setFloor',
         'has_elevator' => 'setHasElevator',
+        'has_parking' => 'setHasParking',
+        'rent' => 'setRent',
         'rooms' => 'setRooms',
-        'floor' => 'setFloor'
+        'size' => 'setSize',
+        'year' => 'setYear'
     ];
 
     /**
@@ -225,14 +225,14 @@ class SearchPostItemRealEstateFields implements ModelInterface, ArrayAccess, \Js
      */
     protected static $getters = [
         'credit' => 'getCredit',
-        'rent' => 'getRent',
         'daily_rent' => 'getDailyRent',
-        'size' => 'getSize',
-        'year' => 'getYear',
-        'has_parking' => 'getHasParking',
+        'floor' => 'getFloor',
         'has_elevator' => 'getHasElevator',
+        'has_parking' => 'getHasParking',
+        'rent' => 'getRent',
         'rooms' => 'getRooms',
-        'floor' => 'getFloor'
+        'size' => 'getSize',
+        'year' => 'getYear'
     ];
 
     /**
@@ -293,14 +293,14 @@ class SearchPostItemRealEstateFields implements ModelInterface, ArrayAccess, \Js
     public function __construct(?array $data = null)
     {
         $this->setIfExists('credit', $data ?? [], null);
-        $this->setIfExists('rent', $data ?? [], null);
         $this->setIfExists('daily_rent', $data ?? [], null);
+        $this->setIfExists('floor', $data ?? [], null);
+        $this->setIfExists('has_elevator', $data ?? [], null);
+        $this->setIfExists('has_parking', $data ?? [], null);
+        $this->setIfExists('rent', $data ?? [], null);
+        $this->setIfExists('rooms', $data ?? [], null);
         $this->setIfExists('size', $data ?? [], null);
         $this->setIfExists('year', $data ?? [], null);
-        $this->setIfExists('has_parking', $data ?? [], null);
-        $this->setIfExists('has_elevator', $data ?? [], null);
-        $this->setIfExists('rooms', $data ?? [], null);
-        $this->setIfExists('floor', $data ?? [], null);
     }
 
     /**
@@ -373,6 +373,114 @@ class SearchPostItemRealEstateFields implements ModelInterface, ArrayAccess, \Js
     }
 
     /**
+     * Gets daily_rent
+     *
+     * @return string|null
+     */
+    public function getDailyRent()
+    {
+        return $this->container['daily_rent'];
+    }
+
+    /**
+     * Sets daily_rent
+     *
+     * @param string|null $daily_rent daily_rent
+     *
+     * @return self
+     */
+    public function setDailyRent($daily_rent)
+    {
+        if (is_null($daily_rent)) {
+            throw new \InvalidArgumentException('non-nullable daily_rent cannot be null');
+        }
+        $this->container['daily_rent'] = $daily_rent;
+
+        return $this;
+    }
+
+    /**
+     * Gets floor
+     *
+     * @return int|null
+     */
+    public function getFloor()
+    {
+        return $this->container['floor'];
+    }
+
+    /**
+     * Sets floor
+     *
+     * @param int|null $floor floor
+     *
+     * @return self
+     */
+    public function setFloor($floor)
+    {
+        if (is_null($floor)) {
+            throw new \InvalidArgumentException('non-nullable floor cannot be null');
+        }
+        $this->container['floor'] = $floor;
+
+        return $this;
+    }
+
+    /**
+     * Gets has_elevator
+     *
+     * @return bool|null
+     */
+    public function getHasElevator()
+    {
+        return $this->container['has_elevator'];
+    }
+
+    /**
+     * Sets has_elevator
+     *
+     * @param bool|null $has_elevator has_elevator
+     *
+     * @return self
+     */
+    public function setHasElevator($has_elevator)
+    {
+        if (is_null($has_elevator)) {
+            throw new \InvalidArgumentException('non-nullable has_elevator cannot be null');
+        }
+        $this->container['has_elevator'] = $has_elevator;
+
+        return $this;
+    }
+
+    /**
+     * Gets has_parking
+     *
+     * @return bool|null
+     */
+    public function getHasParking()
+    {
+        return $this->container['has_parking'];
+    }
+
+    /**
+     * Sets has_parking
+     *
+     * @param bool|null $has_parking has_parking
+     *
+     * @return self
+     */
+    public function setHasParking($has_parking)
+    {
+        if (is_null($has_parking)) {
+            throw new \InvalidArgumentException('non-nullable has_parking cannot be null');
+        }
+        $this->container['has_parking'] = $has_parking;
+
+        return $this;
+    }
+
+    /**
      * Gets rent
      *
      * @return \Divar\KenarApiClient\Model\SearchPostItemPrice|null
@@ -400,28 +508,28 @@ class SearchPostItemRealEstateFields implements ModelInterface, ArrayAccess, \Js
     }
 
     /**
-     * Gets daily_rent
+     * Gets rooms
      *
      * @return string|null
      */
-    public function getDailyRent()
+    public function getRooms()
     {
-        return $this->container['daily_rent'];
+        return $this->container['rooms'];
     }
 
     /**
-     * Sets daily_rent
+     * Sets rooms
      *
-     * @param string|null $daily_rent daily_rent
+     * @param string|null $rooms rooms
      *
      * @return self
      */
-    public function setDailyRent($daily_rent)
+    public function setRooms($rooms)
     {
-        if (is_null($daily_rent)) {
-            throw new \InvalidArgumentException('non-nullable daily_rent cannot be null');
+        if (is_null($rooms)) {
+            throw new \InvalidArgumentException('non-nullable rooms cannot be null');
         }
-        $this->container['daily_rent'] = $daily_rent;
+        $this->container['rooms'] = $rooms;
 
         return $this;
     }
@@ -476,114 +584,6 @@ class SearchPostItemRealEstateFields implements ModelInterface, ArrayAccess, \Js
             throw new \InvalidArgumentException('non-nullable year cannot be null');
         }
         $this->container['year'] = $year;
-
-        return $this;
-    }
-
-    /**
-     * Gets has_parking
-     *
-     * @return bool|null
-     */
-    public function getHasParking()
-    {
-        return $this->container['has_parking'];
-    }
-
-    /**
-     * Sets has_parking
-     *
-     * @param bool|null $has_parking has_parking
-     *
-     * @return self
-     */
-    public function setHasParking($has_parking)
-    {
-        if (is_null($has_parking)) {
-            throw new \InvalidArgumentException('non-nullable has_parking cannot be null');
-        }
-        $this->container['has_parking'] = $has_parking;
-
-        return $this;
-    }
-
-    /**
-     * Gets has_elevator
-     *
-     * @return bool|null
-     */
-    public function getHasElevator()
-    {
-        return $this->container['has_elevator'];
-    }
-
-    /**
-     * Sets has_elevator
-     *
-     * @param bool|null $has_elevator has_elevator
-     *
-     * @return self
-     */
-    public function setHasElevator($has_elevator)
-    {
-        if (is_null($has_elevator)) {
-            throw new \InvalidArgumentException('non-nullable has_elevator cannot be null');
-        }
-        $this->container['has_elevator'] = $has_elevator;
-
-        return $this;
-    }
-
-    /**
-     * Gets rooms
-     *
-     * @return string|null
-     */
-    public function getRooms()
-    {
-        return $this->container['rooms'];
-    }
-
-    /**
-     * Sets rooms
-     *
-     * @param string|null $rooms rooms
-     *
-     * @return self
-     */
-    public function setRooms($rooms)
-    {
-        if (is_null($rooms)) {
-            throw new \InvalidArgumentException('non-nullable rooms cannot be null');
-        }
-        $this->container['rooms'] = $rooms;
-
-        return $this;
-    }
-
-    /**
-     * Gets floor
-     *
-     * @return int|null
-     */
-    public function getFloor()
-    {
-        return $this->container['floor'];
-    }
-
-    /**
-     * Sets floor
-     *
-     * @param int|null $floor floor
-     *
-     * @return self
-     */
-    public function setFloor($floor)
-    {
-        if (is_null($floor)) {
-            throw new \InvalidArgumentException('non-nullable floor cannot be null');
-        }
-        $this->container['floor'] = $floor;
 
         return $this;
     }

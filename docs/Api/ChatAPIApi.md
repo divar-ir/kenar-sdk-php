@@ -29,11 +29,17 @@ You can call this API with either conversation_id or user_id. Calling with user_
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure API key authorization: APIKey
+$config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 
 $apiInstance = new Divar\KenarApiClient\Api\ChatAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $conversation_id = 'conversation_id_example'; // string | Unique identifier for the conversation
 $chat_api_chat_bot_send_message_body = new \Divar\KenarApiClient\Model\ChatAPIChatBotSendMessageBody(); // \Divar\KenarApiClient\Model\ChatAPIChatBotSendMessageBody
@@ -59,7 +65,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[APIKey](../../README.md#APIKey)
 
 ### HTTP request headers
 
@@ -87,11 +93,17 @@ You can call this API with either conversation_id or user_id. Calling with user_
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure API key authorization: APIKey
+$config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 
 $apiInstance = new Divar\KenarApiClient\Api\ChatAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $user_id = 'user_id_example'; // string | Unique identifier for the user to start or continue a conversation with
 $chat_api_chat_bot_send_message_body = new \Divar\KenarApiClient\Model\ChatAPIChatBotSendMessageBody(); // \Divar\KenarApiClient\Model\ChatAPIChatBotSendMessageBody
@@ -117,7 +129,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[APIKey](../../README.md#APIKey)
 
 ### HTTP request headers
 
@@ -145,11 +157,17 @@ You can call this API with either conversation_id or user_id. Calling with user_
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure API key authorization: APIKey
+$config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 
 $apiInstance = new Divar\KenarApiClient\Api\ChatAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $conversation_id = 'conversation_id_example'; // string | Unique identifier for the conversation
 $chat_api_chat_bot_send_message_body = new \Divar\KenarApiClient\Model\ChatAPIChatBotSendMessageBody(); // \Divar\KenarApiClient\Model\ChatAPIChatBotSendMessageBody
@@ -175,7 +193,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[APIKey](../../README.md#APIKey)
 
 ### HTTP request headers
 
@@ -203,11 +221,17 @@ This API is used to send a message to a conversation. You need one of the follow
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure API key authorization: APIKey
+$config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 
 $apiInstance = new Divar\KenarApiClient\Api\ChatAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $conversation_id = 'conversation_id_example'; // string | Unique identifier for the conversation
 $chat_api_conversation_send_message_body = new \Divar\KenarApiClient\Model\ChatAPIConversationSendMessageBody(); // \Divar\KenarApiClient\Model\ChatAPIConversationSendMessageBody
@@ -233,7 +257,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[APIKey](../../README.md#APIKey)
 
 ### HTTP request headers
 
@@ -261,11 +285,17 @@ This API is used to generate an upload token for uploading media files.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure API key authorization: APIKey
+$config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 
 $apiInstance = new Divar\KenarApiClient\Api\ChatAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $body = array('key' => new \stdClass); // object
 
@@ -289,7 +319,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[APIKey](../../README.md#APIKey)
 
 ### HTTP request headers
 
@@ -317,11 +347,17 @@ This API is used to get the conversation and messages of a conversation by it's 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure API key authorization: APIKey
+$config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 
 $apiInstance = new Divar\KenarApiClient\Api\ChatAPIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $conversation_id = 'conversation_id_example'; // string | Unique identifier for the conversation
 
@@ -345,7 +381,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[APIKey](../../README.md#APIKey)
 
 ### HTTP request headers
 

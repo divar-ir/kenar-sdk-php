@@ -57,11 +57,11 @@ class AddonsSelectorRow implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var string[]
       */
     protected static $openAPITypes = [
-        'title' => 'string',
-        'image_id' => 'string',
+        'action' => '\Divar\KenarApiClient\Model\AddonsAction',
         'has_divider' => 'bool',
         'icon_name' => '\Divar\KenarApiClient\Model\DivarIconsIconName',
-        'action' => '\Divar\KenarApiClient\Model\AddonsAction'
+        'image_id' => 'string',
+        'title' => 'string'
     ];
 
     /**
@@ -72,11 +72,11 @@ class AddonsSelectorRow implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'title' => null,
-        'image_id' => null,
+        'action' => null,
         'has_divider' => null,
         'icon_name' => null,
-        'action' => null
+        'image_id' => null,
+        'title' => null
     ];
 
     /**
@@ -85,11 +85,11 @@ class AddonsSelectorRow implements ModelInterface, ArrayAccess, \JsonSerializabl
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'title' => false,
-        'image_id' => false,
+        'action' => false,
         'has_divider' => false,
         'icon_name' => false,
-        'action' => false
+        'image_id' => false,
+        'title' => false
     ];
 
     /**
@@ -178,11 +178,11 @@ class AddonsSelectorRow implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $attributeMap = [
-        'title' => 'title',
-        'image_id' => 'image_id',
+        'action' => 'action',
         'has_divider' => 'has_divider',
         'icon_name' => 'icon_name',
-        'action' => 'action'
+        'image_id' => 'image_id',
+        'title' => 'title'
     ];
 
     /**
@@ -191,11 +191,11 @@ class AddonsSelectorRow implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $setters = [
-        'title' => 'setTitle',
-        'image_id' => 'setImageId',
+        'action' => 'setAction',
         'has_divider' => 'setHasDivider',
         'icon_name' => 'setIconName',
-        'action' => 'setAction'
+        'image_id' => 'setImageId',
+        'title' => 'setTitle'
     ];
 
     /**
@@ -204,11 +204,11 @@ class AddonsSelectorRow implements ModelInterface, ArrayAccess, \JsonSerializabl
      * @var string[]
      */
     protected static $getters = [
-        'title' => 'getTitle',
-        'image_id' => 'getImageId',
+        'action' => 'getAction',
         'has_divider' => 'getHasDivider',
         'icon_name' => 'getIconName',
-        'action' => 'getAction'
+        'image_id' => 'getImageId',
+        'title' => 'getTitle'
     ];
 
     /**
@@ -268,11 +268,11 @@ class AddonsSelectorRow implements ModelInterface, ArrayAccess, \JsonSerializabl
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('title', $data ?? [], null);
-        $this->setIfExists('image_id', $data ?? [], null);
+        $this->setIfExists('action', $data ?? [], null);
         $this->setIfExists('has_divider', $data ?? [], null);
         $this->setIfExists('icon_name', $data ?? [], null);
-        $this->setIfExists('action', $data ?? [], null);
+        $this->setIfExists('image_id', $data ?? [], null);
+        $this->setIfExists('title', $data ?? [], null);
     }
 
     /**
@@ -318,55 +318,28 @@ class AddonsSelectorRow implements ModelInterface, ArrayAccess, \JsonSerializabl
 
 
     /**
-     * Gets title
+     * Gets action
      *
-     * @return string|null
+     * @return \Divar\KenarApiClient\Model\AddonsAction|null
      */
-    public function getTitle()
+    public function getAction()
     {
-        return $this->container['title'];
+        return $this->container['action'];
     }
 
     /**
-     * Sets title
+     * Sets action
      *
-     * @param string|null $title title
+     * @param \Divar\KenarApiClient\Model\AddonsAction|null $action action
      *
      * @return self
      */
-    public function setTitle($title)
+    public function setAction($action)
     {
-        if (is_null($title)) {
-            throw new \InvalidArgumentException('non-nullable title cannot be null');
+        if (is_null($action)) {
+            throw new \InvalidArgumentException('non-nullable action cannot be null');
         }
-        $this->container['title'] = $title;
-
-        return $this;
-    }
-
-    /**
-     * Gets image_id
-     *
-     * @return string|null
-     */
-    public function getImageId()
-    {
-        return $this->container['image_id'];
-    }
-
-    /**
-     * Sets image_id
-     *
-     * @param string|null $image_id image_id
-     *
-     * @return self
-     */
-    public function setImageId($image_id)
-    {
-        if (is_null($image_id)) {
-            throw new \InvalidArgumentException('non-nullable image_id cannot be null');
-        }
-        $this->container['image_id'] = $image_id;
+        $this->container['action'] = $action;
 
         return $this;
     }
@@ -426,28 +399,55 @@ class AddonsSelectorRow implements ModelInterface, ArrayAccess, \JsonSerializabl
     }
 
     /**
-     * Gets action
+     * Gets image_id
      *
-     * @return \Divar\KenarApiClient\Model\AddonsAction|null
+     * @return string|null
      */
-    public function getAction()
+    public function getImageId()
     {
-        return $this->container['action'];
+        return $this->container['image_id'];
     }
 
     /**
-     * Sets action
+     * Sets image_id
      *
-     * @param \Divar\KenarApiClient\Model\AddonsAction|null $action action
+     * @param string|null $image_id image_id
      *
      * @return self
      */
-    public function setAction($action)
+    public function setImageId($image_id)
     {
-        if (is_null($action)) {
-            throw new \InvalidArgumentException('non-nullable action cannot be null');
+        if (is_null($image_id)) {
+            throw new \InvalidArgumentException('non-nullable image_id cannot be null');
         }
-        $this->container['action'] = $action;
+        $this->container['image_id'] = $image_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets title
+     *
+     * @return string|null
+     */
+    public function getTitle()
+    {
+        return $this->container['title'];
+    }
+
+    /**
+     * Sets title
+     *
+     * @param string|null $title title
+     *
+     * @return self
+     */
+    public function setTitle($title)
+    {
+        if (is_null($title)) {
+            throw new \InvalidArgumentException('non-nullable title cannot be null');
+        }
+        $this->container['title'] = $title;
 
         return $this;
     }

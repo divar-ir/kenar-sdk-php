@@ -89,6 +89,42 @@ class SearchPostItemRealEstateFieldsTest extends TestCase
     }
 
     /**
+     * Test attribute "daily_rent"
+     */
+    public function testPropertyDailyRent()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "floor"
+     */
+    public function testPropertyFloor()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "has_elevator"
+     */
+    public function testPropertyHasElevator()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "has_parking"
+     */
+    public function testPropertyHasParking()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "rent"
      */
     public function testPropertyRent()
@@ -98,9 +134,9 @@ class SearchPostItemRealEstateFieldsTest extends TestCase
     }
 
     /**
-     * Test attribute "daily_rent"
+     * Test attribute "rooms"
      */
-    public function testPropertyDailyRent()
+    public function testPropertyRooms()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -119,42 +155,6 @@ class SearchPostItemRealEstateFieldsTest extends TestCase
      * Test attribute "year"
      */
     public function testPropertyYear()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "has_parking"
-     */
-    public function testPropertyHasParking()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "has_elevator"
-     */
-    public function testPropertyHasElevator()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "rooms"
-     */
-    public function testPropertyRooms()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "floor"
-     */
-    public function testPropertyFloor()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

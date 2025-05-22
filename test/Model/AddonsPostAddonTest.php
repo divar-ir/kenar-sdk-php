@@ -80,54 +80,9 @@ class AddonsPostAddonTest extends TestCase
     }
 
     /**
-     * Test attribute "meta_data"
-     */
-    public function testPropertyMetaData()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "token"
-     */
-    public function testPropertyToken()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "app"
      */
     public function testPropertyApp()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "widgets"
-     */
-    public function testPropertyWidgets()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "score"
-     */
-    public function testPropertyScore()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "selector"
-     */
-    public function testPropertySelector()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -143,9 +98,36 @@ class AddonsPostAddonTest extends TestCase
     }
 
     /**
+     * Test attribute "meta_data"
+     */
+    public function testPropertyMetaData()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "score"
+     */
+    public function testPropertyScore()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "secondary_links"
      */
     public function testPropertySecondaryLinks()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "selector"
+     */
+    public function testPropertySelector()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -170,6 +152,15 @@ class AddonsPostAddonTest extends TestCase
     }
 
     /**
+     * Test attribute "semantic_sensitives"
+     */
+    public function testPropertySemanticSensitives()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "sensitive_semantic"
      */
     public function testPropertySensitiveSemantic()
@@ -179,18 +170,27 @@ class AddonsPostAddonTest extends TestCase
     }
 
     /**
-     * Test attribute "widgets_semantic"
+     * Test attribute "token"
      */
-    public function testPropertyWidgetsSemantic()
+    public function testPropertyToken()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "semantic_sensitives"
+     * Test attribute "widgets"
      */
-    public function testPropertySemanticSensitives()
+    public function testPropertyWidgets()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "widgets_semantic"
+     */
+    public function testPropertyWidgetsSemantic()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

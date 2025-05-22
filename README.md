@@ -48,11 +48,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
+// Configure API key authorization: APIKey
+$config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
 
 $apiInstance = new Divar\KenarApiClient\Api\AddonsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $token = 'token_example'; // string
 $addons_create_post_addon_v2_body = new \Divar\KenarApiClient\Model\AddonsCreatePostAddonV2Body(); // \Divar\KenarApiClient\Model\AddonsCreatePostAddonV2Body
@@ -254,7 +260,47 @@ Class | Method | HTTP request | Description
 - [SemanticCreateUserSemanticResponse](docs/Model/SemanticCreateUserSemanticResponse.md)
 
 ## Authorization
-Endpoints do not require authorization.
+
+Authentication schemes defined for the API:
+### APIKey
+
+- **Type**: API key
+- **API key parameter name**: X-API-Key
+- **Location**: HTTP header
+
+
+### OAuth
+
+- **Type**: `OAuth`
+- **Flow**: `accessCode`
+- **Authorization URL**: `oauth.divar.ir/oauth2/auth`
+- **Scopes**: 
+    - **BUSINESS_ADDON_CREATE.{resource_id}**: BUSINESS_ADDON_CREATE.{resource_id}
+    - **CHAT_BOT_USER_MESSAGE_SEND**: CHAT_BOT_USER_MESSAGE_SEND
+    - **CHAT_CONVERSATION_READ.{resource_id}**: CHAT_CONVERSATION_READ.{resource_id}
+    - **CHAT_MESSAGE_SEND.{resource_id}**: CHAT_MESSAGE_SEND.{resource_id}
+    - **CHAT_POST_CONVERSATIONS_MESSAGE_SEND.{resource_id}**: CHAT_POST_CONVERSATIONS_MESSAGE_SEND.{resource_id}
+    - **CHAT_POST_CONVERSATIONS_READ.{resource_id}**: CHAT_POST_CONVERSATIONS_READ.{resource_id}
+    - **CHAT_SUPPLIER_ALL_CONVERSATIONS_MESSAGE_SEND**: CHAT_SUPPLIER_ALL_CONVERSATIONS_MESSAGE_SEND
+    - **CHAT_SUPPLIER_ALL_CONVERSATIONS_READ**: CHAT_SUPPLIER_ALL_CONVERSATIONS_READ
+    - **CONVERSATION_SEND_MESSAGE.{resource_id}**: CONVERSATION_SEND_MESSAGE.{resource_id}
+    - **MANAGEMENT_APPS_READ.{resource_id}**: MANAGEMENT_APPS_READ.{resource_id}
+    - **MANAGEMENT_APPS_WRITE.{resource_id}**: MANAGEMENT_APPS_WRITE.{resource_id}
+    - **NOTIFICATION_ACCESS_REVOCATION**: NOTIFICATION_ACCESS_REVOCATION
+    - **PAYMENT_ALL_POSTS_PRICING_READ**: PAYMENT_ALL_POSTS_PRICING_READ
+    - **PAYMENT_ALL_POSTS_REORDER**: PAYMENT_ALL_POSTS_REORDER
+    - **POST_ADDON_CREATE.{resource_id}**: POST_ADDON_CREATE.{resource_id}
+    - **POST_EDIT.{resource_id}**: POST_EDIT.{resource_id}
+    - **POST_ONGOING_IMAGES_GET.{resource_id}**: POST_ONGOING_IMAGES_GET.{resource_id}
+    - **POST_SEMANTIC_CREATE.{resource_id}**: POST_SEMANTIC_CREATE.{resource_id}
+    - **USER_ADDON_CREATE**: USER_ADDON_CREATE
+    - **USER_ID**: USER_ID
+    - **USER_PHONE**: USER_PHONE
+    - **USER_POSTS_ADDON_CREATE**: USER_POSTS_ADDON_CREATE
+    - **USER_POSTS_GET**: USER_POSTS_GET
+    - **USER_VERIFICATION_CREATE**: USER_VERIFICATION_CREATE
+    - **offline_access**: offline_access
+    - **openid**: openid
 
 ## Tests
 

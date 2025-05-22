@@ -80,15 +80,6 @@ class PaymentTicketValidateRequestTest extends TestCase
     }
 
     /**
-     * Test attribute "ticket_uuid"
-     */
-    public function testPropertyTicketUuid()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "phone_number"
      */
     public function testPropertyPhoneNumber()
@@ -98,18 +89,27 @@ class PaymentTicketValidateRequestTest extends TestCase
     }
 
     /**
-     * Test attribute "user_id"
+     * Test attribute "service_cost"
      */
-    public function testPropertyUserId()
+    public function testPropertyServiceCost()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "service_cost"
+     * Test attribute "ticket_uuid"
      */
-    public function testPropertyServiceCost()
+    public function testPropertyTicketUuid()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "user_id"
+     */
+    public function testPropertyUserId()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

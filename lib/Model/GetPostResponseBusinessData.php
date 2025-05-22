@@ -57,8 +57,8 @@ class GetPostResponseBusinessData implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
-        'business_type' => '\Divar\KenarApiClient\Model\PremiumPanelBusinessDataSubBusinessType',
-        'business_name' => 'string'
+        'business_name' => 'string',
+        'business_type' => '\Divar\KenarApiClient\Model\PremiumPanelBusinessDataSubBusinessType'
     ];
 
     /**
@@ -69,8 +69,8 @@ class GetPostResponseBusinessData implements ModelInterface, ArrayAccess, \JsonS
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'business_type' => null,
-        'business_name' => null
+        'business_name' => null,
+        'business_type' => null
     ];
 
     /**
@@ -79,8 +79,8 @@ class GetPostResponseBusinessData implements ModelInterface, ArrayAccess, \JsonS
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'business_type' => false,
-        'business_name' => false
+        'business_name' => false,
+        'business_type' => false
     ];
 
     /**
@@ -169,8 +169,8 @@ class GetPostResponseBusinessData implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $attributeMap = [
-        'business_type' => 'business_type',
-        'business_name' => 'business_name'
+        'business_name' => 'business_name',
+        'business_type' => 'business_type'
     ];
 
     /**
@@ -179,8 +179,8 @@ class GetPostResponseBusinessData implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $setters = [
-        'business_type' => 'setBusinessType',
-        'business_name' => 'setBusinessName'
+        'business_name' => 'setBusinessName',
+        'business_type' => 'setBusinessType'
     ];
 
     /**
@@ -189,8 +189,8 @@ class GetPostResponseBusinessData implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $getters = [
-        'business_type' => 'getBusinessType',
-        'business_name' => 'getBusinessName'
+        'business_name' => 'getBusinessName',
+        'business_type' => 'getBusinessType'
     ];
 
     /**
@@ -250,8 +250,8 @@ class GetPostResponseBusinessData implements ModelInterface, ArrayAccess, \JsonS
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('business_type', $data ?? [], null);
         $this->setIfExists('business_name', $data ?? [], null);
+        $this->setIfExists('business_type', $data ?? [], null);
     }
 
     /**
@@ -297,33 +297,6 @@ class GetPostResponseBusinessData implements ModelInterface, ArrayAccess, \JsonS
 
 
     /**
-     * Gets business_type
-     *
-     * @return \Divar\KenarApiClient\Model\PremiumPanelBusinessDataSubBusinessType|null
-     */
-    public function getBusinessType()
-    {
-        return $this->container['business_type'];
-    }
-
-    /**
-     * Sets business_type
-     *
-     * @param \Divar\KenarApiClient\Model\PremiumPanelBusinessDataSubBusinessType|null $business_type business_type
-     *
-     * @return self
-     */
-    public function setBusinessType($business_type)
-    {
-        if (is_null($business_type)) {
-            throw new \InvalidArgumentException('non-nullable business_type cannot be null');
-        }
-        $this->container['business_type'] = $business_type;
-
-        return $this;
-    }
-
-    /**
      * Gets business_name
      *
      * @return string|null
@@ -346,6 +319,33 @@ class GetPostResponseBusinessData implements ModelInterface, ArrayAccess, \JsonS
             throw new \InvalidArgumentException('non-nullable business_name cannot be null');
         }
         $this->container['business_name'] = $business_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets business_type
+     *
+     * @return \Divar\KenarApiClient\Model\PremiumPanelBusinessDataSubBusinessType|null
+     */
+    public function getBusinessType()
+    {
+        return $this->container['business_type'];
+    }
+
+    /**
+     * Sets business_type
+     *
+     * @param \Divar\KenarApiClient\Model\PremiumPanelBusinessDataSubBusinessType|null $business_type business_type
+     *
+     * @return self
+     */
+    public function setBusinessType($business_type)
+    {
+        if (is_null($business_type)) {
+            throw new \InvalidArgumentException('non-nullable business_type cannot be null');
+        }
+        $this->container['business_type'] = $business_type;
 
         return $this;
     }

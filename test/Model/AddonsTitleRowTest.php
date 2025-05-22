@@ -80,18 +80,18 @@ class AddonsTitleRowTest extends TestCase
     }
 
     /**
-     * Test attribute "text"
+     * Test attribute "has_divider"
      */
-    public function testPropertyText()
+    public function testPropertyHasDivider()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "has_divider"
+     * Test attribute "text"
      */
-    public function testPropertyHasDivider()
+    public function testPropertyText()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

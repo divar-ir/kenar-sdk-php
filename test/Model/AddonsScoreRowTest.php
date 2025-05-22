@@ -80,9 +80,9 @@ class AddonsScoreRowTest extends TestCase
     }
 
     /**
-     * Test attribute "title"
+     * Test attribute "action"
      */
-    public function testPropertyTitle()
+    public function testPropertyAction()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -92,24 +92,6 @@ class AddonsScoreRowTest extends TestCase
      * Test attribute "descriptive_score"
      */
     public function testPropertyDescriptiveScore()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "percentage_score"
-     */
-    public function testPropertyPercentageScore()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "score_color"
-     */
-    public function testPropertyScoreColor()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -134,9 +116,27 @@ class AddonsScoreRowTest extends TestCase
     }
 
     /**
-     * Test attribute "action"
+     * Test attribute "percentage_score"
      */
-    public function testPropertyAction()
+    public function testPropertyPercentageScore()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "score_color"
+     */
+    public function testPropertyScoreColor()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "title"
+     */
+    public function testPropertyTitle()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

@@ -80,9 +80,9 @@ class AssetsGetOAuthScopesResponseAppOauthScopeTest extends TestCase
     }
 
     /**
-     * Test attribute "slug"
+     * Test attribute "description"
      */
-    public function testPropertySlug()
+    public function testPropertyDescription()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -98,18 +98,18 @@ class AssetsGetOAuthScopesResponseAppOauthScopeTest extends TestCase
     }
 
     /**
-     * Test attribute "description"
+     * Test attribute "lifecycle_state"
      */
-    public function testPropertyDescription()
+    public function testPropertyLifecycleState()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "lifecycle_state"
+     * Test attribute "slug"
      */
-    public function testPropertyLifecycleState()
+    public function testPropertySlug()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

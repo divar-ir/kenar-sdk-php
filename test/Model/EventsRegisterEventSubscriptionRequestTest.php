@@ -80,18 +80,18 @@ class EventsRegisterEventSubscriptionRequestTest extends TestCase
     }
 
     /**
-     * Test attribute "event_type"
+     * Test attribute "event_resource_id"
      */
-    public function testPropertyEventType()
+    public function testPropertyEventResourceId()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "event_resource_id"
+     * Test attribute "event_type"
      */
-    public function testPropertyEventResourceId()
+    public function testPropertyEventType()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

@@ -57,17 +57,17 @@ class AddonsWidget implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'event_row' => '\Divar\KenarApiClient\Model\AddonsEventRow',
         'button_bar' => '\Divar\KenarApiClient\Model\AddonsButtonBar',
-        'title_row' => '\Divar\KenarApiClient\Model\AddonsTitleRow',
-        'subtitle_row' => '\Divar\KenarApiClient\Model\AddonsSubtitleRow',
-        'selector_row' => '\Divar\KenarApiClient\Model\AddonsSelectorRow',
-        'score_row' => '\Divar\KenarApiClient\Model\AddonsScoreRow',
-        'image_carousel_row' => '\Divar\KenarApiClient\Model\AddonsImageCarouselRow',
-        'group_info_row' => '\Divar\KenarApiClient\Model\AddonsGroupInfoRow',
-        'evaluation_row' => '\Divar\KenarApiClient\Model\AddonsEvaluationRow',
         'description_row' => '\Divar\KenarApiClient\Model\AddonsDescriptionRow',
-        'semantic_paths' => 'array<string,string>'
+        'evaluation_row' => '\Divar\KenarApiClient\Model\AddonsEvaluationRow',
+        'event_row' => '\Divar\KenarApiClient\Model\AddonsEventRow',
+        'group_info_row' => '\Divar\KenarApiClient\Model\AddonsGroupInfoRow',
+        'image_carousel_row' => '\Divar\KenarApiClient\Model\AddonsImageCarouselRow',
+        'score_row' => '\Divar\KenarApiClient\Model\AddonsScoreRow',
+        'selector_row' => '\Divar\KenarApiClient\Model\AddonsSelectorRow',
+        'semantic_paths' => 'array<string,string>',
+        'subtitle_row' => '\Divar\KenarApiClient\Model\AddonsSubtitleRow',
+        'title_row' => '\Divar\KenarApiClient\Model\AddonsTitleRow'
     ];
 
     /**
@@ -78,17 +78,17 @@ class AddonsWidget implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'event_row' => null,
         'button_bar' => null,
-        'title_row' => null,
-        'subtitle_row' => null,
-        'selector_row' => null,
-        'score_row' => null,
-        'image_carousel_row' => null,
-        'group_info_row' => null,
-        'evaluation_row' => null,
         'description_row' => null,
-        'semantic_paths' => null
+        'evaluation_row' => null,
+        'event_row' => null,
+        'group_info_row' => null,
+        'image_carousel_row' => null,
+        'score_row' => null,
+        'selector_row' => null,
+        'semantic_paths' => null,
+        'subtitle_row' => null,
+        'title_row' => null
     ];
 
     /**
@@ -97,17 +97,17 @@ class AddonsWidget implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'event_row' => false,
         'button_bar' => false,
-        'title_row' => false,
-        'subtitle_row' => false,
-        'selector_row' => false,
-        'score_row' => false,
-        'image_carousel_row' => false,
-        'group_info_row' => false,
-        'evaluation_row' => false,
         'description_row' => false,
-        'semantic_paths' => false
+        'evaluation_row' => false,
+        'event_row' => false,
+        'group_info_row' => false,
+        'image_carousel_row' => false,
+        'score_row' => false,
+        'selector_row' => false,
+        'semantic_paths' => false,
+        'subtitle_row' => false,
+        'title_row' => false
     ];
 
     /**
@@ -196,17 +196,17 @@ class AddonsWidget implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'event_row' => 'event_row',
         'button_bar' => 'button_bar',
-        'title_row' => 'title_row',
-        'subtitle_row' => 'subtitle_row',
-        'selector_row' => 'selector_row',
-        'score_row' => 'score_row',
-        'image_carousel_row' => 'image_carousel_row',
-        'group_info_row' => 'group_info_row',
-        'evaluation_row' => 'evaluation_row',
         'description_row' => 'description_row',
-        'semantic_paths' => 'semantic_paths'
+        'evaluation_row' => 'evaluation_row',
+        'event_row' => 'event_row',
+        'group_info_row' => 'group_info_row',
+        'image_carousel_row' => 'image_carousel_row',
+        'score_row' => 'score_row',
+        'selector_row' => 'selector_row',
+        'semantic_paths' => 'semantic_paths',
+        'subtitle_row' => 'subtitle_row',
+        'title_row' => 'title_row'
     ];
 
     /**
@@ -215,17 +215,17 @@ class AddonsWidget implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'event_row' => 'setEventRow',
         'button_bar' => 'setButtonBar',
-        'title_row' => 'setTitleRow',
-        'subtitle_row' => 'setSubtitleRow',
-        'selector_row' => 'setSelectorRow',
-        'score_row' => 'setScoreRow',
-        'image_carousel_row' => 'setImageCarouselRow',
-        'group_info_row' => 'setGroupInfoRow',
-        'evaluation_row' => 'setEvaluationRow',
         'description_row' => 'setDescriptionRow',
-        'semantic_paths' => 'setSemanticPaths'
+        'evaluation_row' => 'setEvaluationRow',
+        'event_row' => 'setEventRow',
+        'group_info_row' => 'setGroupInfoRow',
+        'image_carousel_row' => 'setImageCarouselRow',
+        'score_row' => 'setScoreRow',
+        'selector_row' => 'setSelectorRow',
+        'semantic_paths' => 'setSemanticPaths',
+        'subtitle_row' => 'setSubtitleRow',
+        'title_row' => 'setTitleRow'
     ];
 
     /**
@@ -234,17 +234,17 @@ class AddonsWidget implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'event_row' => 'getEventRow',
         'button_bar' => 'getButtonBar',
-        'title_row' => 'getTitleRow',
-        'subtitle_row' => 'getSubtitleRow',
-        'selector_row' => 'getSelectorRow',
-        'score_row' => 'getScoreRow',
-        'image_carousel_row' => 'getImageCarouselRow',
-        'group_info_row' => 'getGroupInfoRow',
-        'evaluation_row' => 'getEvaluationRow',
         'description_row' => 'getDescriptionRow',
-        'semantic_paths' => 'getSemanticPaths'
+        'evaluation_row' => 'getEvaluationRow',
+        'event_row' => 'getEventRow',
+        'group_info_row' => 'getGroupInfoRow',
+        'image_carousel_row' => 'getImageCarouselRow',
+        'score_row' => 'getScoreRow',
+        'selector_row' => 'getSelectorRow',
+        'semantic_paths' => 'getSemanticPaths',
+        'subtitle_row' => 'getSubtitleRow',
+        'title_row' => 'getTitleRow'
     ];
 
     /**
@@ -304,17 +304,17 @@ class AddonsWidget implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('event_row', $data ?? [], null);
         $this->setIfExists('button_bar', $data ?? [], null);
-        $this->setIfExists('title_row', $data ?? [], null);
-        $this->setIfExists('subtitle_row', $data ?? [], null);
-        $this->setIfExists('selector_row', $data ?? [], null);
-        $this->setIfExists('score_row', $data ?? [], null);
-        $this->setIfExists('image_carousel_row', $data ?? [], null);
-        $this->setIfExists('group_info_row', $data ?? [], null);
-        $this->setIfExists('evaluation_row', $data ?? [], null);
         $this->setIfExists('description_row', $data ?? [], null);
+        $this->setIfExists('evaluation_row', $data ?? [], null);
+        $this->setIfExists('event_row', $data ?? [], null);
+        $this->setIfExists('group_info_row', $data ?? [], null);
+        $this->setIfExists('image_carousel_row', $data ?? [], null);
+        $this->setIfExists('score_row', $data ?? [], null);
+        $this->setIfExists('selector_row', $data ?? [], null);
         $this->setIfExists('semantic_paths', $data ?? [], null);
+        $this->setIfExists('subtitle_row', $data ?? [], null);
+        $this->setIfExists('title_row', $data ?? [], null);
     }
 
     /**
@@ -360,33 +360,6 @@ class AddonsWidget implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets event_row
-     *
-     * @return \Divar\KenarApiClient\Model\AddonsEventRow|null
-     */
-    public function getEventRow()
-    {
-        return $this->container['event_row'];
-    }
-
-    /**
-     * Sets event_row
-     *
-     * @param \Divar\KenarApiClient\Model\AddonsEventRow|null $event_row event_row
-     *
-     * @return self
-     */
-    public function setEventRow($event_row)
-    {
-        if (is_null($event_row)) {
-            throw new \InvalidArgumentException('non-nullable event_row cannot be null');
-        }
-        $this->container['event_row'] = $event_row;
-
-        return $this;
-    }
-
-    /**
      * Gets button_bar
      *
      * @return \Divar\KenarApiClient\Model\AddonsButtonBar|null
@@ -409,195 +382,6 @@ class AddonsWidget implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable button_bar cannot be null');
         }
         $this->container['button_bar'] = $button_bar;
-
-        return $this;
-    }
-
-    /**
-     * Gets title_row
-     *
-     * @return \Divar\KenarApiClient\Model\AddonsTitleRow|null
-     */
-    public function getTitleRow()
-    {
-        return $this->container['title_row'];
-    }
-
-    /**
-     * Sets title_row
-     *
-     * @param \Divar\KenarApiClient\Model\AddonsTitleRow|null $title_row title_row
-     *
-     * @return self
-     */
-    public function setTitleRow($title_row)
-    {
-        if (is_null($title_row)) {
-            throw new \InvalidArgumentException('non-nullable title_row cannot be null');
-        }
-        $this->container['title_row'] = $title_row;
-
-        return $this;
-    }
-
-    /**
-     * Gets subtitle_row
-     *
-     * @return \Divar\KenarApiClient\Model\AddonsSubtitleRow|null
-     */
-    public function getSubtitleRow()
-    {
-        return $this->container['subtitle_row'];
-    }
-
-    /**
-     * Sets subtitle_row
-     *
-     * @param \Divar\KenarApiClient\Model\AddonsSubtitleRow|null $subtitle_row subtitle_row
-     *
-     * @return self
-     */
-    public function setSubtitleRow($subtitle_row)
-    {
-        if (is_null($subtitle_row)) {
-            throw new \InvalidArgumentException('non-nullable subtitle_row cannot be null');
-        }
-        $this->container['subtitle_row'] = $subtitle_row;
-
-        return $this;
-    }
-
-    /**
-     * Gets selector_row
-     *
-     * @return \Divar\KenarApiClient\Model\AddonsSelectorRow|null
-     */
-    public function getSelectorRow()
-    {
-        return $this->container['selector_row'];
-    }
-
-    /**
-     * Sets selector_row
-     *
-     * @param \Divar\KenarApiClient\Model\AddonsSelectorRow|null $selector_row selector_row
-     *
-     * @return self
-     */
-    public function setSelectorRow($selector_row)
-    {
-        if (is_null($selector_row)) {
-            throw new \InvalidArgumentException('non-nullable selector_row cannot be null');
-        }
-        $this->container['selector_row'] = $selector_row;
-
-        return $this;
-    }
-
-    /**
-     * Gets score_row
-     *
-     * @return \Divar\KenarApiClient\Model\AddonsScoreRow|null
-     */
-    public function getScoreRow()
-    {
-        return $this->container['score_row'];
-    }
-
-    /**
-     * Sets score_row
-     *
-     * @param \Divar\KenarApiClient\Model\AddonsScoreRow|null $score_row score_row
-     *
-     * @return self
-     */
-    public function setScoreRow($score_row)
-    {
-        if (is_null($score_row)) {
-            throw new \InvalidArgumentException('non-nullable score_row cannot be null');
-        }
-        $this->container['score_row'] = $score_row;
-
-        return $this;
-    }
-
-    /**
-     * Gets image_carousel_row
-     *
-     * @return \Divar\KenarApiClient\Model\AddonsImageCarouselRow|null
-     */
-    public function getImageCarouselRow()
-    {
-        return $this->container['image_carousel_row'];
-    }
-
-    /**
-     * Sets image_carousel_row
-     *
-     * @param \Divar\KenarApiClient\Model\AddonsImageCarouselRow|null $image_carousel_row image_carousel_row
-     *
-     * @return self
-     */
-    public function setImageCarouselRow($image_carousel_row)
-    {
-        if (is_null($image_carousel_row)) {
-            throw new \InvalidArgumentException('non-nullable image_carousel_row cannot be null');
-        }
-        $this->container['image_carousel_row'] = $image_carousel_row;
-
-        return $this;
-    }
-
-    /**
-     * Gets group_info_row
-     *
-     * @return \Divar\KenarApiClient\Model\AddonsGroupInfoRow|null
-     */
-    public function getGroupInfoRow()
-    {
-        return $this->container['group_info_row'];
-    }
-
-    /**
-     * Sets group_info_row
-     *
-     * @param \Divar\KenarApiClient\Model\AddonsGroupInfoRow|null $group_info_row group_info_row
-     *
-     * @return self
-     */
-    public function setGroupInfoRow($group_info_row)
-    {
-        if (is_null($group_info_row)) {
-            throw new \InvalidArgumentException('non-nullable group_info_row cannot be null');
-        }
-        $this->container['group_info_row'] = $group_info_row;
-
-        return $this;
-    }
-
-    /**
-     * Gets evaluation_row
-     *
-     * @return \Divar\KenarApiClient\Model\AddonsEvaluationRow|null
-     */
-    public function getEvaluationRow()
-    {
-        return $this->container['evaluation_row'];
-    }
-
-    /**
-     * Sets evaluation_row
-     *
-     * @param \Divar\KenarApiClient\Model\AddonsEvaluationRow|null $evaluation_row evaluation_row
-     *
-     * @return self
-     */
-    public function setEvaluationRow($evaluation_row)
-    {
-        if (is_null($evaluation_row)) {
-            throw new \InvalidArgumentException('non-nullable evaluation_row cannot be null');
-        }
-        $this->container['evaluation_row'] = $evaluation_row;
 
         return $this;
     }
@@ -630,6 +414,168 @@ class AddonsWidget implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
+     * Gets evaluation_row
+     *
+     * @return \Divar\KenarApiClient\Model\AddonsEvaluationRow|null
+     */
+    public function getEvaluationRow()
+    {
+        return $this->container['evaluation_row'];
+    }
+
+    /**
+     * Sets evaluation_row
+     *
+     * @param \Divar\KenarApiClient\Model\AddonsEvaluationRow|null $evaluation_row evaluation_row
+     *
+     * @return self
+     */
+    public function setEvaluationRow($evaluation_row)
+    {
+        if (is_null($evaluation_row)) {
+            throw new \InvalidArgumentException('non-nullable evaluation_row cannot be null');
+        }
+        $this->container['evaluation_row'] = $evaluation_row;
+
+        return $this;
+    }
+
+    /**
+     * Gets event_row
+     *
+     * @return \Divar\KenarApiClient\Model\AddonsEventRow|null
+     */
+    public function getEventRow()
+    {
+        return $this->container['event_row'];
+    }
+
+    /**
+     * Sets event_row
+     *
+     * @param \Divar\KenarApiClient\Model\AddonsEventRow|null $event_row event_row
+     *
+     * @return self
+     */
+    public function setEventRow($event_row)
+    {
+        if (is_null($event_row)) {
+            throw new \InvalidArgumentException('non-nullable event_row cannot be null');
+        }
+        $this->container['event_row'] = $event_row;
+
+        return $this;
+    }
+
+    /**
+     * Gets group_info_row
+     *
+     * @return \Divar\KenarApiClient\Model\AddonsGroupInfoRow|null
+     */
+    public function getGroupInfoRow()
+    {
+        return $this->container['group_info_row'];
+    }
+
+    /**
+     * Sets group_info_row
+     *
+     * @param \Divar\KenarApiClient\Model\AddonsGroupInfoRow|null $group_info_row group_info_row
+     *
+     * @return self
+     */
+    public function setGroupInfoRow($group_info_row)
+    {
+        if (is_null($group_info_row)) {
+            throw new \InvalidArgumentException('non-nullable group_info_row cannot be null');
+        }
+        $this->container['group_info_row'] = $group_info_row;
+
+        return $this;
+    }
+
+    /**
+     * Gets image_carousel_row
+     *
+     * @return \Divar\KenarApiClient\Model\AddonsImageCarouselRow|null
+     */
+    public function getImageCarouselRow()
+    {
+        return $this->container['image_carousel_row'];
+    }
+
+    /**
+     * Sets image_carousel_row
+     *
+     * @param \Divar\KenarApiClient\Model\AddonsImageCarouselRow|null $image_carousel_row image_carousel_row
+     *
+     * @return self
+     */
+    public function setImageCarouselRow($image_carousel_row)
+    {
+        if (is_null($image_carousel_row)) {
+            throw new \InvalidArgumentException('non-nullable image_carousel_row cannot be null');
+        }
+        $this->container['image_carousel_row'] = $image_carousel_row;
+
+        return $this;
+    }
+
+    /**
+     * Gets score_row
+     *
+     * @return \Divar\KenarApiClient\Model\AddonsScoreRow|null
+     */
+    public function getScoreRow()
+    {
+        return $this->container['score_row'];
+    }
+
+    /**
+     * Sets score_row
+     *
+     * @param \Divar\KenarApiClient\Model\AddonsScoreRow|null $score_row score_row
+     *
+     * @return self
+     */
+    public function setScoreRow($score_row)
+    {
+        if (is_null($score_row)) {
+            throw new \InvalidArgumentException('non-nullable score_row cannot be null');
+        }
+        $this->container['score_row'] = $score_row;
+
+        return $this;
+    }
+
+    /**
+     * Gets selector_row
+     *
+     * @return \Divar\KenarApiClient\Model\AddonsSelectorRow|null
+     */
+    public function getSelectorRow()
+    {
+        return $this->container['selector_row'];
+    }
+
+    /**
+     * Sets selector_row
+     *
+     * @param \Divar\KenarApiClient\Model\AddonsSelectorRow|null $selector_row selector_row
+     *
+     * @return self
+     */
+    public function setSelectorRow($selector_row)
+    {
+        if (is_null($selector_row)) {
+            throw new \InvalidArgumentException('non-nullable selector_row cannot be null');
+        }
+        $this->container['selector_row'] = $selector_row;
+
+        return $this;
+    }
+
+    /**
      * Gets semantic_paths
      *
      * @return array<string,string>|null
@@ -652,6 +598,60 @@ class AddonsWidget implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable semantic_paths cannot be null');
         }
         $this->container['semantic_paths'] = $semantic_paths;
+
+        return $this;
+    }
+
+    /**
+     * Gets subtitle_row
+     *
+     * @return \Divar\KenarApiClient\Model\AddonsSubtitleRow|null
+     */
+    public function getSubtitleRow()
+    {
+        return $this->container['subtitle_row'];
+    }
+
+    /**
+     * Sets subtitle_row
+     *
+     * @param \Divar\KenarApiClient\Model\AddonsSubtitleRow|null $subtitle_row subtitle_row
+     *
+     * @return self
+     */
+    public function setSubtitleRow($subtitle_row)
+    {
+        if (is_null($subtitle_row)) {
+            throw new \InvalidArgumentException('non-nullable subtitle_row cannot be null');
+        }
+        $this->container['subtitle_row'] = $subtitle_row;
+
+        return $this;
+    }
+
+    /**
+     * Gets title_row
+     *
+     * @return \Divar\KenarApiClient\Model\AddonsTitleRow|null
+     */
+    public function getTitleRow()
+    {
+        return $this->container['title_row'];
+    }
+
+    /**
+     * Sets title_row
+     *
+     * @param \Divar\KenarApiClient\Model\AddonsTitleRow|null $title_row title_row
+     *
+     * @return self
+     */
+    public function setTitleRow($title_row)
+    {
+        if (is_null($title_row)) {
+            throw new \InvalidArgumentException('non-nullable title_row cannot be null');
+        }
+        $this->container['title_row'] = $title_row;
 
         return $this;
     }

@@ -89,18 +89,18 @@ class ChatapiConversationTest extends TestCase
     }
 
     /**
-     * Test attribute "type"
+     * Test attribute "post_token"
      */
-    public function testPropertyType()
+    public function testPropertyPostToken()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "post_token"
+     * Test attribute "type"
      */
-    public function testPropertyPostToken()
+    public function testPropertyType()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

@@ -80,15 +80,6 @@ class PaymentTransactionTest extends TestCase
     }
 
     /**
-     * Test attribute "id"
-     */
-    public function testPropertyId()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "cost_rials"
      */
     public function testPropertyCostRials()
@@ -101,6 +92,15 @@ class PaymentTransactionTest extends TestCase
      * Test attribute "extra_details"
      */
     public function testPropertyExtraDetails()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "id"
+     */
+    public function testPropertyId()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

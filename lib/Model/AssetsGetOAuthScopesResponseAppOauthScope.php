@@ -57,10 +57,10 @@ class AssetsGetOAuthScopesResponseAppOauthScope implements ModelInterface, Array
       * @var string[]
       */
     protected static $openAPITypes = [
-        'slug' => '\Divar\KenarApiClient\Model\OAuthScopeScope',
-        'display' => 'string',
         'description' => 'string',
-        'lifecycle_state' => '\Divar\KenarApiClient\Model\AssetsGetOAuthScopesResponseLifeCycleState'
+        'display' => 'string',
+        'lifecycle_state' => '\Divar\KenarApiClient\Model\AssetsGetOAuthScopesResponseLifeCycleState',
+        'slug' => '\Divar\KenarApiClient\Model\OAuthScopeScope'
     ];
 
     /**
@@ -71,10 +71,10 @@ class AssetsGetOAuthScopesResponseAppOauthScope implements ModelInterface, Array
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'slug' => null,
-        'display' => null,
         'description' => null,
-        'lifecycle_state' => null
+        'display' => null,
+        'lifecycle_state' => null,
+        'slug' => null
     ];
 
     /**
@@ -83,10 +83,10 @@ class AssetsGetOAuthScopesResponseAppOauthScope implements ModelInterface, Array
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'slug' => false,
-        'display' => false,
         'description' => false,
-        'lifecycle_state' => false
+        'display' => false,
+        'lifecycle_state' => false,
+        'slug' => false
     ];
 
     /**
@@ -175,10 +175,10 @@ class AssetsGetOAuthScopesResponseAppOauthScope implements ModelInterface, Array
      * @var string[]
      */
     protected static $attributeMap = [
-        'slug' => 'slug',
-        'display' => 'display',
         'description' => 'description',
-        'lifecycle_state' => 'lifecycle_state'
+        'display' => 'display',
+        'lifecycle_state' => 'lifecycle_state',
+        'slug' => 'slug'
     ];
 
     /**
@@ -187,10 +187,10 @@ class AssetsGetOAuthScopesResponseAppOauthScope implements ModelInterface, Array
      * @var string[]
      */
     protected static $setters = [
-        'slug' => 'setSlug',
-        'display' => 'setDisplay',
         'description' => 'setDescription',
-        'lifecycle_state' => 'setLifecycleState'
+        'display' => 'setDisplay',
+        'lifecycle_state' => 'setLifecycleState',
+        'slug' => 'setSlug'
     ];
 
     /**
@@ -199,10 +199,10 @@ class AssetsGetOAuthScopesResponseAppOauthScope implements ModelInterface, Array
      * @var string[]
      */
     protected static $getters = [
-        'slug' => 'getSlug',
-        'display' => 'getDisplay',
         'description' => 'getDescription',
-        'lifecycle_state' => 'getLifecycleState'
+        'display' => 'getDisplay',
+        'lifecycle_state' => 'getLifecycleState',
+        'slug' => 'getSlug'
     ];
 
     /**
@@ -262,10 +262,10 @@ class AssetsGetOAuthScopesResponseAppOauthScope implements ModelInterface, Array
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('slug', $data ?? [], null);
-        $this->setIfExists('display', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
+        $this->setIfExists('display', $data ?? [], null);
         $this->setIfExists('lifecycle_state', $data ?? [], null);
+        $this->setIfExists('slug', $data ?? [], null);
     }
 
     /**
@@ -311,28 +311,28 @@ class AssetsGetOAuthScopesResponseAppOauthScope implements ModelInterface, Array
 
 
     /**
-     * Gets slug
+     * Gets description
      *
-     * @return \Divar\KenarApiClient\Model\OAuthScopeScope|null
+     * @return string|null
      */
-    public function getSlug()
+    public function getDescription()
     {
-        return $this->container['slug'];
+        return $this->container['description'];
     }
 
     /**
-     * Sets slug
+     * Sets description
      *
-     * @param \Divar\KenarApiClient\Model\OAuthScopeScope|null $slug slug
+     * @param string|null $description description
      *
      * @return self
      */
-    public function setSlug($slug)
+    public function setDescription($description)
     {
-        if (is_null($slug)) {
-            throw new \InvalidArgumentException('non-nullable slug cannot be null');
+        if (is_null($description)) {
+            throw new \InvalidArgumentException('non-nullable description cannot be null');
         }
-        $this->container['slug'] = $slug;
+        $this->container['description'] = $description;
 
         return $this;
     }
@@ -365,33 +365,6 @@ class AssetsGetOAuthScopesResponseAppOauthScope implements ModelInterface, Array
     }
 
     /**
-     * Gets description
-     *
-     * @return string|null
-     */
-    public function getDescription()
-    {
-        return $this->container['description'];
-    }
-
-    /**
-     * Sets description
-     *
-     * @param string|null $description description
-     *
-     * @return self
-     */
-    public function setDescription($description)
-    {
-        if (is_null($description)) {
-            throw new \InvalidArgumentException('non-nullable description cannot be null');
-        }
-        $this->container['description'] = $description;
-
-        return $this;
-    }
-
-    /**
      * Gets lifecycle_state
      *
      * @return \Divar\KenarApiClient\Model\AssetsGetOAuthScopesResponseLifeCycleState|null
@@ -414,6 +387,33 @@ class AssetsGetOAuthScopesResponseAppOauthScope implements ModelInterface, Array
             throw new \InvalidArgumentException('non-nullable lifecycle_state cannot be null');
         }
         $this->container['lifecycle_state'] = $lifecycle_state;
+
+        return $this;
+    }
+
+    /**
+     * Gets slug
+     *
+     * @return \Divar\KenarApiClient\Model\OAuthScopeScope|null
+     */
+    public function getSlug()
+    {
+        return $this->container['slug'];
+    }
+
+    /**
+     * Sets slug
+     *
+     * @param \Divar\KenarApiClient\Model\OAuthScopeScope|null $slug slug
+     *
+     * @return self
+     */
+    public function setSlug($slug)
+    {
+        if (is_null($slug)) {
+            throw new \InvalidArgumentException('non-nullable slug cannot be null');
+        }
+        $this->container['slug'] = $slug;
 
         return $this;
     }

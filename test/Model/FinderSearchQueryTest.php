@@ -89,27 +89,27 @@ class FinderSearchQueryTest extends TestCase
     }
 
     /**
+     * Test attribute "credit"
+     */
+    public function testPropertyCredit()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "only_with_parking"
+     */
+    public function testPropertyOnlyWithParking()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "production_year"
      */
     public function testPropertyProductionYear()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "usage"
-     */
-    public function testPropertyUsage()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "rooms"
-     */
-    public function testPropertyRooms()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -125,9 +125,9 @@ class FinderSearchQueryTest extends TestCase
     }
 
     /**
-     * Test attribute "credit"
+     * Test attribute "rooms"
      */
-    public function testPropertyCredit()
+    public function testPropertyRooms()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -143,9 +143,9 @@ class FinderSearchQueryTest extends TestCase
     }
 
     /**
-     * Test attribute "only_with_parking"
+     * Test attribute "usage"
      */
-    public function testPropertyOnlyWithParking()
+    public function testPropertyUsage()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

@@ -89,6 +89,15 @@ class AuthorizationAPICallerInfoTest extends TestCase
     }
 
     /**
+     * Test attribute "api_key_id_v2"
+     */
+    public function testPropertyApiKeyIdV2()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "app"
      */
     public function testPropertyApp()
@@ -101,15 +110,6 @@ class AuthorizationAPICallerInfoTest extends TestCase
      * Test attribute "scopes"
      */
     public function testPropertyScopes()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "api_key_id_v2"
-     */
-    public function testPropertyApiKeyIdV2()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

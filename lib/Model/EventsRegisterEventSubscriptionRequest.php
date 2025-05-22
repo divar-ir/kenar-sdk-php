@@ -57,8 +57,8 @@ class EventsRegisterEventSubscriptionRequest implements ModelInterface, ArrayAcc
       * @var string[]
       */
     protected static $openAPITypes = [
-        'event_type' => '\Divar\KenarApiClient\Model\EventsRegisterEventSubscriptionRequestEventType',
         'event_resource_id' => 'string',
+        'event_type' => '\Divar\KenarApiClient\Model\EventsRegisterEventSubscriptionRequestEventType',
         'metadata' => 'object'
     ];
 
@@ -70,8 +70,8 @@ class EventsRegisterEventSubscriptionRequest implements ModelInterface, ArrayAcc
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'event_type' => null,
         'event_resource_id' => null,
+        'event_type' => null,
         'metadata' => null
     ];
 
@@ -81,8 +81,8 @@ class EventsRegisterEventSubscriptionRequest implements ModelInterface, ArrayAcc
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'event_type' => false,
         'event_resource_id' => false,
+        'event_type' => false,
         'metadata' => false
     ];
 
@@ -172,8 +172,8 @@ class EventsRegisterEventSubscriptionRequest implements ModelInterface, ArrayAcc
      * @var string[]
      */
     protected static $attributeMap = [
-        'event_type' => 'event_type',
         'event_resource_id' => 'event_resource_id',
+        'event_type' => 'event_type',
         'metadata' => 'metadata'
     ];
 
@@ -183,8 +183,8 @@ class EventsRegisterEventSubscriptionRequest implements ModelInterface, ArrayAcc
      * @var string[]
      */
     protected static $setters = [
-        'event_type' => 'setEventType',
         'event_resource_id' => 'setEventResourceId',
+        'event_type' => 'setEventType',
         'metadata' => 'setMetadata'
     ];
 
@@ -194,8 +194,8 @@ class EventsRegisterEventSubscriptionRequest implements ModelInterface, ArrayAcc
      * @var string[]
      */
     protected static $getters = [
-        'event_type' => 'getEventType',
         'event_resource_id' => 'getEventResourceId',
+        'event_type' => 'getEventType',
         'metadata' => 'getMetadata'
     ];
 
@@ -256,8 +256,8 @@ class EventsRegisterEventSubscriptionRequest implements ModelInterface, ArrayAcc
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('event_type', $data ?? [], null);
         $this->setIfExists('event_resource_id', $data ?? [], null);
+        $this->setIfExists('event_type', $data ?? [], null);
         $this->setIfExists('metadata', $data ?? [], null);
     }
 
@@ -304,33 +304,6 @@ class EventsRegisterEventSubscriptionRequest implements ModelInterface, ArrayAcc
 
 
     /**
-     * Gets event_type
-     *
-     * @return \Divar\KenarApiClient\Model\EventsRegisterEventSubscriptionRequestEventType|null
-     */
-    public function getEventType()
-    {
-        return $this->container['event_type'];
-    }
-
-    /**
-     * Sets event_type
-     *
-     * @param \Divar\KenarApiClient\Model\EventsRegisterEventSubscriptionRequestEventType|null $event_type event_type
-     *
-     * @return self
-     */
-    public function setEventType($event_type)
-    {
-        if (is_null($event_type)) {
-            throw new \InvalidArgumentException('non-nullable event_type cannot be null');
-        }
-        $this->container['event_type'] = $event_type;
-
-        return $this;
-    }
-
-    /**
      * Gets event_resource_id
      *
      * @return string|null
@@ -353,6 +326,33 @@ class EventsRegisterEventSubscriptionRequest implements ModelInterface, ArrayAcc
             throw new \InvalidArgumentException('non-nullable event_resource_id cannot be null');
         }
         $this->container['event_resource_id'] = $event_resource_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets event_type
+     *
+     * @return \Divar\KenarApiClient\Model\EventsRegisterEventSubscriptionRequestEventType|null
+     */
+    public function getEventType()
+    {
+        return $this->container['event_type'];
+    }
+
+    /**
+     * Sets event_type
+     *
+     * @param \Divar\KenarApiClient\Model\EventsRegisterEventSubscriptionRequestEventType|null $event_type event_type
+     *
+     * @return self
+     */
+    public function setEventType($event_type)
+    {
+        if (is_null($event_type)) {
+            throw new \InvalidArgumentException('non-nullable event_type cannot be null');
+        }
+        $this->container['event_type'] = $event_type;
 
         return $this;
     }
