@@ -4,14 +4,14 @@ All URIs are relative to https://open-api.divar.ir, except if the operation defi
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**addonsCreatePostAddonV2()**](AddonsApi.md#addonsCreatePostAddonV2) | **POST** /v2/open-platform/addons/post/{token} | Attach a new Addon to a post |
-| [**addonsCreateUserAddonV2()**](AddonsApi.md#addonsCreateUserAddonV2) | **POST** /v2/open-platform/addons/user/{phone} | Attach a new Addon to a user |
-| [**addonsCreateUserAddonV22()**](AddonsApi.md#addonsCreateUserAddonV22) | **POST** /v2/open-platform/addons/users/{divar_user_id} | Attach a new Addon to a user |
-| [**addonsDeletePostAddon()**](AddonsApi.md#addonsDeletePostAddon) | **DELETE** /v1/open-platform/add-ons/post/{token} | Delete an Addon from a post |
-| [**addonsDeletePostAddon2()**](AddonsApi.md#addonsDeletePostAddon2) | **DELETE** /v1/open-platform/addons/post/{token} | Delete an Addon from a post |
-| [**addonsDeleteUserAddon()**](AddonsApi.md#addonsDeleteUserAddon) | **DELETE** /v1/open-platform/addons/user/{id} | Delete an UserAddon |
-| [**addonsGetUserAddons()**](AddonsApi.md#addonsGetUserAddons) | **GET** /v1/open-platform/addons/user/{phone} | Retrieve all UserAddons |
-| [**addonsGetUserAddons2()**](AddonsApi.md#addonsGetUserAddons2) | **GET** /v2/open-platform/addons/users/{divar_user_id} | Retrieve all UserAddons |
+| [**addonsCreatePostAddonV2()**](AddonsApi.md#addonsCreatePostAddonV2) | **POST** /v2/open-platform/addons/post/{token} | افزودن افزونه جدید به آگهی |
+| [**addonsCreateUserAddonV2()**](AddonsApi.md#addonsCreateUserAddonV2) | **POST** /v2/open-platform/addons/user/{phone} | افزودن افزونه جدید به کاربر |
+| [**addonsCreateUserAddonV22()**](AddonsApi.md#addonsCreateUserAddonV22) | **POST** /v2/open-platform/addons/users/{divar_user_id} | افزودن افزونه جدید به کاربر |
+| [**addonsDeletePostAddon()**](AddonsApi.md#addonsDeletePostAddon) | **DELETE** /v1/open-platform/add-ons/post/{token} | حذف افزونه از آگهی |
+| [**addonsDeletePostAddon2()**](AddonsApi.md#addonsDeletePostAddon2) | **DELETE** /v1/open-platform/addons/post/{token} | حذف افزونه از آگهی |
+| [**addonsDeleteUserAddon()**](AddonsApi.md#addonsDeleteUserAddon) | **DELETE** /v1/open-platform/addons/user/{id} | حذف افزونه کاربر |
+| [**addonsGetUserAddons()**](AddonsApi.md#addonsGetUserAddons) | **GET** /v1/open-platform/addons/user/{phone} | دریافت تمام افزونه‌های کاربر |
+| [**addonsGetUserAddons2()**](AddonsApi.md#addonsGetUserAddons2) | **GET** /v2/open-platform/addons/users/{divar_user_id} | دریافت تمام افزونه‌های کاربر |
 
 
 ## `addonsCreatePostAddonV2()`
@@ -20,9 +20,9 @@ All URIs are relative to https://open-api.divar.ir, except if the operation defi
 addonsCreatePostAddonV2($token, $addons_create_post_addon_v2_body): object
 ```
 
-Attach a new Addon to a post
+افزودن افزونه جدید به آگهی
 
-Using this API and with user permission, you can attach a new AD to a post. You can use available widgets to design your Addon. This API need access token having one of the following scopes: - USER_POSTS_ADDON_CREATE - POST_ADDON_CREATE.{post_token}
+با استفاده از این API و با مجوز کاربر، می‌توانید افزونه جدیدی به آگهی متصل کنید. می‌توانید از ویجت‌های موجود برای طراحی افزونه خود استفاده کنید. این API به توکن دسترسی با یکی از دامنه‌های زیر نیاز دارد: - USER_POSTS_ADDON_CREATE - POST_ADDON_CREATE.{post_token}
 
 ### Example
 
@@ -84,9 +84,9 @@ try {
 addonsCreateUserAddonV2($phone, $addons_create_user_addon_v2_body): \Divar\KenarApiClient\Model\AddonsCreateUserAddonResponseV2
 ```
 
-Attach a new Addon to a user
+افزودن افزونه جدید به کاربر
 
-Using this API and with user permission, you can create a UserAddon. UserAddon will attach to all user posts in future and also back fills last 30 posts in the past. You can use available widgets to design your UserAddon. This API need access token having `USER_ADDON_CREATE` scope
+با استفاده از این API و با مجوز کاربر، می‌توانید افزونه کاربر ایجاد کنید. افزونه کاربر به تمام آگهی‌های آینده کاربر متصل می‌شود و همچنین 30 آگهی آخر گذشته را پر می‌کند. می‌توانید از ویجت‌های موجود برای طراحی افزونه کاربر خود استفاده کنید. این API به توکن دسترسی با دامنه `USER_ADDON_CREATE` نیاز دارد
 
 ### Example
 
@@ -148,9 +148,9 @@ try {
 addonsCreateUserAddonV22($divar_user_id, $addons_create_user_addon_v2_body): \Divar\KenarApiClient\Model\AddonsCreateUserAddonResponseV2
 ```
 
-Attach a new Addon to a user
+افزودن افزونه جدید به کاربر
 
-Using this API and with user permission, you can create a UserAddon. UserAddon will attach to all user posts in future and also back fills last 30 posts in the past. You can use available widgets to design your UserAddon. This API need access token having `USER_ADDON_CREATE` scope
+با استفاده از این API و با مجوز کاربر، می‌توانید افزونه کاربر ایجاد کنید. افزونه کاربر به تمام آگهی‌های آینده کاربر متصل می‌شود و همچنین 30 آگهی آخر گذشته را پر می‌کند. می‌توانید از ویجت‌های موجود برای طراحی افزونه کاربر خود استفاده کنید. این API به توکن دسترسی با دامنه `USER_ADDON_CREATE` نیاز دارد
 
 ### Example
 
@@ -212,9 +212,9 @@ try {
 addonsDeletePostAddon($token): object
 ```
 
-Delete an Addon from a post
+حذف افزونه از آگهی
 
-You can only delete addons which are created by your app.
+فقط می‌توانید افزونه‌هایی را حذف کنید که توسط اپلیکیشن شما ایجاد شده‌اند.
 
 ### Example
 
@@ -274,9 +274,9 @@ try {
 addonsDeletePostAddon2($token): object
 ```
 
-Delete an Addon from a post
+حذف افزونه از آگهی
 
-You can only delete addons which are created by your app.
+فقط می‌توانید افزونه‌هایی را حذف کنید که توسط اپلیکیشن شما ایجاد شده‌اند.
 
 ### Example
 
@@ -336,9 +336,9 @@ try {
 addonsDeleteUserAddon($id): object
 ```
 
-Delete an UserAddon
+حذف افزونه کاربر
 
-This will delete all correlated Addons to all user posts. You can only delete Addons which are created by your app.
+این تمام افزونه‌های مرتبط با تمام آگهی‌های کاربر را حذف می‌کند. فقط می‌توانید افزونه‌هایی را حذف کنید که توسط اپلیکیشن شما ایجاد شده‌اند.
 
 ### Example
 
@@ -398,9 +398,9 @@ try {
 addonsGetUserAddons($phone, $divar_user_id): \Divar\KenarApiClient\Model\AddonsGetUserAddonsResponse
 ```
 
-Retrieve all UserAddons
+دریافت تمام افزونه‌های کاربر
 
-Retrieve all UserAddons of a user.
+دریافت تمام افزونه‌های کاربر یک کاربر.
 
 ### Example
 
@@ -462,9 +462,9 @@ try {
 addonsGetUserAddons2($divar_user_id, $phone): \Divar\KenarApiClient\Model\AddonsGetUserAddonsResponse
 ```
 
-Retrieve all UserAddons
+دریافت تمام افزونه‌های کاربر
 
-Retrieve all UserAddons of a user.
+دریافت تمام افزونه‌های کاربر یک کاربر.
 
 ### Example
 

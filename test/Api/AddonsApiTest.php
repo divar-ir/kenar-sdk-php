@@ -74,7 +74,7 @@ class AddonsApiTest extends TestCase
     /**
      * Test case for addonsCreatePostAddonV2
      *
-     * Attach a new Addon to a post.
+     * افزودن افزونه جدید به آگهی.
      *
      */
     public function testAddonsCreatePostAddonV2()
@@ -86,7 +86,7 @@ class AddonsApiTest extends TestCase
     /**
      * Test case for addonsCreateUserAddonV2
      *
-     * Attach a new Addon to a user.
+     * افزودن افزونه جدید به کاربر.
      *
      */
     public function testAddonsCreateUserAddonV2()
@@ -98,7 +98,7 @@ class AddonsApiTest extends TestCase
     /**
      * Test case for addonsCreateUserAddonV22
      *
-     * Attach a new Addon to a user.
+     * افزودن افزونه جدید به کاربر.
      *
      */
     public function testAddonsCreateUserAddonV22()
@@ -110,7 +110,7 @@ class AddonsApiTest extends TestCase
     /**
      * Test case for addonsDeletePostAddon
      *
-     * Delete an Addon from a post.
+     * حذف افزونه از آگهی.
      *
      */
     public function testAddonsDeletePostAddon()
@@ -122,7 +122,7 @@ class AddonsApiTest extends TestCase
     /**
      * Test case for addonsDeletePostAddon2
      *
-     * Delete an Addon from a post.
+     * حذف افزونه از آگهی.
      *
      */
     public function testAddonsDeletePostAddon2()
@@ -134,7 +134,7 @@ class AddonsApiTest extends TestCase
     /**
      * Test case for addonsDeleteUserAddon
      *
-     * Delete an UserAddon.
+     * حذف افزونه کاربر.
      *
      */
     public function testAddonsDeleteUserAddon()
@@ -146,7 +146,7 @@ class AddonsApiTest extends TestCase
     /**
      * Test case for addonsGetUserAddons
      *
-     * Retrieve all UserAddons.
+     * دریافت تمام افزونه‌های کاربر.
      *
      */
     public function testAddonsGetUserAddons()
@@ -158,7 +158,7 @@ class AddonsApiTest extends TestCase
     /**
      * Test case for addonsGetUserAddons2
      *
-     * Retrieve all UserAddons.
+     * دریافت تمام افزونه‌های کاربر.
      *
      */
     public function testAddonsGetUserAddons2()

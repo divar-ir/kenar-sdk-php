@@ -131,7 +131,7 @@ class PostApi
     /**
      * Operation postEditPost
      *
-     * Edit a post
+     * ویرایش آگهی
      *
      * @param  string $post_token post_token (required)
      * @param  \Divar\KenarApiClient\Model\PostEditPostBody $post_edit_post_body post_edit_post_body (required)
@@ -150,7 +150,7 @@ class PostApi
     /**
      * Operation postEditPostWithHttpInfo
      *
-     * Edit a post
+     * ویرایش آگهی
      *
      * @param  string $post_token (required)
      * @param  \Divar\KenarApiClient\Model\PostEditPostBody $post_edit_post_body (required)
@@ -250,7 +250,7 @@ class PostApi
     /**
      * Operation postEditPostAsync
      *
-     * Edit a post
+     * ویرایش آگهی
      *
      * @param  string $post_token (required)
      * @param  \Divar\KenarApiClient\Model\PostEditPostBody $post_edit_post_body (required)
@@ -272,7 +272,7 @@ class PostApi
     /**
      * Operation postEditPostAsyncWithHttpInfo
      *
-     * Edit a post
+     * ویرایش آگهی
      *
      * @param  string $post_token (required)
      * @param  \Divar\KenarApiClient\Model\PostEditPostBody $post_edit_post_body (required)
@@ -437,7 +437,7 @@ class PostApi
     /**
      * Operation postGetImageUploadURL
      *
-     * Get image upload URL
+     * دریافت URL آپلود تصویر
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postGetImageUploadURL'] to see the possible values for this operation
      *
@@ -454,7 +454,7 @@ class PostApi
     /**
      * Operation postGetImageUploadURLWithHttpInfo
      *
-     * Get image upload URL
+     * دریافت URL آپلود تصویر
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postGetImageUploadURL'] to see the possible values for this operation
      *
@@ -552,7 +552,7 @@ class PostApi
     /**
      * Operation postGetImageUploadURLAsync
      *
-     * Get image upload URL
+     * دریافت URL آپلود تصویر
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postGetImageUploadURL'] to see the possible values for this operation
      *
@@ -572,7 +572,7 @@ class PostApi
     /**
      * Operation postGetImageUploadURLAsyncWithHttpInfo
      *
-     * Get image upload URL
+     * دریافت URL آپلود تصویر
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postGetImageUploadURL'] to see the possible values for this operation
      *

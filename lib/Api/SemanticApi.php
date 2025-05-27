@@ -140,7 +140,7 @@ class SemanticApi
     /**
      * Operation semanticCreatePostSemantic
      *
-     * Create Post Semantic
+     * ایجاد اطلاعات معنایی آگهی
      *
      * @param  string $token token (required)
      * @param  \Divar\KenarApiClient\Model\SemanticCreatePostSemanticBody $semantic_create_post_semantic_body semantic_create_post_semantic_body (required)
@@ -159,7 +159,7 @@ class SemanticApi
     /**
      * Operation semanticCreatePostSemanticWithHttpInfo
      *
-     * Create Post Semantic
+     * ایجاد اطلاعات معنایی آگهی
      *
      * @param  string $token (required)
      * @param  \Divar\KenarApiClient\Model\SemanticCreatePostSemanticBody $semantic_create_post_semantic_body (required)
@@ -259,7 +259,7 @@ class SemanticApi
     /**
      * Operation semanticCreatePostSemanticAsync
      *
-     * Create Post Semantic
+     * ایجاد اطلاعات معنایی آگهی
      *
      * @param  string $token (required)
      * @param  \Divar\KenarApiClient\Model\SemanticCreatePostSemanticBody $semantic_create_post_semantic_body (required)
@@ -281,7 +281,7 @@ class SemanticApi
     /**
      * Operation semanticCreatePostSemanticAsyncWithHttpInfo
      *
-     * Create Post Semantic
+     * ایجاد اطلاعات معنایی آگهی
      *
      * @param  string $token (required)
      * @param  \Divar\KenarApiClient\Model\SemanticCreatePostSemanticBody $semantic_create_post_semantic_body (required)
@@ -446,7 +446,7 @@ class SemanticApi
     /**
      * Operation semanticCreateUserSemantic
      *
-     * Create User Semantic
+     * ایجاد اطلاعات معنایی کاربر
      *
      * @param  string $phone phone (required)
      * @param  \Divar\KenarApiClient\Model\SemanticCreateUserSemanticBody $semantic_create_user_semantic_body semantic_create_user_semantic_body (required)
@@ -465,7 +465,7 @@ class SemanticApi
     /**
      * Operation semanticCreateUserSemanticWithHttpInfo
      *
-     * Create User Semantic
+     * ایجاد اطلاعات معنایی کاربر
      *
      * @param  string $phone (required)
      * @param  \Divar\KenarApiClient\Model\SemanticCreateUserSemanticBody $semantic_create_user_semantic_body (required)
@@ -565,7 +565,7 @@ class SemanticApi
     /**
      * Operation semanticCreateUserSemanticAsync
      *
-     * Create User Semantic
+     * ایجاد اطلاعات معنایی کاربر
      *
      * @param  string $phone (required)
      * @param  \Divar\KenarApiClient\Model\SemanticCreateUserSemanticBody $semantic_create_user_semantic_body (required)
@@ -587,7 +587,7 @@ class SemanticApi
     /**
      * Operation semanticCreateUserSemanticAsyncWithHttpInfo
      *
-     * Create User Semantic
+     * ایجاد اطلاعات معنایی کاربر
      *
      * @param  string $phone (required)
      * @param  \Divar\KenarApiClient\Model\SemanticCreateUserSemanticBody $semantic_create_user_semantic_body (required)
@@ -752,7 +752,7 @@ class SemanticApi
     /**
      * Operation semanticCreateUserSemantic2
      *
-     * Create User Semantic
+     * ایجاد اطلاعات معنایی کاربر
      *
      * @param  string $divar_user_id divar_user_id (required)
      * @param  \Divar\KenarApiClient\Model\SemanticCreateUserSemanticBody $semantic_create_user_semantic_body semantic_create_user_semantic_body (required)
@@ -771,7 +771,7 @@ class SemanticApi
     /**
      * Operation semanticCreateUserSemantic2WithHttpInfo
      *
-     * Create User Semantic
+     * ایجاد اطلاعات معنایی کاربر
      *
      * @param  string $divar_user_id (required)
      * @param  \Divar\KenarApiClient\Model\SemanticCreateUserSemanticBody $semantic_create_user_semantic_body (required)
@@ -871,7 +871,7 @@ class SemanticApi
     /**
      * Operation semanticCreateUserSemantic2Async
      *
-     * Create User Semantic
+     * ایجاد اطلاعات معنایی کاربر
      *
      * @param  string $divar_user_id (required)
      * @param  \Divar\KenarApiClient\Model\SemanticCreateUserSemanticBody $semantic_create_user_semantic_body (required)
@@ -893,7 +893,7 @@ class SemanticApi
     /**
      * Operation semanticCreateUserSemantic2AsyncWithHttpInfo
      *
-     * Create User Semantic
+     * ایجاد اطلاعات معنایی کاربر
      *
      * @param  string $divar_user_id (required)
      * @param  \Divar\KenarApiClient\Model\SemanticCreateUserSemanticBody $semantic_create_user_semantic_body (required)
@@ -1058,7 +1058,7 @@ class SemanticApi
     /**
      * Operation semanticDeleteUserSemantic
      *
-     * Delete User Semantic
+     * حذف اطلاعات معنایی کاربر
      *
      * @param  string $phone phone (required)
      * @param  string|null $divar_user_id divar_user_id (optional)
@@ -1077,7 +1077,7 @@ class SemanticApi
     /**
      * Operation semanticDeleteUserSemanticWithHttpInfo
      *
-     * Delete User Semantic
+     * حذف اطلاعات معنایی کاربر
      *
      * @param  string $phone (required)
      * @param  string|null $divar_user_id (optional)
@@ -1177,7 +1177,7 @@ class SemanticApi
     /**
      * Operation semanticDeleteUserSemanticAsync
      *
-     * Delete User Semantic
+     * حذف اطلاعات معنایی کاربر
      *
      * @param  string $phone (required)
      * @param  string|null $divar_user_id (optional)
@@ -1199,7 +1199,7 @@ class SemanticApi
     /**
      * Operation semanticDeleteUserSemanticAsyncWithHttpInfo
      *
-     * Delete User Semantic
+     * حذف اطلاعات معنایی کاربر
      *
      * @param  string $phone (required)
      * @param  string|null $divar_user_id (optional)
@@ -1360,7 +1360,7 @@ class SemanticApi
     /**
      * Operation semanticDeleteUserSemantic2
      *
-     * Delete User Semantic
+     * حذف اطلاعات معنایی کاربر
      *
      * @param  string $divar_user_id divar_user_id (required)
      * @param  string|null $phone phone (optional)
@@ -1379,7 +1379,7 @@ class SemanticApi
     /**
      * Operation semanticDeleteUserSemantic2WithHttpInfo
      *
-     * Delete User Semantic
+     * حذف اطلاعات معنایی کاربر
      *
      * @param  string $divar_user_id (required)
      * @param  string|null $phone (optional)
@@ -1479,7 +1479,7 @@ class SemanticApi
     /**
      * Operation semanticDeleteUserSemantic2Async
      *
-     * Delete User Semantic
+     * حذف اطلاعات معنایی کاربر
      *
      * @param  string $divar_user_id (required)
      * @param  string|null $phone (optional)
@@ -1501,7 +1501,7 @@ class SemanticApi
     /**
      * Operation semanticDeleteUserSemantic2AsyncWithHttpInfo
      *
-     * Delete User Semantic
+     * حذف اطلاعات معنایی کاربر
      *
      * @param  string $divar_user_id (required)
      * @param  string|null $phone (optional)

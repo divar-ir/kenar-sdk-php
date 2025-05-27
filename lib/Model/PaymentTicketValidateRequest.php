@@ -323,7 +323,7 @@ class PaymentTicketValidateRequest implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets phone_number
      *
-     * @param string|null $phone_number Deprecated. Use divar_user_id.
+     * @param string|null $phone_number منسوخ شده. از divar_user_id استفاده کنید.
      *
      * @return self
      */

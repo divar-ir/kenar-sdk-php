@@ -152,6 +152,15 @@ class FinderGetPostResponseTest extends TestCase
     }
 
     /**
+     * Test attribute "supplier_chat_assistant_enabled"
+     */
+    public function testPropertySupplierChatAssistantEnabled()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "token"
      */
     public function testPropertyToken()

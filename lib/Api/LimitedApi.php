@@ -83,6 +83,9 @@ class LimitedApi
         'paymentGetTransaction' => [
             'application/json',
         ],
+        'paymentListTransactions' => [
+            'application/json',
+        ],
         'paymentReorderPost' => [
             'application/json',
         ],
@@ -396,9 +399,9 @@ class LimitedApi
     /**
      * Operation paymentGetPostPricing
      *
-     * Retrieve the cost of the service
+     * دریافت هزینه سرویس
      *
-     * @param  string $post_token An 8-9 character unique identifier for the post (required)
+     * @param  string $post_token شناسه منحصر به فرد 8-9 کاراکتری برای آگهی (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['paymentGetPostPricing'] to see the possible values for this operation
      *
      * @throws \Divar\KenarApiClient\ApiException on non-2xx response or if the response body is not in the expected format
@@ -414,9 +417,9 @@ class LimitedApi
     /**
      * Operation paymentGetPostPricingWithHttpInfo
      *
-     * Retrieve the cost of the service
+     * دریافت هزینه سرویس
      *
-     * @param  string $post_token An 8-9 character unique identifier for the post (required)
+     * @param  string $post_token شناسه منحصر به فرد 8-9 کاراکتری برای آگهی (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['paymentGetPostPricing'] to see the possible values for this operation
      *
      * @throws \Divar\KenarApiClient\ApiException on non-2xx response or if the response body is not in the expected format
@@ -513,9 +516,9 @@ class LimitedApi
     /**
      * Operation paymentGetPostPricingAsync
      *
-     * Retrieve the cost of the service
+     * دریافت هزینه سرویس
      *
-     * @param  string $post_token An 8-9 character unique identifier for the post (required)
+     * @param  string $post_token شناسه منحصر به فرد 8-9 کاراکتری برای آگهی (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['paymentGetPostPricing'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -534,9 +537,9 @@ class LimitedApi
     /**
      * Operation paymentGetPostPricingAsyncWithHttpInfo
      *
-     * Retrieve the cost of the service
+     * دریافت هزینه سرویس
      *
-     * @param  string $post_token An 8-9 character unique identifier for the post (required)
+     * @param  string $post_token شناسه منحصر به فرد 8-9 کاراکتری برای آگهی (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['paymentGetPostPricing'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -586,7 +589,7 @@ class LimitedApi
     /**
      * Create request for operation 'paymentGetPostPricing'
      *
-     * @param  string $post_token An 8-9 character unique identifier for the post (required)
+     * @param  string $post_token شناسه منحصر به فرد 8-9 کاراکتری برای آگهی (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['paymentGetPostPricing'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -683,7 +686,7 @@ class LimitedApi
     /**
      * Operation paymentGetTransaction
      *
-     * @param  string $id The unique identifier for the transaction, same as the id in the request (required)
+     * @param  string $id شناسه منحصر به فرد برای تراکنش، همان id در درخواست (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['paymentGetTransaction'] to see the possible values for this operation
      *
      * @throws \Divar\KenarApiClient\ApiException on non-2xx response or if the response body is not in the expected format
@@ -699,7 +702,7 @@ class LimitedApi
     /**
      * Operation paymentGetTransactionWithHttpInfo
      *
-     * @param  string $id The unique identifier for the transaction, same as the id in the request (required)
+     * @param  string $id شناسه منحصر به فرد برای تراکنش، همان id در درخواست (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['paymentGetTransaction'] to see the possible values for this operation
      *
      * @throws \Divar\KenarApiClient\ApiException on non-2xx response or if the response body is not in the expected format
@@ -796,7 +799,7 @@ class LimitedApi
     /**
      * Operation paymentGetTransactionAsync
      *
-     * @param  string $id The unique identifier for the transaction, same as the id in the request (required)
+     * @param  string $id شناسه منحصر به فرد برای تراکنش، همان id در درخواست (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['paymentGetTransaction'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -815,7 +818,7 @@ class LimitedApi
     /**
      * Operation paymentGetTransactionAsyncWithHttpInfo
      *
-     * @param  string $id The unique identifier for the transaction, same as the id in the request (required)
+     * @param  string $id شناسه منحصر به فرد برای تراکنش، همان id در درخواست (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['paymentGetTransaction'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -865,7 +868,7 @@ class LimitedApi
     /**
      * Create request for operation 'paymentGetTransaction'
      *
-     * @param  string $id The unique identifier for the transaction, same as the id in the request (required)
+     * @param  string $id شناسه منحصر به فرد برای تراکنش، همان id در درخواست (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['paymentGetTransaction'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -899,6 +902,295 @@ class LimitedApi
                 $resourcePath
             );
         }
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation paymentListTransactions
+     *
+     * @param  int|null $page_size Number of transactions to return per page (optional)
+     * @param  string|null $page_token Token for the next page of results (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['paymentListTransactions'] to see the possible values for this operation
+     *
+     * @throws \Divar\KenarApiClient\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return \Divar\KenarApiClient\Model\PaymentListTransactionsResponse|\Divar\KenarApiClient\Model\GooglerpcStatus
+     */
+    public function paymentListTransactions($page_size = null, $page_token = null, string $contentType = self::contentTypes['paymentListTransactions'][0])
+    {
+        list($response) = $this->paymentListTransactionsWithHttpInfo($page_size, $page_token, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation paymentListTransactionsWithHttpInfo
+     *
+     * @param  int|null $page_size Number of transactions to return per page (optional)
+     * @param  string|null $page_token Token for the next page of results (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['paymentListTransactions'] to see the possible values for this operation
+     *
+     * @throws \Divar\KenarApiClient\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of \Divar\KenarApiClient\Model\PaymentListTransactionsResponse|\Divar\KenarApiClient\Model\GooglerpcStatus, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function paymentListTransactionsWithHttpInfo($page_size = null, $page_token = null, string $contentType = self::contentTypes['paymentListTransactions'][0])
+    {
+        $request = $this->paymentListTransactionsRequest($page_size, $page_token, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+
+            switch($statusCode) {
+                case 200:
+                    return $this->handleResponseWithDataType(
+                        '\Divar\KenarApiClient\Model\PaymentListTransactionsResponse',
+                        $request,
+                        $response,
+                    );
+                default:
+                    return $this->handleResponseWithDataType(
+                        '\Divar\KenarApiClient\Model\GooglerpcStatus',
+                        $request,
+                        $response,
+                    );
+            }
+
+            
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return $this->handleResponseWithDataType(
+                '\Divar\KenarApiClient\Model\PaymentListTransactionsResponse',
+                $request,
+                $response,
+            );
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Divar\KenarApiClient\Model\PaymentListTransactionsResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Divar\KenarApiClient\Model\GooglerpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+            }
+        
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation paymentListTransactionsAsync
+     *
+     * @param  int|null $page_size Number of transactions to return per page (optional)
+     * @param  string|null $page_token Token for the next page of results (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['paymentListTransactions'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function paymentListTransactionsAsync($page_size = null, $page_token = null, string $contentType = self::contentTypes['paymentListTransactions'][0])
+    {
+        return $this->paymentListTransactionsAsyncWithHttpInfo($page_size, $page_token, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation paymentListTransactionsAsyncWithHttpInfo
+     *
+     * @param  int|null $page_size Number of transactions to return per page (optional)
+     * @param  string|null $page_token Token for the next page of results (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['paymentListTransactions'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function paymentListTransactionsAsyncWithHttpInfo($page_size = null, $page_token = null, string $contentType = self::contentTypes['paymentListTransactions'][0])
+    {
+        $returnType = '\Divar\KenarApiClient\Model\PaymentListTransactionsResponse';
+        $request = $this->paymentListTransactionsRequest($page_size, $page_token, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'paymentListTransactions'
+     *
+     * @param  int|null $page_size Number of transactions to return per page (optional)
+     * @param  string|null $page_token Token for the next page of results (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['paymentListTransactions'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function paymentListTransactionsRequest($page_size = null, $page_token = null, string $contentType = self::contentTypes['paymentListTransactions'][0])
+    {
+
+
+
+
+        $resourcePath = '/experimental/open-platform/transactions';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $page_size,
+            'page_size', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $page_token,
+            'page_token', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
 
 
         $headers = $this->headerSelector->selectHeaders(

@@ -4,7 +4,7 @@ All URIs are relative to https://open-api.divar.ir, except if the operation defi
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**eventsRegisterEventSubscription()**](EventsApi.md#eventsRegisterEventSubscription) | **POST** /v1/open-platform/events/subscriptions | Subscribe to an event |
+| [**eventsRegisterEventSubscription()**](EventsApi.md#eventsRegisterEventSubscription) | **POST** /v1/open-platform/events/subscriptions | اشتراک در رویداد |
 
 
 ## `eventsRegisterEventSubscription()`
@@ -13,9 +13,9 @@ All URIs are relative to https://open-api.divar.ir, except if the operation defi
 eventsRegisterEventSubscription($events_register_event_subscription_request): object
 ```
 
-Subscribe to an event
+اشتراک در رویداد
 
-This requests allows you to subscribe to an event. You need to send access-token in this API to check your access. For subscribing on `NEW_MESSAGE_ON_POST` you need one of these scopes: - CHAT_POST_CONVERSATIONS_READ.{post_token} - CHAT_SUPPLIER_ALL_CONVERSATIONS_READ For subscribing on `POST_UPDATE` you need `USER_POSTS_GET` scope. After calling this API, You'll be notified in your webhook when corresponding event occurs. Make sure webhook URL is set on providers panel for your app. Some events are enabled by default and no subscription is needed for them(e.g chatbot messages).
+این درخواست به شما امکان اشتراک در رویداد را می‌دهد. باید access-token را در این API ارسال کنید تا دسترسی شما بررسی شود. برای اشتراک در `NEW_MESSAGE_ON_POST` به یکی از این دامنه‌ها نیاز دارید: - CHAT_POST_CONVERSATIONS_READ.{post_token} - CHAT_SUPPLIER_ALL_CONVERSATIONS_READ برای اشتراک در `POST_UPDATE` به دامنه `USER_POSTS_GET` نیاز دارید. پس از فراخوانی این API، هنگام وقوع رویداد مربوطه در webhook خود مطلع خواهید شد. مطمئن شوید URL webhook در پنل ارائه‌دهندگان برای اپلیکیشن شما تنظیم شده است. برخی رویدادها به طور پیش‌فرض فعال هستند و نیازی به اشتراک ندارند (مثل پیام‌های chatbot).
 
 ### Example
 

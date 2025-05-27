@@ -86,7 +86,7 @@ class LimitedApiTest extends TestCase
     /**
      * Test case for paymentGetPostPricing
      *
-     * Retrieve the cost of the service.
+     * دریافت هزینه سرویس.
      *
      */
     public function testPaymentGetPostPricing()
@@ -102,6 +102,18 @@ class LimitedApiTest extends TestCase
      *
      */
     public function testPaymentGetTransaction()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for paymentListTransactions
+     *
+     * .
+     *
+     */
+    public function testPaymentListTransactions()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

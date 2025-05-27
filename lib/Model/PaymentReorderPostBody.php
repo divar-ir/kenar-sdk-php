@@ -309,7 +309,7 @@ class PaymentReorderPostBody implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets extra_details
      *
-     * @param string|null $extra_details Additional details that you want to send to the Kenar side. This field is optional and can be used to solve inconsistencies in the transaction.
+     * @param string|null $extra_details جزئیات اضافی که می‌خواهید به سمت کنار ارسال کنید. این فیلد اختیاری است و می‌تواند برای حل ناسازگاری‌ها در تراکنش استفاده شود.
      *
      * @return self
      */
@@ -336,7 +336,7 @@ class PaymentReorderPostBody implements ModelInterface, ArrayAccess, \JsonSerial
     /**
      * Sets id
      *
-     * @param string|null $id A Version 4 uuid that must be unique for each payment. This uuid must be generated on your side and sent in the request. If an id is sent that has a successful or semi-successful transaction on the Kenar side, you will receive an error.
+     * @param string|null $id یک uuid نسخه 4 که باید برای هر پرداخت منحصر به فرد باشد. این uuid باید در سمت شما تولید شده و در درخواست ارسال شود. اگر id ای ارسال شود که تراکنش موفق یا نیمه موفقی در سمت کنار داشته باشد، خطا دریافت خواهید کرد.
      *
      * @return self
      */

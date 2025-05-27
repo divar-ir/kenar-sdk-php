@@ -74,7 +74,7 @@ class SemanticApiTest extends TestCase
     /**
      * Test case for semanticCreatePostSemantic
      *
-     * Create Post Semantic.
+     * ایجاد اطلاعات معنایی آگهی.
      *
      */
     public function testSemanticCreatePostSemantic()
@@ -86,7 +86,7 @@ class SemanticApiTest extends TestCase
     /**
      * Test case for semanticCreateUserSemantic
      *
-     * Create User Semantic.
+     * ایجاد اطلاعات معنایی کاربر.
      *
      */
     public function testSemanticCreateUserSemantic()
@@ -98,7 +98,7 @@ class SemanticApiTest extends TestCase
     /**
      * Test case for semanticCreateUserSemantic2
      *
-     * Create User Semantic.
+     * ایجاد اطلاعات معنایی کاربر.
      *
      */
     public function testSemanticCreateUserSemantic2()
@@ -110,7 +110,7 @@ class SemanticApiTest extends TestCase
     /**
      * Test case for semanticDeleteUserSemantic
      *
-     * Delete User Semantic.
+     * حذف اطلاعات معنایی کاربر.
      *
      */
     public function testSemanticDeleteUserSemantic()
@@ -122,7 +122,7 @@ class SemanticApiTest extends TestCase
     /**
      * Test case for semanticDeleteUserSemantic2
      *
-     * Delete User Semantic.
+     * حذف اطلاعات معنایی کاربر.
      *
      */
     public function testSemanticDeleteUserSemantic2()

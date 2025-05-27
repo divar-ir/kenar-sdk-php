@@ -4,8 +4,8 @@ All URIs are relative to https://open-api.divar.ir, except if the operation defi
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**postEditPost()**](PostApi.md#postEditPost) | **PUT** /v1/open-platform/post/{post_token} | Edit a post |
-| [**postGetImageUploadURL()**](PostApi.md#postGetImageUploadURL) | **GET** /v1/open-platform/post/image-upload-url | Get image upload URL |
+| [**postEditPost()**](PostApi.md#postEditPost) | **PUT** /v1/open-platform/post/{post_token} | ویرایش آگهی |
+| [**postGetImageUploadURL()**](PostApi.md#postGetImageUploadURL) | **GET** /v1/open-platform/post/image-upload-url | دریافت URL آپلود تصویر |
 
 
 ## `postEditPost()`
@@ -14,9 +14,9 @@ All URIs are relative to https://open-api.divar.ir, except if the operation defi
 postEditPost($post_token, $post_edit_post_body): object
 ```
 
-Edit a post
+ویرایش آگهی
 
-This API allows you to edit a post. This needs `POST_EDIT.{post_token}` OAuth scope. By now you can only edit title, description, and images of a post.
+این API به شما امکان ویرایش آگهی را می‌دهد. این نیاز به دامنه OAuth `POST_EDIT.{post_token}` دارد. در حال حاضر فقط می‌توانید عنوان، توضیحات و تصاویر آگهی را ویرایش کنید.
 
 ### Example
 
@@ -78,9 +78,9 @@ try {
 postGetImageUploadURL(): \Divar\KenarApiClient\Model\PostGetImageUploadURLResponse
 ```
 
-Get image upload URL
+دریافت URL آپلود تصویر
 
-This API allows you to get an upload URL for uploading images of a post. You can upload images to the returned URL using a POST request with binary encoding.
+این API به شما امکان دریافت URL آپلود برای آپلود تصاویر آگهی را می‌دهد. می‌توانید تصاویر را با استفاده از درخواست POST با کدگذاری باینری به URL برگشتی آپلود کنید.
 
 ### Example
 

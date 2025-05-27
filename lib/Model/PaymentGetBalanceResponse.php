@@ -302,7 +302,7 @@ class PaymentGetBalanceResponse implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets balance_rials
      *
-     * @param string|null $balance_rials The balance of the app in rials
+     * @param string|null $balance_rials موجودی اپلیکیشن به ریال
      *
      * @return self
      */

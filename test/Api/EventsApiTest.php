@@ -74,7 +74,7 @@ class EventsApiTest extends TestCase
     /**
      * Test case for eventsRegisterEventSubscription
      *
-     * Subscribe to an event.
+     * اشتراک در رویداد.
      *
      */
     public function testEventsRegisterEventSubscription()

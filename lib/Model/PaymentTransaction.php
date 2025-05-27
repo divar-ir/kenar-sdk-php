@@ -330,7 +330,7 @@ class PaymentTransaction implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets cost_rials
      *
-     * @param string|null $cost_rials The cost of the transaction in rials for your application
+     * @param string|null $cost_rials هزینه تراکنش به ریال برای اپلیکیشن شما
      *
      * @return self
      */
@@ -357,7 +357,7 @@ class PaymentTransaction implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets extra_details
      *
-     * @param string|null $extra_details Same Additional details which you sent in the request
+     * @param string|null $extra_details همان جزئیات اضافی که در درخواست ارسال کردید
      *
      * @return self
      */
@@ -384,7 +384,7 @@ class PaymentTransaction implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets id
      *
-     * @param string|null $id Same uuid when creating transaction
+     * @param string|null $id همان uuid هنگام ایجاد تراکنش
      *
      * @return self
      */

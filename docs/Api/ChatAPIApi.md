@@ -4,12 +4,12 @@ All URIs are relative to https://open-api.divar.ir, except if the operation defi
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**chatAPIChatBotSendMessage()**](ChatAPIApi.md#chatAPIChatBotSendMessage) | **POST** /experimental/open-platform/chatbot-conversations/{conversation_id}/messages | Send a message to a ChatBot conversation |
-| [**chatAPIChatBotSendMessage2()**](ChatAPIApi.md#chatAPIChatBotSendMessage2) | **POST** /experimental/open-platform/chat/bot/users/{user_id}/messages | Send a message to a ChatBot conversation |
-| [**chatAPIChatBotSendMessage3()**](ChatAPIApi.md#chatAPIChatBotSendMessage3) | **POST** /experimental/open-platform/chat/bot/conversations/{conversation_id}/messages | Send a message to a ChatBot conversation |
-| [**chatAPIConversationSendMessage()**](ChatAPIApi.md#chatAPIConversationSendMessage) | **POST** /v2/open-platform/conversations/{conversation_id}/messages | Send a message to a conversation |
-| [**chatAPIGenerateUploadToken()**](ChatAPIApi.md#chatAPIGenerateUploadToken) | **POST** /experimental/open-platform/chat/upload | Generate an upload token |
-| [**chatAPIGetConversation()**](ChatAPIApi.md#chatAPIGetConversation) | **GET** /v1/open-platform/chat/conversations/{conversation_id} | Get Conversation by it&#39;s ID |
+| [**chatAPIChatBotSendMessage()**](ChatAPIApi.md#chatAPIChatBotSendMessage) | **POST** /experimental/open-platform/chatbot-conversations/{conversation_id}/messages | ارسال پیام به مکالمه ChatBot |
+| [**chatAPIChatBotSendMessage2()**](ChatAPIApi.md#chatAPIChatBotSendMessage2) | **POST** /experimental/open-platform/chat/bot/users/{user_id}/messages | ارسال پیام به مکالمه ChatBot |
+| [**chatAPIChatBotSendMessage3()**](ChatAPIApi.md#chatAPIChatBotSendMessage3) | **POST** /experimental/open-platform/chat/bot/conversations/{conversation_id}/messages | ارسال پیام به مکالمه ChatBot |
+| [**chatAPIConversationSendMessage()**](ChatAPIApi.md#chatAPIConversationSendMessage) | **POST** /v2/open-platform/conversations/{conversation_id}/messages | ارسال پیام به مکالمه |
+| [**chatAPIGenerateUploadToken()**](ChatAPIApi.md#chatAPIGenerateUploadToken) | **POST** /experimental/open-platform/chat/upload | تولید توکن آپلود |
+| [**chatAPIGetConversation()**](ChatAPIApi.md#chatAPIGetConversation) | **GET** /v1/open-platform/chat/conversations/{conversation_id} | دریافت مکالمه با شناسه آن |
 
 
 ## `chatAPIChatBotSendMessage()`
@@ -18,9 +18,9 @@ All URIs are relative to https://open-api.divar.ir, except if the operation defi
 chatAPIChatBotSendMessage($conversation_id, $chat_api_chat_bot_send_message_body): \Divar\KenarApiClient\Model\ChatapiChatBotSendMessageResponse
 ```
 
-Send a message to a ChatBot conversation
+ارسال پیام به مکالمه ChatBot
 
-You can call this API with either conversation_id or user_id. Calling with user_id needs a access_token having CHAT_BOT_USER_MESSAGE_SEND scope.This enables you to start conversation with user from ChatBot.
+می‌توانید این API را با conversation_id یا user_id فراخوانی کنید. فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.
 
 ### Example
 
@@ -82,9 +82,9 @@ try {
 chatAPIChatBotSendMessage2($user_id, $chat_api_chat_bot_send_message_body): \Divar\KenarApiClient\Model\ChatapiChatBotSendMessageResponse
 ```
 
-Send a message to a ChatBot conversation
+ارسال پیام به مکالمه ChatBot
 
-You can call this API with either conversation_id or user_id. Calling with user_id needs a access_token having CHAT_BOT_USER_MESSAGE_SEND scope.This enables you to start conversation with user from ChatBot.
+می‌توانید این API را با conversation_id یا user_id فراخوانی کنید. فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.
 
 ### Example
 
@@ -146,9 +146,9 @@ try {
 chatAPIChatBotSendMessage3($conversation_id, $chat_api_chat_bot_send_message_body): \Divar\KenarApiClient\Model\ChatapiChatBotSendMessageResponse
 ```
 
-Send a message to a ChatBot conversation
+ارسال پیام به مکالمه ChatBot
 
-You can call this API with either conversation_id or user_id. Calling with user_id needs a access_token having CHAT_BOT_USER_MESSAGE_SEND scope.This enables you to start conversation with user from ChatBot.
+می‌توانید این API را با conversation_id یا user_id فراخوانی کنید. فراخوانی با user_id نیاز به access_token با دامنه CHAT_BOT_USER_MESSAGE_SEND دارد. این به شما امکان شروع مکالمه با کاربر از ChatBot را می‌دهد.
 
 ### Example
 
@@ -210,9 +210,9 @@ try {
 chatAPIConversationSendMessage($conversation_id, $chat_api_conversation_send_message_body): \Divar\KenarApiClient\Model\ChatapiConversationSendMessageResponse
 ```
 
-Send a message to a conversation
+ارسال پیام به مکالمه
 
-This API is used to send a message to a conversation. You need one of the following scopes to call this API: - CONVERSATION_SEND_MESSAGE.{conversation_id} - CHAT_SUPPLIER_ALL_CONVERSATIONS_MESSAGE_SEND - CHAT_POST_CONVERSATIONS_MESSAGE_SEND.{post_token}
+این API برای ارسال پیام به مکالمه استفاده می‌شود. برای فراخوانی این API به یکی از دامنه‌های زیر نیاز دارید: - CONVERSATION_SEND_MESSAGE.{conversation_id} - CHAT_SUPPLIER_ALL_CONVERSATIONS_MESSAGE_SEND - CHAT_POST_CONVERSATIONS_MESSAGE_SEND.{post_token}
 
 ### Example
 
@@ -274,9 +274,9 @@ try {
 chatAPIGenerateUploadToken($body): \Divar\KenarApiClient\Model\ChatapiGenerateUploadTokenResponse
 ```
 
-Generate an upload token
+تولید توکن آپلود
 
-This API is used to generate an upload token for uploading media files.
+این API برای تولید توکن آپلود برای آپلود فایل‌های رسانه‌ای استفاده می‌شود.
 
 ### Example
 
@@ -336,9 +336,9 @@ try {
 chatAPIGetConversation($conversation_id): \Divar\KenarApiClient\Model\ChatapiGetConversationResponse
 ```
 
-Get Conversation by it's ID
+دریافت مکالمه با شناسه آن
 
-This API is used to get the conversation and messages of a conversation by it's ID.This API expects access token with `CHAT_CONVERSATION_READ` scope.
+این API برای دریافت مکالمه و پیام‌های یک مکالمه با شناسه آن استفاده می‌شود. این API توکن دسترسی با دامنه `CHAT_CONVERSATION_READ` را انتظار دارد.
 
 ### Example
 

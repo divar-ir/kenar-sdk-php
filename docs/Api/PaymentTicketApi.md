@@ -4,7 +4,7 @@ All URIs are relative to https://open-api.divar.ir, except if the operation defi
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**paymentTicketValidate()**](PaymentTicketApi.md#paymentTicketValidate) | **POST** /v1/open-platform/payment-ticket/validate | Validate a payment ticket |
+| [**paymentTicketValidate()**](PaymentTicketApi.md#paymentTicketValidate) | **POST** /v1/open-platform/payment-ticket/validate | اعتبارسنجی بلیط پرداخت |
 
 
 ## `paymentTicketValidate()`
@@ -13,9 +13,9 @@ All URIs are relative to https://open-api.divar.ir, except if the operation defi
 paymentTicketValidate($payment_ticket_validate_request): \Divar\KenarApiClient\Model\PaymentTicketValidateResponse
 ```
 
-Validate a payment ticket
+اعتبارسنجی بلیط پرداخت
 
-Payment tickets are designed to integrate Kenar apps with Divar internal teams. Using this API you can validate a payment ticket and get the issuer payload.
+بلیط‌های پرداخت برای یکپارچه‌سازی اپلیکیشن‌های کنار با تیم‌های داخلی دیوار طراحی شده‌اند. با استفاده از این API می‌توانید بلیط پرداخت را اعتبارسنجی کرده و payload صادرکننده را دریافت کنید.
 
 ### Example
 

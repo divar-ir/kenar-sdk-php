@@ -1,6 +1,6 @@
 <?php
 /**
- * FinderUser
+ * SemanticUserSemanticDeleted
  *
  * PHP version 8.1
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Divar\KenarApiClient\ObjectSerializer;
 
 /**
- * FinderUser Class Doc Comment
+ * SemanticUserSemanticDeleted Class Doc Comment
  *
  * @category Class
  * @package  Divar\KenarApiClient
@@ -40,7 +40,7 @@ use \Divar\KenarApiClient\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class FinderUser implements ModelInterface, ArrayAccess, \JsonSerializable
+class SemanticUserSemanticDeleted implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class FinderUser implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'finderUser';
+    protected static $openAPIModelName = 'semanticUserSemanticDeleted';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,9 +57,9 @@ class FinderUser implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'phone_number' => 'string',
-        'phone_numbers' => 'string[]',
-        'user_id' => 'string'
+        'app_slug' => 'string',
+        'id' => 'string',
+        'phone' => 'string'
     ];
 
     /**
@@ -70,9 +70,9 @@ class FinderUser implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'phone_number' => null,
-        'phone_numbers' => null,
-        'user_id' => null
+        'app_slug' => null,
+        'id' => null,
+        'phone' => null
     ];
 
     /**
@@ -81,9 +81,9 @@ class FinderUser implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'phone_number' => false,
-        'phone_numbers' => false,
-        'user_id' => false
+        'app_slug' => false,
+        'id' => false,
+        'phone' => false
     ];
 
     /**
@@ -172,9 +172,9 @@ class FinderUser implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'phone_number' => 'phone_number',
-        'phone_numbers' => 'phone_numbers',
-        'user_id' => 'user_id'
+        'app_slug' => 'app_slug',
+        'id' => 'id',
+        'phone' => 'phone'
     ];
 
     /**
@@ -183,9 +183,9 @@ class FinderUser implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'phone_number' => 'setPhoneNumber',
-        'phone_numbers' => 'setPhoneNumbers',
-        'user_id' => 'setUserId'
+        'app_slug' => 'setAppSlug',
+        'id' => 'setId',
+        'phone' => 'setPhone'
     ];
 
     /**
@@ -194,9 +194,9 @@ class FinderUser implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'phone_number' => 'getPhoneNumber',
-        'phone_numbers' => 'getPhoneNumbers',
-        'user_id' => 'getUserId'
+        'app_slug' => 'getAppSlug',
+        'id' => 'getId',
+        'phone' => 'getPhone'
     ];
 
     /**
@@ -256,9 +256,9 @@ class FinderUser implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('phone_number', $data ?? [], null);
-        $this->setIfExists('phone_numbers', $data ?? [], null);
-        $this->setIfExists('user_id', $data ?? [], null);
+        $this->setIfExists('app_slug', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
+        $this->setIfExists('phone', $data ?? [], null);
     }
 
     /**
@@ -304,82 +304,82 @@ class FinderUser implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets phone_number
+     * Gets app_slug
      *
      * @return string|null
      */
-    public function getPhoneNumber()
+    public function getAppSlug()
     {
-        return $this->container['phone_number'];
+        return $this->container['app_slug'];
     }
 
     /**
-     * Sets phone_number
+     * Sets app_slug
      *
-     * @param string|null $phone_number phone_number
+     * @param string|null $app_slug app_slug
      *
      * @return self
      */
-    public function setPhoneNumber($phone_number)
+    public function setAppSlug($app_slug)
     {
-        if (is_null($phone_number)) {
-            throw new \InvalidArgumentException('non-nullable phone_number cannot be null');
+        if (is_null($app_slug)) {
+            throw new \InvalidArgumentException('non-nullable app_slug cannot be null');
         }
-        $this->container['phone_number'] = $phone_number;
+        $this->container['app_slug'] = $app_slug;
 
         return $this;
     }
 
     /**
-     * Gets phone_numbers
+     * Gets id
      *
-     * @return string[]|null
+     * @return string|null
      */
-    public function getPhoneNumbers()
+    public function getId()
     {
-        return $this->container['phone_numbers'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets phone_numbers
+     * Sets id
      *
-     * @param string[]|null $phone_numbers منسوخ شده
+     * @param string|null $id id
      *
      * @return self
      */
-    public function setPhoneNumbers($phone_numbers)
+    public function setId($id)
     {
-        if (is_null($phone_numbers)) {
-            throw new \InvalidArgumentException('non-nullable phone_numbers cannot be null');
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
         }
-        $this->container['phone_numbers'] = $phone_numbers;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets user_id
+     * Gets phone
      *
      * @return string|null
      */
-    public function getUserId()
+    public function getPhone()
     {
-        return $this->container['user_id'];
+        return $this->container['phone'];
     }
 
     /**
-     * Sets user_id
+     * Sets phone
      *
-     * @param string|null $user_id user_id
+     * @param string|null $phone phone
      *
      * @return self
      */
-    public function setUserId($user_id)
+    public function setPhone($phone)
     {
-        if (is_null($user_id)) {
-            throw new \InvalidArgumentException('non-nullable user_id cannot be null');
+        if (is_null($phone)) {
+            throw new \InvalidArgumentException('non-nullable phone cannot be null');
         }
-        $this->container['user_id'] = $user_id;
+        $this->container['phone'] = $phone;
 
         return $this;
     }

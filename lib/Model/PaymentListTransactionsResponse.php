@@ -1,6 +1,6 @@
 <?php
 /**
- * FinderUser
+ * PaymentListTransactionsResponse
  *
  * PHP version 8.1
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Divar\KenarApiClient\ObjectSerializer;
 
 /**
- * FinderUser Class Doc Comment
+ * PaymentListTransactionsResponse Class Doc Comment
  *
  * @category Class
  * @package  Divar\KenarApiClient
@@ -40,7 +40,7 @@ use \Divar\KenarApiClient\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class FinderUser implements ModelInterface, ArrayAccess, \JsonSerializable
+class PaymentListTransactionsResponse implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class FinderUser implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'finderUser';
+    protected static $openAPIModelName = 'paymentListTransactionsResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,9 +57,8 @@ class FinderUser implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'phone_number' => 'string',
-        'phone_numbers' => 'string[]',
-        'user_id' => 'string'
+        'next_page_token' => 'string',
+        'transactions' => '\Divar\KenarApiClient\Model\PaymentTransaction[]'
     ];
 
     /**
@@ -70,9 +69,8 @@ class FinderUser implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'phone_number' => null,
-        'phone_numbers' => null,
-        'user_id' => null
+        'next_page_token' => null,
+        'transactions' => null
     ];
 
     /**
@@ -81,9 +79,8 @@ class FinderUser implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'phone_number' => false,
-        'phone_numbers' => false,
-        'user_id' => false
+        'next_page_token' => false,
+        'transactions' => false
     ];
 
     /**
@@ -172,9 +169,8 @@ class FinderUser implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'phone_number' => 'phone_number',
-        'phone_numbers' => 'phone_numbers',
-        'user_id' => 'user_id'
+        'next_page_token' => 'next_page_token',
+        'transactions' => 'transactions'
     ];
 
     /**
@@ -183,9 +179,8 @@ class FinderUser implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'phone_number' => 'setPhoneNumber',
-        'phone_numbers' => 'setPhoneNumbers',
-        'user_id' => 'setUserId'
+        'next_page_token' => 'setNextPageToken',
+        'transactions' => 'setTransactions'
     ];
 
     /**
@@ -194,9 +189,8 @@ class FinderUser implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'phone_number' => 'getPhoneNumber',
-        'phone_numbers' => 'getPhoneNumbers',
-        'user_id' => 'getUserId'
+        'next_page_token' => 'getNextPageToken',
+        'transactions' => 'getTransactions'
     ];
 
     /**
@@ -256,9 +250,8 @@ class FinderUser implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('phone_number', $data ?? [], null);
-        $this->setIfExists('phone_numbers', $data ?? [], null);
-        $this->setIfExists('user_id', $data ?? [], null);
+        $this->setIfExists('next_page_token', $data ?? [], null);
+        $this->setIfExists('transactions', $data ?? [], null);
     }
 
     /**
@@ -304,82 +297,55 @@ class FinderUser implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets phone_number
+     * Gets next_page_token
      *
      * @return string|null
      */
-    public function getPhoneNumber()
+    public function getNextPageToken()
     {
-        return $this->container['phone_number'];
+        return $this->container['next_page_token'];
     }
 
     /**
-     * Sets phone_number
+     * Sets next_page_token
      *
-     * @param string|null $phone_number phone_number
+     * @param string|null $next_page_token Token for the next page of results.
      *
      * @return self
      */
-    public function setPhoneNumber($phone_number)
+    public function setNextPageToken($next_page_token)
     {
-        if (is_null($phone_number)) {
-            throw new \InvalidArgumentException('non-nullable phone_number cannot be null');
+        if (is_null($next_page_token)) {
+            throw new \InvalidArgumentException('non-nullable next_page_token cannot be null');
         }
-        $this->container['phone_number'] = $phone_number;
+        $this->container['next_page_token'] = $next_page_token;
 
         return $this;
     }
 
     /**
-     * Gets phone_numbers
+     * Gets transactions
      *
-     * @return string[]|null
+     * @return \Divar\KenarApiClient\Model\PaymentTransaction[]|null
      */
-    public function getPhoneNumbers()
+    public function getTransactions()
     {
-        return $this->container['phone_numbers'];
+        return $this->container['transactions'];
     }
 
     /**
-     * Sets phone_numbers
+     * Sets transactions
      *
-     * @param string[]|null $phone_numbers منسوخ شده
+     * @param \Divar\KenarApiClient\Model\PaymentTransaction[]|null $transactions List of transactions matching the request
      *
      * @return self
      */
-    public function setPhoneNumbers($phone_numbers)
+    public function setTransactions($transactions)
     {
-        if (is_null($phone_numbers)) {
-            throw new \InvalidArgumentException('non-nullable phone_numbers cannot be null');
+        if (is_null($transactions)) {
+            throw new \InvalidArgumentException('non-nullable transactions cannot be null');
         }
-        $this->container['phone_numbers'] = $phone_numbers;
-
-        return $this;
-    }
-
-    /**
-     * Gets user_id
-     *
-     * @return string|null
-     */
-    public function getUserId()
-    {
-        return $this->container['user_id'];
-    }
-
-    /**
-     * Sets user_id
-     *
-     * @param string|null $user_id user_id
-     *
-     * @return self
-     */
-    public function setUserId($user_id)
-    {
-        if (is_null($user_id)) {
-            throw new \InvalidArgumentException('non-nullable user_id cannot be null');
-        }
-        $this->container['user_id'] = $user_id;
+        $this->container['transactions'] = $transactions;
 
         return $this;
     }

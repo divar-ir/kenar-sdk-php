@@ -74,7 +74,7 @@ class AssetsApiTest extends TestCase
     /**
      * Test case for assetsGetBodyStatuses
      *
-     * Get available body-status options in Divar vehicle categories.
+     * دریافت گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار.
      *
      */
     public function testAssetsGetBodyStatuses()
@@ -86,7 +86,7 @@ class AssetsApiTest extends TestCase
     /**
      * Test case for assetsGetBrandModels
      *
-     * Get brand models in a Divar category.
+     * دریافت مدل‌های برند در دسته‌بندی دیوار.
      *
      */
     public function testAssetsGetBrandModels()
@@ -98,7 +98,7 @@ class AssetsApiTest extends TestCase
     /**
      * Test case for assetsGetCategories
      *
-     * Get Divar categories.
+     * دریافت دسته‌بندی‌های دیوار.
      *
      */
     public function testAssetsGetCategories()
@@ -110,7 +110,7 @@ class AssetsApiTest extends TestCase
     /**
      * Test case for assetsGetCities
      *
-     * Get Divar cities.
+     * دریافت شهرهای دیوار.
      *
      */
     public function testAssetsGetCities()
@@ -122,7 +122,7 @@ class AssetsApiTest extends TestCase
     /**
      * Test case for assetsGetColors
      *
-     * Get colors in a Divar category.
+     * دریافت رنگ‌ها در دسته‌بندی دیوار.
      *
      */
     public function testAssetsGetColors()
@@ -134,7 +134,7 @@ class AssetsApiTest extends TestCase
     /**
      * Test case for assetsGetDistricts
      *
-     * Get Divar districts.
+     * دریافت مناطق دیوار.
      *
      */
     public function testAssetsGetDistricts()
@@ -146,7 +146,7 @@ class AssetsApiTest extends TestCase
     /**
      * Test case for assetsGetDistricts2
      *
-     * Get Divar districts.
+     * دریافت مناطق دیوار.
      *
      */
     public function testAssetsGetDistricts2()
@@ -158,7 +158,7 @@ class AssetsApiTest extends TestCase
     /**
      * Test case for assetsGetInternalStorages
      *
-     * Get available internal-storage options in Divar mobile/tablet/laptop categories.
+     * دریافت گزینه‌های حافظه داخلی موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار.
      *
      */
     public function testAssetsGetInternalStorages()
@@ -170,7 +170,7 @@ class AssetsApiTest extends TestCase
     /**
      * Test case for assetsGetOAuthScopes
      *
-     * Get KenarDivar OAuth scopes.
+     * دریافت دامنه‌های OAuth کنار دیوار.
      *
      */
     public function testAssetsGetOAuthScopes()
@@ -182,7 +182,7 @@ class AssetsApiTest extends TestCase
     /**
      * Test case for assetsGetPermissions
      *
-     * Get KenarDivar permissions.
+     * دریافت مجوزهای کنار دیوار.
      *
      */
     public function testAssetsGetPermissions()
@@ -194,7 +194,7 @@ class AssetsApiTest extends TestCase
     /**
      * Test case for assetsGetRamMemories
      *
-     * Get available ram-memory options in Divar mobile/tablet/laptop categories.
+     * دریافت گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار.
      *
      */
     public function testAssetsGetRamMemories()
@@ -206,7 +206,7 @@ class AssetsApiTest extends TestCase
     /**
      * Test case for assetsGetServiceTypes
      *
-     * Get available service types in KenarDivar.
+     * دریافت انواع سرویس موجود در کنار دیوار.
      *
      */
     public function testAssetsGetServiceTypes()

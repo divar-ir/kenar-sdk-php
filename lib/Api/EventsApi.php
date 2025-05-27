@@ -128,7 +128,7 @@ class EventsApi
     /**
      * Operation eventsRegisterEventSubscription
      *
-     * Subscribe to an event
+     * اشتراک در رویداد
      *
      * @param  \Divar\KenarApiClient\Model\EventsRegisterEventSubscriptionRequest $events_register_event_subscription_request events_register_event_subscription_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['eventsRegisterEventSubscription'] to see the possible values for this operation
@@ -146,7 +146,7 @@ class EventsApi
     /**
      * Operation eventsRegisterEventSubscriptionWithHttpInfo
      *
-     * Subscribe to an event
+     * اشتراک در رویداد
      *
      * @param  \Divar\KenarApiClient\Model\EventsRegisterEventSubscriptionRequest $events_register_event_subscription_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['eventsRegisterEventSubscription'] to see the possible values for this operation
@@ -245,7 +245,7 @@ class EventsApi
     /**
      * Operation eventsRegisterEventSubscriptionAsync
      *
-     * Subscribe to an event
+     * اشتراک در رویداد
      *
      * @param  \Divar\KenarApiClient\Model\EventsRegisterEventSubscriptionRequest $events_register_event_subscription_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['eventsRegisterEventSubscription'] to see the possible values for this operation
@@ -266,7 +266,7 @@ class EventsApi
     /**
      * Operation eventsRegisterEventSubscriptionAsyncWithHttpInfo
      *
-     * Subscribe to an event
+     * اشتراک در رویداد
      *
      * @param  \Divar\KenarApiClient\Model\EventsRegisterEventSubscriptionRequest $events_register_event_subscription_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['eventsRegisterEventSubscription'] to see the possible values for this operation

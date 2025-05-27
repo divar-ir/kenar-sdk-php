@@ -309,7 +309,7 @@ class PaymentReorderPostResponse implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets cost_rials
      *
-     * @param string|null $cost_rials The cost of the transaction in rials for your application
+     * @param string|null $cost_rials هزینه تراکنش به ریال برای اپلیکیشن شما
      *
      * @return self
      */
@@ -336,7 +336,7 @@ class PaymentReorderPostResponse implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets id
      *
-     * @param string|null $id Same uuid when creating transaction
+     * @param string|null $id همان uuid هنگام ایجاد تراکنش
      *
      * @return self
      */

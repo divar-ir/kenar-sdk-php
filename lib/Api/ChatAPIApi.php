@@ -143,7 +143,7 @@ class ChatAPIApi
     /**
      * Operation chatAPIChatBotSendMessage
      *
-     * Send a message to a ChatBot conversation
+     * ارسال پیام به مکالمه ChatBot
      *
      * @param  string $conversation_id Unique identifier for the conversation (required)
      * @param  \Divar\KenarApiClient\Model\ChatAPIChatBotSendMessageBody $chat_api_chat_bot_send_message_body chat_api_chat_bot_send_message_body (required)
@@ -162,7 +162,7 @@ class ChatAPIApi
     /**
      * Operation chatAPIChatBotSendMessageWithHttpInfo
      *
-     * Send a message to a ChatBot conversation
+     * ارسال پیام به مکالمه ChatBot
      *
      * @param  string $conversation_id Unique identifier for the conversation (required)
      * @param  \Divar\KenarApiClient\Model\ChatAPIChatBotSendMessageBody $chat_api_chat_bot_send_message_body (required)
@@ -262,7 +262,7 @@ class ChatAPIApi
     /**
      * Operation chatAPIChatBotSendMessageAsync
      *
-     * Send a message to a ChatBot conversation
+     * ارسال پیام به مکالمه ChatBot
      *
      * @param  string $conversation_id Unique identifier for the conversation (required)
      * @param  \Divar\KenarApiClient\Model\ChatAPIChatBotSendMessageBody $chat_api_chat_bot_send_message_body (required)
@@ -284,7 +284,7 @@ class ChatAPIApi
     /**
      * Operation chatAPIChatBotSendMessageAsyncWithHttpInfo
      *
-     * Send a message to a ChatBot conversation
+     * ارسال پیام به مکالمه ChatBot
      *
      * @param  string $conversation_id Unique identifier for the conversation (required)
      * @param  \Divar\KenarApiClient\Model\ChatAPIChatBotSendMessageBody $chat_api_chat_bot_send_message_body (required)
@@ -449,7 +449,7 @@ class ChatAPIApi
     /**
      * Operation chatAPIChatBotSendMessage2
      *
-     * Send a message to a ChatBot conversation
+     * ارسال پیام به مکالمه ChatBot
      *
      * @param  string $user_id Unique identifier for the user to start or continue a conversation with (required)
      * @param  \Divar\KenarApiClient\Model\ChatAPIChatBotSendMessageBody $chat_api_chat_bot_send_message_body chat_api_chat_bot_send_message_body (required)
@@ -468,7 +468,7 @@ class ChatAPIApi
     /**
      * Operation chatAPIChatBotSendMessage2WithHttpInfo
      *
-     * Send a message to a ChatBot conversation
+     * ارسال پیام به مکالمه ChatBot
      *
      * @param  string $user_id Unique identifier for the user to start or continue a conversation with (required)
      * @param  \Divar\KenarApiClient\Model\ChatAPIChatBotSendMessageBody $chat_api_chat_bot_send_message_body (required)
@@ -568,7 +568,7 @@ class ChatAPIApi
     /**
      * Operation chatAPIChatBotSendMessage2Async
      *
-     * Send a message to a ChatBot conversation
+     * ارسال پیام به مکالمه ChatBot
      *
      * @param  string $user_id Unique identifier for the user to start or continue a conversation with (required)
      * @param  \Divar\KenarApiClient\Model\ChatAPIChatBotSendMessageBody $chat_api_chat_bot_send_message_body (required)
@@ -590,7 +590,7 @@ class ChatAPIApi
     /**
      * Operation chatAPIChatBotSendMessage2AsyncWithHttpInfo
      *
-     * Send a message to a ChatBot conversation
+     * ارسال پیام به مکالمه ChatBot
      *
      * @param  string $user_id Unique identifier for the user to start or continue a conversation with (required)
      * @param  \Divar\KenarApiClient\Model\ChatAPIChatBotSendMessageBody $chat_api_chat_bot_send_message_body (required)
@@ -755,7 +755,7 @@ class ChatAPIApi
     /**
      * Operation chatAPIChatBotSendMessage3
      *
-     * Send a message to a ChatBot conversation
+     * ارسال پیام به مکالمه ChatBot
      *
      * @param  string $conversation_id Unique identifier for the conversation (required)
      * @param  \Divar\KenarApiClient\Model\ChatAPIChatBotSendMessageBody $chat_api_chat_bot_send_message_body chat_api_chat_bot_send_message_body (required)
@@ -774,7 +774,7 @@ class ChatAPIApi
     /**
      * Operation chatAPIChatBotSendMessage3WithHttpInfo
      *
-     * Send a message to a ChatBot conversation
+     * ارسال پیام به مکالمه ChatBot
      *
      * @param  string $conversation_id Unique identifier for the conversation (required)
      * @param  \Divar\KenarApiClient\Model\ChatAPIChatBotSendMessageBody $chat_api_chat_bot_send_message_body (required)
@@ -874,7 +874,7 @@ class ChatAPIApi
     /**
      * Operation chatAPIChatBotSendMessage3Async
      *
-     * Send a message to a ChatBot conversation
+     * ارسال پیام به مکالمه ChatBot
      *
      * @param  string $conversation_id Unique identifier for the conversation (required)
      * @param  \Divar\KenarApiClient\Model\ChatAPIChatBotSendMessageBody $chat_api_chat_bot_send_message_body (required)
@@ -896,7 +896,7 @@ class ChatAPIApi
     /**
      * Operation chatAPIChatBotSendMessage3AsyncWithHttpInfo
      *
-     * Send a message to a ChatBot conversation
+     * ارسال پیام به مکالمه ChatBot
      *
      * @param  string $conversation_id Unique identifier for the conversation (required)
      * @param  \Divar\KenarApiClient\Model\ChatAPIChatBotSendMessageBody $chat_api_chat_bot_send_message_body (required)
@@ -1061,7 +1061,7 @@ class ChatAPIApi
     /**
      * Operation chatAPIConversationSendMessage
      *
-     * Send a message to a conversation
+     * ارسال پیام به مکالمه
      *
      * @param  string $conversation_id Unique identifier for the conversation (required)
      * @param  \Divar\KenarApiClient\Model\ChatAPIConversationSendMessageBody $chat_api_conversation_send_message_body chat_api_conversation_send_message_body (required)
@@ -1080,7 +1080,7 @@ class ChatAPIApi
     /**
      * Operation chatAPIConversationSendMessageWithHttpInfo
      *
-     * Send a message to a conversation
+     * ارسال پیام به مکالمه
      *
      * @param  string $conversation_id Unique identifier for the conversation (required)
      * @param  \Divar\KenarApiClient\Model\ChatAPIConversationSendMessageBody $chat_api_conversation_send_message_body (required)
@@ -1180,7 +1180,7 @@ class ChatAPIApi
     /**
      * Operation chatAPIConversationSendMessageAsync
      *
-     * Send a message to a conversation
+     * ارسال پیام به مکالمه
      *
      * @param  string $conversation_id Unique identifier for the conversation (required)
      * @param  \Divar\KenarApiClient\Model\ChatAPIConversationSendMessageBody $chat_api_conversation_send_message_body (required)
@@ -1202,7 +1202,7 @@ class ChatAPIApi
     /**
      * Operation chatAPIConversationSendMessageAsyncWithHttpInfo
      *
-     * Send a message to a conversation
+     * ارسال پیام به مکالمه
      *
      * @param  string $conversation_id Unique identifier for the conversation (required)
      * @param  \Divar\KenarApiClient\Model\ChatAPIConversationSendMessageBody $chat_api_conversation_send_message_body (required)
@@ -1367,7 +1367,7 @@ class ChatAPIApi
     /**
      * Operation chatAPIGenerateUploadToken
      *
-     * Generate an upload token
+     * تولید توکن آپلود
      *
      * @param  object $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['chatAPIGenerateUploadToken'] to see the possible values for this operation
@@ -1385,7 +1385,7 @@ class ChatAPIApi
     /**
      * Operation chatAPIGenerateUploadTokenWithHttpInfo
      *
-     * Generate an upload token
+     * تولید توکن آپلود
      *
      * @param  object $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['chatAPIGenerateUploadToken'] to see the possible values for this operation
@@ -1484,7 +1484,7 @@ class ChatAPIApi
     /**
      * Operation chatAPIGenerateUploadTokenAsync
      *
-     * Generate an upload token
+     * تولید توکن آپلود
      *
      * @param  object $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['chatAPIGenerateUploadToken'] to see the possible values for this operation
@@ -1505,7 +1505,7 @@ class ChatAPIApi
     /**
      * Operation chatAPIGenerateUploadTokenAsyncWithHttpInfo
      *
-     * Generate an upload token
+     * تولید توکن آپلود
      *
      * @param  object $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['chatAPIGenerateUploadToken'] to see the possible values for this operation
@@ -1653,7 +1653,7 @@ class ChatAPIApi
     /**
      * Operation chatAPIGetConversation
      *
-     * Get Conversation by it&#39;s ID
+     * دریافت مکالمه با شناسه آن
      *
      * @param  string $conversation_id Unique identifier for the conversation (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['chatAPIGetConversation'] to see the possible values for this operation
@@ -1671,7 +1671,7 @@ class ChatAPIApi
     /**
      * Operation chatAPIGetConversationWithHttpInfo
      *
-     * Get Conversation by it&#39;s ID
+     * دریافت مکالمه با شناسه آن
      *
      * @param  string $conversation_id Unique identifier for the conversation (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['chatAPIGetConversation'] to see the possible values for this operation
@@ -1770,7 +1770,7 @@ class ChatAPIApi
     /**
      * Operation chatAPIGetConversationAsync
      *
-     * Get Conversation by it&#39;s ID
+     * دریافت مکالمه با شناسه آن
      *
      * @param  string $conversation_id Unique identifier for the conversation (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['chatAPIGetConversation'] to see the possible values for this operation
@@ -1791,7 +1791,7 @@ class ChatAPIApi
     /**
      * Operation chatAPIGetConversationAsyncWithHttpInfo
      *
-     * Get Conversation by it&#39;s ID
+     * دریافت مکالمه با شناسه آن
      *
      * @param  string $conversation_id Unique identifier for the conversation (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['chatAPIGetConversation'] to see the possible values for this operation

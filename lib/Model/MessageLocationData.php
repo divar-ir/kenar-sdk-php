@@ -309,7 +309,7 @@ class MessageLocationData implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets latitude
      *
-     * @param float|null $latitude The latitude in degrees. It must be in the range [-90.0, +90.0].
+     * @param float|null $latitude عرض جغرافیایی به درجه. باید در محدوده [-90.0, +90.0] باشد.
      *
      * @return self
      */
@@ -336,7 +336,7 @@ class MessageLocationData implements ModelInterface, ArrayAccess, \JsonSerializa
     /**
      * Sets longitude
      *
-     * @param float|null $longitude The longitude in degrees. It must be in the range [-180.0, +180.0].
+     * @param float|null $longitude طول جغرافیایی به درجه. باید در محدوده [-180.0, +180.0] باشد.
      *
      * @return self
      */

@@ -149,7 +149,7 @@ class AddonsApi
     /**
      * Operation addonsCreatePostAddonV2
      *
-     * Attach a new Addon to a post
+     * افزودن افزونه جدید به آگهی
      *
      * @param  string $token token (required)
      * @param  \Divar\KenarApiClient\Model\AddonsCreatePostAddonV2Body $addons_create_post_addon_v2_body addons_create_post_addon_v2_body (required)
@@ -168,7 +168,7 @@ class AddonsApi
     /**
      * Operation addonsCreatePostAddonV2WithHttpInfo
      *
-     * Attach a new Addon to a post
+     * افزودن افزونه جدید به آگهی
      *
      * @param  string $token (required)
      * @param  \Divar\KenarApiClient\Model\AddonsCreatePostAddonV2Body $addons_create_post_addon_v2_body (required)
@@ -268,7 +268,7 @@ class AddonsApi
     /**
      * Operation addonsCreatePostAddonV2Async
      *
-     * Attach a new Addon to a post
+     * افزودن افزونه جدید به آگهی
      *
      * @param  string $token (required)
      * @param  \Divar\KenarApiClient\Model\AddonsCreatePostAddonV2Body $addons_create_post_addon_v2_body (required)
@@ -290,7 +290,7 @@ class AddonsApi
     /**
      * Operation addonsCreatePostAddonV2AsyncWithHttpInfo
      *
-     * Attach a new Addon to a post
+     * افزودن افزونه جدید به آگهی
      *
      * @param  string $token (required)
      * @param  \Divar\KenarApiClient\Model\AddonsCreatePostAddonV2Body $addons_create_post_addon_v2_body (required)
@@ -455,7 +455,7 @@ class AddonsApi
     /**
      * Operation addonsCreateUserAddonV2
      *
-     * Attach a new Addon to a user
+     * افزودن افزونه جدید به کاربر
      *
      * @param  string $phone phone (required)
      * @param  \Divar\KenarApiClient\Model\AddonsCreateUserAddonV2Body $addons_create_user_addon_v2_body addons_create_user_addon_v2_body (required)
@@ -474,7 +474,7 @@ class AddonsApi
     /**
      * Operation addonsCreateUserAddonV2WithHttpInfo
      *
-     * Attach a new Addon to a user
+     * افزودن افزونه جدید به کاربر
      *
      * @param  string $phone (required)
      * @param  \Divar\KenarApiClient\Model\AddonsCreateUserAddonV2Body $addons_create_user_addon_v2_body (required)
@@ -574,7 +574,7 @@ class AddonsApi
     /**
      * Operation addonsCreateUserAddonV2Async
      *
-     * Attach a new Addon to a user
+     * افزودن افزونه جدید به کاربر
      *
      * @param  string $phone (required)
      * @param  \Divar\KenarApiClient\Model\AddonsCreateUserAddonV2Body $addons_create_user_addon_v2_body (required)
@@ -596,7 +596,7 @@ class AddonsApi
     /**
      * Operation addonsCreateUserAddonV2AsyncWithHttpInfo
      *
-     * Attach a new Addon to a user
+     * افزودن افزونه جدید به کاربر
      *
      * @param  string $phone (required)
      * @param  \Divar\KenarApiClient\Model\AddonsCreateUserAddonV2Body $addons_create_user_addon_v2_body (required)
@@ -761,7 +761,7 @@ class AddonsApi
     /**
      * Operation addonsCreateUserAddonV22
      *
-     * Attach a new Addon to a user
+     * افزودن افزونه جدید به کاربر
      *
      * @param  string $divar_user_id divar_user_id (required)
      * @param  \Divar\KenarApiClient\Model\AddonsCreateUserAddonV2Body $addons_create_user_addon_v2_body addons_create_user_addon_v2_body (required)
@@ -780,7 +780,7 @@ class AddonsApi
     /**
      * Operation addonsCreateUserAddonV22WithHttpInfo
      *
-     * Attach a new Addon to a user
+     * افزودن افزونه جدید به کاربر
      *
      * @param  string $divar_user_id (required)
      * @param  \Divar\KenarApiClient\Model\AddonsCreateUserAddonV2Body $addons_create_user_addon_v2_body (required)
@@ -880,7 +880,7 @@ class AddonsApi
     /**
      * Operation addonsCreateUserAddonV22Async
      *
-     * Attach a new Addon to a user
+     * افزودن افزونه جدید به کاربر
      *
      * @param  string $divar_user_id (required)
      * @param  \Divar\KenarApiClient\Model\AddonsCreateUserAddonV2Body $addons_create_user_addon_v2_body (required)
@@ -902,7 +902,7 @@ class AddonsApi
     /**
      * Operation addonsCreateUserAddonV22AsyncWithHttpInfo
      *
-     * Attach a new Addon to a user
+     * افزودن افزونه جدید به کاربر
      *
      * @param  string $divar_user_id (required)
      * @param  \Divar\KenarApiClient\Model\AddonsCreateUserAddonV2Body $addons_create_user_addon_v2_body (required)
@@ -1067,7 +1067,7 @@ class AddonsApi
     /**
      * Operation addonsDeletePostAddon
      *
-     * Delete an Addon from a post
+     * حذف افزونه از آگهی
      *
      * @param  string $token token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addonsDeletePostAddon'] to see the possible values for this operation
@@ -1085,7 +1085,7 @@ class AddonsApi
     /**
      * Operation addonsDeletePostAddonWithHttpInfo
      *
-     * Delete an Addon from a post
+     * حذف افزونه از آگهی
      *
      * @param  string $token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addonsDeletePostAddon'] to see the possible values for this operation
@@ -1184,7 +1184,7 @@ class AddonsApi
     /**
      * Operation addonsDeletePostAddonAsync
      *
-     * Delete an Addon from a post
+     * حذف افزونه از آگهی
      *
      * @param  string $token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addonsDeletePostAddon'] to see the possible values for this operation
@@ -1205,7 +1205,7 @@ class AddonsApi
     /**
      * Operation addonsDeletePostAddonAsyncWithHttpInfo
      *
-     * Delete an Addon from a post
+     * حذف افزونه از آگهی
      *
      * @param  string $token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addonsDeletePostAddon'] to see the possible values for this operation
@@ -1354,7 +1354,7 @@ class AddonsApi
     /**
      * Operation addonsDeletePostAddon2
      *
-     * Delete an Addon from a post
+     * حذف افزونه از آگهی
      *
      * @param  string $token token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addonsDeletePostAddon2'] to see the possible values for this operation
@@ -1372,7 +1372,7 @@ class AddonsApi
     /**
      * Operation addonsDeletePostAddon2WithHttpInfo
      *
-     * Delete an Addon from a post
+     * حذف افزونه از آگهی
      *
      * @param  string $token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addonsDeletePostAddon2'] to see the possible values for this operation
@@ -1471,7 +1471,7 @@ class AddonsApi
     /**
      * Operation addonsDeletePostAddon2Async
      *
-     * Delete an Addon from a post
+     * حذف افزونه از آگهی
      *
      * @param  string $token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addonsDeletePostAddon2'] to see the possible values for this operation
@@ -1492,7 +1492,7 @@ class AddonsApi
     /**
      * Operation addonsDeletePostAddon2AsyncWithHttpInfo
      *
-     * Delete an Addon from a post
+     * حذف افزونه از آگهی
      *
      * @param  string $token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addonsDeletePostAddon2'] to see the possible values for this operation
@@ -1641,7 +1641,7 @@ class AddonsApi
     /**
      * Operation addonsDeleteUserAddon
      *
-     * Delete an UserAddon
+     * حذف افزونه کاربر
      *
      * @param  string $id id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addonsDeleteUserAddon'] to see the possible values for this operation
@@ -1659,7 +1659,7 @@ class AddonsApi
     /**
      * Operation addonsDeleteUserAddonWithHttpInfo
      *
-     * Delete an UserAddon
+     * حذف افزونه کاربر
      *
      * @param  string $id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addonsDeleteUserAddon'] to see the possible values for this operation
@@ -1758,7 +1758,7 @@ class AddonsApi
     /**
      * Operation addonsDeleteUserAddonAsync
      *
-     * Delete an UserAddon
+     * حذف افزونه کاربر
      *
      * @param  string $id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addonsDeleteUserAddon'] to see the possible values for this operation
@@ -1779,7 +1779,7 @@ class AddonsApi
     /**
      * Operation addonsDeleteUserAddonAsyncWithHttpInfo
      *
-     * Delete an UserAddon
+     * حذف افزونه کاربر
      *
      * @param  string $id (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addonsDeleteUserAddon'] to see the possible values for this operation
@@ -1928,7 +1928,7 @@ class AddonsApi
     /**
      * Operation addonsGetUserAddons
      *
-     * Retrieve all UserAddons
+     * دریافت تمام افزونه‌های کاربر
      *
      * @param  string $phone phone (required)
      * @param  string|null $divar_user_id divar_user_id (optional)
@@ -1947,7 +1947,7 @@ class AddonsApi
     /**
      * Operation addonsGetUserAddonsWithHttpInfo
      *
-     * Retrieve all UserAddons
+     * دریافت تمام افزونه‌های کاربر
      *
      * @param  string $phone (required)
      * @param  string|null $divar_user_id (optional)
@@ -2047,7 +2047,7 @@ class AddonsApi
     /**
      * Operation addonsGetUserAddonsAsync
      *
-     * Retrieve all UserAddons
+     * دریافت تمام افزونه‌های کاربر
      *
      * @param  string $phone (required)
      * @param  string|null $divar_user_id (optional)
@@ -2069,7 +2069,7 @@ class AddonsApi
     /**
      * Operation addonsGetUserAddonsAsyncWithHttpInfo
      *
-     * Retrieve all UserAddons
+     * دریافت تمام افزونه‌های کاربر
      *
      * @param  string $phone (required)
      * @param  string|null $divar_user_id (optional)
@@ -2230,7 +2230,7 @@ class AddonsApi
     /**
      * Operation addonsGetUserAddons2
      *
-     * Retrieve all UserAddons
+     * دریافت تمام افزونه‌های کاربر
      *
      * @param  string $divar_user_id divar_user_id (required)
      * @param  string|null $phone phone (optional)
@@ -2249,7 +2249,7 @@ class AddonsApi
     /**
      * Operation addonsGetUserAddons2WithHttpInfo
      *
-     * Retrieve all UserAddons
+     * دریافت تمام افزونه‌های کاربر
      *
      * @param  string $divar_user_id (required)
      * @param  string|null $phone (optional)
@@ -2349,7 +2349,7 @@ class AddonsApi
     /**
      * Operation addonsGetUserAddons2Async
      *
-     * Retrieve all UserAddons
+     * دریافت تمام افزونه‌های کاربر
      *
      * @param  string $divar_user_id (required)
      * @param  string|null $phone (optional)
@@ -2371,7 +2371,7 @@ class AddonsApi
     /**
      * Operation addonsGetUserAddons2AsyncWithHttpInfo
      *
-     * Retrieve all UserAddons
+     * دریافت تمام افزونه‌های کاربر
      *
      * @param  string $divar_user_id (required)
      * @param  string|null $phone (optional)

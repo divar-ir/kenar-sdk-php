@@ -309,7 +309,7 @@ class GetPostPricingResponseReorder implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets available
      *
-     * @param bool|null $available Indicates if the post can be reordered. If false, the reorder API will return an error
+     * @param bool|null $available نشان می‌دهد که آیا آگهی قابل نردبان است. اگر false باشد، API نردبان خطا برمی‌گرداند
      *
      * @return self
      */
@@ -336,7 +336,7 @@ class GetPostPricingResponseReorder implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets cost_rials
      *
-     * @param string|null $cost_rials The cost of reordering in rials
+     * @param string|null $cost_rials هزینه نردبان به ریال
      *
      * @return self
      */

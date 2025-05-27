@@ -74,7 +74,7 @@ class ChatAPIApiTest extends TestCase
     /**
      * Test case for chatAPIChatBotSendMessage
      *
-     * Send a message to a ChatBot conversation.
+     * ارسال پیام به مکالمه ChatBot.
      *
      */
     public function testChatAPIChatBotSendMessage()
@@ -86,7 +86,7 @@ class ChatAPIApiTest extends TestCase
     /**
      * Test case for chatAPIChatBotSendMessage2
      *
-     * Send a message to a ChatBot conversation.
+     * ارسال پیام به مکالمه ChatBot.
      *
      */
     public function testChatAPIChatBotSendMessage2()
@@ -98,7 +98,7 @@ class ChatAPIApiTest extends TestCase
     /**
      * Test case for chatAPIChatBotSendMessage3
      *
-     * Send a message to a ChatBot conversation.
+     * ارسال پیام به مکالمه ChatBot.
      *
      */
     public function testChatAPIChatBotSendMessage3()
@@ -110,7 +110,7 @@ class ChatAPIApiTest extends TestCase
     /**
      * Test case for chatAPIConversationSendMessage
      *
-     * Send a message to a conversation.
+     * ارسال پیام به مکالمه.
      *
      */
     public function testChatAPIConversationSendMessage()
@@ -122,7 +122,7 @@ class ChatAPIApiTest extends TestCase
     /**
      * Test case for chatAPIGenerateUploadToken
      *
-     * Generate an upload token.
+     * تولید توکن آپلود.
      *
      */
     public function testChatAPIGenerateUploadToken()
@@ -134,7 +134,7 @@ class ChatAPIApiTest extends TestCase
     /**
      * Test case for chatAPIGetConversation
      *
-     * Get Conversation by it's ID.
+     * دریافت مکالمه با شناسه آن.
      *
      */
     public function testChatAPIGetConversation()

@@ -140,7 +140,7 @@ class FinderApi
     /**
      * Operation finderGetPost
      *
-     * Get a Divar post
+     * دریافت آگهی دیوار
      *
      * @param  string $token token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['finderGetPost'] to see the possible values for this operation
@@ -158,7 +158,7 @@ class FinderApi
     /**
      * Operation finderGetPostWithHttpInfo
      *
-     * Get a Divar post
+     * دریافت آگهی دیوار
      *
      * @param  string $token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['finderGetPost'] to see the possible values for this operation
@@ -257,7 +257,7 @@ class FinderApi
     /**
      * Operation finderGetPostAsync
      *
-     * Get a Divar post
+     * دریافت آگهی دیوار
      *
      * @param  string $token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['finderGetPost'] to see the possible values for this operation
@@ -278,7 +278,7 @@ class FinderApi
     /**
      * Operation finderGetPostAsyncWithHttpInfo
      *
-     * Get a Divar post
+     * دریافت آگهی دیوار
      *
      * @param  string $token (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['finderGetPost'] to see the possible values for this operation
@@ -427,7 +427,7 @@ class FinderApi
     /**
      * Operation finderGetUser
      *
-     * Get user information
+     * دریافت اطلاعات کاربر
      *
      * @param  object $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['finderGetUser'] to see the possible values for this operation
@@ -445,7 +445,7 @@ class FinderApi
     /**
      * Operation finderGetUserWithHttpInfo
      *
-     * Get user information
+     * دریافت اطلاعات کاربر
      *
      * @param  object $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['finderGetUser'] to see the possible values for this operation
@@ -544,7 +544,7 @@ class FinderApi
     /**
      * Operation finderGetUserAsync
      *
-     * Get user information
+     * دریافت اطلاعات کاربر
      *
      * @param  object $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['finderGetUser'] to see the possible values for this operation
@@ -565,7 +565,7 @@ class FinderApi
     /**
      * Operation finderGetUserAsyncWithHttpInfo
      *
-     * Get user information
+     * دریافت اطلاعات کاربر
      *
      * @param  object $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['finderGetUser'] to see the possible values for this operation
@@ -713,7 +713,7 @@ class FinderApi
     /**
      * Operation finderGetUser2
      *
-     * Get user information
+     * دریافت اطلاعات کاربر
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['finderGetUser2'] to see the possible values for this operation
      *
@@ -730,7 +730,7 @@ class FinderApi
     /**
      * Operation finderGetUser2WithHttpInfo
      *
-     * Get user information
+     * دریافت اطلاعات کاربر
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['finderGetUser2'] to see the possible values for this operation
      *
@@ -828,7 +828,7 @@ class FinderApi
     /**
      * Operation finderGetUser2Async
      *
-     * Get user information
+     * دریافت اطلاعات کاربر
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['finderGetUser2'] to see the possible values for this operation
      *
@@ -848,7 +848,7 @@ class FinderApi
     /**
      * Operation finderGetUser2AsyncWithHttpInfo
      *
-     * Get user information
+     * دریافت اطلاعات کاربر
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['finderGetUser2'] to see the possible values for this operation
      *
@@ -980,7 +980,7 @@ class FinderApi
     /**
      * Operation finderGetUserPosts
      *
-     * Get user posts
+     * دریافت آگهی‌های کاربر
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['finderGetUserPosts'] to see the possible values for this operation
      *
@@ -997,7 +997,7 @@ class FinderApi
     /**
      * Operation finderGetUserPostsWithHttpInfo
      *
-     * Get user posts
+     * دریافت آگهی‌های کاربر
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['finderGetUserPosts'] to see the possible values for this operation
      *
@@ -1095,7 +1095,7 @@ class FinderApi
     /**
      * Operation finderGetUserPostsAsync
      *
-     * Get user posts
+     * دریافت آگهی‌های کاربر
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['finderGetUserPosts'] to see the possible values for this operation
      *
@@ -1115,7 +1115,7 @@ class FinderApi
     /**
      * Operation finderGetUserPostsAsyncWithHttpInfo
      *
-     * Get user posts
+     * دریافت آگهی‌های کاربر
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['finderGetUserPosts'] to see the possible values for this operation
      *
@@ -1247,7 +1247,7 @@ class FinderApi
     /**
      * Operation finderSearchPostV2
      *
-     * Search Divar posts with some filters
+     * جستجو آگهی‌های دیوار با فیلترهایی
      *
      * @param  \Divar\KenarApiClient\Model\FinderSearchPostsV2Request $finder_search_posts_v2_request finder_search_posts_v2_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['finderSearchPostV2'] to see the possible values for this operation
@@ -1265,7 +1265,7 @@ class FinderApi
     /**
      * Operation finderSearchPostV2WithHttpInfo
      *
-     * Search Divar posts with some filters
+     * جستجو آگهی‌های دیوار با فیلترهایی
      *
      * @param  \Divar\KenarApiClient\Model\FinderSearchPostsV2Request $finder_search_posts_v2_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['finderSearchPostV2'] to see the possible values for this operation
@@ -1364,7 +1364,7 @@ class FinderApi
     /**
      * Operation finderSearchPostV2Async
      *
-     * Search Divar posts with some filters
+     * جستجو آگهی‌های دیوار با فیلترهایی
      *
      * @param  \Divar\KenarApiClient\Model\FinderSearchPostsV2Request $finder_search_posts_v2_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['finderSearchPostV2'] to see the possible values for this operation
@@ -1385,7 +1385,7 @@ class FinderApi
     /**
      * Operation finderSearchPostV2AsyncWithHttpInfo
      *
-     * Search Divar posts with some filters
+     * جستجو آگهی‌های دیوار با فیلترهایی
      *
      * @param  \Divar\KenarApiClient\Model\FinderSearchPostsV2Request $finder_search_posts_v2_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['finderSearchPostV2'] to see the possible values for this operation

@@ -128,7 +128,7 @@ class PaymentTicketApi
     /**
      * Operation paymentTicketValidate
      *
-     * Validate a payment ticket
+     * اعتبارسنجی بلیط پرداخت
      *
      * @param  \Divar\KenarApiClient\Model\PaymentTicketValidateRequest $payment_ticket_validate_request payment_ticket_validate_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['paymentTicketValidate'] to see the possible values for this operation
@@ -146,7 +146,7 @@ class PaymentTicketApi
     /**
      * Operation paymentTicketValidateWithHttpInfo
      *
-     * Validate a payment ticket
+     * اعتبارسنجی بلیط پرداخت
      *
      * @param  \Divar\KenarApiClient\Model\PaymentTicketValidateRequest $payment_ticket_validate_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['paymentTicketValidate'] to see the possible values for this operation
@@ -245,7 +245,7 @@ class PaymentTicketApi
     /**
      * Operation paymentTicketValidateAsync
      *
-     * Validate a payment ticket
+     * اعتبارسنجی بلیط پرداخت
      *
      * @param  \Divar\KenarApiClient\Model\PaymentTicketValidateRequest $payment_ticket_validate_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['paymentTicketValidate'] to see the possible values for this operation
@@ -266,7 +266,7 @@ class PaymentTicketApi
     /**
      * Operation paymentTicketValidateAsyncWithHttpInfo
      *
-     * Validate a payment ticket
+     * اعتبارسنجی بلیط پرداخت
      *
      * @param  \Divar\KenarApiClient\Model\PaymentTicketValidateRequest $payment_ticket_validate_request (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['paymentTicketValidate'] to see the possible values for this operation

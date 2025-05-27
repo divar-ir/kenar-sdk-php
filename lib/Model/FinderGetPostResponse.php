@@ -65,6 +65,7 @@ class FinderGetPostResponse implements ModelInterface, ArrayAccess, \JsonSeriali
         'district' => 'string',
         'first_published_at' => '\DateTime',
         'state' => '\Divar\KenarApiClient\Model\FinderPostExtState',
+        'supplier_chat_assistant_enabled' => 'bool',
         'token' => 'string'
     ];
 
@@ -84,6 +85,7 @@ class FinderGetPostResponse implements ModelInterface, ArrayAccess, \JsonSeriali
         'district' => null,
         'first_published_at' => 'date-time',
         'state' => null,
+        'supplier_chat_assistant_enabled' => null,
         'token' => null
     ];
 
@@ -101,6 +103,7 @@ class FinderGetPostResponse implements ModelInterface, ArrayAccess, \JsonSeriali
         'district' => false,
         'first_published_at' => false,
         'state' => false,
+        'supplier_chat_assistant_enabled' => false,
         'token' => false
     ];
 
@@ -198,6 +201,7 @@ class FinderGetPostResponse implements ModelInterface, ArrayAccess, \JsonSeriali
         'district' => 'district',
         'first_published_at' => 'first_published_at',
         'state' => 'state',
+        'supplier_chat_assistant_enabled' => 'supplier_chat_assistant_enabled',
         'token' => 'token'
     ];
 
@@ -215,6 +219,7 @@ class FinderGetPostResponse implements ModelInterface, ArrayAccess, \JsonSeriali
         'district' => 'setDistrict',
         'first_published_at' => 'setFirstPublishedAt',
         'state' => 'setState',
+        'supplier_chat_assistant_enabled' => 'setSupplierChatAssistantEnabled',
         'token' => 'setToken'
     ];
 
@@ -232,6 +237,7 @@ class FinderGetPostResponse implements ModelInterface, ArrayAccess, \JsonSeriali
         'district' => 'getDistrict',
         'first_published_at' => 'getFirstPublishedAt',
         'state' => 'getState',
+        'supplier_chat_assistant_enabled' => 'getSupplierChatAssistantEnabled',
         'token' => 'getToken'
     ];
 
@@ -300,6 +306,7 @@ class FinderGetPostResponse implements ModelInterface, ArrayAccess, \JsonSeriali
         $this->setIfExists('district', $data ?? [], null);
         $this->setIfExists('first_published_at', $data ?? [], null);
         $this->setIfExists('state', $data ?? [], null);
+        $this->setIfExists('supplier_chat_assistant_enabled', $data ?? [], null);
         $this->setIfExists('token', $data ?? [], null);
     }
 
@@ -557,6 +564,33 @@ class FinderGetPostResponse implements ModelInterface, ArrayAccess, \JsonSeriali
             throw new \InvalidArgumentException('non-nullable state cannot be null');
         }
         $this->container['state'] = $state;
+
+        return $this;
+    }
+
+    /**
+     * Gets supplier_chat_assistant_enabled
+     *
+     * @return bool|null
+     */
+    public function getSupplierChatAssistantEnabled()
+    {
+        return $this->container['supplier_chat_assistant_enabled'];
+    }
+
+    /**
+     * Sets supplier_chat_assistant_enabled
+     *
+     * @param bool|null $supplier_chat_assistant_enabled supplier_chat_assistant_enabled
+     *
+     * @return self
+     */
+    public function setSupplierChatAssistantEnabled($supplier_chat_assistant_enabled)
+    {
+        if (is_null($supplier_chat_assistant_enabled)) {
+            throw new \InvalidArgumentException('non-nullable supplier_chat_assistant_enabled cannot be null');
+        }
+        $this->container['supplier_chat_assistant_enabled'] = $supplier_chat_assistant_enabled;
 
         return $this;
     }

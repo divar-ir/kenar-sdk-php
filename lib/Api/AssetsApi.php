@@ -161,7 +161,7 @@ class AssetsApi
     /**
      * Operation assetsGetBodyStatuses
      *
-     * Get available body-status options in Divar vehicle categories
+     * دریافت گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetBodyStatuses'] to see the possible values for this operation
      *
@@ -178,7 +178,7 @@ class AssetsApi
     /**
      * Operation assetsGetBodyStatusesWithHttpInfo
      *
-     * Get available body-status options in Divar vehicle categories
+     * دریافت گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetBodyStatuses'] to see the possible values for this operation
      *
@@ -276,7 +276,7 @@ class AssetsApi
     /**
      * Operation assetsGetBodyStatusesAsync
      *
-     * Get available body-status options in Divar vehicle categories
+     * دریافت گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetBodyStatuses'] to see the possible values for this operation
      *
@@ -296,7 +296,7 @@ class AssetsApi
     /**
      * Operation assetsGetBodyStatusesAsyncWithHttpInfo
      *
-     * Get available body-status options in Divar vehicle categories
+     * دریافت گزینه‌های وضعیت بدنه موجود در دسته‌بندی‌های خودرو دیوار
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetBodyStatuses'] to see the possible values for this operation
      *
@@ -428,7 +428,7 @@ class AssetsApi
     /**
      * Operation assetsGetBrandModels
      *
-     * Get brand models in a Divar category
+     * دریافت مدل‌های برند در دسته‌بندی دیوار
      *
      * @param  string $category category (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetBrandModels'] to see the possible values for this operation
@@ -446,7 +446,7 @@ class AssetsApi
     /**
      * Operation assetsGetBrandModelsWithHttpInfo
      *
-     * Get brand models in a Divar category
+     * دریافت مدل‌های برند در دسته‌بندی دیوار
      *
      * @param  string $category (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetBrandModels'] to see the possible values for this operation
@@ -545,7 +545,7 @@ class AssetsApi
     /**
      * Operation assetsGetBrandModelsAsync
      *
-     * Get brand models in a Divar category
+     * دریافت مدل‌های برند در دسته‌بندی دیوار
      *
      * @param  string $category (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetBrandModels'] to see the possible values for this operation
@@ -566,7 +566,7 @@ class AssetsApi
     /**
      * Operation assetsGetBrandModelsAsyncWithHttpInfo
      *
-     * Get brand models in a Divar category
+     * دریافت مدل‌های برند در دسته‌بندی دیوار
      *
      * @param  string $category (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetBrandModels'] to see the possible values for this operation
@@ -715,7 +715,7 @@ class AssetsApi
     /**
      * Operation assetsGetCategories
      *
-     * Get Divar categories
+     * دریافت دسته‌بندی‌های دیوار
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetCategories'] to see the possible values for this operation
      *
@@ -732,7 +732,7 @@ class AssetsApi
     /**
      * Operation assetsGetCategoriesWithHttpInfo
      *
-     * Get Divar categories
+     * دریافت دسته‌بندی‌های دیوار
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetCategories'] to see the possible values for this operation
      *
@@ -830,7 +830,7 @@ class AssetsApi
     /**
      * Operation assetsGetCategoriesAsync
      *
-     * Get Divar categories
+     * دریافت دسته‌بندی‌های دیوار
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetCategories'] to see the possible values for this operation
      *
@@ -850,7 +850,7 @@ class AssetsApi
     /**
      * Operation assetsGetCategoriesAsyncWithHttpInfo
      *
-     * Get Divar categories
+     * دریافت دسته‌بندی‌های دیوار
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetCategories'] to see the possible values for this operation
      *
@@ -982,7 +982,7 @@ class AssetsApi
     /**
      * Operation assetsGetCities
      *
-     * Get Divar cities
+     * دریافت شهرهای دیوار
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetCities'] to see the possible values for this operation
      *
@@ -999,7 +999,7 @@ class AssetsApi
     /**
      * Operation assetsGetCitiesWithHttpInfo
      *
-     * Get Divar cities
+     * دریافت شهرهای دیوار
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetCities'] to see the possible values for this operation
      *
@@ -1097,7 +1097,7 @@ class AssetsApi
     /**
      * Operation assetsGetCitiesAsync
      *
-     * Get Divar cities
+     * دریافت شهرهای دیوار
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetCities'] to see the possible values for this operation
      *
@@ -1117,7 +1117,7 @@ class AssetsApi
     /**
      * Operation assetsGetCitiesAsyncWithHttpInfo
      *
-     * Get Divar cities
+     * دریافت شهرهای دیوار
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetCities'] to see the possible values for this operation
      *
@@ -1249,7 +1249,7 @@ class AssetsApi
     /**
      * Operation assetsGetColors
      *
-     * Get colors in a Divar category
+     * دریافت رنگ‌ها در دسته‌بندی دیوار
      *
      * @param  string $category category (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetColors'] to see the possible values for this operation
@@ -1267,7 +1267,7 @@ class AssetsApi
     /**
      * Operation assetsGetColorsWithHttpInfo
      *
-     * Get colors in a Divar category
+     * دریافت رنگ‌ها در دسته‌بندی دیوار
      *
      * @param  string $category (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetColors'] to see the possible values for this operation
@@ -1366,7 +1366,7 @@ class AssetsApi
     /**
      * Operation assetsGetColorsAsync
      *
-     * Get colors in a Divar category
+     * دریافت رنگ‌ها در دسته‌بندی دیوار
      *
      * @param  string $category (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetColors'] to see the possible values for this operation
@@ -1387,7 +1387,7 @@ class AssetsApi
     /**
      * Operation assetsGetColorsAsyncWithHttpInfo
      *
-     * Get colors in a Divar category
+     * دریافت رنگ‌ها در دسته‌بندی دیوار
      *
      * @param  string $category (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetColors'] to see the possible values for this operation
@@ -1536,7 +1536,7 @@ class AssetsApi
     /**
      * Operation assetsGetDistricts
      *
-     * Get Divar districts
+     * دریافت مناطق دیوار
      *
      * @param  string|null $city_slug city_slug (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetDistricts'] to see the possible values for this operation
@@ -1554,7 +1554,7 @@ class AssetsApi
     /**
      * Operation assetsGetDistrictsWithHttpInfo
      *
-     * Get Divar districts
+     * دریافت مناطق دیوار
      *
      * @param  string|null $city_slug (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetDistricts'] to see the possible values for this operation
@@ -1653,7 +1653,7 @@ class AssetsApi
     /**
      * Operation assetsGetDistrictsAsync
      *
-     * Get Divar districts
+     * دریافت مناطق دیوار
      *
      * @param  string|null $city_slug (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetDistricts'] to see the possible values for this operation
@@ -1674,7 +1674,7 @@ class AssetsApi
     /**
      * Operation assetsGetDistrictsAsyncWithHttpInfo
      *
-     * Get Divar districts
+     * دریافت مناطق دیوار
      *
      * @param  string|null $city_slug (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetDistricts'] to see the possible values for this operation
@@ -1818,7 +1818,7 @@ class AssetsApi
     /**
      * Operation assetsGetDistricts2
      *
-     * Get Divar districts
+     * دریافت مناطق دیوار
      *
      * @param  string $city_slug city_slug (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetDistricts2'] to see the possible values for this operation
@@ -1836,7 +1836,7 @@ class AssetsApi
     /**
      * Operation assetsGetDistricts2WithHttpInfo
      *
-     * Get Divar districts
+     * دریافت مناطق دیوار
      *
      * @param  string $city_slug (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetDistricts2'] to see the possible values for this operation
@@ -1935,7 +1935,7 @@ class AssetsApi
     /**
      * Operation assetsGetDistricts2Async
      *
-     * Get Divar districts
+     * دریافت مناطق دیوار
      *
      * @param  string $city_slug (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetDistricts2'] to see the possible values for this operation
@@ -1956,7 +1956,7 @@ class AssetsApi
     /**
      * Operation assetsGetDistricts2AsyncWithHttpInfo
      *
-     * Get Divar districts
+     * دریافت مناطق دیوار
      *
      * @param  string $city_slug (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetDistricts2'] to see the possible values for this operation
@@ -2105,7 +2105,7 @@ class AssetsApi
     /**
      * Operation assetsGetInternalStorages
      *
-     * Get available internal-storage options in Divar mobile/tablet/laptop categories
+     * دریافت گزینه‌های حافظه داخلی موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetInternalStorages'] to see the possible values for this operation
      *
@@ -2122,7 +2122,7 @@ class AssetsApi
     /**
      * Operation assetsGetInternalStoragesWithHttpInfo
      *
-     * Get available internal-storage options in Divar mobile/tablet/laptop categories
+     * دریافت گزینه‌های حافظه داخلی موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetInternalStorages'] to see the possible values for this operation
      *
@@ -2220,7 +2220,7 @@ class AssetsApi
     /**
      * Operation assetsGetInternalStoragesAsync
      *
-     * Get available internal-storage options in Divar mobile/tablet/laptop categories
+     * دریافت گزینه‌های حافظه داخلی موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetInternalStorages'] to see the possible values for this operation
      *
@@ -2240,7 +2240,7 @@ class AssetsApi
     /**
      * Operation assetsGetInternalStoragesAsyncWithHttpInfo
      *
-     * Get available internal-storage options in Divar mobile/tablet/laptop categories
+     * دریافت گزینه‌های حافظه داخلی موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetInternalStorages'] to see the possible values for this operation
      *
@@ -2372,7 +2372,7 @@ class AssetsApi
     /**
      * Operation assetsGetOAuthScopes
      *
-     * Get KenarDivar OAuth scopes
+     * دریافت دامنه‌های OAuth کنار دیوار
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetOAuthScopes'] to see the possible values for this operation
      *
@@ -2389,7 +2389,7 @@ class AssetsApi
     /**
      * Operation assetsGetOAuthScopesWithHttpInfo
      *
-     * Get KenarDivar OAuth scopes
+     * دریافت دامنه‌های OAuth کنار دیوار
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetOAuthScopes'] to see the possible values for this operation
      *
@@ -2487,7 +2487,7 @@ class AssetsApi
     /**
      * Operation assetsGetOAuthScopesAsync
      *
-     * Get KenarDivar OAuth scopes
+     * دریافت دامنه‌های OAuth کنار دیوار
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetOAuthScopes'] to see the possible values for this operation
      *
@@ -2507,7 +2507,7 @@ class AssetsApi
     /**
      * Operation assetsGetOAuthScopesAsyncWithHttpInfo
      *
-     * Get KenarDivar OAuth scopes
+     * دریافت دامنه‌های OAuth کنار دیوار
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetOAuthScopes'] to see the possible values for this operation
      *
@@ -2639,7 +2639,7 @@ class AssetsApi
     /**
      * Operation assetsGetPermissions
      *
-     * Get KenarDivar permissions
+     * دریافت مجوزهای کنار دیوار
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetPermissions'] to see the possible values for this operation
      *
@@ -2656,7 +2656,7 @@ class AssetsApi
     /**
      * Operation assetsGetPermissionsWithHttpInfo
      *
-     * Get KenarDivar permissions
+     * دریافت مجوزهای کنار دیوار
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetPermissions'] to see the possible values for this operation
      *
@@ -2754,7 +2754,7 @@ class AssetsApi
     /**
      * Operation assetsGetPermissionsAsync
      *
-     * Get KenarDivar permissions
+     * دریافت مجوزهای کنار دیوار
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetPermissions'] to see the possible values for this operation
      *
@@ -2774,7 +2774,7 @@ class AssetsApi
     /**
      * Operation assetsGetPermissionsAsyncWithHttpInfo
      *
-     * Get KenarDivar permissions
+     * دریافت مجوزهای کنار دیوار
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetPermissions'] to see the possible values for this operation
      *
@@ -2906,7 +2906,7 @@ class AssetsApi
     /**
      * Operation assetsGetRamMemories
      *
-     * Get available ram-memory options in Divar mobile/tablet/laptop categories
+     * دریافت گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetRamMemories'] to see the possible values for this operation
      *
@@ -2923,7 +2923,7 @@ class AssetsApi
     /**
      * Operation assetsGetRamMemoriesWithHttpInfo
      *
-     * Get available ram-memory options in Divar mobile/tablet/laptop categories
+     * دریافت گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetRamMemories'] to see the possible values for this operation
      *
@@ -3021,7 +3021,7 @@ class AssetsApi
     /**
      * Operation assetsGetRamMemoriesAsync
      *
-     * Get available ram-memory options in Divar mobile/tablet/laptop categories
+     * دریافت گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetRamMemories'] to see the possible values for this operation
      *
@@ -3041,7 +3041,7 @@ class AssetsApi
     /**
      * Operation assetsGetRamMemoriesAsyncWithHttpInfo
      *
-     * Get available ram-memory options in Divar mobile/tablet/laptop categories
+     * دریافت گزینه‌های حافظه رم موجود در دسته‌بندی‌های موبایل/تبلت/لپ‌تاپ دیوار
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetRamMemories'] to see the possible values for this operation
      *
@@ -3173,7 +3173,7 @@ class AssetsApi
     /**
      * Operation assetsGetServiceTypes
      *
-     * Get available service types in KenarDivar
+     * دریافت انواع سرویس موجود در کنار دیوار
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetServiceTypes'] to see the possible values for this operation
      *
@@ -3190,7 +3190,7 @@ class AssetsApi
     /**
      * Operation assetsGetServiceTypesWithHttpInfo
      *
-     * Get available service types in KenarDivar
+     * دریافت انواع سرویس موجود در کنار دیوار
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetServiceTypes'] to see the possible values for this operation
      *
@@ -3288,7 +3288,7 @@ class AssetsApi
     /**
      * Operation assetsGetServiceTypesAsync
      *
-     * Get available service types in KenarDivar
+     * دریافت انواع سرویس موجود در کنار دیوار
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetServiceTypes'] to see the possible values for this operation
      *
@@ -3308,7 +3308,7 @@ class AssetsApi
     /**
      * Operation assetsGetServiceTypesAsyncWithHttpInfo
      *
-     * Get available service types in KenarDivar
+     * دریافت انواع سرویس موجود در کنار دیوار
      *
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['assetsGetServiceTypes'] to see the possible values for this operation
      *

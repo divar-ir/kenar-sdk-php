@@ -74,7 +74,7 @@ class PostApiTest extends TestCase
     /**
      * Test case for postEditPost
      *
-     * Edit a post.
+     * ویرایش آگهی.
      *
      */
     public function testPostEditPost()
@@ -86,7 +86,7 @@ class PostApiTest extends TestCase
     /**
      * Test case for postGetImageUploadURL
      *
-     * Get image upload URL.
+     * دریافت URL آپلود تصویر.
      *
      */
     public function testPostGetImageUploadURL()
