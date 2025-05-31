@@ -1,6 +1,6 @@
 <?php
 /**
- * PaymentTransactionTest
+ * GetPostStatsResponseDailyStatsTest
  *
  * PHP version 8.1
  *
@@ -31,15 +31,15 @@ namespace Divar\KenarApiClient\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * PaymentTransactionTest Class Doc Comment
+ * GetPostStatsResponseDailyStatsTest Class Doc Comment
  *
  * @category    Class
- * @description PaymentTransaction
+ * @description GetPostStatsResponseDailyStats
  * @package     Divar\KenarApiClient
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class PaymentTransactionTest extends TestCase
+class GetPostStatsResponseDailyStatsTest extends TestCase
 {
 
     /**
@@ -71,63 +71,27 @@ class PaymentTransactionTest extends TestCase
     }
 
     /**
-     * Test "PaymentTransaction"
+     * Test "GetPostStatsResponseDailyStats"
      */
-    public function testPaymentTransaction()
+    public function testGetPostStatsResponseDailyStats()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "cost_rials"
+     * Test attribute "count"
      */
-    public function testPropertyCostRials()
+    public function testPropertyCount()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "created_at"
+     * Test attribute "date"
      */
-    public function testPropertyCreatedAt()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "extra_details"
-     */
-    public function testPropertyExtraDetails()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "id"
-     */
-    public function testPropertyId()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "state"
-     */
-    public function testPropertyState()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "type"
-     */
-    public function testPropertyType()
+    public function testPropertyDate()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

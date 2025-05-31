@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cost_rials** | **string** | هزینه تراکنش به ریال برای اپلیکیشن شما | [optional]
+**created_at** | **\DateTime** | The time when the transaction was created | [optional]
 **extra_details** | **string** | همان جزئیات اضافی که در درخواست ارسال کردید | [optional]
 **id** | **string** | همان uuid هنگام ایجاد تراکنش | [optional]
 **state** | [**\Divar\KenarApiClient\Model\PaymentTransactionState**](PaymentTransactionState.md) |  | [optional]

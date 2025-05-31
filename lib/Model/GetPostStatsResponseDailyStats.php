@@ -1,6 +1,6 @@
 <?php
 /**
- * PaymentTransaction
+ * GetPostStatsResponseDailyStats
  *
  * PHP version 8.1
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Divar\KenarApiClient\ObjectSerializer;
 
 /**
- * PaymentTransaction Class Doc Comment
+ * GetPostStatsResponseDailyStats Class Doc Comment
  *
  * @category Class
  * @package  Divar\KenarApiClient
@@ -40,7 +40,7 @@ use \Divar\KenarApiClient\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class PaymentTransaction implements ModelInterface, ArrayAccess, \JsonSerializable
+class GetPostStatsResponseDailyStats implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class PaymentTransaction implements ModelInterface, ArrayAccess, \JsonSerializab
       *
       * @var string
       */
-    protected static $openAPIModelName = 'paymentTransaction';
+    protected static $openAPIModelName = 'GetPostStatsResponseDailyStats';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,12 +57,8 @@ class PaymentTransaction implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'cost_rials' => 'string',
-        'created_at' => '\DateTime',
-        'extra_details' => 'string',
-        'id' => 'string',
-        'state' => '\Divar\KenarApiClient\Model\PaymentTransactionState',
-        'type' => '\Divar\KenarApiClient\Model\PaymentTransactionType'
+        'count' => 'int',
+        'date' => 'string'
     ];
 
     /**
@@ -73,12 +69,8 @@ class PaymentTransaction implements ModelInterface, ArrayAccess, \JsonSerializab
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'cost_rials' => 'int64',
-        'created_at' => 'date-time',
-        'extra_details' => null,
-        'id' => null,
-        'state' => null,
-        'type' => null
+        'count' => 'int32',
+        'date' => null
     ];
 
     /**
@@ -87,12 +79,8 @@ class PaymentTransaction implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'cost_rials' => false,
-        'created_at' => false,
-        'extra_details' => false,
-        'id' => false,
-        'state' => false,
-        'type' => false
+        'count' => false,
+        'date' => false
     ];
 
     /**
@@ -181,12 +169,8 @@ class PaymentTransaction implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $attributeMap = [
-        'cost_rials' => 'cost_rials',
-        'created_at' => 'created_at',
-        'extra_details' => 'extra_details',
-        'id' => 'id',
-        'state' => 'state',
-        'type' => 'type'
+        'count' => 'count',
+        'date' => 'date'
     ];
 
     /**
@@ -195,12 +179,8 @@ class PaymentTransaction implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $setters = [
-        'cost_rials' => 'setCostRials',
-        'created_at' => 'setCreatedAt',
-        'extra_details' => 'setExtraDetails',
-        'id' => 'setId',
-        'state' => 'setState',
-        'type' => 'setType'
+        'count' => 'setCount',
+        'date' => 'setDate'
     ];
 
     /**
@@ -209,12 +189,8 @@ class PaymentTransaction implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $getters = [
-        'cost_rials' => 'getCostRials',
-        'created_at' => 'getCreatedAt',
-        'extra_details' => 'getExtraDetails',
-        'id' => 'getId',
-        'state' => 'getState',
-        'type' => 'getType'
+        'count' => 'getCount',
+        'date' => 'getDate'
     ];
 
     /**
@@ -274,12 +250,8 @@ class PaymentTransaction implements ModelInterface, ArrayAccess, \JsonSerializab
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('cost_rials', $data ?? [], null);
-        $this->setIfExists('created_at', $data ?? [], null);
-        $this->setIfExists('extra_details', $data ?? [], null);
-        $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('state', $data ?? [], null);
-        $this->setIfExists('type', $data ?? [], null);
+        $this->setIfExists('count', $data ?? [], null);
+        $this->setIfExists('date', $data ?? [], null);
     }
 
     /**
@@ -325,163 +297,55 @@ class PaymentTransaction implements ModelInterface, ArrayAccess, \JsonSerializab
 
 
     /**
-     * Gets cost_rials
+     * Gets count
+     *
+     * @return int|null
+     */
+    public function getCount()
+    {
+        return $this->container['count'];
+    }
+
+    /**
+     * Sets count
+     *
+     * @param int|null $count count
+     *
+     * @return self
+     */
+    public function setCount($count)
+    {
+        if (is_null($count)) {
+            throw new \InvalidArgumentException('non-nullable count cannot be null');
+        }
+        $this->container['count'] = $count;
+
+        return $this;
+    }
+
+    /**
+     * Gets date
      *
      * @return string|null
      */
-    public function getCostRials()
+    public function getDate()
     {
-        return $this->container['cost_rials'];
+        return $this->container['date'];
     }
 
     /**
-     * Sets cost_rials
+     * Sets date
      *
-     * @param string|null $cost_rials هزینه تراکنش به ریال برای اپلیکیشن شما
+     * @param string|null $date date
      *
      * @return self
      */
-    public function setCostRials($cost_rials)
+    public function setDate($date)
     {
-        if (is_null($cost_rials)) {
-            throw new \InvalidArgumentException('non-nullable cost_rials cannot be null');
+        if (is_null($date)) {
+            throw new \InvalidArgumentException('non-nullable date cannot be null');
         }
-        $this->container['cost_rials'] = $cost_rials;
-
-        return $this;
-    }
-
-    /**
-     * Gets created_at
-     *
-     * @return \DateTime|null
-     */
-    public function getCreatedAt()
-    {
-        return $this->container['created_at'];
-    }
-
-    /**
-     * Sets created_at
-     *
-     * @param \DateTime|null $created_at The time when the transaction was created
-     *
-     * @return self
-     */
-    public function setCreatedAt($created_at)
-    {
-        if (is_null($created_at)) {
-            throw new \InvalidArgumentException('non-nullable created_at cannot be null');
-        }
-        $this->container['created_at'] = $created_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets extra_details
-     *
-     * @return string|null
-     */
-    public function getExtraDetails()
-    {
-        return $this->container['extra_details'];
-    }
-
-    /**
-     * Sets extra_details
-     *
-     * @param string|null $extra_details همان جزئیات اضافی که در درخواست ارسال کردید
-     *
-     * @return self
-     */
-    public function setExtraDetails($extra_details)
-    {
-        if (is_null($extra_details)) {
-            throw new \InvalidArgumentException('non-nullable extra_details cannot be null');
-        }
-        $this->container['extra_details'] = $extra_details;
-
-        return $this;
-    }
-
-    /**
-     * Gets id
-     *
-     * @return string|null
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param string|null $id همان uuid هنگام ایجاد تراکنش
-     *
-     * @return self
-     */
-    public function setId($id)
-    {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
-        }
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets state
-     *
-     * @return \Divar\KenarApiClient\Model\PaymentTransactionState|null
-     */
-    public function getState()
-    {
-        return $this->container['state'];
-    }
-
-    /**
-     * Sets state
-     *
-     * @param \Divar\KenarApiClient\Model\PaymentTransactionState|null $state state
-     *
-     * @return self
-     */
-    public function setState($state)
-    {
-        if (is_null($state)) {
-            throw new \InvalidArgumentException('non-nullable state cannot be null');
-        }
-        $this->container['state'] = $state;
-
-        return $this;
-    }
-
-    /**
-     * Gets type
-     *
-     * @return \Divar\KenarApiClient\Model\PaymentTransactionType|null
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     *
-     * @param \Divar\KenarApiClient\Model\PaymentTransactionType|null $type type
-     *
-     * @return self
-     */
-    public function setType($type)
-    {
-        if (is_null($type)) {
-            throw new \InvalidArgumentException('non-nullable type cannot be null');
-        }
-        $this->container['type'] = $type;
+        $this->container['date'] = $date;
 
         return $this;
     }

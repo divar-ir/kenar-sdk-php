@@ -118,6 +118,7 @@ Class | Method | HTTP request | Description
 *PaymentTicketApi* | [**paymentTicketValidate**](docs/Api/PaymentTicketApi.md#paymentticketvalidate) | **POST** /v1/open-platform/payment-ticket/validate | اعتبارسنجی بلیط پرداخت
 *PostApi* | [**postEditPost**](docs/Api/PostApi.md#posteditpost) | **PUT** /v1/open-platform/post/{post_token} | ویرایش آگهی
 *PostApi* | [**postGetImageUploadURL**](docs/Api/PostApi.md#postgetimageuploadurl) | **GET** /v1/open-platform/post/image-upload-url | دریافت URL آپلود تصویر
+*PostApi* | [**postGetPostStats**](docs/Api/PostApi.md#postgetpoststats) | **GET** /experimental/open-platform/posts/{post_token}/stats | Get post statistics
 *SemanticApi* | [**semanticCreatePostSemantic**](docs/Api/SemanticApi.md#semanticcreatepostsemantic) | **POST** /experimental/open-platform/semantic/post/{token} | ایجاد اطلاعات معنایی آگهی
 *SemanticApi* | [**semanticCreateUserSemantic**](docs/Api/SemanticApi.md#semanticcreateusersemantic) | **POST** /v1/open-platform/semantic/user/{phone} | ایجاد اطلاعات معنایی کاربر
 *SemanticApi* | [**semanticCreateUserSemantic2**](docs/Api/SemanticApi.md#semanticcreateusersemantic2) | **POST** /v1/open-platform/semantic/users/{divar_user_id} | ایجاد اطلاعات معنایی کاربر
@@ -226,6 +227,8 @@ Class | Method | HTTP request | Description
 - [FinderUser](docs/Model/FinderUser.md)
 - [GetPostPricingResponseReorder](docs/Model/GetPostPricingResponseReorder.md)
 - [GetPostResponseBusinessData](docs/Model/GetPostResponseBusinessData.md)
+- [GetPostStatsResponseDailyStats](docs/Model/GetPostStatsResponseDailyStats.md)
+- [GetPostStatsResponsePostStats](docs/Model/GetPostStatsResponsePostStats.md)
 - [GetServiceTypesResponseServiceTypeData](docs/Model/GetServiceTypesResponseServiceTypeData.md)
 - [GooglerpcStatus](docs/Model/GooglerpcStatus.md)
 - [ImageCarouselRowImageItem](docs/Model/ImageCarouselRowImageItem.md)
@@ -252,6 +255,7 @@ Class | Method | HTTP request | Description
 - [PaymentTransactionType](docs/Model/PaymentTransactionType.md)
 - [PostEditPostBody](docs/Model/PostEditPostBody.md)
 - [PostGetImageUploadURLResponse](docs/Model/PostGetImageUploadURLResponse.md)
+- [PostGetPostStatsResponse](docs/Model/PostGetPostStatsResponse.md)
 - [PremiumPanelBusinessDataSubBusinessType](docs/Model/PremiumPanelBusinessDataSubBusinessType.md)
 - [ProtobufAny](docs/Model/ProtobufAny.md)
 - [SearchPostItemPrice](docs/Model/SearchPostItemPrice.md)

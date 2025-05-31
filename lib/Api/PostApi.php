@@ -80,6 +80,9 @@ class PostApi
         'postGetImageUploadURL' => [
             'application/json',
         ],
+        'postGetPostStats' => [
+            'application/json',
+        ],
     ];
 
     /**
@@ -641,6 +644,293 @@ class PostApi
 
 
 
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation postGetPostStats
+     *
+     * Get post statistics
+     *
+     * @param  string $post_token post_token (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postGetPostStats'] to see the possible values for this operation
+     *
+     * @throws \Divar\KenarApiClient\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return \Divar\KenarApiClient\Model\PostGetPostStatsResponse|\Divar\KenarApiClient\Model\GooglerpcStatus
+     */
+    public function postGetPostStats($post_token, string $contentType = self::contentTypes['postGetPostStats'][0])
+    {
+        list($response) = $this->postGetPostStatsWithHttpInfo($post_token, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation postGetPostStatsWithHttpInfo
+     *
+     * Get post statistics
+     *
+     * @param  string $post_token (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postGetPostStats'] to see the possible values for this operation
+     *
+     * @throws \Divar\KenarApiClient\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of \Divar\KenarApiClient\Model\PostGetPostStatsResponse|\Divar\KenarApiClient\Model\GooglerpcStatus, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function postGetPostStatsWithHttpInfo($post_token, string $contentType = self::contentTypes['postGetPostStats'][0])
+    {
+        $request = $this->postGetPostStatsRequest($post_token, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+
+            switch($statusCode) {
+                case 200:
+                    return $this->handleResponseWithDataType(
+                        '\Divar\KenarApiClient\Model\PostGetPostStatsResponse',
+                        $request,
+                        $response,
+                    );
+                default:
+                    return $this->handleResponseWithDataType(
+                        '\Divar\KenarApiClient\Model\GooglerpcStatus',
+                        $request,
+                        $response,
+                    );
+            }
+
+            
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return $this->handleResponseWithDataType(
+                '\Divar\KenarApiClient\Model\PostGetPostStatsResponse',
+                $request,
+                $response,
+            );
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Divar\KenarApiClient\Model\PostGetPostStatsResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Divar\KenarApiClient\Model\GooglerpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+            }
+        
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation postGetPostStatsAsync
+     *
+     * Get post statistics
+     *
+     * @param  string $post_token (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postGetPostStats'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function postGetPostStatsAsync($post_token, string $contentType = self::contentTypes['postGetPostStats'][0])
+    {
+        return $this->postGetPostStatsAsyncWithHttpInfo($post_token, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation postGetPostStatsAsyncWithHttpInfo
+     *
+     * Get post statistics
+     *
+     * @param  string $post_token (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postGetPostStats'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function postGetPostStatsAsyncWithHttpInfo($post_token, string $contentType = self::contentTypes['postGetPostStats'][0])
+    {
+        $returnType = '\Divar\KenarApiClient\Model\PostGetPostStatsResponse';
+        $request = $this->postGetPostStatsRequest($post_token, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'postGetPostStats'
+     *
+     * @param  string $post_token (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postGetPostStats'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function postGetPostStatsRequest($post_token, string $contentType = self::contentTypes['postGetPostStats'][0])
+    {
+
+        // verify the required parameter 'post_token' is set
+        if ($post_token === null || (is_array($post_token) && count($post_token) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $post_token when calling postGetPostStats'
+            );
+        }
+
+
+        $resourcePath = '/experimental/open-platform/posts/{post_token}/stats';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+        // path params
+        if ($post_token !== null) {
+            $resourcePath = str_replace(
+                '{' . 'post_token' . '}',
+                ObjectSerializer::toPathValue($post_token),
+                $resourcePath
+            );
+        }
 
 
         $headers = $this->headerSelector->selectHeaders(

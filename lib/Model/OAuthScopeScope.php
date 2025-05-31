@@ -56,6 +56,8 @@ class OAuthScopeScope
 
     public const USER_POSTS_GET = 'USER_POSTS_GET';
 
+    public const USER_POSTS_STATS_READ = 'USER_POSTS_STATS_READ';
+
     public const CHAT_POST_CONVERSATIONS_READ = 'CHAT_POST_CONVERSATIONS_READ';
 
     public const CHAT_POST_CONVERSATIONS_MESSAGE_SEND = 'CHAT_POST_CONVERSATIONS_MESSAGE_SEND';
@@ -108,6 +110,7 @@ class OAuthScopeScope
             self::CHAT_MESSAGE_SEND,
             self::CHAT_CONVERSATION_READ,
             self::USER_POSTS_GET,
+            self::USER_POSTS_STATS_READ,
             self::CHAT_POST_CONVERSATIONS_READ,
             self::CHAT_POST_CONVERSATIONS_MESSAGE_SEND,
             self::CHAT_SUPPLIER_ALL_CONVERSATIONS_READ,

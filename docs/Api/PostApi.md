@@ -6,6 +6,7 @@ All URIs are relative to https://open-api.divar.ir, except if the operation defi
 | ------------- | ------------- | ------------- |
 | [**postEditPost()**](PostApi.md#postEditPost) | **PUT** /v1/open-platform/post/{post_token} | ویرایش آگهی |
 | [**postGetImageUploadURL()**](PostApi.md#postGetImageUploadURL) | **GET** /v1/open-platform/post/image-upload-url | دریافت URL آپلود تصویر |
+| [**postGetPostStats()**](PostApi.md#postGetPostStats) | **GET** /experimental/open-platform/posts/{post_token}/stats | Get post statistics |
 
 
 ## `postEditPost()`
@@ -117,6 +118,68 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**\Divar\KenarApiClient\Model\PostGetImageUploadURLResponse**](../Model/PostGetImageUploadURLResponse.md)
+
+### Authorization
+
+[APIKey](../../README.md#APIKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `postGetPostStats()`
+
+```php
+postGetPostStats($post_token): \Divar\KenarApiClient\Model\PostGetPostStatsResponse
+```
+
+Get post statistics
+
+This API allows you to retrieve the statistics associated with a single post (e.g. views).
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure API key authorization: APIKey
+$config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
+
+$apiInstance = new Divar\KenarApiClient\Api\PostApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$post_token = 'post_token_example'; // string
+
+try {
+    $result = $apiInstance->postGetPostStats($post_token);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PostApi->postGetPostStats: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **post_token** | **string**|  | |
+
+### Return type
+
+[**\Divar\KenarApiClient\Model\PostGetPostStatsResponse**](../Model/PostGetPostStatsResponse.md)
 
 ### Authorization
 

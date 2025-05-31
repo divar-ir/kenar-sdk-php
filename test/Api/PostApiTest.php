@@ -94,4 +94,16 @@ class PostApiTest extends TestCase
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test case for postGetPostStats
+     *
+     * Get post statistics.
+     *
+     */
+    public function testPostGetPostStats()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
 }
