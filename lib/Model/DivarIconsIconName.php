@@ -1628,6 +1628,8 @@ class DivarIconsIconName
 
     public const CHAT_SPARKLES = 'CHAT_SPARKLES';
 
+    public const PUZZLE_SPARKLES = 'PUZZLE_SPARKLES';
+
     /**
      * Gets allowable values of the enum
      * @return string[]
@@ -2427,7 +2429,8 @@ class DivarIconsIconName
             self::SPARKLES_F,
             self::HAND_CLICK,
             self::WHATS_APP,
-            self::CHAT_SPARKLES
+            self::CHAT_SPARKLES,
+            self::PUZZLE_SPARKLES
         ];
     }
 }
