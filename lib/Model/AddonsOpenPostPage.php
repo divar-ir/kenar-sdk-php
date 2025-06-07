@@ -1,6 +1,6 @@
 <?php
 /**
- * AddonsAction
+ * AddonsOpenPostPage
  *
  * PHP version 8.1
  *
@@ -32,16 +32,16 @@ use \ArrayAccess;
 use \Divar\KenarApiClient\ObjectSerializer;
 
 /**
- * AddonsAction Class Doc Comment
+ * AddonsOpenPostPage Class Doc Comment
  *
  * @category Class
- * @description Represents an action that can be performed
+ * @description An action to open a post page in the app
  * @package  Divar\KenarApiClient
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class AddonsAction implements ModelInterface, ArrayAccess, \JsonSerializable
+class AddonsOpenPostPage implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class AddonsAction implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'addonsAction';
+    protected static $openAPIModelName = 'addonsOpenPostPage';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,11 +58,7 @@ class AddonsAction implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'get_dynamic_action' => '\Divar\KenarApiClient\Model\AddonsGetDynamicAction',
-        'open_direct_link' => 'string',
-        'open_post_manage_page' => '\Divar\KenarApiClient\Model\AddonsOpenPostManagePage',
-        'open_post_page' => '\Divar\KenarApiClient\Model\AddonsOpenPostPage',
-        'open_server_link' => '\Divar\KenarApiClient\Model\AddonsOpenServerLink'
+        'post_token' => 'string'
     ];
 
     /**
@@ -73,11 +69,7 @@ class AddonsAction implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'get_dynamic_action' => null,
-        'open_direct_link' => null,
-        'open_post_manage_page' => null,
-        'open_post_page' => null,
-        'open_server_link' => null
+        'post_token' => null
     ];
 
     /**
@@ -86,11 +78,7 @@ class AddonsAction implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'get_dynamic_action' => false,
-        'open_direct_link' => false,
-        'open_post_manage_page' => false,
-        'open_post_page' => false,
-        'open_server_link' => false
+        'post_token' => false
     ];
 
     /**
@@ -179,11 +167,7 @@ class AddonsAction implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'get_dynamic_action' => 'get_dynamic_action',
-        'open_direct_link' => 'open_direct_link',
-        'open_post_manage_page' => 'open_post_manage_page',
-        'open_post_page' => 'open_post_page',
-        'open_server_link' => 'open_server_link'
+        'post_token' => 'post_token'
     ];
 
     /**
@@ -192,11 +176,7 @@ class AddonsAction implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'get_dynamic_action' => 'setGetDynamicAction',
-        'open_direct_link' => 'setOpenDirectLink',
-        'open_post_manage_page' => 'setOpenPostManagePage',
-        'open_post_page' => 'setOpenPostPage',
-        'open_server_link' => 'setOpenServerLink'
+        'post_token' => 'setPostToken'
     ];
 
     /**
@@ -205,11 +185,7 @@ class AddonsAction implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'get_dynamic_action' => 'getGetDynamicAction',
-        'open_direct_link' => 'getOpenDirectLink',
-        'open_post_manage_page' => 'getOpenPostManagePage',
-        'open_post_page' => 'getOpenPostPage',
-        'open_server_link' => 'getOpenServerLink'
+        'post_token' => 'getPostToken'
     ];
 
     /**
@@ -269,11 +245,7 @@ class AddonsAction implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('get_dynamic_action', $data ?? [], null);
-        $this->setIfExists('open_direct_link', $data ?? [], null);
-        $this->setIfExists('open_post_manage_page', $data ?? [], null);
-        $this->setIfExists('open_post_page', $data ?? [], null);
-        $this->setIfExists('open_server_link', $data ?? [], null);
+        $this->setIfExists('post_token', $data ?? [], null);
     }
 
     /**
@@ -303,6 +275,9 @@ class AddonsAction implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
+        if ($this->container['post_token'] === null) {
+            $invalidProperties[] = "'post_token' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -319,136 +294,28 @@ class AddonsAction implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets get_dynamic_action
+     * Gets post_token
      *
-     * @return \Divar\KenarApiClient\Model\AddonsGetDynamicAction|null
+     * @return string
      */
-    public function getGetDynamicAction()
+    public function getPostToken()
     {
-        return $this->container['get_dynamic_action'];
+        return $this->container['post_token'];
     }
 
     /**
-     * Sets get_dynamic_action
+     * Sets post_token
      *
-     * @param \Divar\KenarApiClient\Model\AddonsGetDynamicAction|null $get_dynamic_action get_dynamic_action
+     * @param string $post_token Token of the post to open
      *
      * @return self
      */
-    public function setGetDynamicAction($get_dynamic_action)
+    public function setPostToken($post_token)
     {
-        if (is_null($get_dynamic_action)) {
-            throw new \InvalidArgumentException('non-nullable get_dynamic_action cannot be null');
+        if (is_null($post_token)) {
+            throw new \InvalidArgumentException('non-nullable post_token cannot be null');
         }
-        $this->container['get_dynamic_action'] = $get_dynamic_action;
-
-        return $this;
-    }
-
-    /**
-     * Gets open_direct_link
-     *
-     * @return string|null
-     */
-    public function getOpenDirectLink()
-    {
-        return $this->container['open_direct_link'];
-    }
-
-    /**
-     * Sets open_direct_link
-     *
-     * @param string|null $open_direct_link An action to send user to your URL directly with just a resource id (if applicable)
-     *
-     * @return self
-     */
-    public function setOpenDirectLink($open_direct_link)
-    {
-        if (is_null($open_direct_link)) {
-            throw new \InvalidArgumentException('non-nullable open_direct_link cannot be null');
-        }
-        $this->container['open_direct_link'] = $open_direct_link;
-
-        return $this;
-    }
-
-    /**
-     * Gets open_post_manage_page
-     *
-     * @return \Divar\KenarApiClient\Model\AddonsOpenPostManagePage|null
-     */
-    public function getOpenPostManagePage()
-    {
-        return $this->container['open_post_manage_page'];
-    }
-
-    /**
-     * Sets open_post_manage_page
-     *
-     * @param \Divar\KenarApiClient\Model\AddonsOpenPostManagePage|null $open_post_manage_page open_post_manage_page
-     *
-     * @return self
-     */
-    public function setOpenPostManagePage($open_post_manage_page)
-    {
-        if (is_null($open_post_manage_page)) {
-            throw new \InvalidArgumentException('non-nullable open_post_manage_page cannot be null');
-        }
-        $this->container['open_post_manage_page'] = $open_post_manage_page;
-
-        return $this;
-    }
-
-    /**
-     * Gets open_post_page
-     *
-     * @return \Divar\KenarApiClient\Model\AddonsOpenPostPage|null
-     */
-    public function getOpenPostPage()
-    {
-        return $this->container['open_post_page'];
-    }
-
-    /**
-     * Sets open_post_page
-     *
-     * @param \Divar\KenarApiClient\Model\AddonsOpenPostPage|null $open_post_page open_post_page
-     *
-     * @return self
-     */
-    public function setOpenPostPage($open_post_page)
-    {
-        if (is_null($open_post_page)) {
-            throw new \InvalidArgumentException('non-nullable open_post_page cannot be null');
-        }
-        $this->container['open_post_page'] = $open_post_page;
-
-        return $this;
-    }
-
-    /**
-     * Gets open_server_link
-     *
-     * @return \Divar\KenarApiClient\Model\AddonsOpenServerLink|null
-     */
-    public function getOpenServerLink()
-    {
-        return $this->container['open_server_link'];
-    }
-
-    /**
-     * Sets open_server_link
-     *
-     * @param \Divar\KenarApiClient\Model\AddonsOpenServerLink|null $open_server_link open_server_link
-     *
-     * @return self
-     */
-    public function setOpenServerLink($open_server_link)
-    {
-        if (is_null($open_server_link)) {
-            throw new \InvalidArgumentException('non-nullable open_server_link cannot be null');
-        }
-        $this->container['open_server_link'] = $open_server_link;
+        $this->container['post_token'] = $post_token;
 
         return $this;
     }

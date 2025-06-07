@@ -161,7 +161,7 @@ $apiInstance = new Divar\KenarApiClient\Api\PostApi(
     new GuzzleHttp\Client(),
     $config
 );
-$post_token = 'post_token_example'; // string
+$post_token = 'post_token_example'; // string | Post token
 
 try {
     $result = $apiInstance->postGetPostStats($post_token);
@@ -175,7 +175,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **post_token** | **string**|  | |
+| **post_token** | **string**| Post token | |
 
 ### Return type
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * AddonsActionTest
+ * AddonsOpenPostPageTest
  *
  * PHP version 8.1
  *
@@ -31,15 +31,15 @@ namespace Divar\KenarApiClient\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * AddonsActionTest Class Doc Comment
+ * AddonsOpenPostPageTest Class Doc Comment
  *
  * @category    Class
- * @description Represents an action that can be performed
+ * @description An action to open a post page in the app
  * @package     Divar\KenarApiClient
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class AddonsActionTest extends TestCase
+class AddonsOpenPostPageTest extends TestCase
 {
 
     /**
@@ -71,54 +71,18 @@ class AddonsActionTest extends TestCase
     }
 
     /**
-     * Test "AddonsAction"
+     * Test "AddonsOpenPostPage"
      */
-    public function testAddonsAction()
+    public function testAddonsOpenPostPage()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "get_dynamic_action"
+     * Test attribute "post_token"
      */
-    public function testPropertyGetDynamicAction()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "open_direct_link"
-     */
-    public function testPropertyOpenDirectLink()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "open_post_manage_page"
-     */
-    public function testPropertyOpenPostManagePage()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "open_post_page"
-     */
-    public function testPropertyOpenPostPage()
-    {
-        // TODO: implement
-        self::markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "open_server_link"
-     */
-    public function testPropertyOpenServerLink()
+    public function testPropertyPostToken()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

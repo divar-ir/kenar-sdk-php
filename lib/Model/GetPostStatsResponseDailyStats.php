@@ -309,7 +309,7 @@ class GetPostStatsResponseDailyStats implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets count
      *
-     * @param int|null $count count
+     * @param int|null $count Number of the daily metric (e.g. view)
      *
      * @return self
      */
@@ -336,7 +336,7 @@ class GetPostStatsResponseDailyStats implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets date
      *
-     * @param string|null $date date
+     * @param string|null $date Date in YYYY-MM-DD format
      *
      * @return self
      */

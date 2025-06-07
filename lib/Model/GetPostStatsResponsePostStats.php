@@ -309,7 +309,7 @@ class GetPostStatsResponsePostStats implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets daily
      *
-     * @param \Divar\KenarApiClient\Model\GetPostStatsResponseDailyStats[]|null $daily daily
+     * @param \Divar\KenarApiClient\Model\GetPostStatsResponseDailyStats[]|null $daily Daily value the metric over the last seven days
      *
      * @return self
      */
@@ -336,7 +336,7 @@ class GetPostStatsResponsePostStats implements ModelInterface, ArrayAccess, \Jso
     /**
      * Sets total
      *
-     * @param int|null $total total
+     * @param int|null $total Total number of the metric (e.g. view)
      *
      * @return self
      */
