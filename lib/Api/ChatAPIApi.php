@@ -83,6 +83,12 @@ class ChatAPIApi
         'chatAPIChatBotSendMessage3' => [
             'application/json',
         ],
+        'chatAPIChatBotSendMessage4' => [
+            'application/json',
+        ],
+        'chatAPIChatBotSendMessage5' => [
+            'application/json',
+        ],
         'chatAPIConversationSendMessage' => [
             'application/json',
         ],
@@ -362,7 +368,7 @@ class ChatAPIApi
         }
 
 
-        $resourcePath = '/experimental/open-platform/chatbot-conversations/{conversation_id}/messages';
+        $resourcePath = '/v1/open-platform/chat/bot/conversations/{conversation_id}/messages';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -668,7 +674,7 @@ class ChatAPIApi
         }
 
 
-        $resourcePath = '/experimental/open-platform/chat/bot/users/{user_id}/messages';
+        $resourcePath = '/v1/open-platform/chat/bot/users/{user_id}/messages';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -970,6 +976,618 @@ class ChatAPIApi
         if ($chat_api_chat_bot_send_message_body === null || (is_array($chat_api_chat_bot_send_message_body) && count($chat_api_chat_bot_send_message_body) === 0)) {
             throw new \InvalidArgumentException(
                 'Missing the required parameter $chat_api_chat_bot_send_message_body when calling chatAPIChatBotSendMessage3'
+            );
+        }
+
+
+        $resourcePath = '/experimental/open-platform/chatbot-conversations/{conversation_id}/messages';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+        // path params
+        if ($conversation_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'conversation_id' . '}',
+                ObjectSerializer::toPathValue($conversation_id),
+                $resourcePath
+            );
+        }
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($chat_api_chat_bot_send_message_body)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($chat_api_chat_bot_send_message_body));
+            } else {
+                $httpBody = $chat_api_chat_bot_send_message_body;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation chatAPIChatBotSendMessage4
+     *
+     * ارسال پیام به مکالمه ChatBot
+     *
+     * @param  string $user_id Unique identifier for the user to start or continue a conversation with (required)
+     * @param  \Divar\KenarApiClient\Model\ChatAPIChatBotSendMessageBody $chat_api_chat_bot_send_message_body chat_api_chat_bot_send_message_body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['chatAPIChatBotSendMessage4'] to see the possible values for this operation
+     *
+     * @throws \Divar\KenarApiClient\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return \Divar\KenarApiClient\Model\ChatapiChatBotSendMessageResponse|\Divar\KenarApiClient\Model\GooglerpcStatus
+     */
+    public function chatAPIChatBotSendMessage4($user_id, $chat_api_chat_bot_send_message_body, string $contentType = self::contentTypes['chatAPIChatBotSendMessage4'][0])
+    {
+        list($response) = $this->chatAPIChatBotSendMessage4WithHttpInfo($user_id, $chat_api_chat_bot_send_message_body, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation chatAPIChatBotSendMessage4WithHttpInfo
+     *
+     * ارسال پیام به مکالمه ChatBot
+     *
+     * @param  string $user_id Unique identifier for the user to start or continue a conversation with (required)
+     * @param  \Divar\KenarApiClient\Model\ChatAPIChatBotSendMessageBody $chat_api_chat_bot_send_message_body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['chatAPIChatBotSendMessage4'] to see the possible values for this operation
+     *
+     * @throws \Divar\KenarApiClient\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of \Divar\KenarApiClient\Model\ChatapiChatBotSendMessageResponse|\Divar\KenarApiClient\Model\GooglerpcStatus, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function chatAPIChatBotSendMessage4WithHttpInfo($user_id, $chat_api_chat_bot_send_message_body, string $contentType = self::contentTypes['chatAPIChatBotSendMessage4'][0])
+    {
+        $request = $this->chatAPIChatBotSendMessage4Request($user_id, $chat_api_chat_bot_send_message_body, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+
+            switch($statusCode) {
+                case 200:
+                    return $this->handleResponseWithDataType(
+                        '\Divar\KenarApiClient\Model\ChatapiChatBotSendMessageResponse',
+                        $request,
+                        $response,
+                    );
+                default:
+                    return $this->handleResponseWithDataType(
+                        '\Divar\KenarApiClient\Model\GooglerpcStatus',
+                        $request,
+                        $response,
+                    );
+            }
+
+            
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return $this->handleResponseWithDataType(
+                '\Divar\KenarApiClient\Model\ChatapiChatBotSendMessageResponse',
+                $request,
+                $response,
+            );
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Divar\KenarApiClient\Model\ChatapiChatBotSendMessageResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Divar\KenarApiClient\Model\GooglerpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+            }
+        
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation chatAPIChatBotSendMessage4Async
+     *
+     * ارسال پیام به مکالمه ChatBot
+     *
+     * @param  string $user_id Unique identifier for the user to start or continue a conversation with (required)
+     * @param  \Divar\KenarApiClient\Model\ChatAPIChatBotSendMessageBody $chat_api_chat_bot_send_message_body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['chatAPIChatBotSendMessage4'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function chatAPIChatBotSendMessage4Async($user_id, $chat_api_chat_bot_send_message_body, string $contentType = self::contentTypes['chatAPIChatBotSendMessage4'][0])
+    {
+        return $this->chatAPIChatBotSendMessage4AsyncWithHttpInfo($user_id, $chat_api_chat_bot_send_message_body, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation chatAPIChatBotSendMessage4AsyncWithHttpInfo
+     *
+     * ارسال پیام به مکالمه ChatBot
+     *
+     * @param  string $user_id Unique identifier for the user to start or continue a conversation with (required)
+     * @param  \Divar\KenarApiClient\Model\ChatAPIChatBotSendMessageBody $chat_api_chat_bot_send_message_body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['chatAPIChatBotSendMessage4'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function chatAPIChatBotSendMessage4AsyncWithHttpInfo($user_id, $chat_api_chat_bot_send_message_body, string $contentType = self::contentTypes['chatAPIChatBotSendMessage4'][0])
+    {
+        $returnType = '\Divar\KenarApiClient\Model\ChatapiChatBotSendMessageResponse';
+        $request = $this->chatAPIChatBotSendMessage4Request($user_id, $chat_api_chat_bot_send_message_body, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'chatAPIChatBotSendMessage4'
+     *
+     * @param  string $user_id Unique identifier for the user to start or continue a conversation with (required)
+     * @param  \Divar\KenarApiClient\Model\ChatAPIChatBotSendMessageBody $chat_api_chat_bot_send_message_body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['chatAPIChatBotSendMessage4'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function chatAPIChatBotSendMessage4Request($user_id, $chat_api_chat_bot_send_message_body, string $contentType = self::contentTypes['chatAPIChatBotSendMessage4'][0])
+    {
+
+        // verify the required parameter 'user_id' is set
+        if ($user_id === null || (is_array($user_id) && count($user_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $user_id when calling chatAPIChatBotSendMessage4'
+            );
+        }
+
+        // verify the required parameter 'chat_api_chat_bot_send_message_body' is set
+        if ($chat_api_chat_bot_send_message_body === null || (is_array($chat_api_chat_bot_send_message_body) && count($chat_api_chat_bot_send_message_body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $chat_api_chat_bot_send_message_body when calling chatAPIChatBotSendMessage4'
+            );
+        }
+
+
+        $resourcePath = '/experimental/open-platform/chat/bot/users/{user_id}/messages';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+        // path params
+        if ($user_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'user_id' . '}',
+                ObjectSerializer::toPathValue($user_id),
+                $resourcePath
+            );
+        }
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($chat_api_chat_bot_send_message_body)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($chat_api_chat_bot_send_message_body));
+            } else {
+                $httpBody = $chat_api_chat_bot_send_message_body;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('X-API-Key');
+        if ($apiKey !== null) {
+            $headers['X-API-Key'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation chatAPIChatBotSendMessage5
+     *
+     * ارسال پیام به مکالمه ChatBot
+     *
+     * @param  string $conversation_id Unique identifier for the conversation (required)
+     * @param  \Divar\KenarApiClient\Model\ChatAPIChatBotSendMessageBody $chat_api_chat_bot_send_message_body chat_api_chat_bot_send_message_body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['chatAPIChatBotSendMessage5'] to see the possible values for this operation
+     *
+     * @throws \Divar\KenarApiClient\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return \Divar\KenarApiClient\Model\ChatapiChatBotSendMessageResponse|\Divar\KenarApiClient\Model\GooglerpcStatus
+     */
+    public function chatAPIChatBotSendMessage5($conversation_id, $chat_api_chat_bot_send_message_body, string $contentType = self::contentTypes['chatAPIChatBotSendMessage5'][0])
+    {
+        list($response) = $this->chatAPIChatBotSendMessage5WithHttpInfo($conversation_id, $chat_api_chat_bot_send_message_body, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation chatAPIChatBotSendMessage5WithHttpInfo
+     *
+     * ارسال پیام به مکالمه ChatBot
+     *
+     * @param  string $conversation_id Unique identifier for the conversation (required)
+     * @param  \Divar\KenarApiClient\Model\ChatAPIChatBotSendMessageBody $chat_api_chat_bot_send_message_body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['chatAPIChatBotSendMessage5'] to see the possible values for this operation
+     *
+     * @throws \Divar\KenarApiClient\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of \Divar\KenarApiClient\Model\ChatapiChatBotSendMessageResponse|\Divar\KenarApiClient\Model\GooglerpcStatus, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function chatAPIChatBotSendMessage5WithHttpInfo($conversation_id, $chat_api_chat_bot_send_message_body, string $contentType = self::contentTypes['chatAPIChatBotSendMessage5'][0])
+    {
+        $request = $this->chatAPIChatBotSendMessage5Request($conversation_id, $chat_api_chat_bot_send_message_body, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+
+            switch($statusCode) {
+                case 200:
+                    return $this->handleResponseWithDataType(
+                        '\Divar\KenarApiClient\Model\ChatapiChatBotSendMessageResponse',
+                        $request,
+                        $response,
+                    );
+                default:
+                    return $this->handleResponseWithDataType(
+                        '\Divar\KenarApiClient\Model\GooglerpcStatus',
+                        $request,
+                        $response,
+                    );
+            }
+
+            
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            return $this->handleResponseWithDataType(
+                '\Divar\KenarApiClient\Model\ChatapiChatBotSendMessageResponse',
+                $request,
+                $response,
+            );
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Divar\KenarApiClient\Model\ChatapiChatBotSendMessageResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Divar\KenarApiClient\Model\GooglerpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    throw $e;
+            }
+        
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation chatAPIChatBotSendMessage5Async
+     *
+     * ارسال پیام به مکالمه ChatBot
+     *
+     * @param  string $conversation_id Unique identifier for the conversation (required)
+     * @param  \Divar\KenarApiClient\Model\ChatAPIChatBotSendMessageBody $chat_api_chat_bot_send_message_body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['chatAPIChatBotSendMessage5'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function chatAPIChatBotSendMessage5Async($conversation_id, $chat_api_chat_bot_send_message_body, string $contentType = self::contentTypes['chatAPIChatBotSendMessage5'][0])
+    {
+        return $this->chatAPIChatBotSendMessage5AsyncWithHttpInfo($conversation_id, $chat_api_chat_bot_send_message_body, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation chatAPIChatBotSendMessage5AsyncWithHttpInfo
+     *
+     * ارسال پیام به مکالمه ChatBot
+     *
+     * @param  string $conversation_id Unique identifier for the conversation (required)
+     * @param  \Divar\KenarApiClient\Model\ChatAPIChatBotSendMessageBody $chat_api_chat_bot_send_message_body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['chatAPIChatBotSendMessage5'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function chatAPIChatBotSendMessage5AsyncWithHttpInfo($conversation_id, $chat_api_chat_bot_send_message_body, string $contentType = self::contentTypes['chatAPIChatBotSendMessage5'][0])
+    {
+        $returnType = '\Divar\KenarApiClient\Model\ChatapiChatBotSendMessageResponse';
+        $request = $this->chatAPIChatBotSendMessage5Request($conversation_id, $chat_api_chat_bot_send_message_body, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'chatAPIChatBotSendMessage5'
+     *
+     * @param  string $conversation_id Unique identifier for the conversation (required)
+     * @param  \Divar\KenarApiClient\Model\ChatAPIChatBotSendMessageBody $chat_api_chat_bot_send_message_body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['chatAPIChatBotSendMessage5'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function chatAPIChatBotSendMessage5Request($conversation_id, $chat_api_chat_bot_send_message_body, string $contentType = self::contentTypes['chatAPIChatBotSendMessage5'][0])
+    {
+
+        // verify the required parameter 'conversation_id' is set
+        if ($conversation_id === null || (is_array($conversation_id) && count($conversation_id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $conversation_id when calling chatAPIChatBotSendMessage5'
+            );
+        }
+
+        // verify the required parameter 'chat_api_chat_bot_send_message_body' is set
+        if ($chat_api_chat_bot_send_message_body === null || (is_array($chat_api_chat_bot_send_message_body) && count($chat_api_chat_bot_send_message_body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $chat_api_chat_bot_send_message_body when calling chatAPIChatBotSendMessage5'
             );
         }
 

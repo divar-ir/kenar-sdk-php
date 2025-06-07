@@ -59,6 +59,7 @@ class FinderGetUserPostsResponsePost implements ModelInterface, ArrayAccess, \Js
     protected static $openAPITypes = [
         'category' => 'string',
         'images' => 'string[]',
+        'is_phone_hidden' => 'bool',
         'title' => 'string',
         'token' => 'string'
     ];
@@ -73,6 +74,7 @@ class FinderGetUserPostsResponsePost implements ModelInterface, ArrayAccess, \Js
     protected static $openAPIFormats = [
         'category' => null,
         'images' => null,
+        'is_phone_hidden' => null,
         'title' => null,
         'token' => null
     ];
@@ -85,6 +87,7 @@ class FinderGetUserPostsResponsePost implements ModelInterface, ArrayAccess, \Js
     protected static array $openAPINullables = [
         'category' => false,
         'images' => false,
+        'is_phone_hidden' => false,
         'title' => false,
         'token' => false
     ];
@@ -177,6 +180,7 @@ class FinderGetUserPostsResponsePost implements ModelInterface, ArrayAccess, \Js
     protected static $attributeMap = [
         'category' => 'category',
         'images' => 'images',
+        'is_phone_hidden' => 'is_phone_hidden',
         'title' => 'title',
         'token' => 'token'
     ];
@@ -189,6 +193,7 @@ class FinderGetUserPostsResponsePost implements ModelInterface, ArrayAccess, \Js
     protected static $setters = [
         'category' => 'setCategory',
         'images' => 'setImages',
+        'is_phone_hidden' => 'setIsPhoneHidden',
         'title' => 'setTitle',
         'token' => 'setToken'
     ];
@@ -201,6 +206,7 @@ class FinderGetUserPostsResponsePost implements ModelInterface, ArrayAccess, \Js
     protected static $getters = [
         'category' => 'getCategory',
         'images' => 'getImages',
+        'is_phone_hidden' => 'getIsPhoneHidden',
         'title' => 'getTitle',
         'token' => 'getToken'
     ];
@@ -264,6 +270,7 @@ class FinderGetUserPostsResponsePost implements ModelInterface, ArrayAccess, \Js
     {
         $this->setIfExists('category', $data ?? [], null);
         $this->setIfExists('images', $data ?? [], null);
+        $this->setIfExists('is_phone_hidden', $data ?? [], null);
         $this->setIfExists('title', $data ?? [], null);
         $this->setIfExists('token', $data ?? [], null);
     }
@@ -360,6 +367,33 @@ class FinderGetUserPostsResponsePost implements ModelInterface, ArrayAccess, \Js
             throw new \InvalidArgumentException('non-nullable images cannot be null');
         }
         $this->container['images'] = $images;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_phone_hidden
+     *
+     * @return bool|null
+     */
+    public function getIsPhoneHidden()
+    {
+        return $this->container['is_phone_hidden'];
+    }
+
+    /**
+     * Sets is_phone_hidden
+     *
+     * @param bool|null $is_phone_hidden is_phone_hidden
+     *
+     * @return self
+     */
+    public function setIsPhoneHidden($is_phone_hidden)
+    {
+        if (is_null($is_phone_hidden)) {
+            throw new \InvalidArgumentException('non-nullable is_phone_hidden cannot be null');
+        }
+        $this->container['is_phone_hidden'] = $is_phone_hidden;
 
         return $this;
     }

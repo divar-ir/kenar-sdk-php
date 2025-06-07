@@ -98,6 +98,15 @@ class FinderGetUserPostsResponsePostTest extends TestCase
     }
 
     /**
+     * Test attribute "is_phone_hidden"
+     */
+    public function testPropertyIsPhoneHidden()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "title"
      */
     public function testPropertyTitle()

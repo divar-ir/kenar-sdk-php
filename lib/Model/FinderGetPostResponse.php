@@ -64,6 +64,7 @@ class FinderGetPostResponse implements ModelInterface, ArrayAccess, \JsonSeriali
         'data' => 'object',
         'district' => 'string',
         'first_published_at' => '\DateTime',
+        'is_phone_hidden' => 'bool',
         'state' => '\Divar\KenarApiClient\Model\FinderPostExtState',
         'supplier_chat_assistant_enabled' => 'bool',
         'token' => 'string'
@@ -84,6 +85,7 @@ class FinderGetPostResponse implements ModelInterface, ArrayAccess, \JsonSeriali
         'data' => null,
         'district' => null,
         'first_published_at' => 'date-time',
+        'is_phone_hidden' => null,
         'state' => null,
         'supplier_chat_assistant_enabled' => null,
         'token' => null
@@ -102,6 +104,7 @@ class FinderGetPostResponse implements ModelInterface, ArrayAccess, \JsonSeriali
         'data' => false,
         'district' => false,
         'first_published_at' => false,
+        'is_phone_hidden' => false,
         'state' => false,
         'supplier_chat_assistant_enabled' => false,
         'token' => false
@@ -200,6 +203,7 @@ class FinderGetPostResponse implements ModelInterface, ArrayAccess, \JsonSeriali
         'data' => 'data',
         'district' => 'district',
         'first_published_at' => 'first_published_at',
+        'is_phone_hidden' => 'is_phone_hidden',
         'state' => 'state',
         'supplier_chat_assistant_enabled' => 'supplier_chat_assistant_enabled',
         'token' => 'token'
@@ -218,6 +222,7 @@ class FinderGetPostResponse implements ModelInterface, ArrayAccess, \JsonSeriali
         'data' => 'setData',
         'district' => 'setDistrict',
         'first_published_at' => 'setFirstPublishedAt',
+        'is_phone_hidden' => 'setIsPhoneHidden',
         'state' => 'setState',
         'supplier_chat_assistant_enabled' => 'setSupplierChatAssistantEnabled',
         'token' => 'setToken'
@@ -236,6 +241,7 @@ class FinderGetPostResponse implements ModelInterface, ArrayAccess, \JsonSeriali
         'data' => 'getData',
         'district' => 'getDistrict',
         'first_published_at' => 'getFirstPublishedAt',
+        'is_phone_hidden' => 'getIsPhoneHidden',
         'state' => 'getState',
         'supplier_chat_assistant_enabled' => 'getSupplierChatAssistantEnabled',
         'token' => 'getToken'
@@ -305,6 +311,7 @@ class FinderGetPostResponse implements ModelInterface, ArrayAccess, \JsonSeriali
         $this->setIfExists('data', $data ?? [], null);
         $this->setIfExists('district', $data ?? [], null);
         $this->setIfExists('first_published_at', $data ?? [], null);
+        $this->setIfExists('is_phone_hidden', $data ?? [], null);
         $this->setIfExists('state', $data ?? [], null);
         $this->setIfExists('supplier_chat_assistant_enabled', $data ?? [], null);
         $this->setIfExists('token', $data ?? [], null);
@@ -537,6 +544,33 @@ class FinderGetPostResponse implements ModelInterface, ArrayAccess, \JsonSeriali
             throw new \InvalidArgumentException('non-nullable first_published_at cannot be null');
         }
         $this->container['first_published_at'] = $first_published_at;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_phone_hidden
+     *
+     * @return bool|null
+     */
+    public function getIsPhoneHidden()
+    {
+        return $this->container['is_phone_hidden'];
+    }
+
+    /**
+     * Sets is_phone_hidden
+     *
+     * @param bool|null $is_phone_hidden is_phone_hidden
+     *
+     * @return self
+     */
+    public function setIsPhoneHidden($is_phone_hidden)
+    {
+        if (is_null($is_phone_hidden)) {
+            throw new \InvalidArgumentException('non-nullable is_phone_hidden cannot be null');
+        }
+        $this->container['is_phone_hidden'] = $is_phone_hidden;
 
         return $this;
     }

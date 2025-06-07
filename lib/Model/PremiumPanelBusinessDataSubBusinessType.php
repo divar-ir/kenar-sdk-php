@@ -52,6 +52,8 @@ class PremiumPanelBusinessDataSubBusinessType
 
     public const SERVICES = 'SERVICES';
 
+    public const PERSONAL = 'PERSONAL';
+
     /**
      * Gets allowable values of the enum
      * @return string[]
@@ -63,7 +65,8 @@ class PremiumPanelBusinessDataSubBusinessType
             self::REAL_ESTATE,
             self::JOBS,
             self::MARKETPLACE,
-            self::SERVICES
+            self::SERVICES,
+            self::PERSONAL
         ];
     }
 }

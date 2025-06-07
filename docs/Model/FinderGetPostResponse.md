@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **data** | **object** |  | [optional]
 **district** | **string** |  | [optional]
 **first_published_at** | **\DateTime** |  | [optional]
+**is_phone_hidden** | **bool** |  | [optional]
 **state** | [**\Divar\KenarApiClient\Model\FinderPostExtState**](FinderPostExtState.md) |  | [optional]
 **supplier_chat_assistant_enabled** | **bool** |  | [optional]
 **token** | **string** |  | [optional]

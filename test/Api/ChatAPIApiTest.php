@@ -108,6 +108,30 @@ class ChatAPIApiTest extends TestCase
     }
 
     /**
+     * Test case for chatAPIChatBotSendMessage4
+     *
+     * ارسال پیام به مکالمه ChatBot.
+     *
+     */
+    public function testChatAPIChatBotSendMessage4()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for chatAPIChatBotSendMessage5
+     *
+     * ارسال پیام به مکالمه ChatBot.
+     *
+     */
+    public function testChatAPIChatBotSendMessage5()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for chatAPIConversationSendMessage
      *
      * ارسال پیام به مکالمه.
