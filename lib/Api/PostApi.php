@@ -707,9 +707,9 @@ class PostApi
     /**
      * Operation postGetPostStats
      *
-     * Get post statistics
+     * دریافت آمارهای آگهی
      *
-     * @param  string $post_token Post token (required)
+     * @param  string $post_token توکن آگهی (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postGetPostStats'] to see the possible values for this operation
      *
      * @throws \Divar\KenarApiClient\ApiException on non-2xx response or if the response body is not in the expected format
@@ -725,9 +725,9 @@ class PostApi
     /**
      * Operation postGetPostStatsWithHttpInfo
      *
-     * Get post statistics
+     * دریافت آمارهای آگهی
      *
-     * @param  string $post_token Post token (required)
+     * @param  string $post_token توکن آگهی (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postGetPostStats'] to see the possible values for this operation
      *
      * @throws \Divar\KenarApiClient\ApiException on non-2xx response or if the response body is not in the expected format
@@ -824,9 +824,9 @@ class PostApi
     /**
      * Operation postGetPostStatsAsync
      *
-     * Get post statistics
+     * دریافت آمارهای آگهی
      *
-     * @param  string $post_token Post token (required)
+     * @param  string $post_token توکن آگهی (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postGetPostStats'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -845,9 +845,9 @@ class PostApi
     /**
      * Operation postGetPostStatsAsyncWithHttpInfo
      *
-     * Get post statistics
+     * دریافت آمارهای آگهی
      *
-     * @param  string $post_token Post token (required)
+     * @param  string $post_token توکن آگهی (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postGetPostStats'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -897,7 +897,7 @@ class PostApi
     /**
      * Create request for operation 'postGetPostStats'
      *
-     * @param  string $post_token Post token (required)
+     * @param  string $post_token توکن آگهی (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['postGetPostStats'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException

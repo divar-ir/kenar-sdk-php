@@ -4,6 +4,7 @@ All URIs are relative to https://open-api.divar.ir, except if the operation defi
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**addonsCreateBusinessAddon()**](AddonsApi.md#addonsCreateBusinessAddon) | **POST** /v1/open-platform/addons/business/{business_token} | Create a BusinessAddon |
 | [**addonsCreatePostAddonV2()**](AddonsApi.md#addonsCreatePostAddonV2) | **POST** /v2/open-platform/addons/post/{token} | افزودن افزونه جدید به آگهی |
 | [**addonsCreateUserAddonV2()**](AddonsApi.md#addonsCreateUserAddonV2) | **POST** /v2/open-platform/addons/user/{phone} | افزودن افزونه جدید به کاربر |
 | [**addonsCreateUserAddonV22()**](AddonsApi.md#addonsCreateUserAddonV22) | **POST** /v2/open-platform/addons/users/{divar_user_id} | افزودن افزونه جدید به کاربر |
@@ -13,6 +14,70 @@ All URIs are relative to https://open-api.divar.ir, except if the operation defi
 | [**addonsGetUserAddons()**](AddonsApi.md#addonsGetUserAddons) | **GET** /v1/open-platform/addons/user/{phone} | دریافت تمام افزونه‌های کاربر |
 | [**addonsGetUserAddons2()**](AddonsApi.md#addonsGetUserAddons2) | **GET** /v2/open-platform/addons/users/{divar_user_id} | دریافت تمام افزونه‌های کاربر |
 
+
+## `addonsCreateBusinessAddon()`
+
+```php
+addonsCreateBusinessAddon($business_token, $addons_create_business_addon_body): \Divar\KenarApiClient\Model\AddonsCreateBusinessAddonResponse
+```
+
+Create a BusinessAddon
+
+This will create a BusinessAddon on published posts of a business. You can only create Addons which are created by your app.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure API key authorization: APIKey
+$config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKey('X-API-Key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Divar\KenarApiClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Key', 'Bearer');
+
+
+$apiInstance = new Divar\KenarApiClient\Api\AddonsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$business_token = 'business_token_example'; // string
+$addons_create_business_addon_body = new \Divar\KenarApiClient\Model\AddonsCreateBusinessAddonBody(); // \Divar\KenarApiClient\Model\AddonsCreateBusinessAddonBody
+
+try {
+    $result = $apiInstance->addonsCreateBusinessAddon($business_token, $addons_create_business_addon_body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling AddonsApi->addonsCreateBusinessAddon: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **business_token** | **string**|  | |
+| **addons_create_business_addon_body** | [**\Divar\KenarApiClient\Model\AddonsCreateBusinessAddonBody**](../Model/AddonsCreateBusinessAddonBody.md)|  | |
+
+### Return type
+
+[**\Divar\KenarApiClient\Model\AddonsCreateBusinessAddonResponse**](../Model/AddonsCreateBusinessAddonResponse.md)
+
+### Authorization
+
+[APIKey](../../README.md#APIKey)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
 
 ## `addonsCreatePostAddonV2()`
 

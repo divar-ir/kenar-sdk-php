@@ -1,6 +1,6 @@
 <?php
 /**
- * GetPostStatsResponsePostStats
+ * AddonsCreateBusinessAddonResponse
  *
  * PHP version 8.1
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \Divar\KenarApiClient\ObjectSerializer;
 
 /**
- * GetPostStatsResponsePostStats Class Doc Comment
+ * AddonsCreateBusinessAddonResponse Class Doc Comment
  *
  * @category Class
  * @package  Divar\KenarApiClient
@@ -40,7 +40,7 @@ use \Divar\KenarApiClient\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class GetPostStatsResponsePostStats implements ModelInterface, ArrayAccess, \JsonSerializable
+class AddonsCreateBusinessAddonResponse implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class GetPostStatsResponsePostStats implements ModelInterface, ArrayAccess, \Jso
       *
       * @var string
       */
-    protected static $openAPIModelName = 'GetPostStatsResponsePostStats';
+    protected static $openAPIModelName = 'addonsCreateBusinessAddonResponse';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,7 @@ class GetPostStatsResponsePostStats implements ModelInterface, ArrayAccess, \Jso
       * @var string[]
       */
     protected static $openAPITypes = [
-        'daily' => '\Divar\KenarApiClient\Model\GetPostStatsResponseDailyStats[]',
-        'total' => 'int'
+        'id' => 'string'
     ];
 
     /**
@@ -69,8 +68,7 @@ class GetPostStatsResponsePostStats implements ModelInterface, ArrayAccess, \Jso
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'daily' => null,
-        'total' => 'int32'
+        'id' => null
     ];
 
     /**
@@ -79,8 +77,7 @@ class GetPostStatsResponsePostStats implements ModelInterface, ArrayAccess, \Jso
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'daily' => false,
-        'total' => false
+        'id' => false
     ];
 
     /**
@@ -169,8 +166,7 @@ class GetPostStatsResponsePostStats implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $attributeMap = [
-        'daily' => 'daily',
-        'total' => 'total'
+        'id' => 'id'
     ];
 
     /**
@@ -179,8 +175,7 @@ class GetPostStatsResponsePostStats implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $setters = [
-        'daily' => 'setDaily',
-        'total' => 'setTotal'
+        'id' => 'setId'
     ];
 
     /**
@@ -189,8 +184,7 @@ class GetPostStatsResponsePostStats implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $getters = [
-        'daily' => 'getDaily',
-        'total' => 'getTotal'
+        'id' => 'getId'
     ];
 
     /**
@@ -250,8 +244,7 @@ class GetPostStatsResponsePostStats implements ModelInterface, ArrayAccess, \Jso
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('daily', $data ?? [], null);
-        $this->setIfExists('total', $data ?? [], null);
+        $this->setIfExists('id', $data ?? [], null);
     }
 
     /**
@@ -297,55 +290,28 @@ class GetPostStatsResponsePostStats implements ModelInterface, ArrayAccess, \Jso
 
 
     /**
-     * Gets daily
+     * Gets id
      *
-     * @return \Divar\KenarApiClient\Model\GetPostStatsResponseDailyStats[]|null
+     * @return string|null
      */
-    public function getDaily()
+    public function getId()
     {
-        return $this->container['daily'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets daily
+     * Sets id
      *
-     * @param \Divar\KenarApiClient\Model\GetPostStatsResponseDailyStats[]|null $daily مقدار آمار مورد نظر در هفت روز اخیر
+     * @param string|null $id id
      *
      * @return self
      */
-    public function setDaily($daily)
+    public function setId($id)
     {
-        if (is_null($daily)) {
-            throw new \InvalidArgumentException('non-nullable daily cannot be null');
+        if (is_null($id)) {
+            throw new \InvalidArgumentException('non-nullable id cannot be null');
         }
-        $this->container['daily'] = $daily;
-
-        return $this;
-    }
-
-    /**
-     * Gets total
-     *
-     * @return int|null
-     */
-    public function getTotal()
-    {
-        return $this->container['total'];
-    }
-
-    /**
-     * Sets total
-     *
-     * @param int|null $total تعداد کلی آمار (مثلا بازدید)
-     *
-     * @return self
-     */
-    public function setTotal($total)
-    {
-        if (is_null($total)) {
-            throw new \InvalidArgumentException('non-nullable total cannot be null');
-        }
-        $this->container['total'] = $total;
+        $this->container['id'] = $id;
 
         return $this;
     }

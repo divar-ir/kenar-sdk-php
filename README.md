@@ -60,14 +60,14 @@ $apiInstance = new Divar\KenarApiClient\Api\AddonsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$token = 'token_example'; // string
-$addons_create_post_addon_v2_body = new \Divar\KenarApiClient\Model\AddonsCreatePostAddonV2Body(); // \Divar\KenarApiClient\Model\AddonsCreatePostAddonV2Body
+$business_token = 'business_token_example'; // string
+$addons_create_business_addon_body = new \Divar\KenarApiClient\Model\AddonsCreateBusinessAddonBody(); // \Divar\KenarApiClient\Model\AddonsCreateBusinessAddonBody
 
 try {
-    $result = $apiInstance->addonsCreatePostAddonV2($token, $addons_create_post_addon_v2_body);
+    $result = $apiInstance->addonsCreateBusinessAddon($business_token, $addons_create_business_addon_body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling AddonsApi->addonsCreatePostAddonV2: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling AddonsApi->addonsCreateBusinessAddon: ', $e->getMessage(), PHP_EOL;
 }
 
 ```
@@ -78,6 +78,7 @@ All URIs are relative to *https://open-api.divar.ir*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AddonsApi* | [**addonsCreateBusinessAddon**](docs/Api/AddonsApi.md#addonscreatebusinessaddon) | **POST** /v1/open-platform/addons/business/{business_token} | Create a BusinessAddon
 *AddonsApi* | [**addonsCreatePostAddonV2**](docs/Api/AddonsApi.md#addonscreatepostaddonv2) | **POST** /v2/open-platform/addons/post/{token} | افزودن افزونه جدید به آگهی
 *AddonsApi* | [**addonsCreateUserAddonV2**](docs/Api/AddonsApi.md#addonscreateuseraddonv2) | **POST** /v2/open-platform/addons/user/{phone} | افزودن افزونه جدید به کاربر
 *AddonsApi* | [**addonsCreateUserAddonV22**](docs/Api/AddonsApi.md#addonscreateuseraddonv22) | **POST** /v2/open-platform/addons/users/{divar_user_id} | افزودن افزونه جدید به کاربر
@@ -120,7 +121,7 @@ Class | Method | HTTP request | Description
 *PaymentTicketApi* | [**paymentTicketValidate**](docs/Api/PaymentTicketApi.md#paymentticketvalidate) | **POST** /v1/open-platform/payment-ticket/validate | اعتبارسنجی بلیط پرداخت
 *PostApi* | [**postEditPost**](docs/Api/PostApi.md#posteditpost) | **PUT** /v1/open-platform/post/{post_token} | ویرایش آگهی
 *PostApi* | [**postGetImageUploadURL**](docs/Api/PostApi.md#postgetimageuploadurl) | **GET** /v1/open-platform/post/image-upload-url | دریافت URL آپلود تصویر
-*PostApi* | [**postGetPostStats**](docs/Api/PostApi.md#postgetpoststats) | **GET** /experimental/open-platform/posts/{post_token}/stats | Get post statistics
+*PostApi* | [**postGetPostStats**](docs/Api/PostApi.md#postgetpoststats) | **GET** /experimental/open-platform/posts/{post_token}/stats | دریافت آمارهای آگهی
 *SemanticApi* | [**semanticCreatePostSemantic**](docs/Api/SemanticApi.md#semanticcreatepostsemantic) | **POST** /experimental/open-platform/semantic/post/{token} | ایجاد اطلاعات معنایی آگهی
 *SemanticApi* | [**semanticCreateUserSemantic**](docs/Api/SemanticApi.md#semanticcreateusersemantic) | **POST** /v1/open-platform/semantic/user/{phone} | ایجاد اطلاعات معنایی کاربر
 *SemanticApi* | [**semanticCreateUserSemantic2**](docs/Api/SemanticApi.md#semanticcreateusersemantic2) | **POST** /v1/open-platform/semantic/users/{divar_user_id} | ایجاد اطلاعات معنایی کاربر
@@ -148,6 +149,8 @@ Class | Method | HTTP request | Description
 - [AddonsAddonSemanticStatus](docs/Model/AddonsAddonSemanticStatus.md)
 - [AddonsBusinessAddon](docs/Model/AddonsBusinessAddon.md)
 - [AddonsButtonBar](docs/Model/AddonsButtonBar.md)
+- [AddonsCreateBusinessAddonBody](docs/Model/AddonsCreateBusinessAddonBody.md)
+- [AddonsCreateBusinessAddonResponse](docs/Model/AddonsCreateBusinessAddonResponse.md)
 - [AddonsCreatePostAddonRequest](docs/Model/AddonsCreatePostAddonRequest.md)
 - [AddonsCreatePostAddonV2Body](docs/Model/AddonsCreatePostAddonV2Body.md)
 - [AddonsCreateUserAddonResponseV2](docs/Model/AddonsCreateUserAddonResponseV2.md)

@@ -6,7 +6,7 @@ All URIs are relative to https://open-api.divar.ir, except if the operation defi
 | ------------- | ------------- | ------------- |
 | [**postEditPost()**](PostApi.md#postEditPost) | **PUT** /v1/open-platform/post/{post_token} | ویرایش آگهی |
 | [**postGetImageUploadURL()**](PostApi.md#postGetImageUploadURL) | **GET** /v1/open-platform/post/image-upload-url | دریافت URL آپلود تصویر |
-| [**postGetPostStats()**](PostApi.md#postGetPostStats) | **GET** /experimental/open-platform/posts/{post_token}/stats | Get post statistics |
+| [**postGetPostStats()**](PostApi.md#postGetPostStats) | **GET** /experimental/open-platform/posts/{post_token}/stats | دریافت آمارهای آگهی |
 
 
 ## `postEditPost()`
@@ -138,9 +138,9 @@ This endpoint does not need any parameter.
 postGetPostStats($post_token): \Divar\KenarApiClient\Model\PostGetPostStatsResponse
 ```
 
-Get post statistics
+دریافت آمارهای آگهی
 
-This API allows you to retrieve the statistics associated with a single post (e.g. views).
+از این api برای مشاهده‌ی آمارهای یک آگهی (مانند تعداد بازدید‌های آگهی) استفاده کنید.
 
 ### Example
 
@@ -161,7 +161,7 @@ $apiInstance = new Divar\KenarApiClient\Api\PostApi(
     new GuzzleHttp\Client(),
     $config
 );
-$post_token = 'post_token_example'; // string | Post token
+$post_token = 'post_token_example'; // string | توکن آگهی
 
 try {
     $result = $apiInstance->postGetPostStats($post_token);
@@ -175,7 +175,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **post_token** | **string**| Post token | |
+| **post_token** | **string**| توکن آگهی | |
 
 ### Return type
 

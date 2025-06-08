@@ -202,7 +202,7 @@ paymentListTransactions($page_size, $page_token): \Divar\KenarApiClient\Model\Pa
 
 
 
-Using this API you can retrieve a list of transactions. Follow pages till you get an empty list.
+با استفاده از این api میتوانید لیست تراکنش‌های اپ را مشاهده کنید. برای مشاهده‌ی تمام تراکنش‌ها، صفحات را دنبال کنید.
 
 ### Example
 

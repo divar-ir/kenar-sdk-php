@@ -72,6 +72,18 @@ class AddonsApiTest extends TestCase
     }
 
     /**
+     * Test case for addonsCreateBusinessAddon
+     *
+     * Create a BusinessAddon.
+     *
+     */
+    public function testAddonsCreateBusinessAddon()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for addonsCreatePostAddonV2
      *
      * افزودن افزونه جدید به آگهی.
