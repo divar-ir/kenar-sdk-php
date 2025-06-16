@@ -4,7 +4,7 @@ All URIs are relative to https://open-api.divar.ir, except if the operation defi
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**addonsCreateBusinessAddon()**](AddonsApi.md#addonsCreateBusinessAddon) | **POST** /v1/open-platform/addons/business/{business_token} | Create a BusinessAddon |
+| [**addonsCreateBusinessAddon()**](AddonsApi.md#addonsCreateBusinessAddon) | **POST** /v1/open-platform/addons/business/{business_token} | افزودن افزونه جدید به آگهی‌های کسب‌و‌کار |
 | [**addonsCreatePostAddonV2()**](AddonsApi.md#addonsCreatePostAddonV2) | **POST** /v2/open-platform/addons/post/{token} | افزودن افزونه جدید به آگهی |
 | [**addonsCreateUserAddonV2()**](AddonsApi.md#addonsCreateUserAddonV2) | **POST** /v2/open-platform/addons/user/{phone} | افزودن افزونه جدید به کاربر |
 | [**addonsCreateUserAddonV22()**](AddonsApi.md#addonsCreateUserAddonV22) | **POST** /v2/open-platform/addons/users/{divar_user_id} | افزودن افزونه جدید به کاربر |
@@ -21,9 +21,9 @@ All URIs are relative to https://open-api.divar.ir, except if the operation defi
 addonsCreateBusinessAddon($business_token, $addons_create_business_addon_body): \Divar\KenarApiClient\Model\AddonsCreateBusinessAddonResponse
 ```
 
-Create a BusinessAddon
+افزودن افزونه جدید به آگهی‌های کسب‌و‌کار
 
-This will create a BusinessAddon on published posts of a business. You can only create Addons which are created by your app.
+با استفاده از این API و با مجوز کاربر، می‌توانید افزونه جدیدی به آگهی‌های کسب‌و‌کار متصل کنید. می‌توانید از ویجت‌های موجود برای طراحی افزونه خود استفاده کنید. این API به توکن دسترسی با یکی از دامنه‌های زیر نیاز دارد: - BUSINESS_ADDON_CREATE.{business_token}
 
 ### Example
 

@@ -74,7 +74,7 @@ class AddonsApiTest extends TestCase
     /**
      * Test case for addonsCreateBusinessAddon
      *
-     * Create a BusinessAddon.
+     * افزودن افزونه جدید به آگهی‌های کسب‌و‌کار.
      *
      */
     public function testAddonsCreateBusinessAddon()

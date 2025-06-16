@@ -152,7 +152,7 @@ class AddonsApi
     /**
      * Operation addonsCreateBusinessAddon
      *
-     * Create a BusinessAddon
+     * افزودن افزونه جدید به آگهی‌های کسب‌و‌کار
      *
      * @param  string $business_token business_token (required)
      * @param  \Divar\KenarApiClient\Model\AddonsCreateBusinessAddonBody $addons_create_business_addon_body addons_create_business_addon_body (required)
@@ -171,7 +171,7 @@ class AddonsApi
     /**
      * Operation addonsCreateBusinessAddonWithHttpInfo
      *
-     * Create a BusinessAddon
+     * افزودن افزونه جدید به آگهی‌های کسب‌و‌کار
      *
      * @param  string $business_token (required)
      * @param  \Divar\KenarApiClient\Model\AddonsCreateBusinessAddonBody $addons_create_business_addon_body (required)
@@ -271,7 +271,7 @@ class AddonsApi
     /**
      * Operation addonsCreateBusinessAddonAsync
      *
-     * Create a BusinessAddon
+     * افزودن افزونه جدید به آگهی‌های کسب‌و‌کار
      *
      * @param  string $business_token (required)
      * @param  \Divar\KenarApiClient\Model\AddonsCreateBusinessAddonBody $addons_create_business_addon_body (required)
@@ -293,7 +293,7 @@ class AddonsApi
     /**
      * Operation addonsCreateBusinessAddonAsyncWithHttpInfo
      *
-     * Create a BusinessAddon
+     * افزودن افزونه جدید به آگهی‌های کسب‌و‌کار
      *
      * @param  string $business_token (required)
      * @param  \Divar\KenarApiClient\Model\AddonsCreateBusinessAddonBody $addons_create_business_addon_body (required)
